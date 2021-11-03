@@ -65,7 +65,7 @@ export const getNewsBySlug = (slug: ParamsType): INewsCard | undefined => {
 	return news.find(item => item.slug === slug);
 };
 
-export const getAllGarderobs = (): GarderobItemType[] => {
+export const getAllGarderobs = (): any => {
 	return garderobs;
 };
 
