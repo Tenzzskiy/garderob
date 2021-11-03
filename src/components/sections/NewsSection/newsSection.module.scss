@@ -1,0 +1,105 @@
+@import '@/assets/framework/typography';
+@import '@/assets/base/variables';
+@import '@/assets/framework/breakpoints';
+
+.title {
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 44px;
+
+	@include desktops {
+		margin-bottom: 56px;
+	}
+
+	@include largeDesktops {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.sliderWrapper {
+	padding-left: 16px;
+	padding-right: 16px;
+	overflow: hidden;
+	margin-bottom: 20px;
+
+	@include largeDesktops {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.slider {
+	overflow: visible;
+}
+
+.container {
+	padding-left: 16px;
+	padding-right: 16px;
+
+	@include desktops {
+		text-align: center;
+	}
+
+	@include largeDesktops {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.button {
+	@include textSubtitleThird;
+
+	text-decoration: none;
+	padding: 13px 32px;
+	background-color: #fff;
+	display: inline-block;
+	color: #373737;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: #ede9e9;
+	}
+}
+
+.outerContainer {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.newsBlock {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 200px 200px;
+	column-gap: 32px;
+	row-gap: 32px;
+	grid-template-areas:
+		'first first second third'
+		'first first fourth fourth';
+	margin-bottom: 32px;
+	padding-left: 16px;
+	padding-right: 16px;
+
+	@include largeDesktops {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.newsBlockCard {
+	&:nth-child(1) {
+		grid-area: first;
+	}
+
+	&:nth-child(2) {
+		grid-area: second;
+	}
+
+	&:nth-child(3) {
+		grid-area: third;
+	}
+
+	&:nth-child(4) {
+		grid-area: fourth;
+	}
+}

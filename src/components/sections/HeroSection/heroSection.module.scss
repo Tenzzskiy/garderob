@@ -1,0 +1,105 @@
+.hero {
+	background: radial-gradient(50% 50% at 50% 50%, #829a9d 0%, #68888c 90.62%);
+	height: 100vh;
+	position: relative;
+	z-index: 5;
+	min-height: 560px;
+
+	@include tablets {
+		height: auto;
+	}
+}
+
+.image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: var(--mobileImage);
+	background-repeat: no-repeat;
+	background-position: top center;
+	z-index: -1;
+
+	@include tablets {
+		background-image: var(--mobileImage);
+		background-position: top 32px right -124px;
+	}
+
+	@include desktops {
+		background-image: var(--desktopImage);
+		background-position: top 0 right -124px;
+	}
+}
+
+.wrapper {
+	@include tablets {
+		max-width: 472px;
+	}
+
+	@include desktops {
+		max-width: 650px;
+	}
+}
+
+.container {
+	padding-top: 320px;
+
+	@include tablets {
+		padding-top: 124px;
+	}
+}
+
+.title {
+	@include textHeadingThird;
+
+	margin-bottom: 12px;
+	color: $grayDark;
+	max-width: 330px;
+
+	@include tablets {
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 62px;
+		margin-bottom: 16px;
+		max-width: none;
+	}
+
+	@include desktops {
+		font-size: 64px;
+		line-height: 72px;
+		margin-bottom: 30px;
+	}
+}
+
+.subtitle {
+	@include textBodyFirst;
+
+	color: $grayDark;
+	margin-bottom: 16px;
+
+	@include desktops {
+		max-width: 516px;
+		margin-bottom: 24px;
+	}
+}
+
+.button {
+	@include textSubtitleFirst;
+
+	padding: 8px 64px;
+	background-color: $yellow;
+	border-radius: 8px;
+	color: $grayDark;
+	display: inline-block;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: #ffeb4c;
+	}
+
+	&:active {
+		background-color: #f2d80d;
+	}
+}

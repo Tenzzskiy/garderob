@@ -1,0 +1,41 @@
+.wrapper {
+	position: relative;
+	display: flex;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	border-radius: 8px;
+	border: 0.5px solid #373737;
+	padding-left: 16px;
+	padding-right: 16px;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+}
+
+.input {
+	text-align: center;
+	font-weight: 600;
+	line-height: 23px;
+	font-size: 18px;
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+.iconLeft {
+	left: 12px;
+}
+
+.iconRight {
+	right: 12px;
+}
+
+.info {
+	@include tablets {
+		display: none;
+	}
+}

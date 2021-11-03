@@ -1,0 +1,123 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('/icons/icomoon.eot?l3hdd4');
+	src: url('/icons/icomoon.eot?l3hdd4#iefix') format('embedded-opentype'),
+		url('/icons/icomoon.ttf?l3hdd4') format('truetype'), url('/icons/icomoon.woff?l3hdd4') format('woff'),
+		url('/icons/icomoon.svg?l3hdd4#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-avatar:before {
+	content: '\e900';
+}
+.icon-bracelet:before {
+	content: '\e901';
+}
+.icon-check-fill:before {
+	content: '\e902';
+}
+.icon-clock:before {
+	content: '\e903';
+}
+.icon-coat:before {
+	content: '\e904';
+}
+.icon-door-hanger:before {
+	content: '\e905';
+}
+.icon-exclamation:before {
+	content: '\e906';
+}
+.icon-hanger .path1:before {
+	content: '\e907';
+	color: rgb(18, 18, 18);
+}
+.icon-hanger .path2:before {
+	content: '\e908';
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.icon-hat:before {
+	content: '\e909';
+}
+.icon-lockers:before {
+	content: '\e90a';
+}
+.icon-mirror:before {
+	content: '\e90b';
+}
+.icon-ottoman:before {
+	content: '\e90c';
+}
+.icon-thermometer-1:before {
+	content: '\e90d';
+}
+.icon-wedding-suit:before {
+	content: '\e90e';
+}
+.icon-alert-circle:before {
+	content: '\e90f';
+}
+.icon-align-left:before {
+	content: '\e910';
+}
+.icon-chevron-right:before {
+	content: '\e911';
+}
+.icon-arrow-right:before {
+	content: '\e912';
+}
+.icon-check:before {
+	content: '\e913';
+}
+.icon-chevron-down:before {
+	content: '\e914';
+}
+.icon-chevron-left:before {
+	content: '\e915';
+}
+.icon-chevron-up:before {
+	content: '\e916';
+}
+.icon-minus:before {
+	content: '\e917';
+}
+.icon-plus:before {
+	content: '\e918';
+}
+.icon-search:before {
+	content: '\e919';
+}
+.icon-shopping-cart:before {
+	content: '\e91a';
+}
+.icon-sliders:before {
+	content: '\e91b';
+}
+.icon-trash:before {
+	content: '\e91c';
+}
+.icon-heart:before {
+	content: '\e91d';
+}
+.icon-close:before {
+	content: '\e91e';
+}

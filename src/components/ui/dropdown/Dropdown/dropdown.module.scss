@@ -1,0 +1,76 @@
+.dropdown {
+	position: relative;
+}
+
+.wrapper {
+	position: relative;
+}
+
+.button {
+	appearance: none;
+	border: none;
+	outline: none;
+	padding: 6px 36px 6px 16px;
+	cursor: pointer;
+	color: #373737;
+	line-height: 20px;
+	border-radius: 8px;
+	min-width: 187px;
+	background-color: rgba(225, 225, 225, 0.7);
+	border: 0.5px solid transparent;
+	text-align: left;
+	width: 100%;
+}
+
+.buttonBig {
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+
+.buttonOpened {
+	background-color: #fff;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border: 0.5px solid #373737;
+	border-bottom: 0.5px solid transparent;
+}
+
+.buttonOpened ~ .icon {
+	opacity: 1;
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	right: 16px;
+	transform: translateY(-50%);
+	opacity: 0.5;
+	font-size: 20px;
+	transition: 0.3s;
+}
+
+.menu {
+	position: absolute;
+	top: 99%;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border: 0.5px solid #373737;
+	border-top: none;
+	overflow: hidden;
+	z-index: 10;
+}
+
+.item {
+	padding: 6px 36px 6px 16px;
+	cursor: pointer;
+	transition: 0.3s;
+	color: #989898;
+
+	&:hover {
+		background: rgba(225, 225, 225, 0.3);
+		color: #373737;
+	}
+}

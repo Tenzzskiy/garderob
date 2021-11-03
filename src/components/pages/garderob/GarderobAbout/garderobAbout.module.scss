@@ -1,0 +1,7 @@
+.garderobAbout {
+	padding-top: 32px;
+
+	@include desktops {
+		padding-top: 0;
+	}
+}

@@ -1,0 +1,67 @@
+.sliderWrapper {
+	padding-left: 16px;
+	padding-right: 16px;
+	overflow: hidden;
+	margin-bottom: 20px;
+
+	@include desktops {
+		padding-left: 0;
+	}
+
+	@include largeDesktops {
+		padding-right: 0;
+	}
+}
+
+.slider {
+	overflow: visible;
+}
+
+.sliderGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 180px);
+	row-gap: 16px;
+	column-gap: 16px;
+}
+
+.card {
+	padding: 16px 48px;
+	border-radius: 8px;
+	background-color: #fff;
+	text-align: center;
+	cursor: pointer;
+	border: 0.5px solid transparent;
+
+	&:hover {
+		border: 0.5px solid #373737;
+	}
+
+	&Active {
+		background: rgba(255, 226, 0, 0.3);
+		border: 0.5px solid #373737;
+	}
+
+	&Title {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 23px;
+	}
+
+	&Info {
+		margin-top: 4px;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 20px;
+	}
+
+	@include desktops {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+.cardGrid {
+	min-width: initial !important;
+	max-width: initial !important;
+	transform: initial !important;
+}

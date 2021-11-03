@@ -1,0 +1,61 @@
+import {Props} from './dropdown.props';
+import DropdownItem from '../DropdownItem';
+import {filterChildrenByType} from '@/utilities/helpers';
+import styles from './dropdown.module.scss';
+import classNames from 'classnames';
+import {useState, useRef} from 'react';
+import useOnClickOutside from '@/hooks/useOnClickOutside';
+
+const Dropdown = ({classname, children, value, onChangeSort, isBig = false}: Props): JSX.Element => {
+	const [opened, setOpened] = useState<boolean>(false);
+
+	const buttonRef = useRef<HTMLDivElement | null>(null);
+
+	const filteredChildren = filterChildrenByType(children, 'DropdownItem');
+
+	const handleOpenMenu = () => {
+		setOpened(!opened);
+	};
+
+	const handleCloseMenu = () => setOpened(false);
+
+	const handleChangeValue = (value: string | number) => {
+		onChangeSort(value);
+		setOpened(false);
+	};
+
+	useOnClickOutside(buttonRef, handleCloseMenu);
+
+	return (
+		<div ref={buttonRef} className={classNames(styles.dropdown, classname)}>
+			<button
+				className={classNames(styles.button, isBig && styles.buttonBig, opened && styles.buttonOpened)}
+				onClick={handleOpenMenu}
+				type='button'
+				disabled={filteredChildren.length ? false : true}
+			>
+				<span>{value}</span>
+				<span className={classNames(styles.icon, opened ? 'icon-chevron-up' : 'icon-chevron-down')} />
+			</button>
+			{opened && (
+				<ul className={styles.menu}>
+					{filteredChildren.map((child, index) => {
+						return (
+							<li
+								className={styles.item}
+								key={index}
+								onClick={() => handleChangeValue(child.props.children)}
+							>
+								{child}
+							</li>
+						);
+					})}
+				</ul>
+			)}
+		</div>
+	);
+};
+
+Dropdown.Item = DropdownItem;
+
+export default Dropdown;

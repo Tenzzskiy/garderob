@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+.keen-slider__slide {
+	overflow: visible !important;
+}
+
+input,
+select,
+textarea {
+	font-family: 'Futura PT';
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background: white;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #c7c7c7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: gray;
+}

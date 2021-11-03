@@ -1,0 +1,66 @@
+[
+	{
+		"id": 20,
+		"title": "Пластиковые",
+		"image": "/images/garderob-item.jpg",
+		"price": 6000,
+		"time": "2 ч",
+		"priceDescription": "Со второго дня 800₽",
+		"info": {
+			"count": "чел",
+			"time": "ч",
+			"countDesktop": "Персон",
+			"timeDesktop": "Часов",
+			"minTime": 6,
+			"priceForTime": 300
+		}
+	},
+	{
+		"id": 21,
+		"title": "Кожаные",
+		"image": "/images/garderob-item.jpg",
+		"price": 3,
+		"time": "шт",
+		"priceDescription": "Со второго дня 800₽",
+		"info": {
+			"count": "чел",
+			"time": "ч",
+			"countDesktop": "Персон",
+			"timeDesktop": "Часов",
+			"minTime": 6,
+			"priceForTime": 300
+		}
+	},
+	{
+		"id": 22,
+		"title": "Браслет",
+		"image": "/images/garderob-item.jpg",
+		"price": 12,
+		"time": "шт",
+		"priceDescription": "Со второго дня 800₽",
+		"info": {
+			"count": "чел",
+			"time": "ч",
+			"countDesktop": "Персон",
+			"timeDesktop": "Часов",
+			"minTime": 6,
+			"priceForTime": 300
+		}
+	},
+	{
+		"id": 23,
+		"title": "Брендирование номерки",
+		"image": "/images/garderob-item.jpg",
+		"price": 3,
+		"time": "шт",
+		"priceDescription": "Со второго дня 800₽",
+		"info": {
+			"count": "чел",
+			"time": "ч",
+			"countDesktop": "Персон",
+			"timeDesktop": "Часов",
+			"minTime": 6,
+			"priceForTime": 300
+		}
+	}
+]

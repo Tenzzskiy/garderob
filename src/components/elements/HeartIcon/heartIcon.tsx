@@ -1,0 +1,44 @@
+import styles from './heartIcon.module.scss';
+import {Props} from './heartIcon.props';
+import classNames from 'classnames';
+import {useState, useEffect} from 'react';
+import useAppSelector from '@/hooks/useAppSelector';
+import useAppDispatch from '@/hooks/useAppDispatch';
+import {addFavoriteItemToStore, deleteFavoriteItemFromStore} from '@/redux/actions/favoriteActions';
+
+function HeartIcon({className, card}: Props): JSX.Element {
+	const [isLiked, setLiked] = useState(false);
+
+	const favoriteItems = useAppSelector(state => state.favoriteState.items);
+
+	const dispatch = useAppDispatch();
+
+	useEffect(() => {
+		if (favoriteItems.find(item => item.id === card.id)) {
+			setLiked(true);
+		} else {
+			setLiked(false);
+		}
+	}, [favoriteItems]);
+
+	const handleSaveItem = () => {
+		if (!isLiked) {
+			setLiked(true);
+
+			dispatch(addFavoriteItemToStore(card));
+		} else {
+			dispatch(deleteFavoriteItemFromStore(card.id));
+
+			setLiked(false);
+		}
+	};
+
+	return (
+		<span
+			className={classNames(styles.icon, className, 'icon-heart', isLiked && styles.liked)}
+			onClick={handleSaveItem}
+		></span>
+	);
+}
+
+export default HeartIcon;

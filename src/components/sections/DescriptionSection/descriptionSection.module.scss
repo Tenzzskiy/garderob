@@ -1,0 +1,162 @@
+@import '@/assets/base/variables';
+@import '@/assets/framework/typography';
+
+.wrapper {
+	padding-top: 44px;
+	padding-bottom: 32px;
+	background-color: #fff;
+	position: relative;
+	z-index: 1;
+
+	&::after {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+.image {
+	position: absolute;
+	top: -30px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-repeat: no-repeat;
+	background-position: top -16px right -140px;
+	z-index: -1;
+}
+
+.outerContainer {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.container {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.title {
+	@include textHeadingThird;
+
+	margin-bottom: 16px;
+}
+
+.text {
+	@include textBodyFirst;
+
+	margin-bottom: 56px;
+	color: $grayLighter;
+	width: 70%;
+}
+
+.advantage {
+	display: flex;
+	align-items: center;
+
+	&:not(:last-child) {
+		margin-bottom: 24px;
+	}
+}
+
+.advantageIcon {
+	font-size: 28px;
+	padding: 8px;
+	background-color: $orange;
+	border-radius: 100%;
+	color: #fff;
+	margin-right: 16px;
+}
+
+.advantageDesc {
+	@include textSubtitleSecond;
+
+	color: $orange;
+}
+
+@media all and (min-width: 768px) {
+	.wrapper {
+		margin-left: 16px;
+		margin-right: 16px;
+		border-radius: 8px;
+	}
+
+	.text {
+		width: 95%;
+	}
+
+	.image {
+		height: 100%;
+		background-size: auto 100%;
+		top: 0px;
+		background-position: center left -100px;
+	}
+
+	// .image {
+	// 	height: 120%;
+	// 	background-size: auto 100%;
+	// 	top: -40px;
+	// 	background-position: center left -100px;
+	// }
+
+	.container {
+		padding-left: 280px !important;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.advantages {
+		display: flex;
+	}
+
+	.advantage {
+		&:not(:last-child) {
+			margin-bottom: 0;
+			margin-right: 36px;
+		}
+	}
+
+	.image {
+		height: 140%;
+		background-size: auto 100%;
+		top: -60px;
+		background-position: center left -40px;
+	}
+
+	.container {
+		padding-left: 360px !important;
+	}
+
+	.text {
+		width: 90%;
+	}
+
+	.title {
+		margin-bottom: 20px;
+		font-size: 48px;
+		line-height: 62px;
+	}
+
+	.text {
+		margin-bottom: 36px;
+	}
+}
+
+@media all and (min-width: 1180px) {
+	.container {
+		padding-left: 400px !important;
+	}
+
+	.wrapper {
+		margin-left: 0;
+		margin-right: 0;
+
+		&::after {
+			max-width: 1284px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

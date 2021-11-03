@@ -1,0 +1,20 @@
+@import '@/assets/framework/breakpoints';
+
+.section {
+	padding-top: 24px;
+
+	@include tablets {
+		padding-top: 48px;
+	}
+}
+
+.container {
+	@include desktops {
+		display: grid;
+		grid-template-columns: 1fr 296px;
+		grid-template-areas:
+			'top .'
+			'left right';
+		column-gap: 48px;
+	}
+}

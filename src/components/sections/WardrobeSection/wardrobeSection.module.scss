@@ -1,0 +1,42 @@
+@import '@/assets/framework/typography';
+@import '@/assets/base/variables';
+
+.wardrobe {
+}
+
+.wardrobeTitle {
+	margin-bottom: 44px;
+}
+
+.slider {
+	margin-bottom: 16px;
+}
+
+.sliderDotsBlock {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sliderDotsItem {
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background-color: $grayLight;
+
+	&:not(:last-child) {
+		margin-right: 12px;
+	}
+
+	&_active {
+		background-color: $yellow;
+		width: 16px;
+		height: 16px;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.wardrobeTitle {
+		margin-bottom: 56px;
+	}
+}

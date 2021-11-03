@@ -1,0 +1,62 @@
+.icon {
+	font-size: 28px;
+	padding-right: 6px;
+
+	&:not(:last-child) {
+		margin-right: 8px;
+	}
+
+	@include desktops {
+		cursor: pointer;
+		font-size: 32px;
+		transition: background-color 0.3s;
+		position: relative;
+
+		&:hover {
+			background-color: #ffe200;
+		}
+
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+	}
+}
+
+.iconHover {
+	@include desktops {
+		&::after {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 40px;
+			transition: background-color 0.3s;
+			transform: translateY(6px);
+		}
+
+		&:hover {
+			&::after {
+				background-color: #ffe200;
+				z-index: -1;
+			}
+		}
+	}
+}
+
+.iconCount {
+	position: absolute;
+	top: 0;
+	right: -4px;
+	width: 16px;
+	height: 16px;
+	font-size: 8px;
+	line-height: 16px;
+	border-radius: 100%;
+	background-color: #ffe200;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+}

@@ -1,0 +1,23 @@
+@import '@/assets/framework/typography';
+@import '@/assets/framework/breakpoints';
+@import '@/assets/base/variables';
+
+.expanded {
+	@include textBodyFourth;
+
+	color: $grayLighter;
+	padding-left: 16px;
+	padding-right: 16px;
+	transition: 0.3s;
+	opacity: 0;
+
+	@include tablets {
+		@include textBodyThird;
+	}
+}
+
+.expandedOpened {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	opacity: 1;
+}

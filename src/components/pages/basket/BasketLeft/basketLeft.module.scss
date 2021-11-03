@@ -1,0 +1,49 @@
+@import '@/assets/framework/breakpoints';
+
+.list {
+	display: grid;
+	grid-row: 14px;
+}
+
+.left {
+	@include desktops {
+		grid-area: left;
+	}
+}
+
+.basketHeader {
+	display: none;
+	padding-top: 6px;
+
+	@include tablets {
+		display: grid;
+		grid-template-columns: 224px 1fr;
+		column-gap: 32px;
+		align-items: center;
+	}
+
+	@include largeDesktops {
+		grid-template-columns: 296px 1fr;
+		column-gap: 76px;
+	}
+}
+
+.basketName {
+	color: #373737;
+	opacity: 0.5;
+	line-height: 24px;
+}
+
+.basketRight {
+	display: none;
+
+	@include tablets {
+		display: grid;
+		grid-template-columns: 20% 50% 30%;
+		column-gap: 10px;
+	}
+
+	@include largeDesktops {
+		grid-template-columns: 30% 40% 30%;
+	}
+}

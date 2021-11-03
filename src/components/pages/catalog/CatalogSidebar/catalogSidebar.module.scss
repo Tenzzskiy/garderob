@@ -1,0 +1,51 @@
+@import '@/assets/framework/breakpoints';
+@import '@/assets/framework/typography';
+@import '@/assets/base/variables';
+
+.sidebar {
+	display: none;
+
+	@include desktops {
+		display: initial;
+		padding-left: 16px;
+	}
+
+	@include largeDesktops {
+		padding-left: 0;
+	}
+}
+
+.list {
+}
+
+.item {
+	padding-bottom: 12px;
+	border-bottom: 1px solid rgba(64, 74, 76, 0.3);
+
+	&:not(:first-child) {
+		padding-top: 12px;
+	}
+}
+
+.link {
+	color: $grayDarkColor;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.name {
+	@include textHeadingFourth;
+	display: inline-block;
+
+	&Active {
+		background-color: #ffe200;
+		padding-right: 12px;
+	}
+}
+
+.count {
+	opacity: 0.5;
+	font-size: 20px;
+	line-height: 20px;
+}

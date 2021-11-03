@@ -1,0 +1,47 @@
+@import '@/assets/framework/breakpoints';
+
+.section {
+	padding-top: 24px;
+
+	@include desktops {
+		padding-top: 48px;
+	}
+}
+
+.title {
+	margin-bottom: 44px;
+}
+
+.list {
+	display: grid;
+	row-gap: 12px;
+}
+
+@media all and (min-width: 576px) {
+	.list {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 24px;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.list {
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 32px;
+		row-gap: 32px;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.list {
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 32px;
+		row-gap: 32px;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.list {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}

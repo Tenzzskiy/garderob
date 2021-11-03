@@ -1,0 +1,74 @@
+@mixin textHeadingFirst {
+	font-weight: 700;
+	font-size: 64px;
+}
+
+@mixin textHeadingSecond {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 62px;
+}
+
+@mixin textHeadingThird {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 38px;
+}
+
+@mixin textHeadingFourth {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 34px;
+}
+
+@mixin textHeadingFifth {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 26px;
+}
+
+@mixin textSubtitleFirst {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 32px;
+}
+
+@mixin textSubtitleSecond {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+@mixin textSubtitleThird {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+@mixin textBodyFirst {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 26px;
+}
+
+@mixin textBodySecond {
+	font-weight: 400;
+	font-size: 18px;
+}
+
+@mixin textBodyThird {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+@mixin textBodyFourth {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+@mixin textBodyFifth {
+	font-weight: 400;
+	font-size: 12px;
+}

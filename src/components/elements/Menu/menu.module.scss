@@ -1,0 +1,136 @@
+@import '@/assets/base/variables';
+@import '@/assets/framework/typography';
+@import '@/assets/framework/breakpoints';
+
+.menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	height: calc(100vh - 66px);
+	overflow-y: auto;
+	background-color: $light;
+	padding: 16px;
+	display: none;
+
+	@include desktops {
+		display: block;
+		height: initial;
+		position: initial;
+		padding: 0;
+	}
+}
+
+.opened {
+	display: block;
+}
+
+.list {
+	list-style: none;
+
+	@include desktops {
+		height: 64px;
+
+		display: flex;
+		align-items: center;
+	}
+}
+
+.sublist {
+	display: flex;
+	flex-direction: column;
+	margin-left: 16px;
+	margin-top: 16px;
+
+	@include desktops {
+		display: none;
+	}
+}
+
+.subitem {
+	&:not(:last-child) {
+		margin-bottom: 16px;
+	}
+}
+
+.sublink {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.item {
+	&:not(:last-child) {
+		margin-bottom: 16px;
+	}
+
+	@include desktops {
+		&:not(:last-child) {
+			margin-bottom: 0;
+			margin-right: 14px;
+		}
+
+		&Margin {
+			margin-right: 36px !important;
+		}
+	}
+}
+
+.itemMobileHidden {
+	display: none;
+
+	@include desktops {
+		display: initial;
+	}
+}
+
+.itemHidden {
+	@include desktops {
+		display: none;
+	}
+}
+
+.itemTabletsHidden {
+	@media all and (min-width: 992px) and (max-width: 1300px) {
+		display: none;
+	}
+}
+
+.link {
+	@include textSubtitleFirst;
+
+	color: #121212;
+	transition: color 0.3s;
+	cursor: pointer;
+
+	@include desktops {
+		padding: 4px 12px;
+
+		&:hover {
+			background-color: #ffe200;
+		}
+	}
+}
+
+.linkButton {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.iconChevron {
+	font-size: 24px;
+
+	@include desktops {
+		display: none;
+	}
+}
+
+.linkFlex {
+	display: flex;
+	align-items: center;
+}
+
+.textMargin {
+	margin-left: 16px;
+}

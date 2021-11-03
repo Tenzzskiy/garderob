@@ -1,0 +1,23 @@
+.navigationTitle {
+	line-height: 20px;
+	color: #373737;
+	font-size: 14px;
+	margin-bottom: 12px;
+}
+
+.navigationLink {
+	text-decoration: none;
+	color: #373737;
+
+	&:hover {
+		border-bottom: 1px solid #373737;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.navigationLink {
+		&:hover {
+			border-bottom: 1px solid #373737;
+		}
+	}
+}

@@ -1,0 +1,271 @@
+.container {
+	padding-left: 16px;
+	padding-right: 16px;
+
+	@include desktops {
+		padding-left: 0;
+	}
+
+	@include largeDesktops {
+		padding-right: 0;
+	}
+}
+
+.desc {
+	display: flex;
+	align-items: center;
+	margin-bottom: 32px;
+
+	&Icon {
+		font-size: 44px;
+		margin-right: 16px;
+		opacity: 0.5;
+		color: var(--color);
+	}
+
+	&Text {
+		font-weight: 600;
+		line-height: 22px;
+		color: var(--color);
+	}
+}
+
+.color__#FB8F00 {
+	color: #fb8f00;
+}
+
+.additives {
+	margin-bottom: 32px;
+
+	&Title {
+		font-size: 24px;
+		line-height: 34px;
+		font-weight: 600;
+		margin-bottom: 32px;
+	}
+
+	&Block {
+		display: inline-flex;
+		flex-wrap: wrap;
+		margin: -22px 0 0 -32px;
+		width: calc(100% + 32px);
+
+		div {
+			margin: 22px 0 0 32px;
+		}
+	}
+
+	&Item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&ItemIcon {
+		font-size: 44px;
+		color: var(--color);
+		margin-bottom: 22px;
+	}
+
+	&ItemText {
+		font-weight: 600;
+		line-height: 22px;
+	}
+}
+
+.marks {
+	display: flex;
+	align-items: center;
+	margin-bottom: 32px;
+
+	&Text {
+		margin-left: 16px;
+		color: #404a4c;
+		line-height: 20px;
+	}
+}
+
+.button {
+	display: block;
+	text-align: center;
+	border-radius: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	background-color: #ffe200;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 32px;
+	color: #121212;
+	transition: background-color 0.3s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #ffeb4c;
+	}
+
+	&:active {
+		background-color: #f2d80d;
+	}
+
+	@include tablets {
+		max-width: 264px;
+	}
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+}
+
+.footerText {
+	@include textBodyFirst;
+
+	margin-right: 16px;
+}
+
+.box {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	box-shadow: 0px -2px 4px rgba(198, 198, 198, 0.25);
+	z-index: 20;
+}
+
+.boxContainer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding-left: 0;
+	padding-right: 0;
+	grid-template-areas:
+		'first second'
+		'third third';
+
+	@include desktops {
+		padding-left: 16px;
+		padding-right: 16px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas: 'first second third';
+	}
+
+	@include largeDesktops {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.boxItem {
+	padding-top: 13px;
+	padding-bottom: 13px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-left: 16px;
+	padding-right: 16px;
+
+	@include desktops {
+		justify-content: initial;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.boxItemFirst {
+	grid-area: first;
+}
+
+.boxItemSecond {
+	grid-area: second;
+}
+
+.boxItemThird {
+	grid-area: third;
+}
+
+.boxItemCenter {
+	justify-content: center;
+	cursor: pointer;
+}
+
+.boxItemGarderob {
+	background-color: #ffe200;
+}
+
+.boxCountCircle {
+	line-height: 24px;
+	padding-left: 6px;
+	padding-right: 6px;
+	font-size: 18px;
+	background-color: #fff;
+	border-radius: 50%;
+	margin-right: 22px;
+	display: none;
+
+	@include desktops {
+		margin-right: 44px;
+		display: initial;
+	}
+}
+
+.boxNameWrapper {
+	display: flex;
+	flex-direction: column;
+
+	@include largeDesktops {
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+.boxName {
+	@include textBodyFourth;
+	margin-right: 10px;
+
+	@include desktops {
+		margin-right: 44px;
+		@include textBodySecond;
+	}
+}
+
+.boxNameButton {
+	//margin-right: 24px;
+}
+
+.boxNameBold {
+	font-weight: 600;
+}
+
+.boxPrice {
+	@include textSubtitleThird;
+
+	@include tablets {
+		margin-right: 24px;
+	}
+
+	@include desktops {
+		@include textHeadingFourth;
+	}
+}
+
+.boxIcon {
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.boxIconHidden {
+	display: none;
+
+	@include desktops {
+		display: initial;
+	}
+}
+
+.boxTrash {
+	opacity: 0.5;
+	transition: transform 0.3s;
+
+	&:hover {
+		transform: translateY(-4px);
+	}
+}

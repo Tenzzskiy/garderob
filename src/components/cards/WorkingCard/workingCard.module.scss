@@ -1,0 +1,119 @@
+@import '@/assets/framework/typography';
+@import '@/assets/framework/breakpoints';
+@import '@/assets/base/variables';
+
+.wrapper {
+	padding-top: 48px;
+	position: relative;
+	z-index: 5;
+	max-width: 252px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	min-height: 180px;
+
+	&::before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 50%;
+		width: 180px;
+		height: 180px;
+		border-radius: 100%;
+		transform: translateX(-50%);
+		background-color: rgba(var(--color), 1);
+		opacity: 0.3;
+		z-index: -1;
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		top: 32px;
+		left: 0;
+		width: 64px;
+		height: 64px;
+		background-color: rgba(var(--color), 1);
+		opacity: 0.6;
+		border-radius: 100%;
+		z-index: -1;
+	}
+
+	&:not(:last-child) {
+		.hooks {
+			background-image: url('/images/hooks-mobile.png');
+			width: 98px;
+			height: 54px;
+			bottom: -41%;
+			left: 37%;
+			transform: rotate(90deg);
+		}
+	}
+
+	@include tablets {
+		&:nth-child(1) {
+			.hooks {
+				background-image: url('/images/hooks.png');
+				width: 98px;
+				height: 54px;
+				top: 28%;
+				left: 85%;
+				transform: rotate(0);
+			}
+		}
+
+		&:nth-child(2) {
+			.hooks {
+				background-image: url('/images/hooks-mobile.png');
+				width: 98px;
+				height: 54px;
+				bottom: -41%;
+				left: 36%;
+				transform: rotate(90deg);
+			}
+		}
+
+		&:nth-child(3) {
+			.hooks {
+				background-image: url('/images/hooks.png');
+				width: 98px;
+				height: 54px;
+				top: 28%;
+				left: 85%;
+				transform: rotate(0);
+			}
+		}
+	}
+
+	@include media(1176px) {
+		&:not(:last-child) {
+			.hooks {
+				background-image: url('/images/hooks.png');
+				width: 98px;
+				height: 54px;
+				top: 28%;
+				left: 85%;
+				transform: rotate(0);
+			}
+		}
+	}
+}
+
+.hooks {
+	position: absolute;
+	z-index: 10;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.title {
+	@include textHeadingFifth;
+
+	color: $grayDark;
+	margin-bottom: 16px;
+}
+
+.text {
+	@include textBodyThird;
+	max-width: 232px;
+}

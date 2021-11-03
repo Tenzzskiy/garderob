@@ -1,0 +1,107 @@
+.wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99;
+	background-color: $lightBackgroundColor;
+	padding: 20px 16px;
+	display: none;
+}
+
+.wrapperHidden {
+	display: block;
+}
+
+.icon {
+	position: absolute;
+	top: 28px;
+	right: 16px;
+	font-size: 24px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.title {
+	@include textSubtitleFirst;
+
+	margin-bottom: 20px;
+}
+
+.priceBox {
+	flex-direction: column;
+	align-items: flex-start !important;
+	margin-bottom: 14px;
+}
+
+.name {
+	color: #121212;
+	line-height: 20px;
+	margin-right: 16px;
+	margin-bottom: 14px;
+	font-weight: 600;
+}
+
+.input {
+	margin-right: 8px;
+	background: rgba(225, 225, 225, 0.7);
+	border-radius: 8px;
+	outline: none;
+	text-align: center;
+	border: none;
+	width: 128px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	line-height: 20px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.block {
+	margin-bottom: 24px;
+}
+
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.button {
+	padding: 6px 16px;
+	line-height: 20px;
+	color: #373737;
+	border-radius: 8px;
+	background-color: rgba(225, 225, 225, 0.7);
+	margin-right: 9px;
+	margin-bottom: 7px;
+}
+
+.buttonActive {
+	background-color: #fff;
+}
+
+.sendButton {
+	@include textSubtitleFirst;
+
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 100%;
+	text-align: center;
+	background-color: $yellow;
+	border-radius: 8px;
+	color: $grayDark;
+	display: inline-block;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: #ffeb4c;
+	}
+
+	&:active {
+		background-color: #f2d80d;
+	}
+}

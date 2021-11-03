@@ -1,0 +1,102 @@
+@import '@/assets/framework/breakpoints';
+
+.aside {
+	display: none;
+
+	@include desktops {
+		display: initial;
+		grid-area: right;
+	}
+}
+
+.title {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 38px;
+	color: #121212;
+	margin-bottom: 24px;
+}
+
+.priceBlock {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.priceBlockName {
+	color: #121212;
+	font-size: 20px;
+	line-height: 32px;
+	font-weight: 600;
+}
+
+.priceBlockText {
+	font-size: 24px;
+	line-height: 34px;
+	font-weight: 600;
+	color: #121212;
+}
+
+.button {
+	appearance: none;
+	outline: none;
+	border: none;
+	background-color: #ffe200;
+	border-radius: 8px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	text-align: center;
+	width: 100%;
+	font-size: 18px;
+	line-height: 23px;
+	font-weight: 600;
+	transition: background-color 0.3s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #ffeb4c;
+	}
+
+	&:active {
+		background-color: #f2d80d;
+	}
+}
+
+.buttonMargin {
+	margin-bottom: 24px;
+}
+
+.description {
+	padding: 16px;
+	border-radius: 8px;
+	background-color: #fff;
+	font-weight: 400;
+	line-height: 20px;
+	color: #404a4c;
+}
+
+.fixedBlock {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 12px 16px 8px 16px;
+	background-color: #fff;
+	z-index: 5;
+}
+
+.fixedHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.fixedName {
+	@include textSubtitleThird;
+}
+
+.fixedPrice {
+	@include textSubtitleFirst;
+}

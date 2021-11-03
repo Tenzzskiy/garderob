@@ -1,0 +1,40 @@
+@import '@/assets/framework/breakpoints';
+
+.wrapper {
+	margin-bottom: 24px;
+
+	@include desktops {
+		grid-area: top;
+		margin-bottom: 0;
+	}
+}
+
+.block {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.title {
+}
+
+.icon {
+	font-size: 24px;
+	opacity: 0.5;
+	cursor: pointer;
+	transition: transform 0.3s;
+
+	&:hover {
+		transform: translateY(-4px);
+	}
+}
+
+.text {
+	color: #404a4c;
+	line-height: 20px;
+
+	@include desktops {
+		display: none;
+	}
+}

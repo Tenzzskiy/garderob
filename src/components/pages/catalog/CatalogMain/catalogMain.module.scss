@@ -1,0 +1,11 @@
+@import '@/assets/framework/breakpoints';
+
+.main {
+	@include desktops {
+		padding-left: 16px;
+	}
+
+	@include largeDesktops {
+		padding-right: 0;
+	}
+}

@@ -1,0 +1,140 @@
+@import '@/assets/base/variables';
+@import '@/assets/framework/typography';
+@import '@/assets/framework/breakpoints';
+
+.footer {
+	padding-bottom: 80px;
+	margin-top: 80px;
+
+	@include desktops {
+		padding-bottom: 44px;
+		margin-top: 0;
+		padding-top: 44px;
+	}
+}
+
+.footerContainer {
+	padding-left: 16px;
+	padding-right: 16px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		'first second'
+		'third third'
+		'fourth fourth'
+		'fifth fifth';
+
+	@include tablets {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+			'first second third'
+			'fourth fourth fifth';
+	}
+
+	@include desktops {
+		grid-template-columns: 200px 200px 280px 1fr;
+		grid-template-rows: auto 1fr;
+		grid-template-areas:
+			'first second third fourth'
+			'first second third fifth';
+		row-gap: 24px;
+	}
+}
+
+.block {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	border-top: 0.5px solid rgba(179, 179, 179, 0.5);
+
+	@include desktops {
+		padding-top: 0;
+		padding-bottom: 0;
+		border-top: none;
+	}
+
+	&Line {
+		border-top: none;
+		padding-top: 0;
+
+		@include tablets {
+			padding-top: 24px;
+			border-top: 0.5px solid rgba(179, 179, 179, 0.5);
+		}
+
+		@include desktops {
+			padding-top: 0;
+			padding-bottom: 0;
+			border-top: none;
+		}
+	}
+}
+
+.item {
+	&Title {
+		@include textSubtitleThird;
+
+		color: rgb(55, 55, 55);
+		margin-bottom: 20px;
+	}
+
+	&List {
+		list-style: none;
+	}
+
+	&ListItem {
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&ListIconLink {
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+	}
+
+	&ListItemFlex {
+		display: flex;
+	}
+
+	&Link {
+		@include textBodyThird;
+
+		opacity: 0.5;
+		color: #373737;
+		text-decoration: none;
+		transition: opacity 0.3s;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.blockFirst {
+	grid-area: first;
+
+	@include desktops {
+		border-top: none;
+	}
+}
+
+.blockSecond {
+	grid-area: second;
+
+	@include desktops {
+		border-top: none;
+	}
+}
+
+.blockThird {
+	grid-area: third;
+}
+
+.blockFourth {
+	grid-area: fourth;
+}
+
+.blockFifth {
+	grid-area: fifth;
+}

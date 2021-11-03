@@ -1,0 +1,35 @@
+[
+	{
+		"id": 1,
+		"name": "Доступный",
+		"image": "/images/warderob-first-mobile.jpg",
+		"desktopImage": "/images/warderob-first-desktop.jpg",
+		"price": "1 место/20 ₽",
+		"description": "Для легкой одежды, экономный вариант",
+		"color": "orange",
+		"status": 0,
+		"icon": "icon-hat"
+	},
+	{
+		"id": 2,
+		"name": "Двухярусный",
+		"image": "/images/warderob-second-mobile.jpg",
+		"desktopImage": "/images/warderob-second-desktop.jpg",
+		"price": "1 место/25 ₽",
+		"description": "Вместительный, занимает меньше места",
+		"color": "blue",
+		"status": 1,
+		"icon": "icon-wedding-suit"
+	},
+	{
+		"id": 3,
+		"name": "Стильный",
+		"image": "/images/warderob-third-mobile.jpg",
+		"desktopImage": "/images/warderob-third-desktop.jpg",
+		"price": "1 место/35 ₽",
+		"description": "Модно и удобно, выдержит шубу и не только",
+		"color": "pink",
+		"status": 2,
+		"icon": "icon-coat"
+	}
+]

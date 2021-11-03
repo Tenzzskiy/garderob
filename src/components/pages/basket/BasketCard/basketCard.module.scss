@@ -1,0 +1,222 @@
+@import '@/assets/framework/breakpoints';
+
+.card {
+	padding-top: 24px;
+	border-top: 0.5px solid rgba(64, 74, 76, 0.2);
+
+	&:not(:last-child) {
+		margin-bottom: 12px;
+	}
+
+	@include tablets {
+		display: grid;
+		grid-template-columns: 224px 1fr;
+		column-gap: 32px;
+	}
+
+	@include largeDesktops {
+		grid-template-columns: 296px 1fr;
+		column-gap: 76px;
+	}
+}
+
+.header {
+	margin-bottom: 12px;
+
+	@include tablets {
+		margin-bottom: 0;
+	}
+}
+
+.body {
+	@include tablets {
+		display: grid;
+		grid-template-columns: 20% 50% 30%;
+		column-gap: 10px;
+		height: 132px;
+		align-items: center;
+	}
+
+	@include largeDesktops {
+		grid-template-columns: 30% 40% 30%;
+	}
+}
+
+.figure {
+	margin-bottom: 12px;
+	height: 132px;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.titleBlock {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.titleIcon {
+	font-size: 24px;
+	transition: transform 0.3s;
+}
+
+.titleIconActive {
+	transform: rotate(180deg);
+}
+
+.title {
+	font-weight: 600;
+	line-height: 24px;
+	color: #373737;
+}
+
+.additionalBlock {
+	margin-top: 6px;
+}
+
+.additionalItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&:not(:last-child) {
+		margin-bottom: 6px;
+	}
+}
+
+.additionalTitle {
+	font-size: 14px;
+	line-height: 18px;
+	color: #404a4c;
+}
+
+.additionalCount {
+	font-size: 12px;
+	line-height: 20px;
+	color: #404a4c;
+}
+
+.block {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-top: 0.5px solid rgba(64, 74, 76, 0.2);
+
+	@include tablets {
+		padding-top: 0;
+		padding-bottom: 0;
+		border-top: none;
+	}
+}
+
+.blockName {
+	line-height: 22px;
+	font-weight: 600;
+	color: rgba(55, 55, 55, 0.5);
+}
+
+.countName {
+	margin-bottom: 8px;
+}
+
+.priceBlock {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include tablets {
+		display: initial;
+	}
+}
+
+.priceFooter {
+	display: flex;
+	align-items: center;
+
+	@include tablets {
+		justify-content: flex-end;
+	}
+}
+
+.descriptionBlock {
+	display: flex;
+	flex-direction: column;
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 8px;
+
+	@include tablets {
+		grid-template-columns: 1fr;
+		column-gap: 0;
+		row-gap: 8px;
+	}
+}
+
+.buttonsInfo {
+	@include tablets {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.buttonsTitle {
+	display: none;
+
+	@include tablets {
+		display: initial;
+		margin-right: 28px;
+		font-size: 14px;
+		opacity: 0.5;
+		min-width: 60px;
+	}
+}
+
+.price {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+
+	@include tablets {
+		text-align: left;
+	}
+}
+
+.priceText {
+	color: #121212;
+	font-weight: 600;
+	font-size: 18px;
+	margin-bottom: 4px;
+}
+
+.priceDescription {
+	color: #68888c;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.priceMargin {
+	margin-bottom: 0;
+	margin-right: 16px;
+}
+
+.icon {
+	font-size: 24px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.hiddenForTablets {
+	@include tablets {
+		display: none;
+	}
+}

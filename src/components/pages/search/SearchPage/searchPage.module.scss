@@ -1,0 +1,51 @@
+@import '@/assets/framework/breakpoints';
+@import '@/assets/framework/typography';
+
+.section {
+	padding-top: 24px;
+}
+
+.title {
+	margin-bottom: 32px;
+
+	@include desktops {
+		margin-bottom: 56px;
+	}
+}
+
+.list {
+	display: grid;
+	row-gap: 12px;
+
+	@include mobile {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 12px;
+	}
+
+	@include desktops {
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 12px;
+	}
+
+	@include largeDesktops {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 32px;
+	}
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.image {
+	margin-bottom: 16px;
+}
+
+.text {
+	color: #373737;
+	font-size: 20px;
+	line-height: 26px;
+}

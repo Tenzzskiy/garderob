@@ -1,0 +1,33 @@
+@import '@/assets/framework/breakpoints';
+
+.section {
+}
+
+.title {
+	font-size: 32px;
+	line-height: 38px;
+	font-weight: 700;
+	color: #121212;
+	margin-bottom: 32px;
+
+	@include desktops {
+		margin-bottom: 56px;
+	}
+}
+
+.container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.wrapper {
+	@include desktops {
+		display: grid;
+		grid-template-columns: 296px 1fr;
+		column-gap: 12px;
+	}
+
+	@include largeDesktops {
+		column-gap: 32px;
+	}
+}

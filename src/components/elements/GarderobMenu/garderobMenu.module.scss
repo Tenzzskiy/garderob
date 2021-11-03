@@ -1,0 +1,118 @@
+@import '@/assets/framework/typography';
+@import '@/assets/framework/breakpoints';
+
+.menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	padding-top: 32px;
+	padding-bottom: 56px;
+	background-color: #f5f1f1;
+	display: none;
+
+	@include desktops {
+		display: initial;
+	}
+}
+
+.title {
+	@include textHeadingFourth;
+
+	margin-bottom: 24px;
+	color: #121212;
+}
+
+.garderobList {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 32px;
+	row-gap: 32px;
+
+	@include media(1200px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.categoryList {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 8px;
+	row-gap: 8px;
+	grid-template-areas:
+		'first second'
+		'third third'
+		'fourth fifth';
+
+	@include tablets {
+		grid-template-columns: repeat(6, 1fr);
+		column-gap: 24px;
+		row-gap: 24px;
+		grid-template-areas:
+			'third third third second second second'
+			'fifth fifth first first fourth fourth';
+	}
+}
+
+.item {
+	background-color: #fff;
+	display: block;
+
+	&:hover {
+		.more {
+			opacity: 1;
+		}
+	}
+}
+
+.top {
+	display: flex;
+}
+
+.figure {
+	width: 133px;
+	height: 120px;
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.name {
+	margin-top: 24px;
+	margin-left: 32px;
+
+	@include textHeadingThird;
+}
+
+.bottom {
+	padding: 30px 24px 24px 24px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.description {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 26px;
+	color: #121212;
+}
+
+.more {
+	display: flex;
+	align-items: center;
+	color: #373737;
+	opacity: 0.5;
+	transition: 0.3s;
+}
+
+.moreText {
+	line-height: 24px;
+	font-weight: 600;
+}
+
+.icon {
+	font-size: 24px;
+}

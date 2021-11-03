@@ -1,0 +1,50 @@
+@import '@/assets/framework/typography';
+
+.title {
+	margin-bottom: 40px;
+}
+
+.container {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.figure {
+	margin-bottom: 24px;
+
+	max-width: 420px;
+}
+
+.image {
+	width: 100%;
+	height: auto;
+}
+
+@media all and (min-width: 768px) {
+	.figure {
+		max-width: 100%;
+	}
+
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 24px;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.wrapper {
+		grid-template-columns: 43% 1fr;
+		column-gap: 116px;
+	}
+
+	.title {
+		margin-bottom: 56px;
+	}
+}
+
+@media all and (min-width: 1312px) {
+	.wrapper {
+		grid-template-columns: 460px 1fr;
+	}
+}

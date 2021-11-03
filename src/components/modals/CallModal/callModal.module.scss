@@ -1,0 +1,178 @@
+@import '@/assets/framework/typography';
+@import '@/assets/framework/breakpoints';
+@import '@/assets/base/variables';
+
+.wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	display: flex;
+
+	@include desktops {
+		background-color: rgba(0, 0, 0, 0.7);
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.container {
+	height: 100%;
+	width: 100%;
+	padding: 20px 16px;
+	background-color: $lightBackgroundColor;
+	position: absolute;
+
+	@include desktops {
+		height: auto;
+		max-width: 680px;
+		padding: 24px;
+	}
+}
+
+.successContainer {
+	display: grid;
+	justify-items: center;
+	align-content: center;
+	grid-template-rows: repeat(3, auto);
+}
+
+.icon {
+	position: absolute;
+	top: 28px;
+	right: 16px;
+	font-size: 24px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.title {
+	@include textHeadingThird;
+
+	margin-bottom: 20px;
+
+	&Margin {
+		margin-bottom: 56px;
+	}
+}
+
+.image {
+	margin-bottom: 24px;
+}
+
+.text {
+	@include textBodyThird;
+
+	margin-bottom: 20px;
+}
+
+.form {
+}
+
+.formGroup {
+	@include mobile {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 16px;
+		margin-bottom: 12px;
+	}
+}
+
+.inputWrapper {
+	position: relative;
+	margin-bottom: 8px;
+
+	&::after {
+		position: absolute;
+		content: '+7';
+		top: 50%;
+		left: 0;
+		transform: translate(16px, -12px);
+		font-size: 18px;
+		line-height: 24px;
+		color: rgba(55, 55, 55, 0.5);
+	}
+
+	@include mobile {
+		margin-bottom: 0;
+	}
+}
+
+.input {
+	padding-top: 12px;
+	padding-bottom: 11px;
+	width: 100%;
+	outline: none;
+	border: none;
+	border-radius: 8px;
+	background: rgba(225, 225, 225, 0.7);
+	padding-left: 40px;
+	font-size: 18px;
+	line-height: 24px;
+	color: rgba(55, 55, 55, 0.5);
+	border: 0.5px solid transparent;
+	transition: border 0.3s;
+
+	&:hover,
+	&:focus {
+		border: 0.5px solid #373737;
+	}
+
+	&::placeholder {
+		color: rgba(55, 55, 55, 0.5);
+	}
+
+	@include mobile {
+		margin-right: 16px;
+	}
+}
+
+.dropdown {
+	width: 100%;
+	margin-bottom: 12px;
+
+	@include mobile {
+		margin-bottom: 0;
+	}
+}
+
+.info {
+	line-height: 20px;
+	color: #404a4c;
+	margin-bottom: 24px;
+}
+
+.privacy {
+	border-bottom: 1px solid #404a4c;
+}
+
+.button {
+	border-radius: 8px;
+	background-color: #ffe200;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-align: center;
+	appearance: none;
+	border: none;
+	outline: none;
+	width: 100%;
+	cursor: pointer;
+
+	@include textSubtitleFirst;
+
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: #ffeb4c;
+	}
+
+	&:active {
+		background-color: #f2d80d;
+	}
+}
+
+.message {
+	margin-bottom: 12px;
+}

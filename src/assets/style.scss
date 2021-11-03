@@ -1,0 +1,154 @@
+@import '@/assets/vendor/normalize';
+
+@import '@/assets/base/fonts';
+@import '@/assets/base/icons';
+@import '@/assets/base/variables';
+
+@import '@/assets/framework/breakpoints';
+@import '@/assets/framework/layout';
+@import '@/assets/framework/typography';
+
+body {
+	font-family: 'Futura PT';
+	font-weight: 400;
+	background-color: $lightBackgroundColor;
+	color: $grayDarkColor;
+	margin-top: $headerHeight;
+	overflow-x: hidden;
+}
+
+a {
+	color: $grayDarkColor;
+}
+
+.mobileHidden {
+}
+
+.desktopHidden {
+}
+
+.tabletHidden {
+}
+
+.container {
+	@include smallContainer;
+
+	@include largeDesktops {
+		@include largeContainer;
+	}
+}
+
+.section {
+	margin-top: 80px;
+
+	@include desktops {
+		margin-top: 100px;
+	}
+}
+
+.sectionTitle {
+	@include textHeadingThird;
+
+	@include desktops {
+		@include textHeadingSecond;
+	}
+}
+
+.pagination {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pagination__link--disabled a {
+	opacity: 0.4;
+	cursor: default;
+}
+
+.previous,
+.next {
+	a {
+		display: flex;
+		align-items: center;
+	}
+
+	&:focus,
+	&:hover {
+		outline: none;
+		border: none;
+	}
+}
+
+.pagination__item {
+	margin-right: 2px;
+}
+
+.pagination__link {
+	display: inline-block;
+	font-weight: 500;
+	cursor: pointer;
+	text-decoration: none;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: rgba(55, 55, 55, 0.5);
+	border-radius: 4px;
+	font-size: 16px;
+	border-radius: 100%;
+
+	@media all and (min-width: 768px) {
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+	}
+
+	&:focus {
+		outline: none;
+		border: none;
+	}
+}
+
+.pagination__link-a {
+	transition: 0.3s;
+
+	&:hover {
+		background: rgba(255, 226, 0, 0.25);
+	}
+
+	&:active {
+		background: rgba(255, 226, 0, 0.25);
+		color: #fff;
+	}
+}
+
+.pagination__link--active a {
+	display: inline-block;
+	border-radius: 4px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	cursor: default;
+	color: #121212;
+	background: rgba(255, 226, 0, 0.25);
+	border-radius: 100%;
+	font-size: 16px;
+
+	@media all and (min-width: 768px) {
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+	}
+}
+
+.pagination__break {
+	margin-right: 2px;
+}
+
+.text {
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+}

@@ -1,0 +1,38 @@
+.button {
+	appearance: none;
+	border: none;
+	outline: none;
+	text-align: left;
+	padding: 13px 32px;
+	background-color: #fff;
+	border-radius: 8px;
+	line-height: 22px;
+	font-weight: 600;
+	cursor: pointer;
+	margin-bottom: 22px;
+	max-width: 168px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include mobile {
+		margin-bottom: 0;
+		margin-left: initial;
+		margin-right: initial;
+	}
+}
+
+.buttonHidden {
+	visibility: hidden;
+}
+
+.pagination {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	@include mobile {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

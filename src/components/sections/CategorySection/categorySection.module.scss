@@ -1,0 +1,31 @@
+@import '@/assets/framework/typography';
+@import '@/assets/framework/breakpoints';
+@import '@/assets/base/variables';
+
+.catalogTitle {
+	margin-bottom: 44px;
+
+	@include desktops {
+		margin-bottom: 56px;
+	}
+}
+
+.catalogList {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 8px;
+	row-gap: 8px;
+	grid-template-areas:
+		'first second'
+		'third third'
+		'fourth fifth';
+
+	@include tablets {
+		grid-template-columns: repeat(6, 1fr);
+		column-gap: 24px;
+		row-gap: 24px;
+		grid-template-areas:
+			'third third third second second second'
+			'fifth fifth first first fourth fourth';
+	}
+}

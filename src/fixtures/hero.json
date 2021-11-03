@@ -1,0 +1,42 @@
+{
+	"id": 1,
+	"slug": "mebel",
+	"name": "Мебель",
+	"workingSectionColor": "255, 226, 0",
+	"hero": {
+		"title": "Выездной гардероб в аренду",
+		"subtitle": "Организуем зону с удобным размещением одежды гостей на любом мероприятии",
+		"mobileImage": "/images/categories/hero-mobile.png",
+		"desktopImage": "/images/categories/hero-desktop.png"
+	},
+	"description": {
+		"title": "Что это такое?",
+		"text": "Выездной гардероб –  услуга  позволяющая организовать любое мероприятие – деловое, выставочное, спортивное, культурно-развлекательное, вне зависимости от его местоположения, с должным комфортом для гостей.",
+		"image": "/images/description/hero.png",
+		"firstAdvantage": "Качественное оборудование",
+		"secondAdvantage": "Квалифицированный  персонал"
+	},
+	"working": {
+		"stepTitle": "Подбор оборудования",
+		"stepText": "У нас есть 3 вида гардероба на любой вкус, выберите подходящий именно вам"
+	},
+	"advantage": {
+		"rectangleColor": "#FFE200",
+		"maskColor": "#FB8F00"
+	},
+	"items": [],
+	"seo": [
+		{
+			"id": 1,
+			"title": "SEO-текст",
+			"image": "/images/seo-first.png",
+			"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit offici consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.st sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+		},
+		{
+			"id": 2,
+			"title": "SEO-текст",
+			"image": "/images/seo-second.png",
+			"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit offici consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.st sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+		}
+	]
+}

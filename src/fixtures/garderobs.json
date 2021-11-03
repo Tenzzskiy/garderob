@@ -1,0 +1,68 @@
+[
+	{
+		"id": 1,
+		"index": 0,
+		"name": "primary",
+		"title": "Гардероб доступный",
+		"images": ["/images/garderob.jpg", "/images/garderob.jpg", "/images/garderob.jpg"],
+		"color": "#FB8F00",
+		"icon": "icon-hat",
+		"description": "Для легкой одежды, экономный вариант",
+		"priceDescription": "Со 2 дня 15₽/место",
+		"price": 20,
+		"time": "место",
+		"addedDops": [],
+		"info": {
+			"count": "мест",
+			"time": "дн",
+			"countDesktop": "Мест",
+			"timeDesktop": "Дней",
+			"minTime": 1,
+			"priceForTime": 15
+		}
+	},
+	{
+		"id": 2,
+		"index": 1,
+		"name": "secondary",
+		"title": "Гардероб двухярусный",
+		"images": ["/images/garderob.jpg", "/images/garderob.jpg", "/images/garderob.jpg"],
+		"color": "#1C82AE",
+		"icon": "icon-wedding-suit",
+		"description": "Вместительный, занимает меньше места",
+		"priceDescription": "Со 2 дня 20₽/место",
+		"addedDops": [],
+		"price": 25,
+		"time": "место",
+		"info": {
+			"count": "мест",
+			"time": "дн",
+			"countDesktop": "Мест",
+			"timeDesktop": "Дней",
+			"minTime": 1,
+			"priceForTime": 20
+		}
+	},
+	{
+		"id": 3,
+		"index": 2,
+		"name": "thirdary",
+		"title": "Гардероб стильный",
+		"images": ["/images/garderob.jpg", "/images/garderob.jpg", "/images/garderob.jpg"],
+		"color": "#FF377F",
+		"icon": "icon-coat",
+		"description": "Модно и удобно, выдержит шубу и не только",
+		"priceDescription": "Со 2 дня 25₽/место",
+		"price": 30,
+		"addedDops": [],
+		"time": "место",
+		"info": {
+			"count": "мест",
+			"time": "дн",
+			"countDesktop": "Мест",
+			"timeDesktop": "Дней",
+			"minTime": 1,
+			"priceForTime": 25
+		}
+	}
+]

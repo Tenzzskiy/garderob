@@ -1,0 +1,193 @@
+@import '@/assets/framework/typography';
+@import '@/assets/framework/breakpoints';
+@import '@/assets/base/variables';
+
+.section {
+	background: $yellow;
+	padding-bottom: 24px;
+	padding-top: 20px;
+	background-image: url(/images/contactMobile.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@include tablets {
+		background-image: url(/images/contact.png);
+		padding-top: 40px;
+		padding-bottom: 44px;
+	}
+
+	@include desktops {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	@include media(1700px) {
+		background-size: 140% 120%;
+	}
+}
+
+.container {
+	@include tablets {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding-left: 40px;
+		padding-right: 24px;
+	}
+}
+
+.figure {
+	text-align: center;
+
+	@include tablets {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@include desktops {
+		justify-content: flex-start;
+	}
+}
+
+.title {
+	@include textHeadingThird;
+
+	text-align: center;
+	margin-bottom: 20px;
+	color: $grayDark;
+
+	@include tablets {
+		text-align: left;
+	}
+}
+
+.subtitle {
+	@include textBodyThird;
+
+	margin-bottom: 12px;
+	text-align: center;
+	color: $grayDark;
+
+	@include tablets {
+		text-align: left;
+	}
+
+	@include desktops {
+		@include textBodyFirst;
+
+		margin-bottom: 24px;
+	}
+}
+
+.number {
+	@include textHeadingThird;
+
+	margin-bottom: 16px;
+	text-align: center;
+	display: block;
+	color: #000;
+	text-decoration: none;
+
+	@include tablets {
+		text-align: left;
+	}
+
+	@include desktops {
+		@include textHeadingSecond;
+	}
+}
+
+.socialsBlock {
+	margin-bottom: 24px;
+	max-width: 274px;
+	margin-left: auto;
+	margin-right: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 16px;
+
+	@include tablets {
+		margin-left: unset;
+		margin-right: unset;
+	}
+}
+
+.button {
+	@include textBodyThird;
+
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 8px;
+	padding: 7px 12px;
+
+	&Blue {
+		background-color: #259cd8;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: darken(#259cd8, 5%);
+		}
+	}
+
+	&Green {
+		background-color: #2cc54e;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: darken(#2cc54e, 5%);
+		}
+	}
+
+	&Text {
+		min-width: 77px;
+		margin-right: 4px;
+	}
+
+	&Icon {
+		height: 16px;
+		width: 16px;
+	}
+}
+
+.text {
+	text-align: center;
+	color: $grayDark;
+	font-size: 18px;
+	line-height: 24px;
+
+	@include tablets {
+		text-align: left;
+	}
+
+	@include desktops {
+		font-size: 20px;
+		line-height: 26px;
+	}
+}
+
+.textButton {
+	border-bottom: 1px solid $grayDark;
+	cursor: pointer;
+}
+
+.image {
+	@include tablets {
+		width: 280px;
+		height: 280px;
+	}
+
+	@include desktops {
+		width: 400px;
+		height: 400px;
+	}
+}
+
+.right {
+	@include desktops {
+		padding-top: 40px;
+		padding-bottom: 44px;
+		max-width: 514px;
+	}
+}

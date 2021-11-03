@@ -1,0 +1,38 @@
+@import '@/assets/framework/breakpoints';
+
+.filter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.filterTitle {
+	font-size: 24px;
+	line-height: 34px;
+	color: #121212;
+	padding-right: 12px;
+	background-color: #ffe200;
+	font-weight: 600;
+
+	@include desktops {
+		display: none;
+	}
+}
+
+.filterIcon {
+	font-size: 24px;
+
+	@include desktops {
+		display: none;
+	}
+}
+
+.priceBox,
+.dropdown {
+	display: none !important;
+
+	@include desktops {
+		display: flex !important;
+	}
+}
