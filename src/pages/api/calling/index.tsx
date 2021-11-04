@@ -28,7 +28,7 @@ export default function (req: NextApiRequest, res: NextApiResponse) {
 		});
 
 		const mailData = {
-			from: '"Выездной Гардероб77" <info@vyezdnoy-garderob77.ru>',
+			from: '"Выездной Гардероб 77" <info@vyezdnoy-garderob77.ru>',
 			to: email,
 			subject: 'Заявка с сайта',
 			text: 'Заявка с сайта Выездной Гардероб 77',
