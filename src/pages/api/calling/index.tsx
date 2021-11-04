@@ -28,10 +28,10 @@ export default function (req: NextApiRequest, res: NextApiResponse) {
 		});
 
 		const mailData = {
-			from: '"Фотозона 77" <info@fotozona77.ru>',
+			from: '"Выездной Гардероб77" <info@vyezdnoy-garderob77.ru>',
 			to: email,
 			subject: 'Заявка с сайта',
-			text: 'Заявка с сайта Фотозона 77',
+			text: 'Заявка с сайта Выездной Гардероб 77',
 			html: `<div style="padding-top: 10px; padding-bottom: 10px">${select} на номер +7 ${phone}</div>`
 		};
 
