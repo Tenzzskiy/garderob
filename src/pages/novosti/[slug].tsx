@@ -22,7 +22,7 @@ const NewsItem: NextPage<Props> = ({news}) => {
 					rel='alternate'
 					type='application/rss+xml'
 					title={`${news.title}`}
-					href='https://fotozona77.ru/rss'
+					href='https://vyezdnoy-garderob77.ru/rss'
 				/>
 			</Head>
 			<NewsItemPage news={news} />
