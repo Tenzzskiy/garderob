@@ -92,10 +92,10 @@ export default function (req, res) {
 		// }
 
 		const mailData = {
-			from: '"Фотозона 77" <info@fotozona77.ru>',
+			from: '"Выездной Гардероб 77" <info@vyezdnoy-garderob77.ru>',
 			to: email,
 			subject: 'Заявка с сайта',
-			text: 'Заявка с сайта Фотозона 77',
+			text: 'Заявка с сайта Выездной Гардероб 77',
 			html: orderMessage
 		};
 
