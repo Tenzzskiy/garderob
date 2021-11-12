@@ -2,6 +2,8 @@
 	"id": 1,
 	"slug": "mebel",
 	"name": "Мебель",
+	"title": "",
+	"desc": "",
 	"workingSectionColor": "255, 226, 0",
 	"hero": {
 		"title": "Выездной гардероб в аренду",
