@@ -6,12 +6,19 @@ const Policy: NextPage = () => {
 	return (
 		<>
 			<Head>
-				<title itemProp='headline'></title>
-				<meta itemProp='description' name='description' content='' />
-				<meta property='og:title' content='' />
-				<meta property='og:description' content='' />
-				<meta property='og:url' content='' />
-				<link rel='canonical' href='' />
+				<title itemProp='headline'>Политика персональных данных - vyezdnoy-garderob77.ru</title>
+				<meta property='og:title' content='Политика персональных данных - vyezdnoy-garderob77.ru' />
+				<meta
+					itemProp='description'
+					name='description'
+					content='Здесь вы можете прочитать нашу политику конфиденциональности'
+				/>
+				<meta
+					property='og:description'
+					content='Здесь вы можете прочитать нашу политику конфиденциональности'
+				/>
+				<meta property='og:url' content='https://vyezdnoy-garderob77.ru/policy' />
+				<link rel='canonical' href='https://vyezdnoy-garderob77.ru/policy' />
 			</Head>
 			<PolicyPage />
 			<QuestionsSection />

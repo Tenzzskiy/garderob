@@ -14,6 +14,8 @@ export interface INewsCard {
 	id: number;
 	exceprt: string;
 	title: string;
+	desc: string;
+	name: string;
 	text: string;
 	date: string;
 	image: string;
@@ -96,6 +98,8 @@ export type CategoryPageType = {
 	id: number;
 	slug: string;
 	name: string;
+	title: string;
+	desc: string;
 	workingSectionColor: string;
 	description: DescriptionType;
 	hero: HeroType;

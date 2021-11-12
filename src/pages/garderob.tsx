@@ -13,12 +13,12 @@ const Garderob: NextPage<Props> = ({garderobs}) => {
 	return (
 		<>
 			<Head>
-				<title itemProp='headline'></title>
-				<meta itemProp='description' name='description' content='' />
-				<meta property='og:title' content='' />
-				<meta property='og:description' content='' />
-				<meta property='og:url' content='' />
-				<link rel='canonical' href='' />
+				<title itemProp='headline'>Выездной гардероб</title>
+				<meta itemProp='description' name='description' content='Выездной гардероб' />
+				<meta property='og:title' content='Выездной гардероб' />
+				<meta property='og:description' content='Выездной гардероб' />
+				<meta property='og:url' content='https://vyezdnoy-garderob77.ru/garderob' />
+				<link rel='canonical' href='https://vyezdnoy-garderob77.ru/garderob' />
 			</Head>
 			<GarderobPage garderobs={garderobs} />
 			<QuestionsSection />

@@ -6,7 +6,7 @@ const NewsItemPage = ({news}: Props): JSX.Element => {
 	return (
 		<section className={styles.section}>
 			<div className='container'>
-				<NewsItemNavigation title={news.title} />
+				<NewsItemNavigation title={news.name} />
 				<NewsItemMain news={news} />
 			</div>
 		</section>

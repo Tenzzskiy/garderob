@@ -14,8 +14,8 @@ const SeoSection = ({seo}: Props): JSX.Element => {
 									<img className={styles.image} src={item.image} alt={item.text} />
 								</figure>
 								<div className={styles.container}>
-									<p className={styles.title}>{item.title}</p>
-									<p className={styles.text}>{item.text}</p>
+									<h2 className={styles.title}>{item.title}</h2>
+									<div className={styles.text} dangerouslySetInnerHTML={{__html: item.text}}></div>
 								</div>
 							</div>
 						</div>

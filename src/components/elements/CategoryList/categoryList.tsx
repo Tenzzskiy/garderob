@@ -6,7 +6,7 @@ import {Props} from './categoryList.props';
 const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 	return (
 		<>
-			<Link href='/catalog/kamera-xraneniya' passHref>
+			<Link href='/catalog/kamery-hraneniya-v-arendu' passHref>
 				<a className={classNames(styles.catalogItem, styles.catalogFirstItem)} onClick={onCloseMenu}>
 					<div className={classNames(styles.catalogItemContainer, styles.catalogFirstItemContainer)}>
 						<figure className={classNames(styles.catalogItemFigure, styles.catalogFirstItemFigure)}>
@@ -25,7 +25,7 @@ const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 					</div>
 				</a>
 			</Link>
-			<Link href='/catalog/personal' passHref>
+			<Link href='/catalog/personal-na-meropriyatie' passHref>
 				<a className={classNames(styles.catalogItem, styles.catalogSecondItem)} onClick={onCloseMenu}>
 					<div className={classNames(styles.catalogItemContainer, styles.catalogSecondItemContainer)}>
 						<div className={styles.catalogItemInfo}>
@@ -40,7 +40,7 @@ const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 					</div>
 				</a>
 			</Link>
-			<Link href='/catalog/mebel' passHref>
+			<Link href='/catalog/arenda-mebeli' passHref>
 				<a className={classNames(styles.catalogItem, styles.catalogThirdItem)} onClick={onCloseMenu}>
 					<div className={classNames(styles.catalogItemContainer, styles.catalogThirdItemContainer)}>
 						<figure className={classNames(styles.catalogItemFigure, styles.catalogThirdItemFigure)}>
@@ -53,7 +53,7 @@ const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 					</div>
 				</a>
 			</Link>
-			<Link href='/catalog/grimernaya' passHref>
+			<Link href='/catalog/oborudovanie-dlya-grimernoy' passHref>
 				<a className={classNames(styles.catalogItem, styles.catalogFourthItem)} onClick={onCloseMenu}>
 					<div className={classNames(styles.catalogItemContainer, styles.catalogFourthItemContainer)}>
 						<div className={styles.catalogItemInfo}>

@@ -8,7 +8,7 @@ const NewsCard = ({className, card, isFull = false}: Props): JSX.Element => {
 		if (isFull) {
 			return (
 				<div className={styles.body}>
-					<p className={styles.name}>{card.title}</p>
+					<p className={styles.name}>{card.name}</p>
 					<p className={styles.time}>{card.date}</p>
 					<p className={styles.text}>{card.exceprt}</p>
 				</div>
@@ -16,7 +16,7 @@ const NewsCard = ({className, card, isFull = false}: Props): JSX.Element => {
 		} else {
 			return (
 				<div className={styles.bottom}>
-					<p className={styles.name}>{card.title}</p>
+					<p className={styles.name}>{card.name}</p>
 					<span className={classNames(styles.icon, 'icon-chevron-right')}></span>
 				</div>
 			);

@@ -12,12 +12,16 @@ const Search: NextPage<Props> = ({items}) => {
 	return (
 		<>
 			<Head>
-				<title itemProp='headline'></title>
-				<meta itemProp='description' name='description' content='' />
-				<meta property='og:title' content='' />
-				<meta property='og:description' content='' />
-				<meta property='og:url' content='' />
-				<link rel='canonical' href='' />
+				<title itemProp='headline'>Поиск по запросу на сайте - vyezdnoy-garderob77.ru</title>
+				<meta property='og:title' content='Поиск по запросу на сайте - vyezdnoy-garderob77.ru' />
+				<meta
+					itemProp='description'
+					name='description'
+					content='Здесь вы можете найти все, что вы ищете на нашем сайте'
+				/>
+				<meta property='og:description' content='Здесь вы можете найти все, что вы ищете на нашем сайте' />
+				<meta property='og:url' content='https://vyezdnoy-garderob77.ru/search' />
+				<link rel='canonical' href='https://vyezdnoy-garderob77.ru/search' />
 			</Head>
 			<SearchPage items={items} />
 			<QuestionsSection />

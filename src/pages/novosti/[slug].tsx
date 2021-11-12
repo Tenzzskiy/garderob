@@ -12,17 +12,17 @@ const NewsItem: NextPage<Props> = ({news}) => {
 	return (
 		<>
 			<Head>
-				<title itemProp='headline'></title>
-				<meta itemProp='description' name='description' content='' />
-				<meta property='og:title' content='' />
-				<meta property='og:description' content='' />
-				<meta property='og:url' content='' />
-				<link rel='canonical' href='' />
+				<title itemProp='headline'>{news.title}</title>
+				<meta itemProp='description' name='description' content={news.desc} />
+				<meta property='og:title' content={news.title} />
+				<meta property='og:description' content={news.desc} />
+				<meta property='og:url' content={`https://vyezdnoy-garderob77.ru/novosti/${news.slug}`} />
+				<link rel='canonical' href={`https://vyezdnoy-garderob77.ru/novosti/${news.slug}`} />
 				<link
 					rel='alternate'
 					type='application/rss+xml'
 					title={`${news.title}`}
-					href='https://fotozona77.ru/rss'
+					href='https://vyezdnoy-garderob77.ru/rss'
 				/>
 			</Head>
 			<NewsItemPage news={news} />

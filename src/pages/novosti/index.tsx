@@ -12,12 +12,24 @@ const News: NextPage<Props> = ({news}) => {
 	return (
 		<>
 			<Head>
-				<title itemProp='headline'></title>
-				<meta itemProp='description' name='description' content='' />
-				<meta property='og:title' content='' />
-				<meta property='og:description' content='' />
-				<meta property='og:url' content='' />
-				<link rel='canonical' href='' />
+				<title itemProp='headline'>
+					Новости и фотоотчёты с прошедших мероприятий компании vyezdnoy-garderob77
+				</title>
+				<meta
+					property='og:title'
+					content='Новости и фотоотчёты с прошедших мероприятий компании vyezdnoy-garderob77'
+				/>
+				<meta
+					itemProp='description'
+					name='description'
+					content='Наше портфолио с выполненными заказами на праздниках в Москве и Московской облости, новости и информация об акциях и скидках компании.'
+				/>
+				<meta
+					property='og:description'
+					content='Наше портфолио с выполненными заказами на праздниках в Москве и Московской облости, новости и информация об акциях и скидках компании.'
+				/>
+				<meta property='og:url' content='https://vyezdnoy-garderob77.ru/novosti' />
+				<link rel='canonical' href='https://vyezdnoy-garderob77.ru/novosti' />
 			</Head>
 			<NewsPage news={news} />
 			<QuestionsSection />

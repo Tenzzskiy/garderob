@@ -19,7 +19,7 @@ const CatalogMain = ({category}: Props): JSX.Element => {
 		handleChangePage,
 		handleShowMore,
 		handleSetSort
-	} = usePagination<CategoryCardType>(category.items, 1);
+	} = usePagination<CategoryCardType>(category.items, 9);
 
 	return (
 		<div className={styles.main}>

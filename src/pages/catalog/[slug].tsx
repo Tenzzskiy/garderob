@@ -22,12 +22,12 @@ const Catalog: NextPage<Props> = ({category, categories}) => {
 	return (
 		<>
 			<Head>
-				<title itemProp='headline'></title>
-				<meta itemProp='description' name='description' content='' />
-				<meta property='og:title' content='' />
-				<meta property='og:description' content='' />
-				<meta property='og:url' content='' />
-				<link rel='canonical' href='' />
+				<title itemProp='headline'>{category.title}</title>
+				<meta itemProp='description' name='description' content={category.desc} />
+				<meta property='og:title' content={category.title} />
+				<meta property='og:description' content={category.desc} />
+				<meta property='og:url' content={`https://vyezdnoy-garderob77.ru/catalog/${category.slug}`} />
+				<link rel='canonical' href={`https://vyezdnoy-garderob77.ru/catalog/${category.slug}`} />
 			</Head>
 			<HeroSection hero={category.hero} />
 			<DescriptionSection description={category.description} />

@@ -16,7 +16,7 @@ const blogPostsRssXml = news => {
         <title>${post.title}</title>
         <link>https://vyezdnoy-garderob77.ru/novosti/${post.slug}</link>   
         <pubDate>${getDate(post.date)}</pubDate>
-        <author>Фотозона 77</author>
+        <author>Выездной гардероб 77</author>
         <yandex:related/>
         <turbo:content>
             <![CDATA[
@@ -44,8 +44,7 @@ const getRssXml = blogPosts => {
         <title>Выездной гардероб 77</title>
         <link>https://vyezdnoy-garderob77.ru</link>
         <description>
-            Заказать фотозону на праздничное мероприятие, свадьбу или день рождения с доставкой и монтажом. Услуги изготовления, большой выбор оформления и декора по доступной цене.
-        </description>
+            Организация выездного гардероба позволит на любом мероприятии создать необходимое количество мест для комфортного размещения одежды людей.        </description>
         <language>ru</language>
         ${rssItemsXml}
     </channel>

@@ -60,6 +60,18 @@
 
 .text {
 	@include textBodyThird;
+
+	p {
+		margin-bottom: 20px;
+	}
+
+	ul {
+		margin-bottom: 20px;
+	}
+
+	li {
+		margin-left: 20px;
+	}
 }
 
 .figure {

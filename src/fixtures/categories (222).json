@@ -1,0 +1,386 @@
+[
+	{
+		"id": 1,
+		"slug": "mebel",
+		"title": "Title",
+		"desc": "Desc",
+		"name": "Мебель",
+		"workingSectionColor": "255, 173, 154",
+		"hero": {
+			"title": "Мебель в аренду",
+			"subtitle": "Диваны, столы, стулья, банкетки... и не только! Мебель на любой вкус в аренду от 6 часов",
+			"mobileImage": "/images/categories/mebel-mobile.png",
+			"desktopImage": "/images/categories/mebel.png"
+		},
+		"description": {
+			"title": "Мебель на любое мероприятие",
+			"text": "Ваше событие станет более удобным и комфортным для гостей благодаря современной мебели. У нас вы найдете все необходимое для организации свадьбы, выставки, конференции или любого праздника",
+			"image": "/images/description/mebel.png",
+			"firstAdvantage": "Качественная мебель",
+			"secondAdvantage": "Большой ассортимент"
+		},
+		"working": {
+			"stepTitle": "Подбор мебели",
+			"stepText": "У нас есть большой ассортимент мебели на любой вкус"
+		},
+		"advantage": {
+			"rectangleColor": "#FFAD9A",
+			"maskColor": "#EDE9E9"
+		},
+		"items": [
+			{
+				"id": 1,
+				"title": "Хостес",
+				"image": "/images/garderob-item.jpg",
+				"price": 8000,
+				"time": "6 ч",
+				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 2,
+				"title": "Зеркало 2",
+				"image": "/images/garderob-item.jpg",
+				"price": 8000,
+				"time": "3 ч",
+				"priceDescription": "Со второго дня 800₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 3,
+				"title": "Зеркало 3",
+				"image": "/images/garderob-item.jpg",
+				"price": 8000,
+				"time": "3 ч",
+				"priceDescription": "Со второго дня 800₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 4,
+				"title": "Зеркало 4",
+				"image": "/images/garderob-item.jpg",
+				"price": 8000,
+				"time": "3 ч",
+				"priceDescription": "Со второго дня 800₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 5,
+				"title": "Зеркало 5",
+				"image": "/images/garderob-item.jpg",
+				"price": 8000,
+				"time": "3 ч",
+				"priceDescription": "Со второго дня 800₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			}
+		],
+		"seo": [
+			{
+				"id": 6,
+				"title": "SEO-текст",
+				"image": "/images/seo-first.png",
+				"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit offici consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.st sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+			},
+			{
+				"id": 7,
+				"title": "SEO-текст",
+				"image": "/images/seo-second.png",
+				"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit offici consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.st sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+			}
+		]
+	},
+	{
+		"id": 2,
+		"slug": "personal",
+		"name": "Персонал",
+		"workingSectionColor": "125, 223, 211",
+		"hero": {
+			"title": "Персонал",
+			"subtitle": "Гардеробщики, хостес, клинеры... Поможем вам с персоналом на любое мероприятие",
+			"mobileImage": "/images/categories/personal-mobile.png",
+			"desktopImage": "/images/categories/personal.png"
+		},
+		"description": {
+			"title": "Персонал на любое мероприятие",
+			"text": "Правильный подбор персонала - это основное в организации события. От задействованных людей зависит, как пройдет ваше мероприятие. Наш персонал коммуникабелен, презентабельно выглядит и проинструктирован, что позволит провести мероприятие без неприятных моментов",
+			"image": "/images/description/personal.png",
+			"firstAdvantage": "Квалифицированный персонал",
+			"secondAdvantage": "Большой ассортимент"
+		},
+		"working": {
+			"stepTitle": "Подбор персонала",
+			"stepText": "Квалифицированный персонал на любое мероприятие"
+		},
+		"advantage": {
+			"rectangleColor": "#7DDFD3",
+			"maskColor": "#EDE9E9"
+		},
+		"items": [
+			{
+				"id": 8,
+				"title": "Зеркало",
+				"image": "/images/garderob-item.jpg",
+				"price": 6000,
+				"time": "6 ч",
+				"priceDescription": "Со второго дня 800₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 9,
+				"title": "Гардеробщик",
+				"image": "/images/garderob-item.jpg",
+				"price": 1000,
+				"time": "6 ч",
+				"priceDescription": "+1 час 100₽",
+				"isGarderob": true,
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 100
+				}
+			}
+		],
+		"seo": [
+			{
+				"id": 1,
+				"title": "SEO-текст",
+				"image": "/images/seo-first.png",
+				"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit offici consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.st sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+			},
+			{
+				"id": 2,
+				"title": "SEO-текст",
+				"image": "/images/seo-second.png",
+				"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit offici consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.st sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+			}
+		]
+	},
+	{
+		"id": 3,
+		"slug": "dezinfeksiya",
+		"title": "Title",
+		"desc": "Desc",
+		"name": "Дезинфекция",
+		"workingSectionColor": "163, 156, 232",
+		"hero": {
+			"title": "Дезинфекция",
+			"subtitle": "Санитайзеры, термометры, маски, перчатки.. без чего уже не обходится ни одно мероприятие и все это есть у нас!",
+			"mobileImage": "/images/categories/dezinfeksiya-mobile.png",
+			"desktopImage": "/images/categories/dezinfeksiya.png"
+		},
+		"description": {
+			"title": "Для чего нужна дезинфекция?",
+			"text": "Здоровье гостей - наш главный приоритет. Проведем работы по дезинфекции мероприятия, и предоставим оборудование для поддержания санитарной чистоты. Измерение температуры гостей, рамки дезинфекции и мобильные санитайзеры не позволят испортить инфекции праздник",
+			"image": "/images/description/dezinfeksiya.png",
+			"firstAdvantage": "Качественное оборудование",
+			"secondAdvantage": "Большой ассортимент"
+		},
+		"working": {
+			"stepTitle": "Подбор оборудования",
+			"stepText": "Поможем вам определиться с наилучшим вариантом дезинфекции помещения"
+		},
+		"advantage": {
+			"rectangleColor": "#A39CE8",
+			"maskColor": "#EDE9E9"
+		},
+		"items": [
+			{
+				"id": 10,
+				"title": "Зеркало",
+				"image": "/images/garderob-item.jpg",
+				"price": 6000,
+				"time": "2 ч",
+				"priceDescription": "Со второго дня 800₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			}
+		],
+		"seo": [
+			{
+				"id": 1,
+				"title": "SEO-текст",
+				"image": "/images/seo-first.png",
+				"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit offici consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.st sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+			},
+			{
+				"id": 2,
+				"title": "SEO-текст",
+				"image": "/images/seo-second.png",
+				"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit offici consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.st sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+			}
+		]
+	},
+	{
+		"id": 4,
+		"slug": "grimernaya",
+		"title": "Title",
+		"desc": "Desc",
+		"name": "Гримерная",
+		"workingSectionColor": "212, 220, 252",
+		"hero": {
+			"title": "Все для гримерной в аренду",
+			"subtitle": "Зеркала с подстветкой, гримерные столики, мебель.. и не только!",
+			"mobileImage": "/images/categories/grimernaya-mobile.png",
+			"desktopImage": "/images/categories/grimernaya.png"
+		},
+		"description": {
+			"title": "Обустроим вашу гримерную",
+			"text": "На любом мероприятии, предусматривающем приглашение звезд, моделей или актрис, необходимо организовать комфортное место в гримерной для подготовки. В нашей компании широкий ассортимент мебели, который позволит оборудовать гримерную всем необходимым",
+			"image": "/images/description/grimernaya.png",
+			"firstAdvantage": "Качественная мебель",
+			"secondAdvantage": "Большой ассортимент"
+		},
+		"working": {
+			"stepTitle": "Подбор оборудования",
+			"stepText": "Поможем вам определиться с наилучшим вариантом дезинфекции помещения"
+		},
+		"advantage": {
+			"rectangleColor": "#D4DCFC",
+			"maskColor": "#EDE9E9"
+		},
+		"items": [
+			{
+				"id": 11,
+				"title": "Зеркало",
+				"image": "/images/garderob-item.jpg",
+				"price": 6000,
+				"time": "2 ч",
+				"priceDescription": "Со второго дня 800₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			}
+		],
+		"seo": [
+			{
+				"id": 1,
+				"title": "SEO-текст",
+				"image": "/images/seo-first.png",
+				"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit offici consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.st sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+			},
+			{
+				"id": 2,
+				"title": "SEO-текст",
+				"image": "/images/seo-second.png",
+				"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit offici consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.st sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+			}
+		]
+	},
+	{
+		"id": 5,
+		"slug": "kamera-xraneniya",
+		"title": "Title",
+		"desc": "Desc",
+		"name": "Камера хранения",
+		"workingSectionColor": "254, 233, 204",
+		"hero": {
+			"title": "Камера хранения в аренду",
+			"subtitle": "Камеры хранения, ячейки, сейфы... и не только!",
+			"mobileImage": "/images/categories/kamera-mobile.png",
+			"desktopImage": "/images/categories/kamera.png"
+		},
+		"description": {
+			"title": "Безопасность превыше всего",
+			"text": "Предоставим необходимую мебель для организации современного гардероба, где гости с удобством смогут разместить свою одежду. Наша компания доставит оборудование в место ",
+			"image": "/images/description/kamera.png",
+			"firstAdvantage": "Качественно",
+			"secondAdvantage": "Большой ассортимент"
+		},
+		"working": {
+			"stepTitle": "Подбор оборудования",
+			"stepText": "Ячейки, камеры хранения на любой вкус"
+		},
+		"advantage": {
+			"rectangleColor": "#FEE9CC",
+			"maskColor": "#EDE9E9"
+		},
+		"items": [
+			{
+				"id": 12,
+				"title": "Зеркало",
+				"image": "/images/garderob-item.jpg",
+				"price": 6000,
+				"time": "2 ч",
+				"priceDescription": "Со второго дня 800₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			}
+		],
+		"seo": [
+			{
+				"id": 1,
+				"title": "SEO-текст",
+				"image": "/images/seo-first.png",
+				"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit offici consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.st sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+			},
+			{
+				"id": 2,
+				"title": "SEO-текст",
+				"image": "/images/seo-second.png",
+				"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit offici consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.st sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.llamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+			}
+		]
+	}
+]

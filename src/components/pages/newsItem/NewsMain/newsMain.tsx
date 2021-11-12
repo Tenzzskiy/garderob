@@ -6,7 +6,7 @@ import Link from 'next/link';
 const NewsMain = ({news}: Props): JSX.Element => {
 	return (
 		<div className={styles.news}>
-			<p className={styles.newsTitle}>{news.title}</p>
+			<p className={styles.newsTitle}>{news.name}</p>
 			<p className={styles.newsDate}>
 				<span className={styles.newsDateName}>Дата публикации</span>
 				<span className={styles.newsDateText}>{news.date}</span>
