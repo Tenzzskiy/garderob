@@ -64,22 +64,22 @@ const FooterSection = (): JSX.Element => {
 						<p className={styles.itemTitle}>Каталог</p>
 						<ul className={styles.itemList}>
 							<li className={styles.itemListItem}>
-								<Link href='/catalog/mebel' passHref>
+								<Link href='/catalog/arenda-mebeli' passHref>
 									<a className={styles.itemLink}>Мебель</a>
 								</Link>
 							</li>
 							<li className={styles.itemListItem}>
-								<Link href='/catalog/kamera-xraneniya' passHref>
+								<Link href='/catalog/kamery-hraneniya-v-arendu' passHref>
 									<a className={styles.itemLink}>Камера хранения</a>
 								</Link>
 							</li>
 							<li className={styles.itemListItem}>
-								<Link href='/catalog/personal' passHref>
+								<Link href='/catalog/personal-na-meropriyatie' passHref>
 									<a className={styles.itemLink}>Персонал</a>
 								</Link>
 							</li>
 							<li className={styles.itemListItem}>
-								<Link href='/catalog/grimernaya' passHref>
+								<Link href='/catalog/oborudovanie-dlya-grimernoy' passHref>
 									<a className={styles.itemLink}>Гримерная</a>
 								</Link>
 							</li>

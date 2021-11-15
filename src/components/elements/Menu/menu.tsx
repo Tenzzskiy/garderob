@@ -93,42 +93,40 @@ const Menu = ({isOpened, onCloseMenu}: Props): JSX.Element => {
 					)}
 				</li>
 				<li className={classNames(styles.item, styles.itemMobileHidden)}>
-					<Link href='#' passHref>
-						<a
-							className={styles.link}
-							onClick={onCloseMenu}
-							onMouseEnter={() => handleMenuMouseOver('catalog')}
-						>
-							Каталог
-						</a>
-					</Link>
+					<p
+						className={styles.link}
+						onClick={onCloseMenu}
+						onMouseEnter={() => handleMenuMouseOver('catalog')}
+					>
+						Каталог
+					</p>
 					{isCatalogOpened ? (
 						<GarderobMenu type='catalog' onCloseMenu={() => setCatalogOpened(false)} />
 					) : null}
 				</li>
 				<li className={classNames(styles.item, styles.itemHidden)}>
-					<Link href='/catalog/mebel' passHref>
+					<Link href='/catalog/arenda-mebeli' passHref>
 						<a className={styles.link} onClick={onCloseMenu}>
 							Мебель
 						</a>
 					</Link>
 				</li>
 				<li className={classNames(styles.item, styles.itemHidden)}>
-					<Link href='/catalog/kamera-xraneniya' passHref>
+					<Link href='/catalog/kamery-hraneniya-v-arendu' passHref>
 						<a className={styles.link} onClick={onCloseMenu}>
 							Камера хранения
 						</a>
 					</Link>
 				</li>
 				<li className={classNames(styles.item, styles.itemHidden)}>
-					<Link href='/catalog/personal' passHref>
+					<Link href='/catalog/personal-na-meropriyatie' passHref>
 						<a className={styles.link} onClick={onCloseMenu}>
 							Персонал
 						</a>
 					</Link>
 				</li>
 				<li className={classNames(styles.item, styles.itemHidden)}>
-					<Link href='/catalog/grimernaya' passHref>
+					<Link href='/catalog/oborudovanie-dlya-grimernoy' passHref>
 						<a className={styles.link} onClick={onCloseMenu}>
 							Гримерная
 						</a>
