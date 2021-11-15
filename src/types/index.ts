@@ -69,6 +69,7 @@ export interface CategoryCardType {
 	price: number;
 	time: string;
 	priceDescription: string;
+	isSimple?: boolean;
 	count: number;
 	countTime: number;
 	isAdded: boolean;

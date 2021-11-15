@@ -9,7 +9,7 @@ const GarderobAdditives = (): JSX.Element => {
 	const {isAdded} = useGarderobContext();
 
 	const getItems = (category: any) => {
-		if (category.slug === 'personal') {
+		if (category.slug === 'personal-na-meropriyatie') {
 			return category.items.filter((item: any) => item.isGarderob !== true);
 		}
 
@@ -17,7 +17,7 @@ const GarderobAdditives = (): JSX.Element => {
 	};
 
 	const getGarderobItems = () => {
-		const personalCategory: any = categories.find(category => category.slug === 'personal');
+		const personalCategory: any = categories.find(category => category.slug === 'personal-na-meropriyatie');
 
 		if (personalCategory) {
 			return personalCategory.items.filter((item: any) => item.isGarderob === true);

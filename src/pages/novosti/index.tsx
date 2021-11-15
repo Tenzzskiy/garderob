@@ -1,5 +1,5 @@
 import type {GetStaticProps, NextPage} from 'next';
-import {NewsPage, QuestionsSection} from '@/components';
+import {NewsPage, QuestionsSection, AdvantagesSection} from '@/components';
 import {getAllNews} from '@/utilities/api';
 import {INewsCard} from '@/types';
 import Head from 'next/head';
@@ -32,6 +32,13 @@ const News: NextPage<Props> = ({news}) => {
 				<link rel='canonical' href='https://vyezdnoy-garderob77.ru/novosti' />
 			</Head>
 			<NewsPage news={news} />
+			<AdvantagesSection
+				color='255, 226, 0'
+				advantage={{
+					rectangleColor: '#FFE200',
+					maskColor: '#FB8F00'
+				}}
+			/>
 			<QuestionsSection />
 		</>
 	);

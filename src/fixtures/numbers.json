@@ -2,10 +2,11 @@
 	{
 		"id": 20,
 		"title": "Пластиковые",
-		"image": "/images/garderob-item.jpg",
+		"image": "/images/nomerok-one.jpg",
 		"price": 6000,
 		"time": "2 ч",
 		"priceDescription": "Со второго дня 800₽",
+		"isSimple": true,
 		"info": {
 			"count": "чел",
 			"time": "ч",
@@ -18,7 +19,7 @@
 	{
 		"id": 21,
 		"title": "Кожаные",
-		"image": "/images/garderob-item.jpg",
+		"image": "/images/nomerok-two.jpg",
 		"price": 3,
 		"time": "шт",
 		"priceDescription": "Со второго дня 800₽",
@@ -34,7 +35,7 @@
 	{
 		"id": 22,
 		"title": "Браслет",
-		"image": "/images/garderob-item.jpg",
+		"image": "/images/nomerok-three.jpg",
 		"price": 12,
 		"time": "шт",
 		"priceDescription": "Со второго дня 800₽",
@@ -50,7 +51,7 @@
 	{
 		"id": 23,
 		"title": "Брендирование номерки",
-		"image": "/images/garderob-item.jpg",
+		"image": "/images/nomerok-four.jpg",
 		"price": 3,
 		"time": "шт",
 		"priceDescription": "Со второго дня 800₽",

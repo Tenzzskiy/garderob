@@ -37,31 +37,35 @@ const GarderobCard = ({
 			</figure>
 			<div className={classNames(styles.body, isDifferent && styles.bodyPadding)}>
 				<p className={styles.title}>{card.title}</p>
-				<div className={styles.priceBlock}>
-					<span className={styles.price}>
-						{card.price}&#8381;/{card.time}
-					</span>
-					{card.isAdded ? (
-						<AddButton
-							card={card}
-							value={card.count}
-							size='128px'
-							garderobId={garderobId}
-							isOwn={isGarderob}
-							maxValue={isGarderob ? 999 : 9999}
-						/>
-					) : (
-						<span
-							className={classNames(
-								styles.button,
-								disabled ? styles.buttonDisabled : styles.buttonActive
-							)}
-							onClick={handleAddCard}
-						>
-							Добавить
+				{!card.isSimple ? (
+					<div className={styles.priceBlock}>
+						<span className={styles.price}>
+							{card.price}&#8381;/{card.time}
 						</span>
-					)}
-				</div>
+						{card.isAdded ? (
+							<AddButton
+								card={card}
+								value={card.count}
+								size='128px'
+								garderobId={garderobId}
+								isOwn={isGarderob}
+								maxValue={isGarderob ? 999 : 9999}
+							/>
+						) : (
+							<span
+								className={classNames(
+									styles.button,
+									disabled ? styles.buttonDisabled : styles.buttonActive
+								)}
+								onClick={handleAddCard}
+							>
+								Добавить
+							</span>
+						)}
+					</div>
+				) : (
+					<div className={styles.priceBlock}>Входит в стоимость</div>
+				)}
 				{!isDifferent && <p className={styles.info}>{card.priceDescription}</p>}
 			</div>
 			{!isPrimary ? (

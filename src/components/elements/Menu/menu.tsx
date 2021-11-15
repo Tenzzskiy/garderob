@@ -50,21 +50,19 @@ const Menu = ({isOpened, onCloseMenu}: Props): JSX.Element => {
 		<nav className={classNames(styles.menu, isOpened && styles.opened)} onMouseLeave={handleMenuMouseOut}>
 			<ul className={styles.list}>
 				<li className={styles.item}>
-					<Link href='#' passHref>
-						<p
-							className={classNames(styles.link, styles.linkButton)}
-							onClick={() => setShowedMenu(!isShowedMenu)}
-							onMouseEnter={() => handleMenuMouseOver('garderob')}
-						>
-							<span>Гардероб</span>
-							<span
-								className={classNames(
-									styles.iconChevron,
-									isShowedMenu ? 'icon-chevron-up' : 'icon-chevron-down'
-								)}
-							></span>
-						</p>
-					</Link>
+					<p
+						className={classNames(styles.link, styles.linkButton)}
+						onClick={() => setShowedMenu(!isShowedMenu)}
+						onMouseEnter={() => handleMenuMouseOver('garderob')}
+					>
+						<span>Гардероб</span>
+						<span
+							className={classNames(
+								styles.iconChevron,
+								isShowedMenu ? 'icon-chevron-up' : 'icon-chevron-down'
+							)}
+						></span>
+					</p>
 					{isGarderobOpened ? (
 						<GarderobMenu type='garderob' onCloseMenu={() => setGarderobOpened(false)} />
 					) : null}
