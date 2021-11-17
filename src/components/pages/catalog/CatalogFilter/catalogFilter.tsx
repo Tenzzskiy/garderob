@@ -4,6 +4,8 @@ import {Dropdown, FilterModal, PriceBox} from '@/components';
 import {Props} from './catalogFilter.props';
 import {useState} from 'react';
 
+const items = ['По умолчанию', 'По возрастанию', 'По убыванию'];
+
 const CatalogFilter = ({sort, price, onChangePrice, onChangeSort}: Props): JSX.Element => {
 	const [isShowed, setShowed] = useState(false);
 
@@ -17,11 +19,14 @@ const CatalogFilter = ({sort, price, onChangePrice, onChangeSort}: Props): JSX.E
 				<p className={styles.filterTitle}>Мебель</p>
 				<span className={classNames(styles.filterIcon, 'icon-sliders')} onClick={handleShowFilterModal} />
 				<PriceBox classname={styles.priceBox} price={price} onChangePrice={onChangePrice} />
-				<Dropdown classname={styles.dropdown} value={sort} onChangeSort={onChangeSort}>
-					<Dropdown.Item>По умолчанию</Dropdown.Item>
-					<Dropdown.Item>По возрастанию</Dropdown.Item>
-					<Dropdown.Item>По убыванию</Dropdown.Item>
-				</Dropdown>
+				<Dropdown
+					classname={styles.dropdown}
+					value={sort}
+					isBig={false}
+					items={items}
+					onChangeSort={onChangeSort}
+					small={true}
+				/>
 			</div>
 			<FilterModal
 				visible={isShowed}

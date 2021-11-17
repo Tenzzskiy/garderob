@@ -8,6 +8,8 @@ import Link from 'next/link';
 import axios from 'axios';
 import useOnClickOutside from '@/hooks/useOnClickOutside';
 
+const items = ['Общение по телефону', 'Написать в Whatsapp', 'Написать в Telegram'];
+
 const CallModal = ({onChangeOpened, title = 'Заявка', button = 'Оставить заявку'}: Props): JSX.Element => {
 	const [windowName, setWindowName] = useState<'request' | 'success'>('request');
 	const [select, setSelect] = useState<string | number>('Общение по телефону');
@@ -83,6 +85,7 @@ const CallModal = ({onChangeOpened, title = 'Заявка', button = 'Остав
 							value={select}
 							isBig={true}
 							onChangeSort={handleChangeSelect}
+							items={items}
 						/>
 					</div>
 					{message.length ? <p className={styles.message}>{message}</p> : null}

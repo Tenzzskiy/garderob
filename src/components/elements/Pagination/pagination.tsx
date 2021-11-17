@@ -1,9 +1,11 @@
 import ReactPaginate from 'react-paginate';
 import {Props} from './pagination.props';
+import {smoothScrollTo} from '@/utilities/helpers';
 
 function Pagination({countOfPages, currentPage, isSimple, onSetCurrentPage}: Props) {
 	const handlePaginate = (page: {selected: number}) => {
 		onSetCurrentPage(page.selected + 1);
+		smoothScrollTo('categoryList');
 	};
 
 	return (

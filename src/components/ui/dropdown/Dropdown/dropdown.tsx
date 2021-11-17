@@ -4,9 +4,7 @@ import classNames from 'classnames';
 import {useState, useRef} from 'react';
 import useOnClickOutside from '@/hooks/useOnClickOutside';
 
-const items = ['Общение по телефону', 'Написать в Whatsapp', 'Написать в Telegram'];
-
-const Dropdown = ({classname, value, onChangeSort, isBig = false}: Props): JSX.Element => {
+const Dropdown = ({classname, value, onChangeSort, items, small = false, isBig = false}: Props): JSX.Element => {
 	const [opened, setOpened] = useState<boolean>(false);
 
 	const buttonRef = useRef<HTMLDivElement | null>(null);

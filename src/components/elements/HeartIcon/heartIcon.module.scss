@@ -1,7 +1,15 @@
 .icon {
+	cursor: pointer;
+}
+
+.iconHover {
 	font-size: 24px;
 	opacity: 0.4;
-	cursor: pointer;
+	transition: opacity 0.3s;
+
+	&:hover {
+		opacity: 1;
+	}
 }
 
 .liked {
