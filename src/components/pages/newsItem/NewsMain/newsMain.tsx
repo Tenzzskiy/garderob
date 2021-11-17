@@ -22,9 +22,7 @@ const NewsMain = ({news}: Props): JSX.Element => {
 					<a className={classNames(styles.newsButton, styles.newsButtonPrimary)}>Назад</a>
 				</Link>
 				<Link href={`/novosti/${news.next}`} passHref>
-					<a className={classNames(styles.newsButton, styles.newsButtonSecondary)} href='#'>
-						Далее
-					</a>
+					<a className={classNames(styles.newsButton, styles.newsButtonSecondary)}>Далее</a>
 				</Link>
 			</div>
 		</div>

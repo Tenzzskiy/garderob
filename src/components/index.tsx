@@ -37,7 +37,7 @@ export {default as FilterModal} from './modals/FilterModal';
 
 /* Accordion */
 
-export {default as Accordion} from './ui/accordion/Accordion';
+export {default as Accordion} from './ui/Accordion';
 export {default as Dropdown} from './ui/dropdown/Dropdown';
 export {default as SearchBox} from './ui/SearchBox';
 

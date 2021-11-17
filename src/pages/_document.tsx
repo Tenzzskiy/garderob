@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
 					<meta property='og:image' content='/images/contacts-mobile.jpg' />
 					<meta property='og:site_name' content='Фотозона 77' />
 					<meta property='og:locale' content='ru_RU' />
-					<link rel='icon' href='/images/logo.svg' />
+					<link rel='icon' href='/favicon.svg' />
 				</Head>
 				<body>
 					<Main />

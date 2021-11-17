@@ -40,6 +40,8 @@
 
 .icon {
 	font-size: 28px;
+	padding-left: 4px;
+	padding-right: 4px;
 
 	&:not(:last-child) {
 		margin-right: 8px;
@@ -58,7 +60,7 @@
 }
 
 .iconHover {
-	padding-right: 4px;
+	//padding-right: 4px;
 
 	@include desktops {
 		&:hover {

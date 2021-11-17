@@ -10,6 +10,7 @@
 	padding-bottom: 56px;
 	background-color: #f5f1f1;
 	display: none;
+	box-shadow: 0px 2px 8px rgba(177, 177, 177, 0.25);
 
 	@include desktops {
 		display: initial;
@@ -57,6 +58,7 @@
 .item {
 	background-color: #fff;
 	display: block;
+	border-radius: 8px;
 
 	&:hover {
 		.more {

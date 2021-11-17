@@ -1,17 +1,15 @@
 import {Props} from './dropdown.props';
-import DropdownItem from '../DropdownItem';
-import {filterChildrenByType} from '@/utilities/helpers';
 import styles from './dropdown.module.scss';
 import classNames from 'classnames';
 import {useState, useRef} from 'react';
 import useOnClickOutside from '@/hooks/useOnClickOutside';
 
-const Dropdown = ({classname, children, value, onChangeSort, isBig = false}: Props): JSX.Element => {
+const items = ['Общение по телефону', 'Написать в Whatsapp', 'Написать в Telegram'];
+
+const Dropdown = ({classname, value, onChangeSort, isBig = false}: Props): JSX.Element => {
 	const [opened, setOpened] = useState<boolean>(false);
 
 	const buttonRef = useRef<HTMLDivElement | null>(null);
-
-	const filteredChildren = filterChildrenByType(children, 'DropdownItem');
 
 	const handleOpenMenu = () => {
 		setOpened(!opened);
@@ -32,20 +30,16 @@ const Dropdown = ({classname, children, value, onChangeSort, isBig = false}: Pro
 				className={classNames(styles.button, isBig && styles.buttonBig, opened && styles.buttonOpened)}
 				onClick={handleOpenMenu}
 				type='button'
-				disabled={filteredChildren.length ? false : true}
+				disabled={items.length ? false : true}
 			>
 				<span>{value}</span>
 				<span className={classNames(styles.icon, opened ? 'icon-chevron-up' : 'icon-chevron-down')} />
 			</button>
 			{opened && (
 				<ul className={styles.menu}>
-					{filteredChildren.map((child, index) => {
+					{items.map((child, index) => {
 						return (
-							<li
-								className={styles.item}
-								key={index}
-								onClick={() => handleChangeValue(child.props.children)}
-							>
+							<li className={styles.item} key={index} onClick={() => handleChangeValue(child)}>
 								{child}
 							</li>
 						);
@@ -55,7 +49,5 @@ const Dropdown = ({classname, children, value, onChangeSort, isBig = false}: Pro
 		</div>
 	);
 };
-
-Dropdown.Item = DropdownItem;
 
 export default Dropdown;

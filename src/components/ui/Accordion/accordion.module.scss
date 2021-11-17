@@ -1,0 +1,61 @@
+.accordionItem:hover .accordionCollapsed {
+	background: #ede9e9;
+}
+
+.collapsed {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 16px;
+	cursor: pointer;
+	border-bottom: 1px solid rgb(179, 179, 179, 0.5);
+	transition: background-color 0.3s;
+
+	&Opened {
+		border-color: transparent;
+	}
+}
+
+.icon {
+	font-size: 24px;
+	padding: 10px;
+	background-color: #e9d4b7;
+	border-radius: 100%;
+	color: rgb(18, 18, 18, 0.5);
+	transition: 0.3s;
+
+	&Opened {
+		color: #000000;
+		transform: rotate(45deg) scale(1.1);
+	}
+}
+
+.heading {
+	@include textSubtitleThird;
+
+	margin-right: 16px;
+
+	@include tablets {
+		@include textSubtitleSecond;
+	}
+}
+
+.expanded {
+	@include textBodyFourth;
+
+	color: $grayLighter;
+	padding-left: 16px;
+	padding-right: 16px;
+	transition: 0.3s;
+	opacity: 0;
+
+	@include tablets {
+		@include textBodyThird;
+	}
+}
+
+.expandedOpened {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	opacity: 1;
+}

@@ -13,11 +13,16 @@
 	max-width: 168px;
 	margin-left: auto;
 	margin-right: auto;
+	transition: background-color 0.3s;
 
 	@include mobile {
 		margin-bottom: 0;
 		margin-left: initial;
 		margin-right: initial;
+	}
+
+	&:hover {
+		background-color: #ede9e9;
 	}
 }
 

@@ -13,16 +13,7 @@ const QuestionsSection = (): JSX.Element => {
 					<figure className={styles.figure}>
 						<img className={styles.image} src='/images/questions.png' alt='Questions' />
 					</figure>
-					<Accordion defaultValue='1'>
-						{questions.map((question: QuestionType) => {
-							return (
-								<Accordion.Item id={question.id} key={question.id}>
-									<Accordion.Collapsed>{question.question}</Accordion.Collapsed>
-									<Accordion.Expanded>{question.answer}</Accordion.Expanded>
-								</Accordion.Item>
-							);
-						})}
-					</Accordion>
+					<Accordion />
 				</div>
 			</div>
 		</section>

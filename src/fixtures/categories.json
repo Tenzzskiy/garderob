@@ -1340,7 +1340,7 @@
 		"name": "Камеры хранения",
 		"workingSectionColor": "254, 233, 204",
 		"hero": {
-			"title": "Камера хранения в аренду",
+			"title": "Камера хранения в&nbsp;аренду",
 			"subtitle": "Камеры хранения, ячейки, сейфы... и не только!",
 			"mobileImage": "/images/categories/kamera-mobile.png",
 			"desktopImage": "/images/categories/kamera.png"

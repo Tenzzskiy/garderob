@@ -56,13 +56,22 @@
 	line-height: 22px;
 	padding: 6px 30px;
 	border-radius: 8px;
+	transition: background-color 0.3s;
 
 	&Primary {
 		background-color: #ede9e9;
+
+		&:hover {
+			background-color: #fff;
+		}
 	}
 
 	&Secondary {
 		background-color: #fff;
+
+		&:hover {
+			background-color: #ede9e9;
+		}
 	}
 }
 
