@@ -19,7 +19,7 @@ const HeroSection = ({hero: {title, subtitle, mobileImage, desktopImage}}: Props
 			/>
 			<div className={classNames('container', styles.container)}>
 				<div className={styles.wrapper}>
-					<p className={styles.title} dangerouslySetInnerHTML={{__html: title}}></p>
+					<h1 className={styles.title} dangerouslySetInnerHTML={{__html: title}}></h1>
 					<p className={styles.subtitle}>{subtitle}</p>
 					<span className={styles.button} onClick={handleScroll}>
 						Подобрать

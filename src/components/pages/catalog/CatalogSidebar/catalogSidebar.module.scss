@@ -37,10 +37,17 @@
 .name {
 	@include textHeadingFourth;
 	display: inline-block;
+	padding-left: 12px;
+	padding-right: 12px;
+	transition: background-color 0.3s;
 
 	&Active {
 		background-color: #ffe200;
 		padding-right: 12px;
+	}
+
+	&:hover {
+		background-color: #ffe200;
 	}
 }
 

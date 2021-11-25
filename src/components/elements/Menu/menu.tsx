@@ -7,6 +7,7 @@ import {useState, MouseEvent} from 'react';
 import {smoothScrollTo} from '@/utilities/helpers';
 import useAppDispatch from '@/hooks/useAppDispatch';
 import {chooseGarderob} from '@/redux/actions/garderobActions';
+import {MOBILE_PHONE, MOBILE_PHONE_BEAUTY} from '@/constants';
 
 const Menu = ({isOpened, onCloseMenu}: Props): JSX.Element => {
 	const [isGarderobOpened, setGarderobOpened] = useState(false);
@@ -157,10 +158,10 @@ const Menu = ({isOpened, onCloseMenu}: Props): JSX.Element => {
 					<SearchBox />
 				</li>
 				<li className={classNames(styles.item, styles.itemTabletsHidden)}>
-					<Link href='#' passHref>
+					<Link href={`tel:${MOBILE_PHONE}`} passHref>
 						<a className={classNames(styles.link, styles.linkFlex)} onClick={onCloseMenu}>
 							<WhatsappFillIcon />
-							<span className={styles.textMargin}>+7(496)-999-99-99</span>
+							<span className={styles.textMargin}>{MOBILE_PHONE_BEAUTY}</span>
 						</a>
 					</Link>
 				</li>

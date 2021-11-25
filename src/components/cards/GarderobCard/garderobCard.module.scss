@@ -4,6 +4,11 @@
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
+	transition: box-shadow 0.3s;
+
+	&:hover {
+		box-shadow: 0px 1px 25px rgba(162, 159, 159, 0.25);
+	}
 }
 
 .figure {

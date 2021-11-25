@@ -29,7 +29,7 @@ function FavoritesPage(): JSX.Element {
 	return (
 		<section className={styles.section}>
 			<div className='container'>
-				<h1 className={classNames(styles.title, 'sectionTitle')}>Избранные</h1>
+				<h1 className={classNames(styles.title, 'sectionTitle')}>Избранное</h1>
 				{renderItems()}
 			</div>
 		</section>

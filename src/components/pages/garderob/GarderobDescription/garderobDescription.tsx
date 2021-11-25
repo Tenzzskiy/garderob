@@ -36,6 +36,16 @@ const GarderobDescription = (): JSX.Element => {
 		return sum + card.count * card.price;
 	};
 
+	const isGarderobs = (): boolean => {
+		const garderobItems = card.addedDops.filter(added => added.isGarderob === true);
+
+		if (garderobItems.length) {
+			return true;
+		}
+
+		return false;
+	};
+
 	const renderChooseGarderobBlock = (): JSX.Element => {
 		if (card.addedDops && card.addedDops.length) {
 			const garderobItems = card.addedDops.filter(added => added.isGarderob === true);
@@ -50,14 +60,7 @@ const GarderobDescription = (): JSX.Element => {
 
 			if (garderobItems.length) {
 				return (
-					<div
-						className={classNames(
-							styles.boxItem,
-							styles.boxItemGarderob,
-							styles.boxItemSecond,
-							styles.boxItemCenter
-						)}
-					>
+					<div className={classNames(styles.boxItem, styles.boxItemSecond, styles.boxItemCenter)}>
 						<span className={classNames(styles.boxName, styles.boxNameButton)}>Гардеробщик</span>
 						<span className={classNames(styles.boxCountCircle)}>{length}</span>
 						<span className={styles.boxPrice}>{convertToNumberWithSpaces(sum)} ₽</span>
@@ -138,7 +141,14 @@ const GarderobDescription = (): JSX.Element => {
 						</div>
 						{renderChooseGarderobBlock()}
 						<Link href='/basket' passHref>
-							<a className={classNames(styles.boxItem, styles.boxItemThird, styles.boxItemCenter)}>
+							<a
+								className={classNames(
+									styles.boxItem,
+									styles.boxItemThird,
+									styles.boxItemCenter,
+									isGarderobs() && styles.boxItemGarderob
+								)}
+							>
 								<span className={classNames(styles.boxName, styles.boxNameButton, styles.boxNameBold)}>
 									Перейти в корзину
 								</span>

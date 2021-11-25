@@ -25,7 +25,12 @@ const Dropdown = ({classname, value, onChangeSort, items, small = false, isBig =
 	return (
 		<div ref={buttonRef} className={classNames(styles.dropdown, classname)}>
 			<button
-				className={classNames(styles.button, isBig && styles.buttonBig, opened && styles.buttonOpened)}
+				className={classNames(
+					styles.button,
+					isBig && styles.buttonBig,
+					!opened && styles.buttonClosed,
+					opened && styles.buttonOpened
+				)}
 				onClick={handleOpenMenu}
 				type='button'
 				disabled={items.length ? false : true}
