@@ -1,6 +1,6 @@
 .wrapper {
 	border-radius: 8px;
-	overflow: hidden;
+	overflow: hidden !important;
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
@@ -52,6 +52,7 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-top: auto;
+	min-height: 37px;
 }
 
 .price {

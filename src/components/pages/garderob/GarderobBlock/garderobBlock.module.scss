@@ -17,7 +17,7 @@
 	@include largeDesktops {
 		padding-left: 0;
 		padding-right: 0;
-		margin-bottom: 24px;
+		//margin-bottom: 24px;
 	}
 }
 
@@ -53,8 +53,11 @@
 	display: block;
 
 	@include largeDesktops {
-		padding-left: 0;
-		padding-right: 0;
+		padding: 10px;
+
+		margin-left: -10px;
+		margin-right: -10px;
+		margin-top: -10px;
 	}
 }
 

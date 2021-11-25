@@ -52,7 +52,7 @@ const GarderobMenu = ({type, onCloseMenu}: Props): JSX.Element => {
 												alt='Image'
 											/>
 										</figure>
-										<p className={styles.name}>Стандартный</p>
+										<p className={styles.name}>Двухярусный</p>
 									</div>
 									<div className={styles.bottom}>
 										<span className={styles.description}>1 место/25 ₽</span>
