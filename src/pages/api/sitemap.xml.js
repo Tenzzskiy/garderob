@@ -38,14 +38,14 @@ export default async (req, res) => {
 		});
 
 		smStream.write({
-			url: '/catalog/mebel',
+			url: '/catalog/arenda-mebeli',
 			lastmod: date,
 			changefreq: EnumChangefreq.WEEKLY,
 			priority: 0.9
 		});
 
 		smStream.write({
-			url: '/catalog/personal',
+			url: '/catalog/personal-na-meropriyatie',
 			lastmod: date,
 			changefreq: EnumChangefreq.WEEKLY,
 			priority: 0.9
@@ -59,14 +59,14 @@ export default async (req, res) => {
 		});
 
 		smStream.write({
-			url: '/catalog/kamera-xraneniya',
+			url: '/catalog/kamery-hraneniya-v-arendu',
 			lastmod: date,
 			changefreq: EnumChangefreq.WEEKLY,
 			priority: 0.9
 		});
 
 		smStream.write({
-			url: '/catalog/grimernaya',
+			url: '/catalog/oborudovanie-dlya-grimernoy',
 			lastmod: date,
 			changefreq: EnumChangefreq.WEEKLY,
 			priority: 0.9

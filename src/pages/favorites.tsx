@@ -19,6 +19,7 @@ const Favorites: NextPage = () => {
 				/>
 				<meta property='og:url' content='https://vyezdnoy-garderob77.ru/favorites' />
 				<link rel='canonical' href='https://vyezdnoy-garderob77.ru/favorites' />
+				<meta name='robots' content='noindex,nofollow' />
 			</Head>
 			<FavoritesPage />
 			<QuestionsSection />

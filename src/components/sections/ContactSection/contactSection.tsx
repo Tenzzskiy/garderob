@@ -28,7 +28,7 @@ const ContactSection = (): JSX.Element => {
 						<a className={styles.number} href={`tel: ${MOBILE_PHONE}`} target='_blank'>
 							{MOBILE_PHONE_BEAUTY}
 						</a>
-						<div className={styles.socialsBlock}>
+						{/* <div className={styles.socialsBlock}>
 							<a
 								className={classNames(styles.button, styles.buttonBlue)}
 								href={`https://telegram.me/${TELEGRAM}`}
@@ -45,7 +45,7 @@ const ContactSection = (): JSX.Element => {
 								<span className={styles.buttonText}>WhatsApp</span>
 								<WhatsappIcon className={styles.buttonIcon} />
 							</a>
-						</div>
+						</div> */}
 						<p className={styles.text}>
 							Пишите нам в мессенджеры или укажите{' '}
 							<span className={styles.textButton} onClick={() => setOpened(true)}>

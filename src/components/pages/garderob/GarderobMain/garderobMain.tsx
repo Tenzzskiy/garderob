@@ -27,7 +27,7 @@ const GarderobMain = ({garderobs}: Props): JSX.Element => {
 		<GarderobProvider value={currentGarderob}>
 			<section className={styles.section}>
 				<div className={styles.container}>
-					<p className={classNames('sectionTitle', styles.sectionTitle)}>{currentGarderob.title}</p>
+					<h1 className={classNames('sectionTitle', styles.sectionTitle)}>{currentGarderob.title}</h1>
 					<div className={styles.main}>
 						<GarderobImage key={currentIndex} />
 						<GarderobAbout />

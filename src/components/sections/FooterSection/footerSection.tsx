@@ -92,9 +92,9 @@ const FooterSection = (): JSX.Element => {
 					</div>
 				</div>
 				<div className={classNames(styles.block, styles.blockThird)}>
-					<p className={styles.itemTitle}>Социальные сети</p>
+					{/* <p className={styles.itemTitle}>Социальные сети</p> */}
 					<ul className={styles.itemList}>
-						<li className={classNames(styles.itemListItem, styles.itemListItemFlex)}>
+						{/* <li className={classNames(styles.itemListItem, styles.itemListItemFlex)}>
 							<a className={styles.itemListIconLink} href='#' target='_blank'>
 								<VkontakteFooterIcon />
 							</a>
@@ -110,7 +110,7 @@ const FooterSection = (): JSX.Element => {
 							<a className={styles.itemListIconLink} href='#' target='_blank'>
 								<WhatsappFooterIcon />
 							</a>
-						</li>
+						</li> */}
 						<li className={styles.itemListItem}>
 							<a className={styles.itemLink} href='#questions' onClick={e => onScrollTo(e, 'questions')}>
 								Вопросы
@@ -123,7 +123,9 @@ const FooterSection = (): JSX.Element => {
 						</li>
 						<li className={styles.itemListItem}>
 							<Link href='/privacy' passHref>
-								<a className={styles.itemLink}>Политика конфиденциальности</a>
+								<a className={styles.itemLink} rel='nofollow'>
+									Политика конфиденциальности
+								</a>
 							</Link>
 						</li>
 					</ul>
@@ -143,7 +145,11 @@ const FooterSection = (): JSX.Element => {
 					</ul>
 				</div>
 				<div className={classNames(styles.block, styles.blockLine, styles.blockFifth)}>
-					<LogoIcon />
+					<Link href='/' passHref>
+						<a>
+							<LogoIcon />
+						</a>
+					</Link>
 				</div>
 			</div>
 		</footer>

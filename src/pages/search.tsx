@@ -22,6 +22,7 @@ const Search: NextPage<Props> = ({items}) => {
 				<meta property='og:description' content='Здесь вы можете найти все, что вы ищете на нашем сайте' />
 				<meta property='og:url' content='https://vyezdnoy-garderob77.ru/search' />
 				<link rel='canonical' href='https://vyezdnoy-garderob77.ru/search' />
+				<meta name='robots' content='noindex,nofollow' />
 			</Head>
 			<SearchPage items={items} />
 			<QuestionsSection />

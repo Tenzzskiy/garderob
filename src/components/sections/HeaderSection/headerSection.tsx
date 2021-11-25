@@ -43,12 +43,12 @@ const HeaderSection = (): JSX.Element => {
 						onClick={() => setSearchOpened(true)}
 					/>
 					<Link href='/favorites' passHref>
-						<a className={styles.icon}>
+						<a className={styles.icon} rel='nofollow'>
 							<span className={classNames(styles.icon, styles.iconHover, 'icon-heart')} />
 						</a>
 					</Link>
 					<Link href='/basket' passHref>
-						<a>
+						<a rel='nofollow'>
 							<BasketIcon />
 						</a>
 					</Link>

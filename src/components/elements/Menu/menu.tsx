@@ -160,7 +160,6 @@ const Menu = ({isOpened, onCloseMenu}: Props): JSX.Element => {
 				<li className={classNames(styles.item, styles.itemTabletsHidden)}>
 					<Link href={`tel:${MOBILE_PHONE}`} passHref>
 						<a className={classNames(styles.link, styles.linkFlex)} onClick={onCloseMenu}>
-							<WhatsappFillIcon />
 							<span className={styles.textMargin}>{MOBILE_PHONE_BEAUTY}</span>
 						</a>
 					</Link>

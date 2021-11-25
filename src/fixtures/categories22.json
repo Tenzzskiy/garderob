@@ -29,28 +29,12 @@
 		},
 		"items": [
 			{
-				"id": 44,
-				"title": "Стол прямоугольный пластиковый",
-				"image": "/images/glavniystol.jpg",
-				"price": 550,
-				"time": "дн",
-				"priceDescription": "Со второго дня 100₽",
-				"info": {
-					"count": "чел",
-					"time": "ч",
-					"countDesktop": "Персон",
-					"timeDesktop": "Часов",
-					"minTime": 6,
-					"priceForTime": 300
-				}
-			},
-			{
 				"id": 1,
-				"title": "Стол для кейтеринга (зеленый)",
+				"title": "Стол для кейтеринга большой (зеленый)",
 				"image": "/images/stol-pryamougolnyy-dlinniy_1.jpg",
-				"price": 1500,
+				"price": 900,
 				"time": "дн",
-				"priceDescription": "Со второго дня 300₽",
+				"priceDescription": "Со второго дня 765₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -62,11 +46,11 @@
 			},
 			{
 				"id": 2,
-				"title": "Стол для кейтеринга (синий)",
+				"title": "Стол для кейтеринга малый (синий)",
 				"image": "/images/stol-pryamougolnyy-malenkiy1.jpg",
-				"price": 1500,
+				"price": 1100,
 				"time": "дн",
-				"priceDescription": "Со второго дня 300₽",
+				"priceDescription": "Со второго дня 935₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -78,11 +62,11 @@
 			},
 			{
 				"id": 3,
-				"title": "Стол для кейтеринга (красный)",
+				"title": "Стол для кейтеринга малый (красный)",
 				"image": "/images/stol-pryamougolnyy-malenkiy2.jpg",
-				"price": 1500,
+				"price": 1000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 300₽",
+				"priceDescription": "Со второго дня 850₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -94,27 +78,11 @@
 			},
 			{
 				"id": 4,
-				"title": "Стол для кейтеринга (зеленый)",
+				"title": "Стол для кейтеринга малый (зеленый)",
 				"image": "/images/stol-pryamougolnyy-malenkiy3.jpg",
-				"price": 1500,
+				"price": 900,
 				"time": "дн",
-				"priceDescription": "Со второго дня 300₽",
-				"info": {
-					"count": "чел",
-					"time": "ч",
-					"countDesktop": "Персон",
-					"timeDesktop": "Часов",
-					"minTime": 6,
-					"priceForTime": 300
-				}
-			},
-			{
-				"id": 22,
-				"title": "Стол для кейтеринга (черный)",
-				"image": "/images/stol-pryamougolnyy-dlinniy_2.jpg",
-				"price": 1500,
-				"time": "дн",
-				"priceDescription": "Со второго дня 300₽",
+				"priceDescription": "Со второго дня 765₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -128,9 +96,9 @@
 				"id": 5,
 				"title": "Стол бочка (зеленый)",
 				"image": "/images/bochka_3.jpg",
-				"price": 1200,
+				"price": 1100,
 				"time": "дн",
-				"priceDescription": "Со второго дня 240₽",
+				"priceDescription": "Со второго дня 935₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -144,25 +112,9 @@
 				"id": 6,
 				"title": "Стол бочка (красный)",
 				"image": "/images/bochka_2.jpg",
-				"price": 1200,
+				"price": 900,
 				"time": "дн",
-				"priceDescription": "Со второго дня 240₽",
-				"info": {
-					"count": "чел",
-					"time": "ч",
-					"countDesktop": "Персон",
-					"timeDesktop": "Часов",
-					"minTime": 6,
-					"priceForTime": 300
-				}
-			},
-			{
-				"id": 66,
-				"title": "Стол Коктейльный",
-				"image": "/images/kokteylnii11.jpg",
-				"price": 550,
-				"time": "дн",
-				"priceDescription": "Со второго дня 100₽",
+				"priceDescription": "Со второго дня 765₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -176,9 +128,9 @@
 				"id": 7,
 				"title": "Стол Коктейльный (синий)",
 				"image": "/images/stol-kokteylnyy_3.jpg",
-				"price": 1300,
+				"price": 1250,
 				"time": "дн",
-				"priceDescription": "Со второго дня 250₽",
+				"priceDescription": "Со второго дня 1100₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -192,9 +144,9 @@
 				"id": 8,
 				"title": "Стол Коктейльный (красный)",
 				"image": "/images/stol-kokteylnyy_2.jpg",
-				"price": 1300,
+				"price": 1250,
 				"time": "дн",
-				"priceDescription": "Со второго дня 250₽",
+				"priceDescription": "Со второго дня 1100₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -208,9 +160,9 @@
 				"id": 9,
 				"title": "Стол Коктейльный (черный)",
 				"image": "/images/stol-kokteylnyy_1.jpg",
-				"price": 1200,
+				"price": 900,
 				"time": "дн",
-				"priceDescription": "Со второго дня 240₽",
+				"priceDescription": "Со второго дня 765₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -224,9 +176,9 @@
 				"id": 10,
 				"title": "Стол Коктейльный (белый)",
 				"image": "/images/stol-kokteylnyy_4.jpg",
-				"price": 1200,
+				"price": 1500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 240₽",
+				"priceDescription": "Со второго дня 1300₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -240,9 +192,9 @@
 				"id": 11,
 				"title": "Стол Коктейльный ВИП",
 				"image": "/images/stol-kokteylnyy_6.jpg",
-				"price": 1500,
+				"price": 2500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 300₽",
+				"priceDescription": "Со второго дня 2100₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -258,7 +210,7 @@
 				"image": "/images/bochka_4.jpg",
 				"price": 1200,
 				"time": "дн",
-				"priceDescription": "Со второго дня 240₽",
+				"priceDescription": "Со второго дня 1000₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -272,9 +224,9 @@
 				"id": 13,
 				"title": "Стул кьявари (белый)",
 				"image": "/images/stul-kyavari-prozrachnyy--belaya-podushka.jpg",
-				"price": 300,
+				"price": 500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 150₽",
+				"priceDescription": "Со второго дня 400₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -288,9 +240,9 @@
 				"id": 14,
 				"title": "Стул кьявари (черный)",
 				"image": "/images/stul-kyavari-cherny.jpg",
-				"price": 300,
+				"price": 500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 150₽",
+				"priceDescription": "Со второго дня 400₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -304,9 +256,9 @@
 				"id": 15,
 				"title": "Стол с подсветкой (зеленый)",
 				"image": "/images/stol-s-podsvetkoy_5.jpg",
-				"price": 4000,
+				"price": 3000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 3200₽",
+				"priceDescription": "Со второго дня 2500₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -320,9 +272,9 @@
 				"id": 16,
 				"title": "Стол с подсветкой (синий)",
 				"image": "/images/stol-s-podsvetkoy_2.jpg",
-				"price": 4000,
+				"price": 2500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 3200₽",
+				"priceDescription": "Со второго дня 2100₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -336,9 +288,9 @@
 				"id": 17,
 				"title": "Стол с подсветкой (желтый)",
 				"image": "/images/stol-s-podsvetkoy_3.jpg",
-				"price": 4000,
+				"price": 2000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 3200₽",
+				"priceDescription": "Со второго дня 1700₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -352,9 +304,9 @@
 				"id": 18,
 				"title": "Стол с подсветкой (красный)",
 				"image": "/images/stol-s-podsvetkoy_1.jpg",
-				"price": 4000,
+				"price": 1500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 3200₽",
+				"priceDescription": "Со второго дня 1300₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -368,9 +320,9 @@
 				"id": 19,
 				"title": "Стол с подсветкой (белый)",
 				"image": "/images/stol-s-podsvetkoy_4.jpg",
-				"price": 4000,
+				"price": 1200,
 				"time": "дн",
-				"priceDescription": "Со второго дня 3200₽",
+				"priceDescription": "Со второго дня 1000₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -380,14 +332,61 @@
 					"priceForTime": 300
 				}
 			},
-
+			{
+				"id": 20,
+				"title": "Стол для кейтеринга большой (красный)",
+				"image": "/images/stol-pryamougolnyy-dlinniy_3.jpg",
+				"price": 1200,
+				"time": "дн",
+				"priceDescription": "Со второго дня 1000₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 21,
+				"title": "Стол для кейтеринга большой (синий)",
+				"image": "/images/stol-pryamougolnyy-dlinniy_4.jpg",
+				"price": 1100,
+				"time": "дн",
+				"priceDescription": "Со второго дня 1000₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 22,
+				"title": "Стол для кейтеринга большой (черный)",
+				"image": "/images/stol-pryamougolnyy-dlinniy_2.jpg",
+				"price": 800,
+				"time": "дн",
+				"priceDescription": "Со второго дня 700₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
 			{
 				"id": 23,
 				"title": "Стол бочка (черный)",
 				"image": "/images/bochka_1.jpg",
-				"price": 1200,
+				"price": 700,
 				"time": "дн",
-				"priceDescription": "Со второго дня 240₽",
+				"priceDescription": "Со второго дня 600₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -401,9 +400,9 @@
 				"id": 24,
 				"title": "Стул барный эко кожа",
 				"image": "/images/stul-barnyy-eko-kozha.jpg",
-				"price": 1150,
+				"price": 1500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 550₽",
+				"priceDescription": "Со второго дня 1300₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -413,14 +412,29 @@
 					"priceForTime": 300
 				}
 			},
-
+			{
+				"id": 25,
+				"title": "Стол для кейтеринга малый (черный)",
+				"image": "/images/stol-pryamougolnyy-malenkiy4.jpg",
+				"price": 800,
+				"time": "дн",
+				"priceDescription": "Со второго дня 700₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
 			{
 				"id": 26,
 				"title": "Стул барный пластиковый",
 				"image": "/images/stul-barnyy-plastikovyy.jpg",
-				"price": 750,
+				"price": 800,
 				"time": "дн",
-				"priceDescription": "Со второго дня 350₽",
+				"priceDescription": "Со второго дня 700₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -434,9 +448,9 @@
 				"id": 27,
 				"title": "Пуфик",
 				"image": "/images/pufik.jpg",
-				"price": 800,
+				"price": 1300,
 				"time": "дн",
-				"priceDescription": "Со второго дня 400₽",
+				"priceDescription": "Со второго дня 1100₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -446,14 +460,45 @@
 					"priceForTime": 300
 				}
 			},
-
+			{
+				"id": 28,
+				"title": "Стул барный эко кожа",
+				"image": "/images/stul-barnyy-eko-kozha.jpg",
+				"price": 1500,
+				"time": "дн",
+				"priceDescription": "Со второго дня 1300₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 29,
+				"title": "Пуфик",
+				"image": "/images/pufik.jpg",
+				"price": 1200,
+				"time": "дн",
+				"priceDescription": "Со второго дня 1000₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
 			{
 				"id": 30,
 				"title": "Диван из паллет",
 				"image": "/images/divan-iz-pallet.jpg",
-				"price": 2200,
+				"price": 2500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 1100₽",
+				"priceDescription": "Со второго дня 2200₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -467,9 +512,9 @@
 				"id": 31,
 				"title": "Банкетка (1 вид).",
 				"image": "/images/banketka1.jpg",
-				"price": 950,
+				"price": 1500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 450₽",
+				"priceDescription": "Со второго дня 1300₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -483,9 +528,9 @@
 				"id": 32,
 				"title": "Банкетка (2 вид)",
 				"image": "/images/banketka2.jpg",
-				"price": 3350,
+				"price": 1500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 1700₽",
+				"priceDescription": "Со второго дня 1300₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -499,9 +544,9 @@
 				"id": 33,
 				"title": "Ширма",
 				"image": "/images/shirma.jpg",
-				"price": 2650,
+				"price": 4000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 1300₽",
+				"priceDescription": "Со второго дня 3400₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -515,9 +560,9 @@
 				"id": 34,
 				"title": "Зеркало напольное",
 				"image": "/images/zerkalo.jpg",
-				"price": 700,
+				"price": 5000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 350₽",
+				"priceDescription": "Со второго дня 4300₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -531,9 +576,9 @@
 				"id": 35,
 				"title": "Диван (1 вид)",
 				"image": "/images/divan1.jpg",
-				"price": 3000,
+				"price": 6000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 600₽",
+				"priceDescription": "Со второго дня 5100₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -547,9 +592,9 @@
 				"id": 36,
 				"title": "Диван (2 вид)",
 				"image": "/images/divan2.jpg",
-				"price": 3000,
+				"price": 6000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 600₽",
+				"priceDescription": "Со второго дня 5100₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -621,7 +666,7 @@
 				"title": "Гардеробщик муж.",
 				"image": "/images/garderobshik1.jpg",
 				"price": 2700,
-				"time": "4 ч",
+				"time": "6 ч",
 				"priceDescription": "+1 час 400₽",
 				"isGarderob": true,
 				"info": {
@@ -637,8 +682,8 @@
 				"id": 9,
 				"title": "Гардеробщик жен.",
 				"image": "/images/garderobshikdev1.jpg",
-				"price": 3200,
-				"time": "4 ч",
+				"price": 2700,
+				"time": "6 ч",
 				"priceDescription": "+1 час 400₽",
 				"isGarderob": true,
 				"info": {
@@ -651,11 +696,11 @@
 				}
 			},
 			{
-				"id": 10,
+				"id": 9,
 				"title": "Гардеробщик black man",
 				"image": "/images/garderobshikblack2.jpg",
-				"price": 3500,
-				"time": "4 ч",
+				"price": 3000,
+				"time": "6 ч",
 				"priceDescription": "+1 час 500₽",
 				"isGarderob": true,
 				"info": {
@@ -668,11 +713,11 @@
 				}
 			},
 			{
-				"id": 11,
+				"id": 9,
 				"title": "Хостес",
 				"image": "/images/hostes3.jpg",
-				"price": 4000,
-				"time": "4 ч",
+				"price": 3000,
+				"time": "6 ч",
 				"priceDescription": "+1 час 500₽",
 				"info": {
 					"count": "чел",
@@ -684,11 +729,11 @@
 				}
 			},
 			{
-				"id": 12,
+				"id": 9,
 				"title": "Клинер",
 				"image": "/images/cleaner1.jpg",
-				"price": 3500,
-				"time": "4 ч",
+				"price": 3000,
+				"time": "6 ч",
 				"priceDescription": "+1 час 500₽",
 				"info": {
 					"count": "чел",
@@ -700,11 +745,11 @@
 				}
 			},
 			{
-				"id": 13,
+				"id": 9,
 				"title": "Швейцар",
 				"image": "/images/shweizar1.jpg",
-				"price": 3500,
-				"time": "4 ч",
+				"price": 2700,
+				"time": "6 ч",
 				"priceDescription": "+1 час 400₽",
 				"info": {
 					"count": "чел",
@@ -716,11 +761,11 @@
 				}
 			},
 			{
-				"id": 14,
+				"id": 9,
 				"title": "Промо-модели",
 				"image": "/images/promo1.jpg",
-				"price": 5000,
-				"time": "4 ч",
+				"price": 3000,
+				"time": "6 ч",
 				"priceDescription": "+1 час 500₽",
 				"info": {
 					"count": "чел",
@@ -732,11 +777,11 @@
 				}
 			},
 			{
-				"id": 15,
+				"id": 9,
 				"title": "Парковщик",
 				"image": "/images/parkovshik1.jpg",
-				"price": 3500,
-				"time": "4 ч",
+				"price": 3000,
+				"time": "6 ч",
 				"priceDescription": "+1 час 500₽",
 				"info": {
 					"count": "чел",
@@ -748,11 +793,11 @@
 				}
 			},
 			{
-				"id": 16,
+				"id": 9,
 				"title": "Фотограф",
 				"image": "/images/fotograf3.jpg",
-				"price": 10500,
-				"time": "4 ч",
+				"price": 10000,
+				"time": "6 ч",
 				"priceDescription": "+1 час 1500₽",
 				"info": {
 					"count": "чел",
@@ -764,11 +809,11 @@
 				}
 			},
 			{
-				"id": 17,
+				"id": 9,
 				"title": "Аниматор",
 				"image": "/images/animator2.jpg",
-				"price": 5500,
-				"time": "4 ч",
+				"price": 5000,
+				"time": "6 ч",
 				"priceDescription": "+1 час 800₽",
 				"info": {
 					"count": "чел",
@@ -780,11 +825,11 @@
 				}
 			},
 			{
-				"id": 18,
+				"id": 9,
 				"title": "Промоутер",
 				"image": "/images/promouter1.jpg",
-				"price": 2500,
-				"time": "4 ч",
+				"price": 2000,
+				"time": "6 ч",
 				"priceDescription": "+1 час 300₽",
 				"info": {
 					"count": "чел",
@@ -856,9 +901,9 @@
 				"id": 1,
 				"title": "Автомат с масками и перчатками",
 				"image": "/images/avtomat_s_maskami_i_perchtkami.jpg",
-				"price": 22500,
+				"price": 19000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 13500₽",
+				"priceDescription": "Со второго дня 16000₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -872,9 +917,9 @@
 				"id": 2,
 				"title": "Обеззораживание рук",
 				"image": "/images/obezzarachivanie_ruk.jpg",
-				"price": 9900,
+				"price": 2000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 6000₽",
+				"priceDescription": "Со второго дня 17000₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -888,9 +933,9 @@
 				"id": 3,
 				"title": "Обеззораживание воздуха",
 				"image": "/images/obezzarachivanie_vozduha.jpg",
-				"price": 6000,
+				"price": 4000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 3600₽",
+				"priceDescription": "Со второго дня 3400₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -904,9 +949,9 @@
 				"id": 4,
 				"title": "Потоковое измерение температуры",
 				"image": "/images/potokovoe_izmerenie_temperaturi.jpg",
-				"price": 21000,
+				"price": 25000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 11400₽",
+				"priceDescription": "Со второго дня 21000₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -922,7 +967,7 @@
 				"image": "/images/ruchnoi_termometr.jpg",
 				"price": 500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 300₽",
+				"priceDescription": "Со второго дня 400₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -936,9 +981,9 @@
 				"id": 7,
 				"title": "Санитайзер",
 				"image": "/images/sanitaizer.jpg",
-				"price": 2200,
+				"price": 6000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 1350₽",
+				"priceDescription": "Со второго дня 5100₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -949,10 +994,10 @@
 				}
 			},
 			{
-				"id": 8,
+				"id": 7,
 				"title": "Стойка дезинфекции",
 				"image": "/images/stoika_dezinfekcii.jpg",
-				"price": 18700,
+				"price": 7000,
 				"time": "дн",
 				"priceDescription": "Со второго дня 6000₽",
 				"info": {
@@ -965,12 +1010,12 @@
 				}
 			},
 			{
-				"id": 9,
+				"id": 7,
 				"title": "Туннель дезинфекции",
 				"image": "/images/tunnel_dezinfekcii.jpg",
-				"price": 28900,
+				"price": 10000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 17500₽",
+				"priceDescription": "Со второго дня 9500₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1035,9 +1080,9 @@
 				"id": 1,
 				"title": "Гримерный стол (белый)",
 				"image": "/images/grimernii_stol_beliy.jpg",
-				"price": 3900,
+				"price": 3500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 1950₽",
+				"priceDescription": "Со второго дня 3000₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1051,9 +1096,9 @@
 				"id": 2,
 				"title": "Гримерный стол (черный)",
 				"image": "/images/grimernii_stol_cherny.jpg",
-				"price": 5600,
+				"price": 3500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 2800₽",
+				"priceDescription": "Со второго дня 3000₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1069,7 +1114,7 @@
 				"image": "/images/lampa_kruglaya.jpg",
 				"price": 2500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 1250₽",
+				"priceDescription": "Со второго дня 2100₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1083,9 +1128,9 @@
 				"id": 4,
 				"title": "Стул визажиста белый",
 				"image": "/images/stul_vizazhista_beliy.jpg",
-				"price": 1100,
+				"price": 2000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 550₽",
+				"priceDescription": "Со второго дня 1700₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1099,9 +1144,9 @@
 				"id": 5,
 				"title": "Стул визажиста черный",
 				"image": "/images/stul_vizazhista_chernyy.jpg",
-				"price": 1100,
+				"price": 2000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 550₽",
+				"priceDescription": "Со второго дня 1700₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1115,9 +1160,9 @@
 				"id": 13,
 				"title": "Стул кьявари (белый)",
 				"image": "/images/stul-kyavari-prozrachnyy--belaya-podushka.jpg",
-				"price": 300,
+				"price": 500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 150₽",
+				"priceDescription": "Со второго дня 400₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1131,9 +1176,9 @@
 				"id": 14,
 				"title": "Стул кьявари (черный)",
 				"image": "/images/stul-kyavari-cherny.jpg",
-				"price": 300,
+				"price": 500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 150₽",
+				"priceDescription": "Со второго дня 400₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1147,9 +1192,9 @@
 				"id": 26,
 				"title": "Стул барный пластиковый",
 				"image": "/images/stul-barnyy-plastikovyy.jpg",
-				"price": 750,
+				"price": 800,
 				"time": "дн",
-				"priceDescription": "Со второго дня 350₽",
+				"priceDescription": "Со второго дня 700₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1163,9 +1208,9 @@
 				"id": 24,
 				"title": "Стул барный эко кожа",
 				"image": "/images/stul-barnyy-eko-kozha.jpg",
-				"price": 1150,
+				"price": 1500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 550₽",
+				"priceDescription": "Со второго дня 1300₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1179,9 +1224,9 @@
 				"id": 31,
 				"title": "Банкетка (1 вид).",
 				"image": "/images/banketka1.jpg",
-				"price": 950,
+				"price": 1500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 450₽",
+				"priceDescription": "Со второго дня 1300₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1195,9 +1240,9 @@
 				"id": 32,
 				"title": "Банкетка (2 вид)",
 				"image": "/images/banketka2.jpg",
-				"price": 3350,
+				"price": 1500,
 				"time": "дн",
-				"priceDescription": "Со второго дня 1700₽",
+				"priceDescription": "Со второго дня 1300₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1211,9 +1256,9 @@
 				"id": 33,
 				"title": "Ширма",
 				"image": "/images/shirma.jpg",
-				"price": 2650,
+				"price": 4000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 1300₽",
+				"priceDescription": "Со второго дня 3400₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1227,9 +1272,9 @@
 				"id": 34,
 				"title": "Зеркало напольное",
 				"image": "/images/zerkalo.jpg",
-				"price": 700,
+				"price": 5000,
 				"time": "дн",
-				"priceDescription": "Со второго дня 350₽",
+				"priceDescription": "Со второго дня 4300₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1301,7 +1346,7 @@
 				}
 			},
 			{
-				"id": 13,
+				"id": 12,
 				"title": "Камера хранения (2 вид)",
 				"image": "/images/kamera_hranenia2.jpg",
 				"price": 9000,
@@ -1317,44 +1362,12 @@
 				}
 			},
 			{
-				"id": 14,
+				"id": 12,
 				"title": "Шкаф ( для сумок ) на 16 мест",
 				"image": "/images/kamera_hranenia1.jpg",
 				"price": 12000,
 				"time": "дн",
 				"priceDescription": "Со второго дня 10000₽",
-				"info": {
-					"count": "чел",
-					"time": "ч",
-					"countDesktop": "Персон",
-					"timeDesktop": "Часов",
-					"minTime": 6,
-					"priceForTime": 300
-				}
-			},
-			{
-				"id": 16,
-				"title": "Шкаф 4 секции",
-				"image": "/images/shkafmetal2.jpg",
-				"price": 1400,
-				"time": "дн",
-				"priceDescription": "Со второго дня 700₽",
-				"info": {
-					"count": "чел",
-					"time": "ч",
-					"countDesktop": "Персон",
-					"timeDesktop": "Часов",
-					"minTime": 6,
-					"priceForTime": 300
-				}
-			},
-			{
-				"id": 17,
-				"title": "Шкаф 8 секций",
-				"image": "/images/shkafmetal1.jpg",
-				"price": 2600,
-				"time": "дн",
-				"priceDescription": "Со второго дня 1300₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",

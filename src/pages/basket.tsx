@@ -19,6 +19,7 @@ const Basket: NextPage = () => {
 				/>
 				<meta property='og:url' content='https://vyezdnoy-garderob77.ru/basket' />
 				<link rel='canonical' href='https://vyezdnoy-garderob77.ru/basket' />
+				<meta name='robots' content='noindex,nofollow' />
 			</Head>
 			<BasketSection />
 			<QuestionsSection />
