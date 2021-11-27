@@ -1,11 +1,12 @@
 .hero {
 	background: radial-gradient(50% 50% at 50% 50%, #829a9d 0%, #68888c 90.62%);
-	height: 100vh;
+	padding-bottom: 68px;
 	position: relative;
 	z-index: 5;
 	min-height: 560px;
 
 	@include tablets {
+		padding-bottom: 0;
 		height: auto;
 	}
 }
@@ -43,7 +44,7 @@
 }
 
 .container {
-	padding-top: 320px;
+	padding-top: 350px;
 
 	@include tablets {
 		padding-top: 124px;

@@ -63,3 +63,51 @@ export const convertToNumberWithSpaces = (x: number) => {
 
 	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 };
+
+export const getFavoritesFromLocaleStorage = () => {
+	let favorites = [];
+
+	if (typeof window !== 'undefined') {
+		if (localStorage.getItem('garderobStore')) {
+			const store = JSON.parse(String(localStorage.getItem('garderobStore')));
+
+			if (store.favoriteState.items && store.favoriteState.items.length) {
+				favorites = store.favoriteState.items;
+			}
+		}
+	}
+
+	return favorites;
+};
+
+export const getGarderobFromLocaleStorage = () => {
+	let favorites = [];
+
+	if (typeof window !== 'undefined') {
+		if (localStorage.getItem('garderobStore')) {
+			const store = JSON.parse(String(localStorage.getItem('garderobStore')));
+
+			if (store.garderobState.items && store.garderobState.items.length) {
+				favorites = store.garderobState.items;
+			}
+		}
+	}
+
+	return favorites;
+};
+
+export const getItemsFromLocaleStorage = () => {
+	let favorites = [];
+
+	if (typeof window !== 'undefined') {
+		if (localStorage.getItem('garderobStore')) {
+			const store = JSON.parse(String(localStorage.getItem('garderobStore')));
+
+			if (store.shopState.items && store.shopState.items.length) {
+				favorites = store.shopState.items;
+			}
+		}
+	}
+
+	return favorites;
+};

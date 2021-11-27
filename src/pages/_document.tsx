@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
 					<meta httpEquiv='X-UA-Compatible' content='IE-edge' />
 					<meta property='og:type' content='website' />
 					<meta property='og:image' content='/images/contacts-mobile.jpg' />
-					<meta property='og:site_name' content='Фотозона 77' />
+					<meta property='og:site_name' content='Выездной гардероб 77' />
 					<meta property='og:locale' content='ru_RU' />
 					<link rel='icon' href='/favicon.svg' />
 				</Head>

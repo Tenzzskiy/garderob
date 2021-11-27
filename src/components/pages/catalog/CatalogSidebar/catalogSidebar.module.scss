@@ -32,6 +32,12 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	&:hover {
+		.name {
+			background-color: #ffe200;
+		}
+	}
 }
 
 .name {
@@ -44,10 +50,6 @@
 	&Active {
 		background-color: #ffe200;
 		padding-right: 12px;
-	}
-
-	&:hover {
-		background-color: #ffe200;
 	}
 }
 

@@ -21,12 +21,12 @@ const HeaderSection = (): JSX.Element => {
 				<div className={styles.left}>
 					{opened ? (
 						<span
-							className={classNames(styles.icon, styles.iconHidden, 'icon-close')}
+							className={classNames(styles.iconMenu, styles.iconHidden, 'icon-close')}
 							onClick={handleCloseMenu}
 						/>
 					) : (
 						<span
-							className={classNames(styles.icon, styles.iconHidden, 'icon-align-left')}
+							className={classNames(styles.iconMenu, styles.iconHidden, 'icon-align-left')}
 							onClick={handleOpenMenu}
 						/>
 					)}

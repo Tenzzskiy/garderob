@@ -16,6 +16,7 @@ $headerHeight: 64px;
 
 @mixin mediaMax($size) {
 	@media (max-width: $size) {
+		@content;
 	}
 }
 

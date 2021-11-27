@@ -1,3 +1,4 @@
+import {CategoryCardType} from '@/types';
 import {createReducer} from '@reduxjs/toolkit';
 import {
 	addCardToBasket,
@@ -8,9 +9,13 @@ import {
 	changeTimeCardInBasket,
 	increaseTimeCardToBasket,
 	decreaseTimeCardToBasket,
-	clearBasket
+	clearBasket,
+	initializeShop
 } from '../actions/shopActions';
 import {ShopStateType} from '../types';
+import {getItemsFromLocaleStorage} from '@/utilities/helpers';
+
+const savedItems = getItemsFromLocaleStorage() as CategoryCardType[];
 
 const initialState: ShopStateType = {
 	items: []
@@ -68,6 +73,9 @@ const shopReducer = createReducer(initialState, builder => {
 		})
 		.addCase(clearBasket, state => {
 			state.items = [];
+		})
+		.addCase(initializeShop, state => {
+			state.items = savedItems;
 		});
 });
 

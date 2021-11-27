@@ -15,7 +15,8 @@ import {
 	INCREASE_DOPS_IN_GARDEROB,
 	DECREASE_DOPS_IN_GARDEROB,
 	CHANGE_DOPS_IN_GARDEROB,
-	CLEAR_GARDEROBS
+	CLEAR_GARDEROBS,
+	INITIALIZE_GARDEROB_STORE
 } from '../types/gaderobTypes';
 
 export const addGarderob = createAction<GarderobItemType>(ADD_GARDEROB);
@@ -35,3 +36,5 @@ export const decreaseDopsInGarderob = createAction<{id: number; item: any}>(DECR
 export const changeDopsInGarderob = createAction<{id: number; item: any; value: number}>(CHANGE_DOPS_IN_GARDEROB);
 
 export const clearGarderobs = createAction(CLEAR_GARDEROBS);
+
+export const initializeGarderobStore = createAction(INITIALIZE_GARDEROB_STORE);

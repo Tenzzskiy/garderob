@@ -9,6 +9,7 @@
 	justify-content: stretch;
 	background-color: #fff;
 	overflow: hidden;
+	transition: background-color 0.3s;
 
 	&:hover {
 		background-color: #ede9e9;

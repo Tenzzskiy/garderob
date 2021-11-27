@@ -8,7 +8,8 @@ import {
 	INCREASE_TIME_CARD_TO_BASKET,
 	DECREASE_TIME_CARD_TO_BASKET,
 	CHANGE_TIME_CARD_IN_BASKET,
-	CLEAR_BASKET
+	CLEAR_BASKET,
+	INITIALIZE_SHOP
 } from '../types/shopTypes';
 import {CategoryCardType} from '@/types';
 
@@ -24,3 +25,4 @@ export const decreaseTimeCardToBasket = createAction<number>(DECREASE_TIME_CARD_
 export const changeTimeCardInBasket = createAction<{id: number; countTime: number}>(CHANGE_TIME_CARD_IN_BASKET);
 
 export const clearBasket = createAction(CLEAR_BASKET);
+export const initializeShop = createAction(INITIALIZE_SHOP);

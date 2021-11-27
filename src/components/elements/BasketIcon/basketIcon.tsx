@@ -11,7 +11,7 @@ function BasketIcon(): JSX.Element {
 
 	return (
 		<>
-			<span className={classNames(styles.icon, 'icon-shopping-cart')}>
+			<span className={classNames(styles.icon, 'icon-shopping-cart', countOfItems && styles.iconActive)}>
 				{countOfItems ? <span className={styles.iconCount}>{countOfItems}</span> : null}
 			</span>
 		</>

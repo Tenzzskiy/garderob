@@ -23,6 +23,14 @@
 	}
 }
 
+.iconActive {
+	color: #ffe200;
+
+	@include desktops {
+		color: initial;
+	}
+}
+
 .iconHover {
 	@include desktops {
 		&::after {
@@ -47,17 +55,22 @@
 }
 
 .iconCount {
-	position: absolute;
-	top: 0;
-	right: -4px;
-	width: 16px;
-	height: 16px;
-	font-size: 8px;
-	line-height: 16px;
-	border-radius: 100%;
-	background-color: #ffe200;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: 600;
+	display: none;
+
+	@include desktops {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: -4px;
+		width: 16px;
+		height: 16px;
+		font-size: 8px;
+		line-height: 16px;
+		border-radius: 100%;
+		background-color: #ffe200;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 600;
+	}
 }

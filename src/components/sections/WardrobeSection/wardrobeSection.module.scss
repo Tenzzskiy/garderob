@@ -9,8 +9,12 @@
 }
 
 .slider {
-	margin: -16px;
-	padding: 16px;
+	margin-bottom: 16px;
+
+	@include desktops {
+		margin: -16px;
+		padding: 16px;
+	}
 }
 
 .sliderDotsBlock {
