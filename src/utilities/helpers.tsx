@@ -111,3 +111,13 @@ export const getItemsFromLocaleStorage = () => {
 
 	return favorites;
 };
+
+export const loadScript = (src: string) => {
+	const scriptElement = document.createElement('script');
+	scriptElement.type = 'text/javascript';
+	scriptElement.src = src;
+	scriptElement.async = false;
+	scriptElement.setAttribute('defer', '');
+	document.body.appendChild(scriptElement);
+};
+
