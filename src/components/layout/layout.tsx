@@ -1,5 +1,6 @@
 import {Props} from './layout.props';
 import {HeaderSection, FooterSection, ContactSection} from '@/components';
+import {loadScript} from '@/utilities/helpers';
 import {useEffect} from 'react';
 
 const Layout = ({children}: Props): JSX.Element => {
