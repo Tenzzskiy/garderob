@@ -72,7 +72,15 @@ const BasketRight = ({cards, garderobs}: Props): JSX.Element => {
 	return (
 		<>
 			<div className={styles.aside}>{renderWindow()}</div>
-			{isOpened ? <CallModal onChangeOpened={setOpened} title='Оформление' button='Оформить заказ' /> : null}
+			{isOpened ? (
+				<CallModal
+					onChangeOpened={setOpened}
+					title='Оформление'
+					button='Оформить заказ'
+					cards={cards}
+					garderobs={garderobs}
+				/>
+			) : null}
 			{typeof windowSize.width !== 'undefined' && windowSize.width <= 992 && renderPrice() !== 0 ? (
 				<div className={styles.fixedBlock}>
 					<div className={styles.fixedHeader}>

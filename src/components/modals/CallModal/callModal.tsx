@@ -10,7 +10,13 @@ import useOnClickOutside from '@/hooks/useOnClickOutside';
 
 const items = ['Общение по телефону', 'Написать в Whatsapp', 'Написать в Telegram'];
 
-const CallModal = ({onChangeOpened, title = 'Заявка', button = 'Оставить заявку'}: Props): JSX.Element => {
+const CallModal = ({
+	onChangeOpened,
+	title = 'Заявка',
+	button = 'Оставить заявку',
+	cards = [],
+	garderobs = []
+}: Props): JSX.Element => {
 	const [windowName, setWindowName] = useState<'request' | 'success'>('request');
 	const [select, setSelect] = useState<string | number>('Общение по телефону');
 	const [phone, setPhone] = useState<string>('');
@@ -33,7 +39,7 @@ const CallModal = ({onChangeOpened, title = 'Заявка', button = 'Остав
 			setMessage('');
 
 			if (title === 'Оформление') {
-				const res: any = await axios.post('/api/order', {phone, select});
+				const res: any = await axios.post('/api/order', {phone, select, cards, garderobs});
 				const {success} = res.data;
 
 				if (success) {

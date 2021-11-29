@@ -22,7 +22,29 @@ const getAllDops = card => {
 	return allDops;
 };
 
-const renderMessage = items => {
+function getCurrentPriceOfProduct(card) {
+	const price = card.price + (card.countTime - card.info.minTime) * card.info.priceForTime;
+
+	return price * card.count;
+}
+
+function getCurrentPriceOfGarderob(garderob) {
+	let price = 0;
+
+	if (garderob.countTime > 1) {
+		price += garderob.info.priceForTime * garderob.count * (garderob.countTime - 1);
+	}
+
+	price += garderob.price * garderob.count;
+
+	for (let i = 0; i < garderob.addedDops.length; i++) {
+		price += garderob.addedDops[i].count * garderob.addedDops[i].price;
+	}
+
+	return price;
+}
+
+const renderCardMessage = items => {
 	let result = '';
 
 	if (!items.length) {
@@ -33,8 +55,7 @@ const renderMessage = items => {
 				<tr style='padding-top: 20px; padding-bottom: 20px; text-align: left; background-color: #f0f2f0;'>
 					<th>Имя</th>
 					<th>Изначальная цена</th>
-					<th>Размер</th>
-					<th>Дополнительно</th>
+					<th>Количество</th>
 					<th>Итого</th>
 				</tr>
 			`;
@@ -43,9 +64,8 @@ const renderMessage = items => {
 		result += `
 			<tr style='padding-top: 5px; padding-bottom: 5px; text-align: left;'>
 				<td>${items[i].title}</td>
-				<td>${getSimplePriceOfProduct(items[i])} руб.</td>
-				<td>${items[i].productSizes[items[i].currentSize].size}</td>
-				<td>${getAllDops(items[i])}</td>
+				<td>${items[i].price} руб.</td>
+				<td>${items[i].count} </td>
 				<td>${getCurrentPriceOfProduct(items[i])} руб.</td>
 			</tr>`;
 	}
@@ -55,15 +75,50 @@ const renderMessage = items => {
 	return result;
 };
 
+const renderGarderobMessage = items => {
+	let result = '';
+
+	if (!items.length) {
+		return '<p>Корзина пуста</p>';
+	}
+
+	result = `<table  style="width:100%; border-collapse: collapse;">
+				<tr style='padding-top: 20px; padding-bottom: 20px; text-align: left; background-color: #f0f2f0;'>
+					<th>Имя</th>
+					<th>Изначальная цена</th>
+					<th>Количество</th>
+					<th>Дополнительные товары</th>
+					<th>Итого</th>
+				</tr>
+			`;
+
+	for (let i = 0; i < items.length; i++) {
+		result += `
+			<tr style='padding-top: 5px; padding-bottom: 5px; text-align: left;'>
+				<td>${items[i].title}</td>
+				<td>${items[i].price} руб.</td>
+				<td>${items[i].count} </td>
+				<td>${items[i].addedDops.length ? 'Присутствуют' : 'Отсутствуют'} </td>
+				<td>${getCurrentPriceOfGarderob(items[i])} руб.</td>
+			</tr>`;
+	}
+
+	result += '</table>';
+
+	return result;
+};
+
 export default function (req, res) {
-	const {phone, select, items} = req.body;
+	const {phone, select, cards, garderobs} = req.body;
 
 	if (!phone || !select) {
 		return res.status(200).json({success: false});
 	}
 
-	const email = '19rustamov1996@gmail.com';
-	const password = '19rustamov9628';
+	const email = 'info@vyezdnoy-garderob77.ru';
+	const password = 'KP6-WfX-9u7';
+
+	//console.log(garderobs);
 
 	if (!email || !password) {
 		return res.status(200).json({success: false});
@@ -74,7 +129,7 @@ export default function (req, res) {
 	try {
 		const transporter = nodemailer.createTransport({
 			port: 465,
-			host: 'smtp.gmail.com', //smtp.yandex.ru
+			host: 'smtp.yandex.ru',
 			auth: {
 				user: email,
 				pass: password
@@ -84,18 +139,25 @@ export default function (req, res) {
 
 		let orderMessage = `<div style='font-weight: bold;  margin-bottom: 14px;'><p style='padding-bottom: 10px;'>Заказ. Номер: +7 ${phone}</p></div>`;
 
-		// if (items.length) {
-		// 	orderMessage =
-		// 		orderMessage +
-		// 		`<div style='padding-top: 10px; padding-bottom: 10px; font-weight: bold; margin-botom: 20px; '>Фотозоны и оборудование</div>` +
-		// 		renderMessage(items);
-		// }
+		if (cards.length) {
+			orderMessage =
+				orderMessage +
+				`<div style='padding-top: 10px; padding-bottom: 10px; font-weight: bold; margin-botom: 20px; '>Оборудование</div>` +
+				renderCardMessage(cards);
+		}
+
+		if (garderobs.length) {
+			orderMessage =
+				orderMessage +
+				`<div style='padding-top: 10px; padding-bottom: 10px; font-weight: bold; margin-botom: 20px; '>Гардеробы</div>` +
+				renderGarderobMessage(garderobs);
+		}
 
 		const mailData = {
-			from: '"Выездной Гардероб 77" <info@vyezdnoy-garderob77.ru>',
+			from: '"Vyezdnoy-garderob" <info@vyezdnoy-garderob77.ru>',
 			to: email,
 			subject: 'Заявка с сайта',
-			text: 'Заявка с сайта Выездной Гардероб 77',
+			text: 'Заявка с сайта vyezdnoy-garderob',
 			html: orderMessage
 		};
 

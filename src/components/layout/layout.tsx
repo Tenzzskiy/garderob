@@ -7,6 +7,7 @@ const Layout = ({children}: Props): JSX.Element => {
 	useEffect(() => {
 		loadScript('/main.js');
 	});
+
 	return (
 		<>
 			<HeaderSection />
@@ -22,7 +23,6 @@ const Layout = ({children}: Props): JSX.Element => {
 					/>
 				</div>
 			</noscript>
-
 		</>
 	);
 };
