@@ -11,8 +11,8 @@ const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 					<div className={classNames(styles.catalogItemContainer, styles.catalogFirstItemContainer)}>
 						<figure className={classNames(styles.catalogItemFigure, styles.catalogFirstItemFigure)}>
 							<img
-								className={classNames(styles.catalogItemImage, 'lazyload')}
-								data-src='/images/catalog-first.png'
+								className={classNames(styles.catalogItemImage)}
+								src='/images/catalog-first.png'
 								alt='Камера хранения'
 							/>
 						</figure>
@@ -36,8 +36,8 @@ const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 						</div>
 						<figure className={classNames(styles.catalogItemFigure, styles.catalogSecondItemFigure)}>
 							<img
-								className={classNames(styles.catalogItemImage, 'lazyload')}
-								data-src='/images/catalog-second.png'
+								className={classNames(styles.catalogItemImage)}
+								src='/images/catalog-second.png'
 								alt='Персонал'
 							/>
 						</figure>
@@ -49,8 +49,8 @@ const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 					<div className={classNames(styles.catalogItemContainer, styles.catalogThirdItemContainer)}>
 						<figure className={classNames(styles.catalogItemFigure, styles.catalogThirdItemFigure)}>
 							<img
-								className={classNames(styles.catalogItemImage, 'lazyload')}
-								data-src='/images/catalog-third.png'
+								className={classNames(styles.catalogItemImage)}
+								src='/images/catalog-third.png'
 								alt='Мебель'
 							/>
 						</figure>
@@ -72,8 +72,8 @@ const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 						</div>
 						<figure className={classNames(styles.catalogItemFigure, styles.catalogFourthItemFigure)}>
 							<img
-								className={classNames(styles.catalogItemImage, 'lazyload')}
-								data-src='/images/catalog-fourth.png'
+								className={classNames(styles.catalogItemImage)}
+								src='/images/catalog-fourth.png'
 								alt='Гримерная'
 							/>
 						</figure>
@@ -85,8 +85,8 @@ const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 					<div className={classNames(styles.catalogItemContainer, styles.catalogFifthItemContainer)}>
 						<figure className={classNames(styles.catalogItemFigure, styles.catalogFifthItemFigure)}>
 							<img
-								className={classNames(styles.catalogItemImage, 'lazyload')}
-								data-src='/images/catalog-fifth.png'
+								className={classNames(styles.catalogItemImage)}
+								src='/images/catalog-fifth.png'
 								alt='Дезинфекция'
 							/>
 						</figure>
