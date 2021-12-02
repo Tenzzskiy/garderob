@@ -28,9 +28,13 @@ const WardrobeCard = ({className = null, card, index}: Props): JSX.Element => {
 				{renderStatus()}
 				<figure className={styles.figure}>
 					<picture>
-						<source srcSet={card.image} media='(max-width: 1140px)' />
-						<source srcSet={card.desktopImage} />
-						<img className={styles.cardImage} srcSet={card.desktopImage} alt='Warderob' />
+						<source data-srcset={card.image} media='(max-width: 1140px)' />
+						<source data-srcset={card.desktopImage} />
+						<img
+							className={classNames(styles.cardImage, 'lazyload')}
+							data-src={card.desktopImage}
+							alt='Warderob'
+						/>
 					</picture>
 				</figure>
 				<div className={styles.body}>

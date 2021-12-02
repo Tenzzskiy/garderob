@@ -27,7 +27,7 @@ const NewsCard = ({className, card, isFull = false}: Props): JSX.Element => {
 		<Link href={`/novosti/${card.slug}`} passHref>
 			<a className={classNames(className, styles.wrapper)}>
 				<figure className={classNames(styles.figure, isFull && styles.figureFull)}>
-					<img className={styles.image} src={card.image} alt='news' />
+					<img className={classNames(styles.image, 'lazyload')} data-src={card.image} alt='news' />
 				</figure>
 				{renderInfoBlock()}
 			</a>

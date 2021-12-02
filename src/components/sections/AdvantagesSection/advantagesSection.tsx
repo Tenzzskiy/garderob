@@ -37,7 +37,7 @@ const AdvantagesSection = ({color, advantage}: Props): JSX.Element => {
 						className='keen-slider__slide'
 						image='/images/advantages/first.png'
 						title='Камера хранения'
-						description='При заказе стильного гардероба, камера хранения в подарок'
+						description='При заказе стильного гардероба камера хранения в подарок'
 						color={color}
 						rectangleColor={advantage.rectangleColor}
 						maskColor={advantage.maskColor}
@@ -67,7 +67,7 @@ const AdvantagesSection = ({color, advantage}: Props): JSX.Element => {
 						className='keen-slider__slide'
 						image='/images/advantages/fourth.png'
 						title='Зеркало'
-						description='При заказе мебели<br>для гардероба, зеркало в подарок'
+						description='При заказе мебели<br>для гардероба зеркало в подарок'
 						color={color}
 						rectangleColor={advantage.rectangleColor}
 						maskColor={advantage.maskColor}

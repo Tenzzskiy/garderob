@@ -17,9 +17,13 @@ const ContactSection = (): JSX.Element => {
 				<div className={classNames('container', styles.container)}>
 					<figure className={styles.figure}>
 						<picture>
-							<source srcSet='/images/contact-phone.png' media='(max-width: 992px)' />
-							<source srcSet='/images/contact-phone-desktop.png' />
-							<img className={styles.image} src='/images/contact-phone-desktop.png' alt='Contact Phone' />
+							<source data-srcset='/images/contact-phone.png' media='(max-width: 992px)' />
+							<source data-srcset='/images/contact-phone-desktop.png' />
+							<img
+								className={classNames(styles.image, 'lazyload')}
+								data-src='/images/contact-phone-desktop.png'
+								alt='Contact Phone'
+							/>
 						</picture>
 					</figure>
 					<div className={styles.right}>

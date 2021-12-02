@@ -12,7 +12,7 @@ const WorkingSection = ({color, working}: Props): JSX.Element => {
 					<WorkingCard title={working.stepTitle} text={working.stepText} color={color} />
 					<WorkingCard
 						title='Обсуждение деталей'
-						text='Наши менеджеры подскажут информацию и сориентируют вас'
+						text='Наши менеджеры подскажут информацию и помогут определиться с выбором'
 						color={color}
 					/>
 					<WorkingCard
