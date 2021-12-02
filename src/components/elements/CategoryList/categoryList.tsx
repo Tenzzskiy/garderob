@@ -11,7 +11,7 @@ const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 					<div className={classNames(styles.catalogItemContainer, styles.catalogFirstItemContainer)}>
 						<figure className={classNames(styles.catalogItemFigure, styles.catalogFirstItemFigure)}>
 							<img
-								className={styles.catalogItemImage}
+								className={classNames(styles.catalogItemImage)}
 								src='/images/catalog-first.png'
 								alt='Камера хранения'
 							/>
@@ -35,7 +35,11 @@ const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 							<p className={styles.catalogItemText}>Гардеробщики, хостес...</p>
 						</div>
 						<figure className={classNames(styles.catalogItemFigure, styles.catalogSecondItemFigure)}>
-							<img className={styles.catalogItemImage} src='/images/catalog-second.png' alt='Персонал' />
+							<img
+								className={classNames(styles.catalogItemImage)}
+								src='/images/catalog-second.png'
+								alt='Персонал'
+							/>
 						</figure>
 					</div>
 				</a>
@@ -44,7 +48,11 @@ const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 				<a className={classNames(styles.catalogItem, styles.catalogThirdItem)} onClick={onCloseMenu}>
 					<div className={classNames(styles.catalogItemContainer, styles.catalogThirdItemContainer)}>
 						<figure className={classNames(styles.catalogItemFigure, styles.catalogThirdItemFigure)}>
-							<img className={styles.catalogItemImage} src='/images/catalog-third.png' alt='Мебель' />
+							<img
+								className={classNames(styles.catalogItemImage)}
+								src='/images/catalog-third.png'
+								alt='Мебель'
+							/>
 						</figure>
 						<div className={styles.catalogItemInfo}>
 							<p className={classNames(styles.catalogItemTitle, styles.catalogThirdItemTitle)}>Мебель</p>
@@ -63,7 +71,11 @@ const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 							<p className={styles.catalogItemText}>Гримерные столики, ширмы...</p>
 						</div>
 						<figure className={classNames(styles.catalogItemFigure, styles.catalogFourthItemFigure)}>
-							<img className={styles.catalogItemImage} src='/images/catalog-fourth.png' alt='Гримерная' />
+							<img
+								className={classNames(styles.catalogItemImage)}
+								src='/images/catalog-fourth.png'
+								alt='Гримерная'
+							/>
 						</figure>
 					</div>
 				</a>
@@ -73,7 +85,7 @@ const CategoryList = ({onCloseMenu}: Props): JSX.Element => {
 					<div className={classNames(styles.catalogItemContainer, styles.catalogFifthItemContainer)}>
 						<figure className={classNames(styles.catalogItemFigure, styles.catalogFifthItemFigure)}>
 							<img
-								className={styles.catalogItemImage}
+								className={classNames(styles.catalogItemImage)}
 								src='/images/catalog-fifth.png'
 								alt='Дезинфекция'
 							/>

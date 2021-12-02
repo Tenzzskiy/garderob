@@ -5,9 +5,16 @@ import classNames from 'classnames';
 import useWindowSize from '@/hooks/useWindowSize';
 import {Props} from './newsSection.props';
 import Link from 'next/link';
+import {useEffect} from 'react';
 
 const NewsSection = ({news}: Props): JSX.Element => {
 	const windowSize = useWindowSize();
+
+	useEffect(() => {
+		if (typeof window.lazyInstance !== 'undefined') {
+			window.lazyInstance?.update();
+		}
+	}, [windowSize.width]);
 
 	const {sliderRef} = useSlider({
 		slidesPerView: 1.1,

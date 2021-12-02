@@ -11,7 +11,11 @@ const QuestionsSection = (): JSX.Element => {
 				<p className={classNames('sectionTitle', styles.title)}>Часто задаваемые вопросы</p>
 				<div className={styles.wrapper}>
 					<figure className={styles.figure}>
-						<img className={styles.image} src='/images/questions.png' alt='Questions' />
+						<img
+							className={classNames(styles.image, 'lazyload')}
+							data-src='/images/questions.png'
+							alt='Questions'
+						/>
 					</figure>
 					<Accordion />
 				</div>
