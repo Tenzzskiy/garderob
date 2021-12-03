@@ -41,7 +41,7 @@ const WardrobeCard = ({className = null, card, index}: Props): JSX.Element => {
 					<p className={styles.title}>{card.name}</p>
 					<div className={classNames(styles.desc, styles[`desc_${card.color}`])}>
 						{card.status === 1 ? (
-							<img className={classNames(styles.imageIcon)} src='/images/wardrobe.png' />
+							<img className={classNames(styles.imageIcon)} src='/images/wardrobe.png' alt='Wardrobe' />
 						) : (
 							<span className={classNames(styles.icon, card.icon)}></span>
 						)}
