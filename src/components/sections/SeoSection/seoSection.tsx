@@ -14,7 +14,7 @@ const SeoSection = ({seo}: Props): JSX.Element => {
 									<img
 										className={classNames(styles.image, 'lazyload')}
 										data-src={item.image}
-										alt={item.text}
+										alt={item.title}
 									/>
 								</figure>
 								<div className={styles.container}>
