@@ -9,7 +9,7 @@ const DescriptionSection = ({
 	return (
 		<div className={classNames('container', styles.outerContainer)}>
 			<section className={classNames('section', styles.wrapper)}>
-				<div className={classNames(styles.image, 'lazyload')} data-bg={image} />
+				<div className={classNames(styles.image, 'lazyload')} data-bg={image} key={title} />
 				<div className={classNames('container', styles.container)}>
 					<p className={styles.title}>{title}</p>
 					<p className={styles.text}>{text}</p>
