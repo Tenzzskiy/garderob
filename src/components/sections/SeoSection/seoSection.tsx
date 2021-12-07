@@ -12,7 +12,7 @@ const SeoSection = ({seo}: Props): JSX.Element => {
 							<div className={styles.block}>
 								<figure className={styles.figure}>
 									<img
-										className={classNames(styles.image, 'lazyload')}
+										className={classNames('lazyload', styles.image)}
 										data-src={item.image}
 										alt={item.title}
 									/>
@@ -29,5 +29,5 @@ const SeoSection = ({seo}: Props): JSX.Element => {
 		</section>
 	);
 };
-
+// dfdfdfdfdf
 export default SeoSection;
