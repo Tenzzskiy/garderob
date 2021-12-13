@@ -45,22 +45,6 @@
 				}
 			},
 			{
-				"id": 1,
-				"title": "Стол для кейтеринга (зеленый)",
-				"image": "/images/stol-pryamougolnyy-dlinniy_1.jpg",
-				"price": 1500,
-				"time": "дн",
-				"priceDescription": "Со второго дня 300₽",
-				"info": {
-					"count": "шт",
-					"time": "ч",
-					"countDesktop": "Штук",
-					"timeDesktop": "Часов",
-					"minTime": 6,
-					"priceForTime": 300
-				}
-			},
-			{
 				"id": 2,
 				"title": "Стол для кейтеринга (синий)",
 				"image": "/images/stol-pryamougolnyy-malenkiy1.jpg",
