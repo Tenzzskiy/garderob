@@ -30,7 +30,7 @@
 	color: rgba(64, 74, 76, 1);
 	font-size: 14px;
 	line-height: 18px;
-	width: 180px;
+	width: 400px;
 	border: 0.5px solid transparent;
 	transition: border 0.3s;
 
@@ -66,4 +66,12 @@
 	font-size: 24px;
 	color: rgba(18, 18, 18, 0.5);
 	transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1200px) {
+
+	.input {
+		width: 280px;
+	}
+
 }

@@ -1,12 +1,12 @@
 import classNames from 'classnames';
 import styles from './garderobDescription.module.scss';
-import {ExclamationIcon, HangerIcon, AddButton} from '@/components';
-import {useGarderobContext} from '@/contexts/GarderobContext';
+import { ExclamationIcon, HangerIcon, AddButton } from '@/components';
+import { useGarderobContext } from '@/contexts/GarderobContext';
 import useAppDispatch from '@/hooks/useAppDispatch';
-import {addGarderob, removeGarderob} from '@/redux/actions/garderobActions';
-import {CSSProperties} from 'react';
+import { addGarderob, removeGarderob } from '@/redux/actions/garderobActions';
+import { CSSProperties } from 'react';
 import Link from 'next/link';
-import {convertToNumberWithSpaces, scrollTo} from '@/utilities/helpers';
+import { convertToNumberWithSpaces, scrollTo } from '@/utilities/helpers';
 
 const GarderobDescription = (): JSX.Element => {
 	const card = useGarderobContext();
@@ -14,7 +14,7 @@ const GarderobDescription = (): JSX.Element => {
 	const dispatch = useAppDispatch();
 
 	const handleAdd = (): void => {
-		dispatch(addGarderob({...card, isAdded: true, count: 1, countTime: 1}));
+		dispatch(addGarderob({ ...card, isAdded: true, count: 1, countTime: 1 }));
 	};
 
 	const handleDelete = (): void => {
@@ -87,31 +87,31 @@ const GarderobDescription = (): JSX.Element => {
 
 	return (
 		<>
-			<div className={styles.container} style={{'--color': card.color} as CSSProperties}>
-				<div className={styles.desc}>
-					<span className={classNames(card.icon, styles.descIcon)} />
-					<p className={styles.descText}>{card.description}</p>
-				</div>
+			<div className={styles.container}>
 				<div className={styles.additives}>
-					<p className={styles.additivesTitle}>Что входит:</p>
-					<div className={styles.additivesBlock}>
+					<p className={styles.additivesTitle}>В стоимость входит</p>
+					<div className={styles.additivesBlock} style={{ '--color': card.color } as CSSProperties}>
 						<div className={styles.additivesItem}>
 							<HangerIcon className={classNames(styles.additivesItemIcon)} color={card.color} />
 							<span className={classNames(styles.additivesItemText)}>Пластиковые вешалки</span>
 						</div>
-						<div className={styles.additivesItem}>
+						{/* <div className={styles.additivesItem}>
 							<span className={classNames(styles.additivesItemIcon, 'icon-clock')}></span>
 							<span className={classNames(styles.additivesItemText)}>6 часов аренды</span>
-						</div>
+						</div> */}
 						<div className={styles.additivesItem}>
 							<span className={classNames(styles.additivesItemIcon, 'icon-door-hanger')}></span>
 							<span className={classNames(styles.additivesItemText)}>Пластиковые номерки</span>
 						</div>
 					</div>
 				</div>
-				<div className={styles.marks}>
+				{/* <div className={styles.marks}>
 					<ExclamationIcon />
 					<p className={styles.marksText}>Укажите количество мест в гардеробе, затем измените параметры</p>
+				</div> */}
+				<div style={{ 'background': card.color } as CSSProperties} className={styles.desc}>
+					<p className={styles.descText}>{card.description}</p>
+					<p className={styles.postDesc}>Время аренды зависит от количества рабочих часов гардеробщика!</p>
 				</div>
 				{card.isAdded ? (
 					<div className={styles.footer}>

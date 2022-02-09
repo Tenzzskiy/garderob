@@ -71,6 +71,9 @@ export interface CategoryCardType {
 	priceDescription: string;
 	isSimple?: boolean;
 	count: number;
+	desc?: string;
+	color?: string;
+	brand?: boolean;
 	countTime: number;
 	isAdded: boolean;
 	info: {

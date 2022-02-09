@@ -1,14 +1,16 @@
 .wrapper {
 	border-radius: 8px;
-	overflow: hidden !important;
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
 	transition: box-shadow 0.3s;
+	position: relative;
+	overflow: hidden;
 
 	&:hover {
 		box-shadow: 0px 1px 25px rgba(162, 159, 159, 0.25);
 	}
+
 }
 
 .figure {
@@ -18,12 +20,24 @@
 .image {
 	width: 100%;
 	height: auto;
+	border-radius: 8px;
 }
 
 .heart {
 	position: absolute;
 	top: 16px;
 	right: 16px;
+	opacity: 0;
+}
+
+.wrapper:hover {
+	.heart {
+		opacity: 1;
+	}
+}
+
+.heartVisible {
+	opacity: 1;
 }
 
 .body {
@@ -96,4 +110,36 @@
 .footer {
 	border-top: 1px solid rgba(225, 225, 225, 0.7);
 	padding: 4px 16px 8px 16px;
+}
+
+.desc {
+	padding: 16px;
+	background-color: #000;
+	color: #FFF;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: translate(0, 95%);
+	border-radius: 0 0 8px 8px;
+}
+
+.tag {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 6px 12px;
+	background: #FB8F00;
+	color: #FFF;
+	font-size: 16px;
+	line-height: 20px;
+	border-radius: 8px 0 8px 0;
+}
+
+@media screen and (max-width: 992px) {
+
+	.heart {
+		opacity: 1;
+	}
+
 }

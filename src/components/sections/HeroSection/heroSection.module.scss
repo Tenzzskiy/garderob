@@ -24,12 +24,12 @@
 
 	@include tablets {
 		background-image: var(--mobileImage);
-		background-position: top 32px right -124px;
+		background-position: top 32px right 0;
 	}
 
 	@include desktops {
 		background-image: var(--desktopImage);
-		background-position: top 0 right -124px;
+		background-position: top 0 right 0;
 	}
 }
 

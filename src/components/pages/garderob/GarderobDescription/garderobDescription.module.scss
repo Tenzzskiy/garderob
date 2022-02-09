@@ -13,8 +13,11 @@
 
 .desc {
 	display: flex;
-	align-items: center;
 	margin-bottom: 32px;
+	color: #FFFFFF;
+	padding: 15px;
+	flex-direction: column;
+	border-radius: 5px;
 
 	&Icon {
 		font-size: 44px;
@@ -24,8 +27,9 @@
 	}
 
 	&Text {
-		font-weight: 600;
-		line-height: 22px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 20px;
 		color: var(--color);
 	}
 }
@@ -270,4 +274,9 @@
 	&:hover {
 		transform: translateY(-4px);
 	}
+}
+
+.postDesc {
+	margin-top: 16px;
+	font-weight: 600;
 }

@@ -1,8 +1,8 @@
-import {Props} from './advantageCard.props';
+import { Props } from './advantageCard.props';
 import classNames from 'classnames';
 import styles from './advantageCard.module.scss';
-import {CSSProperties} from 'react';
-import {CameraIcon, BanketIcon, ThermometerIcon, MirrorIcon} from '@/components';
+import { CSSProperties, useState } from 'react';
+import { CameraIcon, BanketIcon, ThermometerIcon, MirrorIcon } from '@/components';
 
 const AdvantageCard = ({
 	image,
@@ -28,11 +28,22 @@ const AdvantageCard = ({
 		}
 	};
 
+	const [imgStatus, setImgStatus] = useState(false);
+
 	return (
-		<div className={classNames(styles.wrapper, className)} style={{'--color': color} as CSSProperties}>
-			{getIcon(number)}
-			<p className={styles.title}>{title}</p>
-			<div className={styles.description} dangerouslySetInnerHTML={{__html: description}}></div>
+		<div className={classNames(styles.wrapper, className)} style={{ '--color': color } as CSSProperties}
+			onMouseEnter={() => setImgStatus(true)}
+			onMouseLeave={() => setImgStatus(false)}>
+			<div className={styles.inner}>
+				{getIcon(number)}
+				<p className={styles.title}>{title}</p>
+				<div className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></div>
+			</div>
+
+			{imgStatus && (
+				<img className={styles.img}
+					src={image} />
+			)}
 		</div>
 	);
 };

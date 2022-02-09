@@ -1,12 +1,12 @@
 import styles from './garderobImage.module.scss';
 import useSlider from '@/hooks/useSlider';
 import classNames from 'classnames';
-import {useGarderobContext} from '@/contexts/GarderobContext';
+import { useGarderobContext } from '@/contexts/GarderobContext';
 
 const GarderobImage = (): JSX.Element => {
-	const {images, title} = useGarderobContext();
+	const { images, title } = useGarderobContext();
 
-	const {currentIndex, slider, sliderRef, handleChangeCurrentIndex, handleSlideNext, handleSlidePrev} = useSlider({
+	const { currentIndex, slider, sliderRef, handleChangeCurrentIndex, handleSlideNext, handleSlidePrev } = useSlider({
 		slidesPerView: 1
 	});
 

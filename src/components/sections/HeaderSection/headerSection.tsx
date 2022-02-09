@@ -1,10 +1,11 @@
 import styles from './headerSection.module.scss';
 import classNames from 'classnames';
-import {BasketIcon, LogoIcon, Menu} from '@/components';
-import {useState} from 'react';
+import { BasketIcon, LogoIcon, Menu } from '@/components';
+import { useState } from 'react';
 import Link from 'next/link';
 import useScrollFreeze from '@/hooks/useScrollFreeze';
-import {SearchBox} from '@/components';
+import { SearchBox } from '@/components';
+import FavouriteIcon from '../../elements/FavouritesIcon/favouritesIcon'
 
 const HeaderSection = (): JSX.Element => {
 	const [opened, setOpened] = useState(false);
@@ -44,7 +45,7 @@ const HeaderSection = (): JSX.Element => {
 					/>
 					<Link href='/favorites' passHref>
 						<a className={styles.icon} rel='nofollow'>
-							<span className={classNames(styles.icon, styles.iconHover, 'icon-heart')} />
+							<FavouriteIcon />
 						</a>
 					</Link>
 					<Link href='/basket' passHref>

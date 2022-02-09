@@ -1,15 +1,15 @@
 import styles from './menu.module.scss';
-import {Props} from './menu.props';
+import { Props } from './menu.props';
 import classNames from 'classnames';
-import {SearchBox, WhatsappFillIcon, GarderobMenu} from '@/components';
+import { SearchBox, WhatsappFillIcon, GarderobMenu } from '@/components';
 import Link from 'next/link';
-import {useState, MouseEvent} from 'react';
-import {smoothScrollTo} from '@/utilities/helpers';
+import { useState, MouseEvent } from 'react';
+import { smoothScrollTo } from '@/utilities/helpers';
 import useAppDispatch from '@/hooks/useAppDispatch';
-import {chooseGarderob} from '@/redux/actions/garderobActions';
-import {MOBILE_PHONE, MOBILE_PHONE_BEAUTY} from '@/constants';
+import { chooseGarderob } from '@/redux/actions/garderobActions';
+import { MOBILE_PHONE, MOBILE_PHONE_BEAUTY } from '@/constants';
 
-const Menu = ({isOpened, onCloseMenu}: Props): JSX.Element => {
+const Menu = ({ isOpened, onCloseMenu }: Props): JSX.Element => {
 	const [isGarderobOpened, setGarderobOpened] = useState(false);
 	const [isCatalogOpened, setCatalogOpened] = useState(false);
 	const [isShowedMenu, setShowedMenu] = useState(false);
@@ -50,49 +50,6 @@ const Menu = ({isOpened, onCloseMenu}: Props): JSX.Element => {
 	return (
 		<nav className={classNames(styles.menu, isOpened && styles.opened)} onMouseLeave={handleMenuMouseOut}>
 			<ul className={styles.list}>
-				<li className={styles.item}>
-					<p
-						className={classNames(styles.link, styles.linkButton)}
-						onClick={() => setShowedMenu(!isShowedMenu)}
-						onMouseEnter={() => handleMenuMouseOver('garderob')}
-					>
-						<span>Гардероб</span>
-						<span
-							className={classNames(
-								styles.iconChevron,
-								isShowedMenu ? 'icon-chevron-up' : 'icon-chevron-down'
-							)}
-						></span>
-					</p>
-					{isGarderobOpened ? (
-						<GarderobMenu type='garderob' onCloseMenu={() => setGarderobOpened(false)} />
-					) : null}
-					{isShowedMenu && (
-						<ul className={styles.sublist}>
-							<li className={styles.subitem}>
-								<Link href='/garderob' passHref>
-									<a className={styles.sublink} onClick={() => handleChooseGarderob(0)}>
-										Доступный
-									</a>
-								</Link>
-							</li>
-							<li className={styles.subitem}>
-								<Link href='/garderob' passHref>
-									<a className={styles.sublink} onClick={() => handleChooseGarderob(1)}>
-										Cтандартный
-									</a>
-								</Link>
-							</li>
-							<li className={styles.subitem}>
-								<Link href='/garderob' passHref>
-									<a className={styles.sublink} onClick={() => handleChooseGarderob(2)}>
-										Стильный
-									</a>
-								</Link>
-							</li>
-						</ul>
-					)}
-				</li>
 				<li className={classNames(styles.item, styles.itemMobileHidden)}>
 					<p
 						className={styles.link}

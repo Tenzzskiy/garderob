@@ -25,7 +25,7 @@
 }
 
 .card {
-	padding: 16px 48px;
+	padding: 16px 0;
 	border-radius: 8px;
 	background-color: #fff;
 	text-align: center;
@@ -53,15 +53,34 @@
 		font-size: 12px;
 		line-height: 20px;
 	}
-
-	@include desktops {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
 }
 
 .cardGrid {
 	min-width: initial !important;
 	max-width: initial !important;
 	transform: initial !important;
+}
+
+.cardTitle1 {
+	color: #FB8F00;
+}
+
+.cardTitle2 {
+	color: #6E8C90;
+}
+
+.cardTitle3 {
+	color: #FA198C;
+}
+
+.cardActive1 {
+	background-color: #E9D4B7;
+}
+
+.cardActive2 {
+	background-color: #CCD2D3;
+}
+
+.cardActive3 {
+	background-color: #EABCD4;
 }

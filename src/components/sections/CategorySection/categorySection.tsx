@@ -1,6 +1,6 @@
 import styles from './categorySection.module.scss';
 import classNames from 'classnames';
-import {CategoryList} from '@/components';
+import { CategoryList } from '@/components';
 
 const CategorySection = (): JSX.Element => {
 	return (

@@ -3,17 +3,17 @@ import useSlider from '@/hooks/useSlider';
 import classNames from 'classnames';
 import useWindowSize from '@/hooks/useWindowSize';
 import useAppDispatch from '@/hooks/useAppDispatch';
-import {chooseGarderob} from '@/redux/actions/garderobActions';
-import {useGarderobContext} from '@/contexts/GarderobContext';
+import { chooseGarderob } from '@/redux/actions/garderobActions';
+import { useGarderobContext } from '@/contexts/GarderobContext';
 
 const GarderobTypes = (): JSX.Element => {
-	const {index: currentGarderob} = useGarderobContext();
+	const { index: currentGarderob } = useGarderobContext();
 
 	const windowSize = useWindowSize();
 
 	const dispatch = useAppDispatch();
 
-	const {currentIndex, slider, sliderRef, handleChangeCurrentIndex} = useSlider({
+	const { currentIndex, slider, sliderRef, handleChangeCurrentIndex } = useSlider({
 		slidesPerView: 1.6,
 		spacing: 14,
 		breakpoints: {
@@ -58,13 +58,13 @@ const GarderobTypes = (): JSX.Element => {
 					onClick={() => handleChangeCurrentGarderob(0)}
 					className={classNames(
 						styles.card,
-						currentGarderob === 0 && styles.cardActive,
+						currentGarderob === 0 && styles.cardActive1,
 						windowSize.width !== undefined && windowSize.width >= 992 && styles.cardGrid,
 
 						'keen-slider__slide'
 					)}
 				>
-					<p className={styles.cardTitle}>Доступный</p>
+					<p className={classNames(styles.cardTitle, styles.cardTitle1)}>Эконом</p>
 					<p className={styles.cardTitle}>20 &#8381;/место</p>
 					<p className={styles.cardInfo}>со 2 дня 15₽/место</p>
 				</div>
@@ -72,29 +72,29 @@ const GarderobTypes = (): JSX.Element => {
 					onClick={() => handleChangeCurrentGarderob(1)}
 					className={classNames(
 						styles.card,
-						currentGarderob === 1 && styles.cardActive,
+						currentGarderob === 1 && styles.cardActive2,
 						windowSize.width !== undefined && windowSize.width >= 992 && styles.cardGrid,
 						'keen-slider__slide'
 					)}
 				>
-					<p className={styles.cardTitle}>Двухярусный</p>
-					<p className={styles.cardTitle}>25 &#8381;/место</p>
-					<p className={styles.cardInfo}>со 2 дня 20₽/место</p>
+					<p className={classNames(styles.cardTitle, styles.cardTitle2)}>Стандарт</p>
+					<p className={styles.cardTitle}>45 &#8381;/место</p>
+					<p className={styles.cardInfo}>со 2 дня 30₽/место</p>
 				</div>
 				<div
 					onClick={() => handleChangeCurrentGarderob(2)}
 					className={classNames(
 						styles.card,
-						currentGarderob === 2 && styles.cardActive,
+						currentGarderob === 2 && styles.cardActive3,
 						windowSize.width !== undefined && windowSize.width >= 992 && styles.cardGrid,
 						'keen-slider__slide'
 					)}
 				>
-					<p className={styles.cardTitle}>Стильный</p>
-					<p className={styles.cardTitle}>30 &#8381;/место</p>
-					<p className={styles.cardInfo}>со 2 дня 25₽/место</p>
+					<p className={classNames(styles.cardTitle, styles.cardTitle3)}>VIP</p>
+					<p className={styles.cardTitle}>15 000 &#8381;/до 60 мест</p>
+					<p className={styles.cardInfo}>со 2 дня 9000 &#8381;</p>
 				</div>
-			</div>
+			</div >
 		);
 	};
 

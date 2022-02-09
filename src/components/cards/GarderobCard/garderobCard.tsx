@@ -1,10 +1,13 @@
 import styles from './garderobCard.module.scss';
-import {Props} from './garderobCard.props';
+import { Props } from './garderobCard.props';
 import classNames from 'classnames';
 import useAppDispatch from '@/hooks/useAppDispatch';
-import {addCardToBasket} from '@/redux/actions/shopActions';
-import {AddButton, HeartIcon} from '@/components';
-import {addDopsToGarderob} from '@/redux/actions/garderobActions';
+import { addCardToBasket } from '@/redux/actions/shopActions';
+import { AddButton, HeartIcon } from '@/components';
+import { addDopsToGarderob } from '@/redux/actions/garderobActions';
+import { useState, CSSProperties } from 'react';
+import CardSlider from '../../elements/CardSlider/cardSlider';
+import useAppSelector from '@/hooks/useAppSelector';
 
 const GarderobCard = ({
 	className,
@@ -18,25 +21,38 @@ const GarderobCard = ({
 	const dispatch = useAppDispatch();
 
 	const handleAddCard = () => {
-		if (disabled) {
-			return;
-		}
+		// if (disabled) {
+		// 	return;
+		// }
 
 		if (isGarderob && typeof garderobId !== 'undefined') {
-			dispatch(addDopsToGarderob({id: garderobId, item: {...card, isAdded: true, count: 1}}));
+			dispatch(addDopsToGarderob({ id: garderobId, item: { ...card, isAdded: true, count: 1 } }));
 		} else {
-			dispatch(addCardToBasket({...card, isAdded: true, count: 1, countTime: card.info.minTime}));
+			dispatch(addCardToBasket({ ...card, isAdded: true, count: 1, countTime: card.info.minTime }));
 		}
 	};
 
+	const [descStatus, setDescStatus] = useState(false);
+	const favoriteItems = useAppSelector(state => state.favoriteState.items);
+	const foundItem = favoriteItems.find(item => item.title === card.title);
+
 	return (
-		<div className={classNames(className, styles.wrapper)}>
+		<div className={classNames(className, styles.wrapper)}
+			onMouseEnter={() => setDescStatus(true)}
+			onMouseLeave={() => setDescStatus(false)}>
 			<figure className={styles.figure}>
-				<img className={styles.image} src={card.image} alt={card.title} />
-				{!isDifferent && <HeartIcon className={styles.heart} card={card} />}
+				{typeof card.image === 'string' ? (
+					<img className={styles.image} src={card.image} alt={card.title} />
+				) : (
+					<CardSlider card={card} />
+				)}
+				{!isDifferent && <HeartIcon className={classNames(styles.heart, {
+					[styles.heartVisible]: foundItem
+				})} card={card} />}
 			</figure>
 			<div className={classNames(styles.body, isDifferent && styles.bodyPadding)}>
-				<p className={styles.title}>{card.title}</p>
+				<p style={{ 'color': card.color } as CSSProperties}
+					className={styles.title}>{card.title}</p>
 				{!card.isSimple ? (
 					<div className={styles.priceBlock}>
 						<span className={styles.price}>
@@ -55,7 +71,7 @@ const GarderobCard = ({
 							<span
 								className={classNames(
 									styles.button,
-									disabled ? styles.buttonDisabled : styles.buttonActive
+									styles.buttonActive
 								)}
 								onClick={handleAddCard}
 							>
@@ -75,6 +91,17 @@ const GarderobCard = ({
 					</p>
 				</div>
 			) : null}
+
+			{(descStatus && card.desc) && (
+				<div className={styles.desc}>
+					{card.desc}
+				</div>
+			)}
+
+			{typeof card.brand !== 'undefined' && (
+				<p className={styles.tag}>возможен брендинг</p>
+			)}
+
 		</div>
 	);
 };

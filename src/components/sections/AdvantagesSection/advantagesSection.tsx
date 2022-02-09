@@ -1,11 +1,11 @@
 import styles from './advantagesSection.module.scss';
 import classNames from 'classnames';
-import {SliderDots, AdvantageCard} from '@/components';
+import { SliderDots, AdvantageCard } from '@/components';
 import useSlider from '@/hooks/useSlider';
-import {Props} from './advantagesSection.props';
+import { Props } from './advantagesSection.props';
 
-const AdvantagesSection = ({color, advantage}: Props): JSX.Element => {
-	const {currentIndex, handleChangeCurrentIndex, sliderRef, slider} = useSlider({
+const AdvantagesSection = ({ color, advantage }: Props): JSX.Element => {
+	const { currentIndex, handleChangeCurrentIndex, sliderRef, slider } = useSlider({
 		slidesPerView: 1.15,
 		spacing: 16,
 		breakpoints: {
@@ -35,7 +35,7 @@ const AdvantagesSection = ({color, advantage}: Props): JSX.Element => {
 				<div ref={sliderRef} className={classNames(styles.slider, 'keen-slider')}>
 					<AdvantageCard
 						className='keen-slider__slide'
-						image='/images/advantages/first.png'
+						image='/images/advantages/1.png'
 						title='Камера хранения'
 						description='При заказе стильного гардероба камера хранения в подарок'
 						color={color}
@@ -45,7 +45,7 @@ const AdvantagesSection = ({color, advantage}: Props): JSX.Element => {
 					/>
 					<AdvantageCard
 						className='keen-slider__slide'
-						image='/images/advantages/second.png'
+						image='/images/advantages/2.png'
 						title='Термометр'
 						description='<p>При заказе гардероба<br>от 150 гостей термометр в подарок</p>'
 						color={color}
@@ -55,7 +55,7 @@ const AdvantagesSection = ({color, advantage}: Props): JSX.Element => {
 					/>
 					<AdvantageCard
 						className='keen-slider__slide'
-						image='/images/advantages/third.png'
+						image='/images/advantages/3.png'
 						title='Банкетка'
 						description='При заказе гардероба от 200<br> гостей банкетка в подарок'
 						color={color}
@@ -65,7 +65,7 @@ const AdvantagesSection = ({color, advantage}: Props): JSX.Element => {
 					/>
 					<AdvantageCard
 						className='keen-slider__slide'
-						image='/images/advantages/fourth.png'
+						image='/images/advantages/4.png'
 						title='Зеркало'
 						description='При заказе мебели<br>для гардероба зеркало в подарок'
 						color={color}

@@ -4,42 +4,22 @@
 
 .footer {
 	padding-bottom: 80px;
-	margin-top: 80px;
-
-	@include desktops {
-		padding-bottom: 44px;
-		margin-top: 0;
-		padding-top: 44px;
-	}
+	background-color: #404A4C;
+	padding-top: 64px;
 }
 
 .footerContainer {
 	padding-left: 16px;
 	padding-right: 16px;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-areas:
-		'first second'
-		'third third'
-		'fourth fourth'
-		'fifth fifth';
-
-	@include tablets {
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-areas:
-			'first second third'
-			'fourth fourth fifth';
-	}
-
-	@include desktops {
-		grid-template-columns: 200px 200px 280px 1fr;
-		grid-template-rows: auto 1fr;
-		grid-template-areas:
-			'first second third fourth'
-			'first second third fifth';
-		row-gap: 24px;
-	}
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
+
+.blockFourth {
+	.divider {
+		margin-bottom: 16px;
+	}
+} 
 
 .block {
 	padding-top: 24px;
@@ -112,7 +92,6 @@
 }
 
 .blockFirst {
-	grid-area: first;
 
 	@include desktops {
 		border-top: none;
@@ -120,21 +99,126 @@
 }
 
 .blockSecond {
-	grid-area: second;
 
 	@include desktops {
 		border-top: none;
 	}
 }
 
-.blockThird {
-	grid-area: third;
+
+.logo {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.rights {
+	color: #68888C;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+.itemLink {
+	color: #FFFFFF;
+	opacity: 1;
+}
+
+.itemLink:hover {
+	opacity: 0.5;
+}
+
+.svg {
+	margin-right: 12px;
 }
 
 .blockFourth {
-	grid-area: fourth;
+	.itemLink {
+		color: #9FA4A5;
+	}
 }
 
 .blockFifth {
-	grid-area: fifth;
+	.itemLink {
+		display: flex;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+
+	.footer {
+		padding: 26px 26px 36px;
+	}
+
+	.footerContainer {
+		padding: 0 !important;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.block {
+		width: 20%;
+		border: none;
+		padding: 0;
+	}
+
+	.blockFirst {
+		width: 100%;
+		margin-bottom: 40px;
+
+		.itemList {
+			display: flex;
+			justify-content: space-between;
+			align-items: center
+		};
+
+		.logo {
+			margin: 0;
+		}
+	}
+
+	.blockFifth {
+		width: 30%;
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+
+	.footer {
+		padding: 15px 20px;
+	}
+
+	.blockSecond, .blockThird {
+		width: 48%;
+	}
+
+	.blockThird {
+		text-align: end;
+	}
+
+	.blockFourth {
+		width: 100%;
+		margin: 40px 0;
+
+		.itemList {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.divider {
+			width: 30%;
+		}
+
+		.policy {	
+			width: 65%;
+			text-align: end;
+		}
+
+	}
+
+	.blockFifth {
+		width: 100%;
+	}
+
 }

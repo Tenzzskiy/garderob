@@ -1,0 +1,117 @@
+[
+	{
+		"id": 6,
+		"slug": "zonirovanie",
+		"items": [
+			{
+				"id": 1,
+				"title": "Столбики ограждения",
+				"image": "/images/zon-1.png",
+				"price": 1000,
+				"time": "дн",
+				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 2,
+				"title": "Указатель",
+				"image": "/images/zon-2.png",
+				"price": 1000,
+				"time": "дн",
+				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 3,
+				"title": "Красная дорожка",
+				"image": "/images/zon-3.png",
+				"price": 1000,
+				"time": "дн",
+				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			}
+		]
+	},
+	{
+		"id": 7,
+		"slug": "brendirovanie",
+		"items": [
+			{
+				"id": 1,
+				"title": "Брендирование номерков",
+				"image": "/images/brand-1.png",
+				"price": 50,
+				"brand": true,
+				"time": "шт",
+				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 2,
+				"title": "Стойка приема",
+				"image": [
+					"/images/brand-2.png",
+					"/images/brand-2-2.png",
+					"/images/brand-2-3.png"
+				],
+				"price": 1000,
+				"brand": true,
+				"time": "дн",
+				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 3,
+				"title": "Шкаф на 4 секции",
+				"image": "/images/brand-3.png",
+				"price": 1000,
+				"brand": true,
+				"time": "дн",
+				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			}
+		]
+	}
+]

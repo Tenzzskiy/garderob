@@ -1,12 +1,13 @@
 import styles from './garderobAdditives.module.scss';
-import {GarderobBlock} from '@/components';
+import { GarderobBlock } from '@/components';
 import categories from '@/fixtures/categories.json';
-import {CategoryCardType, CategoryPageType} from '@/types';
-import {useGarderobContext} from '@/contexts/GarderobContext';
+import { CategoryCardType, CategoryPageType } from '@/types';
+import { useGarderobContext } from '@/contexts/GarderobContext';
 import numbers from '@/fixtures/numbers.json';
+import GarderobTabs from '../GarderobTabs';
 
 const GarderobAdditives = (): JSX.Element => {
-	const {isAdded} = useGarderobContext();
+	const { isAdded } = useGarderobContext();
 
 	const getItems = (category: any) => {
 		if (category.slug === 'personal-na-meropriyatie') {
@@ -30,28 +31,12 @@ const GarderobAdditives = (): JSX.Element => {
 		<div className={styles.section}>
 			<GarderobBlock
 				myId='garderobBlock'
-				title='Гардеробщик'
+				title='Выберите сотрудника'
 				items={getGarderobItems() as CategoryCardType[]}
 				isAdded={isAdded}
 				visible={true}
 			/>
-			<GarderobBlock
-				title='Выбор номерков'
-				items={numbers as CategoryCardType[]}
-				isAdded={isAdded}
-				visible={true}
-				isDifferent={true}
-			/>
-			{categories.map(category => {
-				return (
-					<GarderobBlock
-						isAdded={isAdded}
-						title={category.name}
-						key={category.id}
-						items={getItems(category) as CategoryCardType[]}
-					/>
-				);
-			})}
+			<GarderobTabs />
 		</div>
 	);
 };

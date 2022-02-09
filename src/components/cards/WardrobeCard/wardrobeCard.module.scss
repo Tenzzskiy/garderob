@@ -7,7 +7,8 @@
 	border-radius: 8px;
 	overflow: hidden !important;
 	cursor: pointer;
-	display: block;
+	display: flex;
+	flex-direction: column;
 	text-decoration: none;
 
 	@include desktops {
@@ -57,7 +58,7 @@
 }
 
 .statusPopular {
-	background-color: #1c82ae;
+	background-color: #68888C;
 }
 
 .statusHit {
@@ -66,6 +67,9 @@
 
 .body {
 	padding: 20px 16px 16px 16px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
 
 	@include desktops {
 		padding: 20px 24px 24px 24px;
@@ -95,15 +99,15 @@
 	}
 }
 
-.desc_orange {
+.title_orange {
 	color: $orange;
 }
 
-.desc_blue {
-	color: #1c82ae;
+.title_blue {
+	color: #68888C;
 }
 
-.desc_pink {
+.title_pink {
 	color: #ff377f;
 }
 
@@ -117,14 +121,16 @@
 	margin-right: 16px;
 }
 
-.description {
-	@include textSubtitleThird;
+.description {	
+	font-size: 20px;
+	line-height: 26px;
 }
 
 .bottom {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-top: auto;
 }
 
 .price {

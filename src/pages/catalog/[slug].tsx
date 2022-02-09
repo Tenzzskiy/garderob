@@ -1,16 +1,15 @@
-import type {NextPage} from 'next';
+import type { NextPage } from 'next';
 import {
 	AdvantagesSection,
-	WorkingSection,
 	DescriptionSection,
 	QuestionsSection,
 	HeroSection,
 	CatalogSection,
 	SeoSection
 } from '@/components';
-import {GetStaticProps, GetStaticPaths} from 'next';
-import {getPathsForCategories, getCategoryBySlug, getAllCategories} from '@/utilities/api';
-import {CategoryPageType, CategoriesType} from '@/types';
+import { GetStaticProps, GetStaticPaths } from 'next';
+import { getPathsForCategories, getCategoryBySlug, getAllCategories } from '@/utilities/api';
+import { CategoryPageType, CategoriesType } from '@/types';
 import Head from 'next/head';
 
 type Props = {
@@ -18,7 +17,7 @@ type Props = {
 	categories: Array<CategoriesType>;
 };
 
-const Catalog: NextPage<Props> = ({category, categories}) => {
+const Catalog: NextPage<Props> = ({ category, categories }) => {
 	return (
 		<>
 			<Head>
@@ -31,7 +30,6 @@ const Catalog: NextPage<Props> = ({category, categories}) => {
 			</Head>
 			<HeroSection hero={category.hero} />
 			<DescriptionSection description={category.description} />
-			<WorkingSection color={category.workingSectionColor} working={category.working} />
 			<AdvantagesSection color={category.workingSectionColor} advantage={category.advantage} />
 			<CatalogSection category={category} categories={categories} />
 			<QuestionsSection />
@@ -40,7 +38,7 @@ const Catalog: NextPage<Props> = ({category, categories}) => {
 	);
 };
 
-export const getStaticProps: GetStaticProps = async ({params}) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const category = getCategoryBySlug(params?.slug);
 	const categories = getAllCategories();
 

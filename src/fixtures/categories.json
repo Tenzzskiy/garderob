@@ -364,7 +364,6 @@
 					"priceForTime": 300
 				}
 			},
-
 			{
 				"id": 23,
 				"title": "Стол бочка (черный)",
@@ -397,7 +396,6 @@
 					"priceForTime": 300
 				}
 			},
-
 			{
 				"id": 26,
 				"title": "Стул барный пластиковый",
@@ -430,7 +428,6 @@
 					"priceForTime": 300
 				}
 			},
-
 			{
 				"id": 30,
 				"title": "Диван из палет",
@@ -602,12 +599,13 @@
 		"items": [
 			{
 				"id": 8,
-				"title": "Гардеробщик муж.",
-				"image": "/images/garderobshik1.jpg",
-				"price": 2700,
+				"title": "Монтажник гардероба",
+				"image": "/images/garderob-8.jpg",
+				"price": 2900,
 				"time": "4 ч",
-				"priceDescription": "+1 час 400₽",
+				"priceDescription": "+1 час 750₽",
 				"isGarderob": true,
+				"desc": "Соберет и разберет конструкцию гардероба",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -619,12 +617,14 @@
 			},
 			{
 				"id": 9,
-				"title": "Гардеробщик жен.",
-				"image": "/images/garderobshikdev1.jpg",
-				"price": 3200,
+				"title": "Стандарт",
+				"image": "/images/garderob-9.jpg",
+				"price": 2900,
 				"time": "4 ч",
-				"priceDescription": "+1 час 400₽",
+				"priceDescription": "+1 час 750₽",
 				"isGarderob": true,
+				"color": "#68888C",
+				"desc": "Рекомендуется для потокового приема одежды",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -636,12 +636,52 @@
 			},
 			{
 				"id": 10,
-				"title": "Гардеробщик black man",
-				"image": "/images/garderobshikblack2.jpg",
-				"price": 3500,
+				"title": "Стандарт +",
+				"image": "/images/garderob-10.jpg",
+				"price": 4500,
 				"time": "4 ч",
-				"priceDescription": "+1 час 500₽",
+				"priceDescription": "+1 час 750₽",
 				"isGarderob": true,
+				"color": "#FB8F00",
+				"desc": "Рекомендуется на мероприятии, где важен каждый гость",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 100
+				}
+			},
+			{
+				"id": "10-1",
+				"title": "VIP",
+				"image": "/images/garderob-10-1.jpg",
+				"price": 9000,
+				"time": "4 ч",
+				"priceDescription": "+1 час 750₽",
+				"isGarderob": true,
+				"color": "#43C02E",
+				"desc": "Персональный подход к каждому гостю",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 100
+				}
+			},
+			{
+				"id": "10-2",
+				"title": "Менеджер проекта",
+				"image": "/images/garderob-10-2.jpg",
+				"price": 6000,
+				"time": "4 ч",
+				"priceDescription": "+1 час 750₽",
+				"isGarderob": true,
+				"color": "#A39CE8",
+				"desc": "При работе более 2ух гардеробщиков",
 				"info": {
 					"count": "чел",
 					"time": "ч",

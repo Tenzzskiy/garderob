@@ -1,5 +1,5 @@
-import type {NextPage} from 'next';
-import {GetStaticProps} from 'next';
+import type { NextPage } from 'next';
+import { GetStaticProps } from 'next';
 import {
 	QuestionsSection,
 	WardrobeSection,
@@ -8,11 +8,10 @@ import {
 	CategorySection,
 	DescriptionSection,
 	NewsSection,
-	SeoSection,
-	WorkingSection
+	SeoSection
 } from '@/components';
-import {getHeroInfo, getAllNews} from '@/utilities/api';
-import {CategoryPageType, INewsCard} from '@/types';
+import { getHeroInfo, getAllNews } from '@/utilities/api';
+import { CategoryPageType, INewsCard } from '@/types';
 import Head from 'next/head';
 
 type Props = {
@@ -20,7 +19,7 @@ type Props = {
 	news: INewsCard[];
 };
 
-const Home: NextPage<Props> = ({info, news}) => {
+const Home: NextPage<Props> = ({ info, news }) => {
 	return (
 		<>
 			<Head>
@@ -40,7 +39,6 @@ const Home: NextPage<Props> = ({info, news}) => {
 			</Head>
 			<HeroSection hero={info.hero} />
 			<DescriptionSection description={info.description} />
-			<WorkingSection color={info.workingSectionColor} working={info.working} />
 			<AdvantagesSection color={info.workingSectionColor} advantage={info.advantage} />
 			<WardrobeSection />
 			<CategorySection />

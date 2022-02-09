@@ -3,9 +3,9 @@ import styles from './wardrobeCard.module.scss';
 import Props from './wardrobeCard.props';
 import Link from 'next/link';
 import useAppDispatch from '@/hooks/useAppDispatch';
-import {chooseGarderob} from '@/redux/actions/garderobActions';
+import { chooseGarderob } from '@/redux/actions/garderobActions';
 
-const WardrobeCard = ({className = null, card, index}: Props): JSX.Element => {
+const WardrobeCard = ({ className = null, card, index }: Props): JSX.Element => {
 	const dispatch = useAppDispatch();
 
 	const renderStatus = () => {
@@ -38,13 +38,8 @@ const WardrobeCard = ({className = null, card, index}: Props): JSX.Element => {
 					</picture>
 				</figure>
 				<div className={styles.body}>
-					<p className={styles.title}>{card.name}</p>
+					<p className={classNames(styles.title, styles[`title_${card.color}`])}>{card.name}</p>
 					<div className={classNames(styles.desc, styles[`desc_${card.color}`])}>
-						{card.status === 1 ? (
-							<img className={classNames(styles.imageIcon)} src='/images/wardrobe.png' alt='Wardrobe' />
-						) : (
-							<span className={classNames(styles.icon, card.icon)}></span>
-						)}
 						<p className={styles.description}>{card.description}</p>
 					</div>
 					<div className={styles.bottom}>
