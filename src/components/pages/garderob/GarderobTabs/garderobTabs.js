@@ -7,9 +7,11 @@ import categoriesNew from '@/fixtures/categoriesNew.json';
 import { useGarderobContext } from '@/contexts/GarderobContext';
 import { GarderobCard } from '@/components';
 import useWindowSize from '@/hooks/useWindowSize';
+import {useSelector} from "react-redux";
+import {selectItems} from "@/redux/selectors";
 
 const GarderobTabs = () => {
-
+	const shopState = useSelector(selectItems)
 	const [selected, setSelected] = useState('vse');
 	const { id, addedDops } = useGarderobContext();
 	const [showValue, setShowValue] = useState(0);
@@ -61,12 +63,13 @@ const GarderobTabs = () => {
 
 				{calcCurrentArr().slice(0, showValue).map((i) => {
 
-					const foundItem = addedDops.find(addedItem => addedItem.id === i.id);
-
+					const foundItem = shopState.find(addedItem => addedItem.id === i.id);
+					const data = addedDops.find(addedItem => addedItem.id === i.id);
 					return (
 						<GarderobCard
 							key={i.title}
 							card={foundItem ? foundItem : i}
+							data={data ? data : i}
 							isPrimary={true}
 							garderobId={id}
 							isGarderob={true}

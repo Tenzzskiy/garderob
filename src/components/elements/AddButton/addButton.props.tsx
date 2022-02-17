@@ -1,6 +1,7 @@
 import {CategoryCardType, GarderobItemType} from '@/types';
 
 export type Props = {
+	data:CategoryCardType,
 	value: number;
 	size: string;
 	card: any;

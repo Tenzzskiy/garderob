@@ -5,11 +5,14 @@ import {GarderobCard} from '@/components';
 import {Props} from './garderobBlock.props';
 import {useGarderobContext} from '@/contexts/GarderobContext';
 import {useEffect, useState} from 'react';
+import {useSelector} from "react-redux";
+import {selectItems} from "@/redux/selectors";
 
 const GarderobBlock = ({title, items, isAdded, isDifferent = false, visible = false, myId}: Props): JSX.Element => {
 	const [isOpened, setOpened] = useState(true);
 	const {id, addedDops} = useGarderobContext();
-
+	const shopState = useSelector(selectItems)
+	console.log('d',shopState)
 	const {sliderRef, slider, handleSlideNext, handleSlidePrev} = useSlider({
 		slidesPerView: 1.1,
 		spacing: 16,
@@ -91,7 +94,7 @@ const GarderobBlock = ({title, items, isAdded, isDifferent = false, visible = fa
 				<div className={classNames(styles.sliderWrapper)}>
 					<div ref={sliderRef} className={classNames(styles.slider, 'keen-slider')}>
 						{items.map(item => {
-							const foundItem = addedDops.find(addedItem => addedItem.id === item.id);
+							const foundItem = shopState.find(addedItem => addedItem.id === item.id);
 
 							return (
 								<GarderobCard

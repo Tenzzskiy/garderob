@@ -27,37 +27,47 @@ import {
 	removeDopsFromGarderob,
 	changeDopsInGarderob
 } from '@/redux/actions/garderobActions';
+import {data} from "browserslist";
 
 const AddButton = ({
 	card,
 	value,
 	size,
-	info,
+	info, data,
 	garderobId,
 	isGarderob = false,
 	isOwn = false,
 	isCount = true,
-	maxValue = 9999
+	maxValue = 9999,
+
 }: Props) => {
 	const dispatch = useAppDispatch();
 
 	const handleRemove = () => {
 		if (isGarderob) {
 			dispatch(removeGarderob(card.id));
-		} else if (isOwn && typeof garderobId !== 'undefined') {
+		} else if (!isOwn && typeof garderobId !== 'undefined') {
 			dispatch(removeDopsFromGarderob({id: garderobId, item: card}));
 		} else {
 			dispatch(removeCardToBasket(card.id));
 		}
 	};
-
+	// console.log(card,
+	// 	value,
+	// 	size,
+	// 	info,
+	// 	garderobId,
+	// 	isGarderob ,
+	// 	isOwn ,
+	// 	isCount ,
+	// 	maxValue )
 	const handleDecrease = () => {
 		if (value === 1) {
 			handleRemove();
 			return;
 		}
 
-		if (isOwn && typeof garderobId !== 'undefined') {
+		if (!isOwn && typeof garderobId !== 'undefined') {
 			dispatch(decreaseDopsInGarderob({id: garderobId, item: card}));
 			return;
 		}
@@ -84,18 +94,24 @@ const AddButton = ({
 
 	const handleIncrease = () => {
 		if (card.count + 1 > maxValue) {
+			console.log('+1')
 			return;
+
 		}
 
-		if (isOwn && typeof garderobId !== 'undefined') {
+		if (!isOwn && typeof garderobId !== 'undefined') {
+			console.log('own')
 			dispatch(increaseDopsInGarderob({id: garderobId, item: card}));
 			return;
 		}
 
 		if (isGarderob) {
+			console.log('garderob')
 			if (isCount) {
+				console.log('id')
 				dispatch(increaseGarderob(card.id));
 			} else {
+				console.log('time')
 				dispatch(increaseTimeGarderob(card.id));
 			}
 
@@ -103,8 +119,11 @@ const AddButton = ({
 		}
 
 		if (isCount) {
+			console.log('+count')
 			dispatch(increaseCardToBasket(card.id));
+
 		} else {
+			console.log('time++')
 			dispatch(increaseTimeCardToBasket(card.id));
 		}
 	};
@@ -114,7 +133,7 @@ const AddButton = ({
 			return;
 		}
 
-		if (isOwn && typeof garderobId !== 'undefined') {
+		if (!isOwn && typeof garderobId !== 'undefined') {
 			dispatch(changeDopsInGarderob({id: garderobId, item: card, value: Number(e.target.value)}));
 			return;
 		}

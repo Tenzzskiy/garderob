@@ -12,11 +12,12 @@ import useAppSelector from '@/hooks/useAppSelector';
 const GarderobCard = ({
 	className,
 	card,
-	isPrimary,
+	isPrimary, data,
 	isGarderob = false,
-	garderobId,
+	garderobId = data.id,
 	disabled = false,
 	isDifferent = false
+
 }: Props): JSX.Element => {
 	const dispatch = useAppDispatch();
 
@@ -25,11 +26,9 @@ const GarderobCard = ({
 		// 	return;
 		// }
 
-		if (isGarderob && typeof garderobId !== 'undefined') {
 			dispatch(addDopsToGarderob({ id: garderobId, item: { ...card, isAdded: true, count: 1 } }));
-		} else {
 			dispatch(addCardToBasket({ ...card, isAdded: true, count: 1, countTime: card.info.minTime }));
-		}
+		// }
 	};
 
 	const [descStatus, setDescStatus] = useState(false);
@@ -61,6 +60,7 @@ const GarderobCard = ({
 						{card.isAdded ? (
 							<AddButton
 								card={card}
+								data={data}
 								value={card.count}
 								size='128px'
 								garderobId={garderobId}

@@ -27,7 +27,7 @@ const GarderobDescription = (): JSX.Element => {
 
 	const getPriceOfGarderob = (): number => {
 		let sum = 0;
-
+		console.log(card)
 		if (card.addedDops && card.addedDops.length) {
 			card.addedDops.forEach(item => {
 				sum += item.count * item.price;
