@@ -3,7 +3,7 @@ import styles from './garderobDescription.module.scss';
 import { ExclamationIcon, HangerIcon, AddButton } from '@/components';
 import { useGarderobContext } from '@/contexts/GarderobContext';
 import useAppDispatch from '@/hooks/useAppDispatch';
-import { addGarderob, removeGarderob } from '@/redux/actions/garderobActions';
+import {addGarderob, clearGarderobs, removeGarderob} from '@/redux/actions/garderobActions';
 import { CSSProperties } from 'react';
 import Link from 'next/link';
 import { convertToNumberWithSpaces, scrollTo } from '@/utilities/helpers';
@@ -11,6 +11,7 @@ import {useCatalogContext} from "@/contexts/CatalogContext";
 import {useSelector} from "react-redux";
 import {selectAllGarderobs, selectItems} from "@/redux/selectors";
 import useAppSelector from "@/hooks/useAppSelector";
+import {clearBasket} from "@/redux/actions/shopActions";
 
 const GarderobDescription = () => {
 	const card = useGarderobContext();
@@ -22,7 +23,8 @@ const GarderobDescription = () => {
 	};
 
 	const handleDelete = ()=> {
-		dispatch(removeGarderob(card.id));
+		dispatch(clearBasket());
+		dispatch(clearGarderobs());
 	};
 
 	const handleScrollToGarderob = () => {
