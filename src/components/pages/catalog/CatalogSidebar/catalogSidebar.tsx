@@ -10,7 +10,9 @@ const CatalogSidebar = ({categories, slug}: Props): JSX.Element => {
 				{categories.map(categoryItem => {
 					return (
 						<li className={styles.item} key={categoryItem.id}>
-							<Link href={`/catalog/${categoryItem.slug}`} passHref>
+							<Link
+								// href={`/catalog/${categoryItem.slug}`}
+								  href={{ pathname: `/catalog/${categoryItem.slug}`, hash: ('catalog')} } passHref>
 								<a className={styles.link}>
 									<span
 										className={classNames(

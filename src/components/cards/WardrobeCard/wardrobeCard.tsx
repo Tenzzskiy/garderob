@@ -4,6 +4,7 @@ import Props from './wardrobeCard.props';
 import Link from 'next/link';
 import useAppDispatch from '@/hooks/useAppDispatch';
 import { chooseGarderob } from '@/redux/actions/garderobActions';
+import {useState} from "react";
 
 const WardrobeCard = ({ className = null, card, index }: Props): JSX.Element => {
 	const dispatch = useAppDispatch();
@@ -18,13 +19,14 @@ const WardrobeCard = ({ className = null, card, index }: Props): JSX.Element => 
 		}
 	};
 
+	const [color , setColor] = useState(styles.white);
 	const handleChooseGarderob = () => {
 		dispatch(chooseGarderob(index));
 	};
-
+	console.log(card)
 	return (
 		<Link href='/garderob' passHref>
-			<a className={classNames(className, styles.wrapper)} onClick={handleChooseGarderob}>
+			<a className={classNames(className, styles.wrapper,card.status === 1 ? styles.white : card.status === 2 ? styles.gray : styles.purple  )} onClick={handleChooseGarderob} >
 				{renderStatus()}
 				<figure className={styles.figure}>
 					<picture>
@@ -37,7 +39,7 @@ const WardrobeCard = ({ className = null, card, index }: Props): JSX.Element => 
 						/>
 					</picture>
 				</figure>
-				<div className={styles.body}>
+				<div className={styles.body} >
 					<p className={classNames(styles.title, styles[`title_${card.color}`])}>{card.name}</p>
 					<div className={classNames(styles.desc, styles[`desc_${card.color}`])}>
 						<p className={styles.description}>{card.description}</p>

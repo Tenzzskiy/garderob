@@ -15,10 +15,12 @@ body {
 	color: $grayDarkColor;
 	margin-top: $headerHeight;
 	overflow-x: hidden;
+
 }
 
 html {
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 a {

@@ -27,6 +27,8 @@ import {
 	removeDopsFromGarderob,
 	changeDopsInGarderob
 } from '@/redux/actions/garderobActions';
+import useAppSelector from "@/hooks/useAppSelector";
+import {decreaseFavourite, increaseFavourite} from "@/redux/actions/favoriteActions";
 
 
 const AddButton = ({
@@ -41,6 +43,8 @@ const AddButton = ({
 	maxValue = 9999,
 
 }: Props) => {
+	const favoriteItems = useAppSelector(state => state.favoriteState.items);
+	const foundItem = favoriteItems.find(item => item.title === card.title);
 	const dispatch = useAppDispatch();
 
 	const handleRemove = () => {
@@ -86,6 +90,7 @@ const AddButton = ({
 		if (isCount) {
 			dispatch(decreaseCardToBasket(card.id));
 			dispatch(decreaseDopsInGarderob({id: garderobId, item: card}));
+			dispatch(decreaseFavourite(card.id));
 		} else {
 			if (card.countTime === card.info.minTime) {
 				handleRemove();
@@ -124,6 +129,7 @@ const AddButton = ({
 
 		if (isCount) {
 			console.log('+count')
+			dispatch(increaseFavourite(card.id));
 			dispatch(increaseCardToBasket(card.id));
 			dispatch(increaseDopsInGarderob({id: garderobId, item: card}));
 

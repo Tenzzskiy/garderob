@@ -7,7 +7,7 @@ const CatalogList = ({items}: Props): JSX.Element => {
 	const allItems = useAppSelector(state => state.shopState.items);
 
 	return (
-		<div className={styles.list}>
+		<div className={styles.list} >
 			{items.map(item => {
 				let foundItem = allItems.find(card => card.id === item.id);
 

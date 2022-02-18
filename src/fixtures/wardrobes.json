@@ -13,8 +13,8 @@
 	{
 		"id": 2,
 		"name": "Стандарт",
-		"image": "/images/warderob-second-mobile.jpg",
-		"desktopImage": "/images/warderob-second-desktop.jpg",
+		"image": "/images/warderob-second-mobile.png",
+		"desktopImage":"/images/warderob-second-desktop.png",
 		"price": "1 место/25 ₽",
 		"description": "Вместительный, занимает меньше места",
 		"color": "blue",
@@ -24,8 +24,8 @@
 	{
 		"id": 3,
 		"name": "VIP",
-		"image": "/images/warderob-third-mobile.jpg",
-		"desktopImage": "/images/warderob-third-desktop.jpg",
+		"image": "/images/warderob-third-desktop.png",
+		"desktopImage": "/images/warderob-third-desktop.png",
 		"price": "60 мест/15 000 ₽",
 		"description": "Модно и удобно, выдержит шубу и не только",
 		"color": "pink",

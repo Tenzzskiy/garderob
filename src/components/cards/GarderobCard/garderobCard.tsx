@@ -8,6 +8,7 @@ import { addDopsToGarderob } from '@/redux/actions/garderobActions';
 import { useState, CSSProperties } from 'react';
 import CardSlider from '../../elements/CardSlider/cardSlider';
 import useAppSelector from '@/hooks/useAppSelector';
+import {addToBusket} from "@/redux/actions/favoriteActions";
 
 const GarderobCard = ({
 	className,
@@ -28,6 +29,8 @@ const GarderobCard = ({
 
 
 			dispatch(addCardToBasket({ ...card, isAdded: true, count: 1, countTime: card.info.minTime }));
+			dispatch(addToBusket(card.id))
+
 		// }
 	};
 
@@ -60,7 +63,6 @@ const GarderobCard = ({
 						{card.isAdded ? (
 							<AddButton
 								card={card}
-
 								value={card.count}
 								size='128px'
 								garderobId={garderobId}
@@ -92,11 +94,6 @@ const GarderobCard = ({
 				</div>
 			) : null}
 
-			{(descStatus && card.desc) && (
-				<div className={styles.desc}>
-					{card.desc}
-				</div>
-			)}
 
 			{typeof card.brand !== 'undefined' && (
 				<p className={styles.tag}>возможен брендинг</p>

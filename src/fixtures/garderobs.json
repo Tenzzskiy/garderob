@@ -5,8 +5,9 @@
 		"name": "primary",
 		"title": "Гардероб эконом",
 		"images": [
-			"/images/garderob/garderobFirst-1.jpg",
-			"/images/garderob/garderobFirst-2.jpg"
+			"/images/garderob/1.jpg",
+			"/images/garderob/2.jpg",
+			"/images/garderob/3.jpg"
 		],
 		"color": "#FB8F00",
 		"icon": "icon-hat",
@@ -30,8 +31,9 @@
 		"name": "secondary",
 		"title": "Гардероб стандарт",
 		"images": [
-			"/images/garderob/garderobSecond-1.jpg",
-			"/images/garderob/garderobSecond-2.jpg"
+			"/images/garderob/4.jpg",
+			"/images/garderob/5.jpg",
+			"/images/garderob/6.jpg"
 		],
 		"color": "#68888C",
 		"icon": "icon-wedding-suit",
@@ -55,8 +57,9 @@
 		"name": "thirdary",
 		"title": "Гардероб VIP",
 		"images": [
-			"/images/garderob/garderobThird-1.jpg",
-			"/images/garderob/garderobThird-2.jpg"
+			"/images/garderob/8.jpg",
+			"/images/garderob/9.jpg",
+			"/images/garderob/10.jpg"
 		],
 		"color": "#FF377F",
 		"icon": "icon-coat",

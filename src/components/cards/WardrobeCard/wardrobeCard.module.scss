@@ -2,7 +2,36 @@
 @import '@/assets/framework/breakpoints';
 @import '@/assets/base/variables';
 
+.purple{
+	border: 1px solid #373737;
+	box-sizing: border-box;
+	border-radius: 8px;
+&:hover{
+	background: #FDF1E1!important;
+	transition:  all 0.4s;
+}
+
+}.white{
+	border: 1px solid #373737;
+	box-sizing: border-box;
+	border-radius: 8px;
+	&:hover{
+		background: #ECF0F0!important;
+		transition:  all 0.4s;
+	}
+}.gray{
+		  border: 1px solid #373737;
+		  box-sizing: border-box;
+		  border-radius: 8px;
+		  &:hover{
+			  background: #FAE0E9 !important;
+			  transition:  all 0.4s;
+		  }
+
+}
+
 .wrapper {
+	transition: all 0.4s;
 	background-color: $white;
 	border-radius: 8px;
 	overflow: hidden !important;
@@ -20,14 +49,22 @@
 
 		&:hover {
 			box-shadow: 0px 1px 25px rgba(162, 159, 159, 0.25);
+
 		}
+
 	}
 }
 
 .figure {
 	position: relative;
 }
-
+@media(max-width: 1100px){
+	.figure{
+	img{
+		width: 175px;
+	}
+}
+}
 .heart {
 	position: absolute;
 	top: 16px;
