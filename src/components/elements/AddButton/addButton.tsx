@@ -27,13 +27,13 @@ import {
 	removeDopsFromGarderob,
 	changeDopsInGarderob
 } from '@/redux/actions/garderobActions';
-import {data} from "browserslist";
+
 
 const AddButton = ({
 	card,
 	value,
 	size,
-	info, data,
+	info,
 	garderobId,
 	isGarderob = false,
 	isOwn = false,
@@ -49,7 +49,9 @@ const AddButton = ({
 		} else if (!isOwn && typeof garderobId !== 'undefined') {
 			dispatch(removeDopsFromGarderob({id: garderobId, item: card}));
 		} else {
+			dispatch(removeDopsFromGarderob({id: garderobId, item: card}));
 			dispatch(removeCardToBasket(card.id));
+
 		}
 	};
 	// console.log(card,
@@ -83,6 +85,7 @@ const AddButton = ({
 
 		if (isCount) {
 			dispatch(decreaseCardToBasket(card.id));
+			dispatch(decreaseDopsInGarderob({id: garderobId, item: card}));
 		} else {
 			if (card.countTime === card.info.minTime) {
 				handleRemove();
@@ -113,6 +116,7 @@ const AddButton = ({
 			} else {
 				console.log('time')
 				dispatch(increaseTimeGarderob(card.id));
+
 			}
 
 			return;
@@ -121,6 +125,7 @@ const AddButton = ({
 		if (isCount) {
 			console.log('+count')
 			dispatch(increaseCardToBasket(card.id));
+			dispatch(increaseDopsInGarderob({id: garderobId, item: card}));
 
 		} else {
 			console.log('time++')

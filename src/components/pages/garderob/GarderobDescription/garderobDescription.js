@@ -7,36 +7,70 @@ import { addGarderob, removeGarderob } from '@/redux/actions/garderobActions';
 import { CSSProperties } from 'react';
 import Link from 'next/link';
 import { convertToNumberWithSpaces, scrollTo } from '@/utilities/helpers';
+import {useCatalogContext} from "@/contexts/CatalogContext";
+import {useSelector} from "react-redux";
+import {selectAllGarderobs, selectItems} from "@/redux/selectors";
+import useAppSelector from "@/hooks/useAppSelector";
 
-const GarderobDescription = (): JSX.Element => {
+const GarderobDescription = () => {
 	const card = useGarderobContext();
-
+	const items = useAppSelector(selectItems);
 	const dispatch = useAppDispatch();
 
-	const handleAdd = (): void => {
+	const handleAdd = ()=> {
 		dispatch(addGarderob({ ...card, isAdded: true, count: 1, countTime: 1 }));
 	};
 
-	const handleDelete = (): void => {
+	const handleDelete = ()=> {
 		dispatch(removeGarderob(card.id));
 	};
 
-	const handleScrollToGarderob = (): void => {
+	const handleScrollToGarderob = () => {
 		scrollTo('garderobBlock', -60);
 	};
+	const garderobs = useAppSelector(selectAllGarderobs);
+	const getPriceOfGarderob = () => {
+		// let sum = 0;
+		// console.log(card)
+		// if (card.addedDops && card.addedDops.length) {
+		// 	card.addedDops.forEach(item => {
+		// 		sum += item.count * item.price;
+		// 	});
+		// }
+		// return sum + card.count * card.price;
+			let sum = 0;
 
-	const getPriceOfGarderob = (): number => {
-		let sum = 0;
-		console.log(card)
-		if (card.addedDops && card.addedDops.length) {
-			card.addedDops.forEach(item => {
-				sum += item.count * item.price;
-			});
-		}
-		return sum + card.count * card.price;
+			if (items && items.length) {
+				for (let card of items) {
+					let price = card.price + (card.countTime - card.info.minTime) * card.info.priceForTime;
+
+					sum += price * card.count;
+				}
+			}
+
+			if (garderobs && garderobs.length) {
+				for (let garderob of garderobs) {
+					let price = 0;
+
+					if (garderob.countTime > 1) {
+						price += garderob.info.priceForTime * garderob.count * (garderob.countTime - 1);
+					}
+
+					price += garderob.price * garderob.count;
+
+					for (let i = 0; i < garderob.addedDops.length; i++) {
+						price += garderob.addedDops[i].count * garderob.addedDops[i].price;
+					}
+
+					sum += price;
+				}
+			}
+
+			return sum;
+
 	};
 
-	const isGarderobs = (): boolean => {
+	const isGarderobs = () => {
 		const garderobItems = card.addedDops.filter(added => added.isGarderob === true);
 
 		if (garderobItems.length) {
@@ -45,10 +79,11 @@ const GarderobDescription = (): JSX.Element => {
 
 		return false;
 	};
-
-	const renderChooseGarderobBlock = (): JSX.Element => {
-		if (card.addedDops && card.addedDops.length) {
-			const garderobItems = card.addedDops.filter(added => added.isGarderob === true);
+	const shopState = useSelector(selectItems)
+	console.log('cards',card)
+	const renderChooseGarderobBlock = () => {
+		if (shopState && shopState.length) {
+			const garderobItems = shopState.filter(added => added.isGarderob === true);
 
 			let sum = 0;
 			let length = 0;
@@ -90,7 +125,7 @@ const GarderobDescription = (): JSX.Element => {
 			<div className={styles.container}>
 				<div className={styles.additives}>
 					<p className={styles.additivesTitle}>В стоимость входит</p>
-					<div className={styles.additivesBlock} style={{ '--color': card.color } as CSSProperties}>
+					<div className={styles.additivesBlock} style={{ '--color': card.color } }>
 						<div className={styles.additivesItem}>
 							<HangerIcon className={classNames(styles.additivesItemIcon)} color={card.color} />
 							<span className={classNames(styles.additivesItemText)}>Пластиковые вешалки</span>
@@ -109,14 +144,14 @@ const GarderobDescription = (): JSX.Element => {
 					<ExclamationIcon />
 					<p className={styles.marksText}>Укажите количество мест в гардеробе, затем измените параметры</p>
 				</div> */}
-				<div style={{ 'background': card.color } as CSSProperties} className={styles.desc}>
+				<div style={{ 'background': card.color } } className={styles.desc}>
 					<p className={styles.descText}>{card.description}</p>
 					<p className={styles.postDesc}>Время аренды зависит от количества рабочих часов гардеробщика!</p>
 				</div>
 				{card.isAdded ? (
 					<div className={styles.footer}>
 						<span className={styles.footerText}>Количество мест</span>
-						<AddButton card={card} value={card.count} size='116px' isGarderob={true} />
+						<AddButton data={card} card={card} value={card.count} size='116px' isGarderob={true} />
 					</div>
 				) : (
 					<span className={styles.button} onClick={handleAdd}>
@@ -124,7 +159,7 @@ const GarderobDescription = (): JSX.Element => {
 					</span>
 				)}
 			</div>
-			{card.isAdded ? (
+			{items && items.length ? (
 				<div className={styles.box}>
 					<div className={classNames('container', styles.boxContainer)}>
 						<div className={classNames(styles.boxItem, styles.boxItemFirst)}>

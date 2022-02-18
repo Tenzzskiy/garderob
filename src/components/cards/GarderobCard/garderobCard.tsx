@@ -12,9 +12,9 @@ import useAppSelector from '@/hooks/useAppSelector';
 const GarderobCard = ({
 	className,
 	card,
-	isPrimary, data,
+	isPrimary,
 	isGarderob = false,
-	garderobId = data.id,
+	garderobId ,
 	disabled = false,
 	isDifferent = false
 
@@ -26,7 +26,7 @@ const GarderobCard = ({
 		// 	return;
 		// }
 
-			dispatch(addDopsToGarderob({ id: garderobId, item: { ...card, isAdded: true, count: 1 } }));
+
 			dispatch(addCardToBasket({ ...card, isAdded: true, count: 1, countTime: card.info.minTime }));
 		// }
 	};
@@ -60,7 +60,7 @@ const GarderobCard = ({
 						{card.isAdded ? (
 							<AddButton
 								card={card}
-								data={data}
+
 								value={card.count}
 								size='128px'
 								garderobId={garderobId}
