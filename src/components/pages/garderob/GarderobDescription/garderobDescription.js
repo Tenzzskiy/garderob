@@ -3,8 +3,8 @@ import styles from './garderobDescription.module.scss';
 import { ExclamationIcon, HangerIcon, AddButton } from '@/components';
 import { useGarderobContext } from '@/contexts/GarderobContext';
 import useAppDispatch from '@/hooks/useAppDispatch';
-import {addGarderob, clearGarderobs, removeGarderob} from '@/redux/actions/garderobActions';
-import { CSSProperties } from 'react';
+import {addGarderob, clearGarderobs, refresh, removeGarderob} from '@/redux/actions/garderobActions';
+import {CSSProperties, useEffect, useState} from 'react';
 import Link from 'next/link';
 import { convertToNumberWithSpaces, scrollTo } from '@/utilities/helpers';
 import {useCatalogContext} from "@/contexts/CatalogContext";
@@ -12,14 +12,15 @@ import {useSelector} from "react-redux";
 import {selectAllGarderobs, selectItems} from "@/redux/selectors";
 import useAppSelector from "@/hooks/useAppSelector";
 import {clearBasket} from "@/redux/actions/shopActions";
+import {SecondIcon,ThirdIcon,FourthIcon} from './../../../../components/icons/HangerIcon'
+const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setColor}) => {
 
-const GarderobDescription = () => {
 	const card = useGarderobContext();
 	const items = useAppSelector(selectItems);
 	const dispatch = useAppDispatch();
 
 	const handleAdd = ()=> {
-		dispatch(addGarderob({ ...card, isAdded: true, count: 1, countTime: 1 }));
+		dispatch(addGarderob({ ...card, isAdded: true, count: 1, countTime: 1, montage: active2, dops:active2 ? 'Монтаж включен' : 'Без монтажа' }));
 	};
 
 	const handleDelete = ()=> {
@@ -44,7 +45,8 @@ const GarderobDescription = () => {
 
 			if (items && items.length) {
 				for (let card of items) {
-					let price = card.price + (card.countTime - card.info.minTime) * card.info.priceForTime;
+					let price = card.price + (card.countTime - card.info.minTime) * card.info.priceForTime
+						+ (active2 ? 2900 : 0);
 
 					sum += price * card.count;
 				}
@@ -130,29 +132,66 @@ const GarderobDescription = () => {
 					<div className={styles.additivesBlock} style={{ '--color': card.color } }>
 						<div className={styles.additivesItem}>
 							<HangerIcon className={classNames(styles.additivesItemIcon)} color={card.color} />
-							<span className={classNames(styles.additivesItemText)}>Пластиковые вешалки</span>
+							<span className={classNames(styles.additivesItemText)}>Вешалки</span>
+						</div><div className={styles.additivesItem}>
+							<SecondIcon className={classNames(styles.additivesItemIcon)} color={card.color} />
+							<span className={classNames(styles.additivesItemText)}>Номерки</span>
+						</div><div className={styles.additivesItem}>
+							<ThirdIcon className={classNames(styles.additivesItemIcon)} color={card.color} />
+							<span className={classNames(styles.additivesItemText)}>Вешала</span>
+						</div><div className={styles.additivesItem}>
+							<FourthIcon className={classNames(styles.additivesItemIcon)} color={color} />
+							<span className={classNames(styles.additivesItemText)}>Монтаж/демонтаж</span>
 						</div>
 						{/* <div className={styles.additivesItem}>
 							<span className={classNames(styles.additivesItemIcon, 'icon-clock')}></span>
 							<span className={classNames(styles.additivesItemText)}>6 часов аренды</span>
 						</div> */}
-						<div className={styles.additivesItem}>
-							<span className={classNames(styles.additivesItemIcon, 'icon-door-hanger')}></span>
-							<span className={classNames(styles.additivesItemText)}>Пластиковые номерки</span>
-						</div>
+
 					</div>
 				</div>
 				{/* <div className={styles.marks}>
 					<ExclamationIcon />
 					<p className={styles.marksText}>Укажите количество мест в гардеробе, затем измените параметры</p>
 				</div> */}
-				<div style={{ 'background': card.color } } className={styles.desc}>
+				<div style={{ 'background': 'none' } } className={styles.desc}>
 					<p className={styles.descText}>{card.description}</p>
-					<p className={styles.postDesc}>Время аренды зависит от количества рабочих часов гардеробщика!</p>
+					<p className={styles.descText2}>Дополнительно</p>
 				</div>
+
+				<div className={styles.radioFlex} >
+					<div className={styles.flexx} onClick={() =>{
+						if(active1 === false){
+							setActive1(true);
+							setActive2(false)
+							setColor('#C4C4C4')
+						}
+
+					}}>
+					<div className={styles.circle}>
+						<div className={classNames(styles.circleCenter,active1 ? styles.active : null)} >
+						</div>
+
+					</div>
+					<div>Без монтажа</div></div>
+					<div className={styles.flexx} onClick={() =>{
+						if(active2 === false){
+							setActive2(true);
+							setActive1(false)
+							setColor(card.color)
+						}}}>
+					<div className={styles.circle}>
+						<div className={classNames(styles.circleCenter,active2 ? styles.active : null)} >
+
+						</div>
+					</div>
+					<div>С монтажом  + <span style={{ 'color': card.color } }>2900 Р </span></div>
+					</div>
+				</div>
+
 				{card.isAdded ? (
 					<div className={styles.footer}>
-						<span className={styles.footerText}>Количество мест</span>
+						<span className={styles.footerText}>Кол-во мест</span>
 						<AddButton data={card} card={card} value={card.count} size='116px' isGarderob={true} />
 					</div>
 				) : (

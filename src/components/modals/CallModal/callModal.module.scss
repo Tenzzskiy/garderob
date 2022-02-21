@@ -22,7 +22,7 @@
 	height: 100%;
 	width: 100%;
 	padding: 20px 16px;
-	background-color: $lightBackgroundColor;
+	background-color: #F5F1F1;
 	position: absolute;
 
 	@include desktops {
@@ -85,6 +85,7 @@
 	margin-bottom: 8px;
 
 	&::after {
+		color: black !important;
 		position: absolute;
 		content: '+7';
 		top: 50%;
@@ -111,12 +112,13 @@
 	padding-left: 40px;
 	font-size: 18px;
 	line-height: 24px;
-	color: rgba(55, 55, 55, 0.5);
+	color: black !important;
 	border: 0.5px solid transparent;
 	transition: border 0.3s;
 
 	&:hover,
 	&:focus {
+		background: white !important;
 		border: 0.5px solid #373737;
 	}
 
@@ -157,8 +159,10 @@
 	appearance: none;
 	border: none;
 	outline: none;
-	width: 100%;
+	color: black !important;
 	cursor: pointer;
+	width: 296px !important;
+	height: 48px !important;
 
 	@include textSubtitleFirst;
 

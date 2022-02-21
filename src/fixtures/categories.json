@@ -597,34 +597,17 @@
 			"maskColor": "#EDE9E9"
 		},
 		"items": [
-			{
-				"id": 8,
-				"title": "Монтажник гардероба",
-				"image": "/images/garderob-8.jpg",
-				"price": 2900,
-				"time": "4 ч",
-				"priceDescription": "+1 час 750₽",
-				"isGarderob": true,
-				"desc": "Соберет и разберет конструкцию гардероба",
-				"info": {
-					"count": "чел",
-					"time": "ч",
-					"countDesktop": "Персон",
-					"timeDesktop": "Часов",
-					"minTime": 4,
-					"priceForTime": 300
-				}
-			},
+
 			{
 				"id": 9,
-				"title": "Стандарт",
+				"title": "Эконом-гардеробщик",
 				"image": "/images/garderob-9.jpg",
 				"price": 2900,
 				"time": "4 ч",
 				"priceDescription": "+1 час 750₽",
 				"isGarderob": true,
-				"color": "#68888C",
-				"desc": "Рекомендуется для потокового приема одежды",
+				"color": "#FB8F00",
+				"desc": " для потокового приема одежды",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -636,14 +619,14 @@
 			},
 			{
 				"id": 10,
-				"title": "Стандарт +",
+				"title": "Стандарт-гардеробщик",
 				"image": "/images/garderob-10.jpg",
 				"price": 4500,
 				"time": "4 ч",
 				"priceDescription": "+1 час 750₽",
 				"isGarderob": true,
-				"color": "#FB8F00",
-				"desc": "Рекомендуется на мероприятии, где важен каждый гость",
+				"color": "#68888C",
+				"desc": ", внимателен к каждому гостю",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -655,14 +638,14 @@
 			},
 			{
 				"id": "10-1",
-				"title": "VIP",
-				"image": "/images/garderob-10-1.jpg",
+				"title": "VIP-гардеробщик",
+				"image": "/images/garderob/garderob-10-1.jpg",
 				"price": 9000,
 				"time": "4 ч",
 				"priceDescription": "+1 час 750₽",
 				"isGarderob": true,
-				"color": "#43C02E",
-				"desc": "Персональный подход к каждому гостю",
+				"color": "#FF198F",
+				"desc": ", презентабельный внешний вид, обходительность",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -681,7 +664,7 @@
 				"priceDescription": "+1 час 750₽",
 				"isGarderob": true,
 				"color": "#A39CE8",
-				"desc": "При работе более 2ух гардеробщиков",
+				"desc": ", рекомендуем для мероприятий от 150 человек",
 				"info": {
 					"count": "чел",
 					"time": "ч",

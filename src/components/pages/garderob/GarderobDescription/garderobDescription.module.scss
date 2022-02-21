@@ -1,3 +1,53 @@
+.flexx{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	span{
+
+	}
+}
+.radioFlex{
+	display: flex;
+	margin-bottom: 27px;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	max-width: 350px;
+}
+.circle{
+	&:hover .circleCenter{
+		opacity: 50%;
+	}
+	cursor: pointer;
+	background: white;
+	border: 1px solid #373737;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin-right: 16px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	&Center{
+		background: #373737;
+		width: 80%;
+		border-radius: 50%;
+		height: 80%;
+		transition: all 0.2s;
+		opacity: 0;
+	}
+	.active{
+		opacity: 1 !important;
+		transition:  all 0.2s;
+	}
+}
 .container {
 	padding-left: 16px;
 	padding-right: 16px;
@@ -13,9 +63,8 @@
 
 .desc {
 	display: flex;
-	margin-bottom: 32px;
 	color: #FFFFFF;
-	padding: 15px;
+	padding: 24px 32px 16px 0;
 	flex-direction: column;
 	border-radius: 5px;
 
@@ -30,7 +79,17 @@
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 20px;
-		color: var(--color);
+		color: #373737;
+
+	}
+
+	&Text2 {
+		margin-top:16px ;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 24px;
+		color: #373737;
 	}
 }
 
@@ -39,7 +98,7 @@
 }
 
 .additives {
-	margin-bottom: 32px;
+
 
 	&Title {
 		font-size: 24px;
@@ -51,18 +110,28 @@
 	&Block {
 		display: inline-flex;
 		flex-wrap: wrap;
-		margin: -22px 0 0 -32px;
-		width: calc(100% + 32px);
-
+		margin: -12px 0 0 0;
+		width: 90%;
+		justify-content: space-between;
+		transition: all 0.3s;
 		div {
-			margin: 22px 0 0 32px;
+
 		}
 	}
 
 	&Item {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+		justify-content: center;
 		align-items: center;
+		svg{
+			margin-bottom: 0 !important;
+			margin-right: 12px;
+		}
 	}
 
 	&ItemIcon {
@@ -72,7 +141,7 @@
 	}
 
 	&ItemText {
-		font-weight: 600;
+		font-weight: 400;
 		line-height: 22px;
 	}
 }
@@ -87,6 +156,7 @@
 		color: #404a4c;
 		line-height: 20px;
 	}
+
 }
 
 .button {
@@ -277,6 +347,7 @@
 }
 
 .postDesc {
+
 	margin-top: 16px;
 	font-weight: 600;
 }

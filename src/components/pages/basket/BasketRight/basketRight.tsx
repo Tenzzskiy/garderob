@@ -12,10 +12,9 @@ const BasketRight = ({cards, garderobs}: Props): JSX.Element => {
 
 	const renderPrice = (): number => {
 		let sum = 0;
-		console.log('cards',cards)
 		if (cards && cards.length) {
 			for (let card of cards) {
-				let price = card.price + (card.countTime - card.info.minTime) * card.info.priceForTime;
+				let price = card.price + (card.countTime - card.info.minTime) * card.info.priceForTime ;
 
 				sum += price * card.count;
 			}
@@ -35,7 +34,7 @@ const BasketRight = ({cards, garderobs}: Props): JSX.Element => {
 					price += garderob.addedDops[i].count * garderob.addedDops[i].price;
 				}
 
-				sum += price;
+				sum += price + (garderob.montage ? 2900 : 0 );
 			}
 		}
 

@@ -26,12 +26,12 @@ const BasketCard = ({card, isGarderob = false}: Props): JSX.Element => {
 				sum += card.addedDops[i].count * card.addedDops[i].price;
 			}
 
-			return sum + card.price * card.count;
+			return sum + card.price * card.count + ( card.montage ? 2900 : 0);
 		}
 
 		let price = card.price + (card.countTime - card.info.minTime) * card.info.priceForTime;
 
-		return price * card.count;
+		return price * card.count + ( card.montage ? 2900 : 0);
 	};
 
 	const getImageSoure = (): string => {
@@ -46,28 +46,13 @@ const BasketCard = ({card, isGarderob = false}: Props): JSX.Element => {
 		if (isGarderob) {
 			return (
 				<>
-					<div className={styles.titleBlock} onClick={() => setOpened(!isOpened)}>
+					<div className={styles.title_list}>
+					<div className={styles.titleBlock} >
 						<p className={styles.title}>{card.title}</p>
-						<span
-							className={classNames(
-								styles.titleIcon,
-								'icon-chevron-down',
-								isOpened && styles.titleIconActive
-							)}
-						></span>
+						{card.montage === true ? <p >Монтаж включен</p> : null}
 					</div>
-					{isOpened && (
-						<div className={styles.additionalBlock}>
-							{card.addedDops.map((addedItem: GarderobItemType) => {
-								return (
-									<div className={styles.additionalItem}>
-										<span className={styles.additionalTitle}>{addedItem.title}</span>
-										<span className={styles.additionalCount}>{addedItem.count}</span>
-									</div>
-								);
-							})}
-						</div>
-					)}
+
+					</div>
 				</>
 			);
 		}
@@ -78,7 +63,9 @@ const BasketCard = ({card, isGarderob = false}: Props): JSX.Element => {
 	const handleRemove = () => {
 		if (isGarderob) {
 			dispatch(removeGarderob(card.id));
+			console.log(card);
 			return;
+
 		}
 
 		dispatch(removeCardToBasket(card.id));
@@ -97,7 +84,8 @@ const BasketCard = ({card, isGarderob = false}: Props): JSX.Element => {
 					<span className={classNames(styles.blockName, styles.hiddenForTablets)}>Цена</span>
 					<div className={styles.price}>
 						<span className={styles.priceText}>
-							{card.price}&#8381;/{card.time}
+							{card.price }&#8381;/
+							{card.time}
 						</span>
 						<span className={styles.priceDescription}>{card.priceDescription}</span>
 					</div>
@@ -117,24 +105,24 @@ const BasketCard = ({card, isGarderob = false}: Props): JSX.Element => {
 								size='100%'
 							/>
 						</div>
-						<div className={styles.buttonsInfo}>
-							<span className={styles.buttonsTitle}>{card.info.timeDesktop}</span>
-							<AddButton
-								card={card}
-								value={card.countTime}
-								info={card.info.time}
-								isGarderob={isGarderob}
-								isCount={false}
-								size='100%'
-							/>
-						</div>
+						{/*<div className={styles.buttonsInfo}>*/}
+						{/*	<span className={styles.buttonsTitle}>{card.info.timeDesktop}</span>*/}
+						{/*	<AddButton*/}
+						{/*		card={card}*/}
+						{/*		value={card.countTime}*/}
+						{/*		info={card.info.time}*/}
+						{/*		isGarderob={isGarderob}*/}
+						{/*		isCount={false}*/}
+						{/*		size='100%'*/}
+						{/*	/>*/}
+						{/*</div>*/}
 					</div>
 				</div>
 				<div className={classNames(styles.block, styles.priceBlock)}>
 					<span className={classNames(styles.blockName, styles.hiddenForTablets)}>Сумма</span>
 					<div className={classNames(styles.priceFooter)}>
 						<span className={classNames(styles.priceText, styles.priceMargin)}>
-							{convertToNumberWithSpaces(countPrice())}&#8381;
+							{convertToNumberWithSpaces(countPrice() )}&#8381;
 						</span>
 						<span className={classNames('icon-close', styles.icon)} onClick={handleRemove}></span>
 					</div>

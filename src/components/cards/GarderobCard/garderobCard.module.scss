@@ -9,6 +9,7 @@
 
 	&:hover {
 		box-shadow: 0px 1px 25px rgba(162, 159, 159, 0.25);
+		background: #FFFCE8 !important;
 	}
 
 }
@@ -59,6 +60,9 @@
 	line-height: 22px;
 	font-weight: 600;
 	color: #373737;
+	span{
+		color: #373737;
+	}
 }
 
 .priceBlock {

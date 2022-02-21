@@ -6,7 +6,8 @@ import useAppDispatch from '@/hooks/useAppDispatch';
 import { chooseGarderob } from '@/redux/actions/garderobActions';
 import { useGarderobContext } from '@/contexts/GarderobContext';
 
-const GarderobTypes = (): JSX.Element => {
+// @ts-ignore
+const GarderobTypes = ({setActive1,setActive2,setColor}): JSX.Element => {
 	const { index: currentGarderob } = useGarderobContext();
 
 	const windowSize = useWindowSize();
@@ -55,7 +56,12 @@ const GarderobTypes = (): JSX.Element => {
 				)}
 			>
 				<div
-					onClick={() => handleChangeCurrentGarderob(0)}
+					onClick={() => {
+						handleChangeCurrentGarderob(0)
+						setActive1(true);
+						setActive2(false);
+						setColor('#C4C4C4')
+					}}
 					className={classNames(
 						styles.card,
 						currentGarderob === 0 && styles.cardActive1,
@@ -69,7 +75,15 @@ const GarderobTypes = (): JSX.Element => {
 					<p className={styles.cardInfo}>со 2 дня 15₽/место</p>
 				</div>
 				<div
-					onClick={() => handleChangeCurrentGarderob(1)}
+					onClick={() => {
+						handleChangeCurrentGarderob(1);
+						setActive1(true);
+						setActive2(false);
+						setColor('#C4C4C4')
+					}
+
+
+				}
 					className={classNames(
 						styles.card,
 						currentGarderob === 1 && styles.cardActive2,
@@ -82,7 +96,12 @@ const GarderobTypes = (): JSX.Element => {
 					<p className={styles.cardInfo}>со 2 дня 30₽/место</p>
 				</div>
 				<div
-					onClick={() => handleChangeCurrentGarderob(2)}
+					onClick={() => {
+						handleChangeCurrentGarderob(2)
+						setActive1(true);
+						setActive2(false);
+						setColor('#C4C4C4')
+					}}
 					className={classNames(
 						styles.card,
 						currentGarderob === 2 && styles.cardActive3,

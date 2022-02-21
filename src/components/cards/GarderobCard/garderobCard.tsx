@@ -29,7 +29,8 @@ const GarderobCard = ({
 
 
 			dispatch(addCardToBasket({ ...card, isAdded: true, count: 1, countTime: card.info.minTime }));
-			dispatch(addToBusket(card.id))
+			// @ts-ignore
+		dispatch(addToBusket(card.id))
 
 		// }
 	};
@@ -54,7 +55,7 @@ const GarderobCard = ({
 			</figure>
 			<div className={classNames(styles.body, isDifferent && styles.bodyPadding)}>
 				<p style={{ 'color': card.color } as CSSProperties}
-					className={styles.title}>{card.title}</p>
+				   className={styles.title}>{card.title}<span>{card.desc}</span></p>
 				{!card.isSimple ? (
 					<div className={styles.priceBlock}>
 						<span className={styles.price}>

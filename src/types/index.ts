@@ -121,6 +121,8 @@ export type CategoriesType = {
 };
 
 export type GarderobItemType = {
+	dops?:any,
+	montage?:boolean,
 	id: number;
 	index: number;
 	images: string[];

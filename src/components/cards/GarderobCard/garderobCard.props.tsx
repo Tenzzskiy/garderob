@@ -1,6 +1,7 @@
 import {CategoryCardType} from '@/types';
 
 export type Props = {
+	dops?:any;
 	className?: string;
 	card: CategoryCardType;
 	isPrimary: boolean;

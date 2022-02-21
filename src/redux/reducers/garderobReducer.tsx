@@ -15,7 +15,8 @@ import {
 	decreaseDopsInGarderob,
 	changeDopsInGarderob,
 	clearGarderobs,
-	initializeGarderobStore
+	initializeGarderobStore,
+	refresh
 } from '../actions/garderobActions';
 import {GarderobStateType} from '../types';
 import {getGarderobFromLocaleStorage} from '@/utilities/helpers';
@@ -134,6 +135,7 @@ const favoriteReducer = createReducer(initialState, builder => {
 		.addCase(initializeGarderobStore, state => {
 			state.items = savedItems;
 		});
+
 });
 
 export default favoriteReducer;

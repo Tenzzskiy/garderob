@@ -16,7 +16,8 @@ import {
 	DECREASE_DOPS_IN_GARDEROB,
 	CHANGE_DOPS_IN_GARDEROB,
 	CLEAR_GARDEROBS,
-	INITIALIZE_GARDEROB_STORE
+	INITIALIZE_GARDEROB_STORE,
+	CHANGE_TIME_REFRESH
 } from '../types/gaderobTypes';
 
 export const addGarderob = createAction<GarderobItemType>(ADD_GARDEROB);
@@ -28,7 +29,7 @@ export const changeGarderob = createAction<{id: number; count: number}>(CHANGE_G
 export const increaseTimeGarderob = createAction<number>(INCREASE_TIME_GARDEROB);
 export const decreaseTimeGarderob = createAction<number>(DECREASE_TIME_GARDEROB);
 export const changeTimeGarderob = createAction<{id: number; count: number}>(CHANGE_TIME_GARDEROB);
-
+export const refresh = createAction<number>(CHANGE_TIME_REFRESH);
 export const addDopsToGarderob = createAction<{id: number; item: any}>(ADD_DOPS_TO_GARDEROB);
 export const removeDopsFromGarderob = createAction<{id: number; item: any}>(REMOVE_DOPS_FROM_GARDEROB);
 export const increaseDopsInGarderob = createAction<{id: number; item: any}>(INCREASE_DOPS_IN_GARDEROB);

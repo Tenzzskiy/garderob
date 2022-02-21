@@ -8,7 +8,11 @@
 	column-gap: 32px;
 	row-gap: 23px;
 }
-
+@media (max-width: 720px){
+	.wrapper{
+		grid-template-columns: 1fr;
+	}
+}
 .catalogItemContainer {
 	position: relative
 }
