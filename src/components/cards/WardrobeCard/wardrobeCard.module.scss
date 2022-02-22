@@ -9,7 +9,7 @@
 &:hover{
 	background: #FDF1E1!important;
 	transition:  all 0.4s;
-	border: 1px solid #373737;
+	box-sizing: border-box;
 }
 
 }.white{
@@ -20,7 +20,7 @@
 		background: #ECF0F0!important;
 		transition:  all 0.4s;
 
-		border: 1px solid #373737;
+
 	}
 }.gray{
 		  box-sizing: border-box;
@@ -29,7 +29,7 @@
 		  &:hover{
 			  background: #FAE0E9 !important;
 			  transition:  all 0.4s;
-			  border: 1px solid #373737;
+
 		  }
 
 }
@@ -43,7 +43,9 @@
 	display: flex;
 	flex-direction: column;
 	text-decoration: none;
-
+	&:hover{
+		border: 1px solid #373737;
+	}
 	@include desktops {
 		transition: box-shadow 0.3s;
 

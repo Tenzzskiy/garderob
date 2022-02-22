@@ -7,7 +7,22 @@
 @import '@/assets/framework/breakpoints';
 @import '@/assets/framework/layout';
 @import '@/assets/framework/typography';
+.react-calendar__tile--active {
+	background: #ffe22e !important;
+	color: black;
+}
 
+.react-calendar {
+	width: 350px;
+	max-width: 100%;
+	background: white;
+	border: 0 !important;
+	border-radius: 8px;
+	font-family: 'Futura PT';
+}
+.react-calendar__month-view__days__day--neighboringMonth {
+	color: black !important;
+}
 body {
 	font-family: 'Futura PT';
 	font-weight: 400;

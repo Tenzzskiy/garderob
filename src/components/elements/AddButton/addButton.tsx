@@ -32,6 +32,7 @@ import {decreaseFavourite, increaseFavourite} from "@/redux/actions/favoriteActi
 
 
 const AddButton = ({
+	count=1,
 	card,
 	value,
 	size,
@@ -41,7 +42,7 @@ const AddButton = ({
 	isOwn = false,
 	isCount = true,
 	maxValue = 9999,
-
+	custom
 
 }: Props) => {
 	const favoriteItems = useAppSelector(state => state.favoriteState.items);
@@ -183,7 +184,7 @@ const AddButton = ({
 	};
 
 	return (
-		<div className={styles.wrapper} style={{width: size}}>
+		<div className={classNames(styles.wrapper,custom ? styles.custom : null,count ? styles.border : null)} style={{width: size}} >
 			<span className={classNames('icon-minus', styles.icon, styles.iconLeft)} onClick={handleDecrease}></span>
 			<AutosizeInput
 				value={value}

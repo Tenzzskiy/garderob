@@ -42,8 +42,11 @@
 	}
 
 	@include largeDesktops {
-		grid-template-columns: 30% 40% 30%;
+		grid-template-columns: 30% 40% 27%;
 	}
+}
+.montage{
+	color: #68888C;
 }
 
 .figure {

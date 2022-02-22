@@ -49,7 +49,7 @@ const BasketCard = ({card, isGarderob = false}: Props): JSX.Element => {
 					<div className={styles.title_list}>
 					<div className={styles.titleBlock} >
 						<p className={styles.title}>{card.title}</p>
-						{card.montage === true ? <p >Монтаж включен</p> : null}
+						{card.montage === true ? <p className={styles.montage}>Монтаж включен</p> : null}
 					</div>
 
 					</div>
@@ -98,6 +98,7 @@ const BasketCard = ({card, isGarderob = false}: Props): JSX.Element => {
 						<div className={styles.buttonsInfo}>
 							<span className={styles.buttonsTitle}>{card.info.countDesktop}</span>
 							<AddButton
+								count={0}
 								card={card}
 								value={card.count}
 								info={card.info.count}

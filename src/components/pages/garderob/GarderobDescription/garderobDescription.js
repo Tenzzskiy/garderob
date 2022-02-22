@@ -17,12 +17,12 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 
 	const card = useGarderobContext();
 	const items = useAppSelector(selectItems);
+	const garderobius = useAppSelector(selectAllGarderobs)
 	const dispatch = useAppDispatch();
 
 	const handleAdd = ()=> {
-		dispatch(addGarderob({ ...card, isAdded: true, count: 1, countTime: 1, montage: active2, dops:active2 ? 'Монтаж включен' : 'Без монтажа' }));
+		dispatch(addGarderob({ ...card, isAdded: true, count: 1, countTime: 1, montage: active2 , dops:active2 ? 'Монтаж включен' : 'Без монтажа' }));
 	};
-
 	const handleDelete = ()=> {
 		dispatch(clearBasket());
 		dispatch(clearGarderobs());
@@ -63,10 +63,10 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 					price += garderob.price * garderob.count;
 
 					for (let i = 0; i < garderob.addedDops.length; i++) {
-						price += garderob.addedDops[i].count * garderob.addedDops[i].price;
+						price += garderob.addedDops[i].count * garderob.addedDops[i].price ;
 					}
 
-					sum += price;
+					sum += price + (active2 ? 2900 : 0) ;
 				}
 			}
 
@@ -83,10 +83,14 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 
 		return false;
 	};
+	useEffect(() =>{
+		if (!card.isAdded && active2 === true ){
+			handleAdd();
+		}
+	},[active2]);
 	const shopState = useSelector(selectItems)
-	console.log('cards',card)
 	const renderChooseGarderobBlock = () => {
-		if (shopState && shopState.length) {
+		if (shopState && shopState.length ) {
 			const garderobItems = shopState.filter(added => added.isGarderob === true);
 
 			let sum = 0;
@@ -141,7 +145,7 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 							<span className={classNames(styles.additivesItemText)}>Вешала</span>
 						</div><div className={styles.additivesItem}>
 							<FourthIcon className={classNames(styles.additivesItemIcon)} color={color} />
-							<span className={classNames(styles.additivesItemText)}>Монтаж/демонтаж</span>
+							<span className={classNames(styles.additivesItemText2,active2 ? styles.active_item : null)}>Монтаж/демонтаж</span>
 						</div>
 						{/* <div className={styles.additivesItem}>
 							<span className={classNames(styles.additivesItemIcon, 'icon-clock')}></span>
@@ -176,23 +180,31 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 					<div>Без монтажа</div></div>
 					<div className={styles.flexx} onClick={() =>{
 						if(active2 === false){
-							setActive2(true);
-							setActive1(false)
+							setActive2(
+								!active2
+							);
+							setActive1((active1) => !active1)
 							setColor(card.color)
-						}}}>
-					<div className={styles.circle}>
-						<div className={classNames(styles.circleCenter,active2 ? styles.active : null)} >
+							console.log(active2)
+							console.log(active1)
+						}
+
+					}}>
+					<div className={styles.circle} onClick={() => {
+
+					}}>
+						<div  className={classNames(styles.circleCenter,active2 ? styles.active : null)} >
 
 						</div>
 					</div>
-					<div>С монтажом  + <span style={{ 'color': card.color } }>2900 Р </span></div>
+					<div >С монтажом  + <span style={{ 'color': card.color } }>2900 Р </span></div>
 					</div>
 				</div>
 
 				{card.isAdded ? (
 					<div className={styles.footer}>
 						<span className={styles.footerText}>Кол-во мест</span>
-						<AddButton data={card} card={card} value={card.count} size='116px' isGarderob={true} />
+						<AddButton custom={true} data={card} card={card} value={card.count} size='116px' isGarderob={true} />
 					</div>
 				) : (
 					<span className={styles.button} onClick={handleAdd}>
@@ -200,7 +212,7 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 					</span>
 				)}
 			</div>
-			{items && items.length ? (
+			{(shopState && shopState.length )|| garderobs.length? (
 				<div className={styles.box}>
 					<div className={classNames('container', styles.boxContainer)}>
 						<div className={classNames(styles.boxItem, styles.boxItemFirst)}>

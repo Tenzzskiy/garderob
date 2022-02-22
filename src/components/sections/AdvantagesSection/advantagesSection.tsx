@@ -37,7 +37,7 @@ const AdvantagesSection = ({ color, advantage }: Props): JSX.Element => {
 						className='keen-slider__slide'
 						image='/images/advantages/1.png'
 						title='Камера хранения'
-						description='При заказе стильного гардероба камера хранения в подарок'
+						description={`При заказе VIP гардероба,<br/>  4 ячейки в подарок`}
 						color={color}
 						rectangleColor={advantage.rectangleColor}
 						maskColor={advantage.maskColor}

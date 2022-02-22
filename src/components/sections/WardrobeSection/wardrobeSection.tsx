@@ -35,7 +35,7 @@ const WardrobeSection = (): JSX.Element => {
 				<p className={classNames('sectionTitle', styles.wardrobeTitle)}>Выбери подходящий гардероб</p>
 				<div ref={sliderRef} className={classNames(styles.slider, 'keen-slider')}>
 					{wardrobes.map((card: IWardrobeCard, index) => (
-						<WardrobeCard className='keen-slider__slide' card={card} key={card.id} index={index} />
+						<WardrobeCard className={classNames('keen-slider__slide',styles.slider_slider)} card={card} key={card.id} index={index} />
 					))}
 				</div>
 				<SliderDots

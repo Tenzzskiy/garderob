@@ -1,6 +1,9 @@
 @import '@/assets/framework/typography';
 @import '@/assets/base/variables';
 
+.slider_slider{
+
+}
 .wardrobe {
 }
 
@@ -10,7 +13,6 @@
 
 .slider {
 	margin-bottom: 16px;
-
 	@include desktops {
 		margin: -16px;
 		padding: 16px;

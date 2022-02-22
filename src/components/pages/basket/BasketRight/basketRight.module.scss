@@ -1,14 +1,54 @@
 @import '@/assets/framework/breakpoints';
 
 .aside {
-	display: none;
 
+	position: relative;
 	@include desktops {
 		display: initial;
 		grid-area: right;
 	}
 }
+.first_date{
+background: white;
+	width: 102px;
+	height: 36px;
+	border-radius: 30px;
+	border: 0;
+	text-decoration: none;
+	outline: none;text-align: center;
+	cursor: pointer;
+}
+.second_date{
+	cursor: pointer;
+	outline: none;text-align: center;
+	background: white;
+	width: 102px;
+	height: 36px;
+	border-radius: 30px;
+	border: 0;
+	text-decoration: none;
+}
+.calendar{
 
+	p{
+		margin-bottom: 12px;
+	}
+	display: flex;
+	flex-direction: column;
+}
+.calendar_flex{
+	margin-bottom: 12px;
+	max-width: 270px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+}
+.calendar_active{
+	transition: all 0.3s;
+	transform: scale(1) !important;
+}
 .title {
 	font-weight: 700;
 	font-size: 32px;
@@ -16,9 +56,21 @@
 	color: #121212;
 	margin-bottom: 24px;
 }
-
+.modaal_calendar{
+	position: absolute !important;
+	right: -20px;
+	top: 140px;
+	max-width: 320px;
+	transform: scale(0);
+	transition: all 0.3s;
+ }
 .priceBlock {
+
+	/* gray/lighter */
+
+	border-top: 0.5px solid rgba(64, 74, 76, 0.3);
 	display: flex;
+	padding-top: 12px;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 16px;

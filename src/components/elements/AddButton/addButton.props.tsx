@@ -11,4 +11,6 @@ export type Props = {
 	isOwn?: boolean;
 	garderobId?: any;
 	id?:any;
+	custom?:any;
+	count?:any,
 };

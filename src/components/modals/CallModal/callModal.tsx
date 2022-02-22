@@ -97,7 +97,7 @@ const CallModal = ({
 					{message.length ? <p className={styles.message}>{message}</p> : null}
 					<p className={styles.info}>
 						Нажимая на кнопку, соглашаюсь на{' '}
-						<Link href='/policy' passHref>
+						<Link href='/privacy' passHref>
 							<a className={styles.privacy} onClick={() => onChangeOpened(false)}>
 								обработку персональных данных
 							</a>
