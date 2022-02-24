@@ -13,7 +13,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 	const [isOpened, setOpened] = useState(false);
 	const [circle , setCircle ] = useState(false);
 	const dispatch = useAppDispatch();
-
+	const price = card.price;
 	const countPrice = (): number => {
 		if (isGarderob) {
 			let sum = 0;
@@ -33,6 +33,16 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 
 		return price * card.count + ( card.montage ? 2900 : 0);
 	};
+	const changeValue = () =>{
+		if(circle){
+			// @ts-ignore
+			dispatch(updateDate({...card,price: price-1500 , time:'4ч'}))
+
+		}else {
+// @ts-ignore
+			dispatch(updateDate({...card,price: price + 1500, time:'6ч'}))
+		}
+	}
 	useEffect(() =>{
 		// @ts-ignore
 
@@ -40,13 +50,10 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 			// @ts-ignore
 			setDuration((prev) =>  [prev[0] = value[0].getDate(),prev[1] =value[1].getDate()])
 		}
-
+		// if (card.isGarderob)
 		// @ts-ignore
-		if (circle){
-			// @ts-ignore
-			dispatch(updateDate({...card,time:duration[1] > duration[0] ? duration[1] - duration[0] !== 0 ? duration[1] - duration[0]  +' дн' : ' 1 день' :
-					duration[0] - duration[1] !== 0 ? duration[0] - duration[1]  +'дн' : '1 день'}))
-		}
+		// @ts-ignore
+		// if (circle && Array.isArray(value)){
 
 
 	},[value,circle])
@@ -94,13 +101,13 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 					<img className={styles.image} src={getImageSoure()} alt={card.title} />
 				</figure>
 				{getTitleBlock()}
-				{card.isGarderob ? <div className={styles.radio_button} onClick={() => setCircle(!circle)}>
-					<div className={styles.r_button} >
+				{card.isGarderob ? <div className={styles.radio_button} onClick={() => setCircle((prev) => !prev)}>
+					<div className={styles.r_button} onClick={() =>changeValue()}>
 						<div className={classNames(styles.circle,circle ? styles.active_circle : null)}>
 
 						</div>
 					</div>
-					<span className={styles.radio_button_text}>
+					<span className={styles.radio_button_text} >
 					{`Продлить работу ${card.title} на весь период аренды гардероба`}
 				</span>
 				</div> : null}

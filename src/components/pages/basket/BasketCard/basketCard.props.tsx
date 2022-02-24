@@ -6,4 +6,6 @@ export type Props = {
 	value?:any;
 	duration?:any;
 	setDuration?:any;
+	circle?:any;
+	setCircle?:any;
 };

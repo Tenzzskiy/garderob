@@ -3,7 +3,7 @@
 .radio_button{
 	position: absolute;
 	bottom: -32px;
-	left: 145px;
+	left: 0px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -11,7 +11,9 @@
 }
 .radio_button_text{
 	color: #68888C;
-	border-bottom: 1px solid  #68888C;;
+	&:hover{
+		border-bottom: 1px solid  #68888C;
+	}
 }
 .circle{
 	cursor: pointer;
@@ -44,7 +46,7 @@
 @media (max-width: 1000px){
 	.radio_button{
 		left: 0 !important;
-		bottom: -24px !important;
+		bottom: -36px !important;
 	}
 }
 @media (max-width: 720px){

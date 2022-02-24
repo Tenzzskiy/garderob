@@ -6,14 +6,14 @@ import {useDispatch} from "react-redux";
 import {updateDate} from "@/redux/actions/garderobActions";
 import useAppDispatch from "@/hooks/useAppDispatch";
 
-const BasketLeft = ({cards, garderobs,value}: Props): JSX.Element => {
+const BasketLeft = ({cards, garderobs,value,duration,setDuration}: Props): JSX.Element => {
 	const renderItems = (): JSX.Element => {
 
-		const [duration,setDuration] = useState( [new Date().getDate() ,new Date().getDate() ]);
+
 		useEffect(()=>{
 			if (duration[1] - duration[0] === 0){
+				// @ts-ignore
 				setDuration((prev) => [prev[0] , prev[1]+ +1])
-				console.log('1231231232',duration)
 			}
 		},[duration])
 		if (cards.length || garderobs.length) {
@@ -32,7 +32,7 @@ const BasketLeft = ({cards, garderobs,value}: Props): JSX.Element => {
 							<BasketCard key={card.id} card={card} isGarderob={true} duration={duration} setDuration={setDuration} />
 						))}
 						{cards.map(card => (
-							<BasketCard key={card.id} card={card} value={value} duration={duration} setDuration={setDuration} />
+							<BasketCard  key={card.id} card={card} value={value} duration={duration} setDuration={setDuration} />
 						))}
 					</div>
 				</>

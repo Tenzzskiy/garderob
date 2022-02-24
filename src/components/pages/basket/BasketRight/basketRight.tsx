@@ -10,7 +10,7 @@ import 'react-calendar/dist/Calendar.css';
 import Calendar from 'react-calendar';
 import useOnClickOutside from "@/hooks/useOnClickOutside";
 
-const BasketRight = ({cards, garderobs,value,onChange,date}: Props): JSX.Element => {
+const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Props): JSX.Element => {
 	const [date2,setDate2] = useState();
 
 	const [isOpened, setOpened] = useState(false);
@@ -30,12 +30,14 @@ const BasketRight = ({cards, garderobs,value,onChange,date}: Props): JSX.Element
 			if (value.length < 2) {
 				// @ts-ignore
 				setDate1(`${value[0].getDate()}.${value[0].getMonth()}.${value[0].getFullYear()} `);
+				console.log(value[1] -value[0])
 				// @ts-ignore
 				setDate1(`${value[0].getDate()}.${value[0].getMonth()}.${value[0].getFullYear()} `);
 			}else
 			{
 				// @ts-ignore
 				setDate1(`${value[0].getDate()}.${value[0].getMonth()}.${value[0].getFullYear()} `);
+				console.log((value[1].getDate() -value[0].getDate() +1))
 				// @ts-ignore
 				setDate2(`${value[1].getDate()}.${value[1].getMonth()}.${value[1].getFullYear()} `);
 			}
@@ -52,7 +54,7 @@ const BasketRight = ({cards, garderobs,value,onChange,date}: Props): JSX.Element
 			for (let card of cards) {
 				let price = card.price + (card.countTime - card.info.minTime) * card.info.priceForTime ;
 
-				sum += price * card.count;
+				sum +=  price * card.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() +1) : 1);
 			}
 		}
 
@@ -64,7 +66,7 @@ const BasketRight = ({cards, garderobs,value,onChange,date}: Props): JSX.Element
 					price += garderob.info.priceForTime * garderob.count * (garderob.countTime - 1);
 				}
 
-				price += garderob.price * garderob.count;
+				price += garderob.price * garderob.count ;
 
 				for (let i = 0; i < garderob.addedDops.length; i++) {
 					price += garderob.addedDops[i].count * garderob.addedDops[i].price;
@@ -92,9 +94,17 @@ const BasketRight = ({cards, garderobs,value,onChange,date}: Props): JSX.Element
 			<>
 				<p className={styles.title}>Ваш заказ</p>
 				<div className={styles.calendar}>
-				<p>
-					Укажите время аренда
-				</p>
+				<div className={styles.arenda_time}>
+					<p>
+						Укажите время аренды
+					</p>
+					<span>
+						{
+							Array.isArray(value) ?
+							(value[1].getDate() -value[0].getDate() +1) : 1
+						} дн
+					</span>
+				</div>
 					<div className={styles.calendar_flex}>
 					<div> c</div>
 					<input value={date1} className={styles.first_date}
@@ -130,7 +140,7 @@ const BasketRight = ({cards, garderobs,value,onChange,date}: Props): JSX.Element
 		<>
 			<div className={styles.aside}>{renderWindow()}
 				<div className={classNames(styles.modaal_calendar, calendar1 ? styles.calendar_active : null)} ref={calendar_f} >
-					<Calendar selectRange={true}  minDate={new Date(date.setDate(date.getDate() -1   ))}  onChange={onChange} value={value} />
+					<Calendar selectRange={true}  minDate={new Date(date.setDate(date.getDate()   ))}  onChange={onChange} value={value} />
 				</div>
 
 

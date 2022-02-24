@@ -7,4 +7,6 @@ export type Props = {
 	value?:any;
 	onChange?:any;
 	date?:any;
+	duration?:any;
+	circle?:any;
 };
