@@ -16,6 +16,7 @@ import {
 	changeDopsInGarderob,
 	clearGarderobs,
 	initializeGarderobStore,
+	updateDate,
 	refresh
 } from '../actions/garderobActions';
 import {GarderobStateType} from '../types';
@@ -132,6 +133,7 @@ const favoriteReducer = createReducer(initialState, builder => {
 		.addCase(clearGarderobs, state => {
 			state.items = [];
 		})
+
 		.addCase(initializeGarderobStore, state => {
 			state.items = savedItems;
 		});

@@ -63,6 +63,13 @@ const Menu = ({ isOpened, onCloseMenu }: Props): JSX.Element => {
 					) : null}
 				</li>
 				<li className={classNames(styles.item, styles.itemHidden)}>
+					<Link href='/garderob' passHref>
+						<a className={styles.link} onClick={onCloseMenu}>
+							Гардероб
+						</a>
+					</Link>
+				</li>
+				<li className={classNames(styles.item, styles.itemHidden)}>
 					<Link href='/catalog/arenda-mebeli' passHref>
 						<a className={styles.link} onClick={onCloseMenu}>
 							Мебель

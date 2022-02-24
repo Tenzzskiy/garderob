@@ -108,12 +108,13 @@
 	}
 
 	&Block {
-		display: inline-flex;
+		display: flex;
 		flex-wrap: wrap;
 		margin: -12px 0 0 0;
 		width: 90%;
 		justify-content: space-between;
 		transition: all 0.3s;
+
 		div {
 
 		}
@@ -131,6 +132,16 @@
 		svg{
 			margin-bottom: 0 !important;
 			margin-right: 12px;
+		}
+	}
+	@media (max-width: 720px) {
+		&Item{
+			justify-content: flex-start !important;
+			width: 50%;
+			margin:  5px 0;
+		}
+		&Block{
+			width: 100% !important;
 		}
 	}
 

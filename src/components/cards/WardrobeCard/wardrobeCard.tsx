@@ -4,7 +4,6 @@ import Props from './wardrobeCard.props';
 import Link from 'next/link';
 import useAppDispatch from '@/hooks/useAppDispatch';
 import { chooseGarderob } from '@/redux/actions/garderobActions';
-import {useState} from "react";
 
 const WardrobeCard = ({ className = null, card, index }: Props): JSX.Element => {
 	const dispatch = useAppDispatch();
@@ -19,7 +18,6 @@ const WardrobeCard = ({ className = null, card, index }: Props): JSX.Element => 
 		}
 	};
 
-	const [color , setColor] = useState(styles.white);
 	const handleChooseGarderob = () => {
 		dispatch(chooseGarderob(index));
 	};

@@ -14,6 +14,7 @@ import {
 } from '../actions/shopActions';
 import {ShopStateType} from '../types';
 import {getItemsFromLocaleStorage} from '@/utilities/helpers';
+import {updateDate} from "@/redux/actions/garderobActions";
 
 const savedItems = getItemsFromLocaleStorage() as CategoryCardType[];
 
@@ -76,7 +77,13 @@ const shopReducer = createReducer(initialState, builder => {
 		})
 		.addCase(initializeShop, state => {
 			state.items = savedItems;
-		});
+		})
+		.addCase(updateDate, (state,action) => {
+			// @ts-ignore
+			state.items = state.items.map(card => card.id === action.payload.id ? action.payload : card );
+
+		})
+
 });
 
 export default shopReducer;

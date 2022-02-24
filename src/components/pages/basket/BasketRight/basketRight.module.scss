@@ -13,19 +13,33 @@ background: white;
 	width: 102px;
 	height: 36px;
 	border-radius: 30px;
-	border: 0;
 	text-decoration: none;
 	outline: none;text-align: center;
 	cursor: pointer;
+	transition: all 0.3s;
+	border: 0;
+	&:hover{
+		background: #FFFCE8;
+		border: 1px solid #373737;
+		box-sizing: border-box;
+		transition: all 0.3s;
+	}
 }
 .second_date{
+	border: 0;
+	&:hover{
+		background: #FFFCE8;
+		border: 1px solid #373737;
+		box-sizing: border-box;
+		transition: all 0.3s;
+	}
+	transition: all 0.3s;
 	cursor: pointer;
 	outline: none;text-align: center;
 	background: white;
 	width: 102px;
 	height: 36px;
 	border-radius: 30px;
-	border: 0;
 	text-decoration: none;
 }
 .calendar{
@@ -64,6 +78,16 @@ background: white;
 	transform: scale(0);
 	transition: all 0.3s;
  }
+@media(max-width: 1000px){
+	.modaal_calendar{
+		position: absolute !important;
+		left: 0;
+		top: 140px;
+		max-width: 320px;
+		transform: scale(0);
+		transition: all 0.3s;
+	}
+}
 .priceBlock {
 
 	/* gray/lighter */

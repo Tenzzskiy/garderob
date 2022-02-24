@@ -4,4 +4,7 @@ export type Props = {
 	cards: any;
 	garderobs: any;
 	elem?:any;
+	value?:any;
+	onChange?:any;
+	date?:any;
 };

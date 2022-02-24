@@ -3,15 +3,15 @@ import styles from './basketCard.module.scss';
 import {AddButton} from '@/components';
 import {Props} from './basketCard.props';
 import {removeCardToBasket} from '@/redux/actions/shopActions';
-import {removeGarderob} from '@/redux/actions/garderobActions';
+import {removeGarderob, updateDate} from '@/redux/actions/garderobActions';
 import useAppDispatch from '@/hooks/useAppDispatch';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {GarderobItemType} from '@/types';
 import {convertToNumberWithSpaces} from '@/utilities/helpers';
 
-const BasketCard = ({card, isGarderob = false}: Props): JSX.Element => {
+const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props): JSX.Element => {
 	const [isOpened, setOpened] = useState(false);
-
+	const [circle , setCircle ] = useState(false);
 	const dispatch = useAppDispatch();
 
 	const countPrice = (): number => {
@@ -33,7 +33,23 @@ const BasketCard = ({card, isGarderob = false}: Props): JSX.Element => {
 
 		return price * card.count + ( card.montage ? 2900 : 0);
 	};
+	useEffect(() =>{
+		// @ts-ignore
 
+		if (Array.isArray(value) ){
+			// @ts-ignore
+			setDuration((prev) =>  [prev[0] = value[0].getDate(),prev[1] =value[1].getDate()])
+		}
+
+		// @ts-ignore
+		if (circle){
+			// @ts-ignore
+			dispatch(updateDate({...card,time:duration[1] > duration[0] ? duration[1] - duration[0] !== 0 ? duration[1] - duration[0]  +' дн' : ' 1 день' :
+					duration[0] - duration[1] !== 0 ? duration[0] - duration[1]  +'дн' : '1 день'}))
+		}
+
+
+	},[value,circle])
 	const getImageSoure = (): string => {
 		if (isGarderob) {
 			return card.images[0];
@@ -78,6 +94,16 @@ const BasketCard = ({card, isGarderob = false}: Props): JSX.Element => {
 					<img className={styles.image} src={getImageSoure()} alt={card.title} />
 				</figure>
 				{getTitleBlock()}
+				{card.isGarderob ? <div className={styles.radio_button} onClick={() => setCircle(!circle)}>
+					<div className={styles.r_button} >
+						<div className={classNames(styles.circle,circle ? styles.active_circle : null)}>
+
+						</div>
+					</div>
+					<span className={styles.radio_button_text}>
+					{`Продлить работу ${card.title} на весь период аренды гардероба`}
+				</span>
+				</div> : null}
 			</div>
 			<div className={styles.body}>
 				<div className={classNames(styles.block, styles.priceBlock)}>

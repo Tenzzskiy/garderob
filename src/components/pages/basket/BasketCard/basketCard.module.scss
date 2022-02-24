@@ -1,11 +1,66 @@
 @import '@/assets/framework/breakpoints';
 
+.radio_button{
+	position: absolute;
+	bottom: -32px;
+	left: 145px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.radio_button_text{
+	color: #68888C;
+	border-bottom: 1px solid  #68888C;;
+}
+.circle{
+	cursor: pointer;
+	width: 80%;
+	height: 80%;
+	border-radius: 50%;
+	opacity: 0;
+	background: #373737;
+	transition: all 0.3s;
+	&:hover{
+		opacity: 0.5;
+		transition: all 0.3s;
+	}
+}
+.active_circle{
+	transition: all 0.3s;
+	opacity: 1 !important;
+}
+.r_button{
+	margin-right: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 28px;
+	height: 28px;
+	border: 1px solid #373737;
+	border-radius: 50%;
+	background: white;
+}
+@media (max-width: 1000px){
+	.radio_button{
+		left: 0 !important;
+		bottom: -24px !important;
+	}
+}
+@media (max-width: 720px){
+	.radio_button{
+		font-size: 14px !important;
+	}
+	.r_button{
+		width: 39.63px;
+	}
+}
 .card {
 	padding-top: 24px;
 	border-top: 0.5px solid rgba(64, 74, 76, 0.2);
-
-	&:not(:last-child) {
-		margin-bottom: 12px;
+	position: relative;
+	&{
+		margin-bottom: 36px;
 	}
 
 	@include tablets {
@@ -99,7 +154,7 @@
 
 .title {
 	font-weight: 600;
-	line-height: 24px;
+	line-height: 16px;
 	color: #373737;
 	display: flex;
 	justify-content: center;

@@ -10,11 +10,9 @@ import 'react-calendar/dist/Calendar.css';
 import Calendar from 'react-calendar';
 import useOnClickOutside from "@/hooks/useOnClickOutside";
 
-const BasketRight = ({cards, garderobs}: Props): JSX.Element => {
-	let date = new Date();
-	let yesterday = new Date(date.setDate(date.getDate() +1));
+const BasketRight = ({cards, garderobs,value,onChange,date}: Props): JSX.Element => {
 	const [date2,setDate2] = useState();
-	const [value, onChange] = useState(new Date(date.setDate(date.getDate() +1)));
+
 	const [isOpened, setOpened] = useState(false);
 	const windowSize = useWindowSize();
 	const [calendar1,setCalendar1] = useState(false);
@@ -23,7 +21,6 @@ const BasketRight = ({cards, garderobs}: Props): JSX.Element => {
 
  	useEffect(() =>{
 		 // @ts-ignore
-		console.log(typeof value)
 		if ( !(Array.isArray(value)) ) {
 			// @ts-ignore
 			setDate2(`${value.getDate()}.${value.getMonth()}.${value.getFullYear()} `);
