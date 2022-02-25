@@ -29,7 +29,7 @@ const BasketLeft = ({cards, garderobs,value,duration,setDuration}: Props): JSX.E
 					</div>
 					<div className={styles.list}>
 						{garderobs.map(card => (
-							<BasketCard key={card.id} card={card} isGarderob={true} duration={duration} setDuration={setDuration} />
+							<BasketCard value={value} key={card.id} card={card} isGarderob={true} duration={duration} setDuration={setDuration} />
 						))}
 						{cards.map(card => (
 							<BasketCard  key={card.id} card={card} value={value} duration={duration} setDuration={setDuration} />

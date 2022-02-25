@@ -25,13 +25,27 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 			for (let i = 0; i < card.addedDops.length; i++) {
 				sum += card.addedDops[i].count * card.addedDops[i].price;
 			}
+			if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
+				sum += (card.price*0.8) *  card.count   *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() )   : 1) + card.price * card.count ;
 
-			return sum + card.price * card.count + ( card.montage ? 2900 : 0);
+			} else {
+				sum +=card.price * card.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() + 1 )  : 1) ;
+			}
+
+
+			return sum + ( card.montage ? 2900 : 0)
 		}
 
-		let price = card.price + (card.countTime - card.info.minTime) * card.info.priceForTime;
+		let price = 0;
+		if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
+			price += (card.price*0.8) *  card.count   *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() )   : 1) + card.price * card.count ;
 
-		return price * card.count + ( card.montage ? 2900 : 0);
+		} else {
+			price +=card.price * card.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() + 1 )  : 1) ;
+		}
+
+
+		return price + ( card.montage ? 2900 : 0);
 	};
 	const changeValue = () =>{
 		if(circle){
@@ -40,7 +54,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 
 		}else {
 // @ts-ignore
-			dispatch(updateDate({...card,price: price + 1500, time:'6ч'}))
+			dispatch(updateDate({...card,price: price + 1500, time:'дн'}))
 		}
 	}
 	useEffect(() =>{
@@ -120,7 +134,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 							{card.price }&#8381;/
 							{card.time}
 						</span>
-						<span className={styles.priceDescription}>{card.priceDescription}</span>
+						<span className={styles.priceDescription}>Со 2 дня {card.price * 0.8} ₽/место</span>
 					</div>
 				</div>
 				<div className={classNames(styles.block, styles.descriptionBlock)}>

@@ -2,7 +2,7 @@
 
 .radio_button{
 	position: absolute;
-	bottom: -32px;
+	bottom: -43px;
 	left: 0px;
 	display: flex;
 	flex-direction: row;
@@ -11,6 +11,8 @@
 }
 .radio_button_text{
 	color: #68888C;
+	cursor: pointer;
+	border-bottom: 1px solid rgba(104, 136, 140, 0);
 	&:hover{
 		border-bottom: 1px solid  #68888C;
 	}
@@ -46,7 +48,7 @@
 @media (max-width: 1000px){
 	.radio_button{
 		left: 0 !important;
-		bottom: -36px !important;
+		bottom: -43px !important;
 	}
 }
 @media (max-width: 720px){
@@ -56,13 +58,31 @@
 	.r_button{
 		width: 39.63px;
 	}
+	.buttons {
+		grid-template-columns: 1fr !important;
+	}
+	.block{
+		padding-top: 8px !important;
+		padding-bottom: 8px !important;
+		border-top: 0 !important;
+	}
+	.descriptionBlock{
+
+	}
+	.radio_button{
+		bottom: 135px !important;
+
+	}
+	.card{
+		margin-bottom: 0 !important;
+	}
 }
 .card {
 	padding-top: 24px;
 	border-top: 0.5px solid rgba(64, 74, 76, 0.2);
 	position: relative;
 	&{
-		margin-bottom: 36px;
+		margin-bottom: 55px;
 	}
 
 	@include tablets {
@@ -100,6 +120,10 @@
 
 	@include largeDesktops {
 		grid-template-columns: 30% 40% 27%;
+
+		align-items: center;
+		align-content: center;
+		justify-content: center;
 	}
 }
 .montage{
@@ -156,7 +180,7 @@
 
 .title {
 	font-weight: 600;
-	line-height: 16px;
+	line-height: 24px;
 	color: #373737;
 	display: flex;
 	justify-content: center;
@@ -189,7 +213,22 @@
 	line-height: 20px;
 	color: #404a4c;
 }
+@media(max-width: 720px){
+	.priceBlock {
+		margin-bottom: 40px;
 
+
+	}
+	.block{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.descriptionBlock{
+		flex-direction: row !important;
+		justify-content: space-between !important;
+	}
+}
 .block {
 	padding-top: 12px;
 	padding-bottom: 12px;

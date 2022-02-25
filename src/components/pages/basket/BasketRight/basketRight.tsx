@@ -50,11 +50,18 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 	useOnClickOutside(calendar_f,() => setCalendar1(false));
 	const renderPrice = (): number => {
 		let sum = 0;
+
 		if (cards && cards.length) {
 			for (let card of cards) {
-				let price = card.price + (card.countTime - card.info.minTime) * card.info.priceForTime ;
+				let price =  ( (Array.isArray(value) && (value[1].getDate() -value[0].getDate() +1 )) > 1 ? (card.price
+					* 0.8) : card.price) + (card.countTime - card.info.minTime) * card.info.priceForTime ;
 
-				sum +=  price * card.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() +1) : 1);
+					if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
+						sum +=  price * card.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() )   : 1) + card.price * card.count ;
+					} else {
+						sum +=  price * card.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() + 1 )  : 1) ;
+					}
+
 			}
 		}
 
@@ -66,7 +73,15 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 					price += garderob.info.priceForTime * garderob.count * (garderob.countTime - 1);
 				}
 
-				price += garderob.price * garderob.count ;
+
+				if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
+					price += (garderob.price*0.8) *   garderob.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() )   : 1) + garderob.price * garderob.count ;
+
+				} else {
+					price +=garderob.price * garderob.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() + 1 )  : 1) ;
+				}
+
+
 
 				for (let i = 0; i < garderob.addedDops.length; i++) {
 					price += garderob.addedDops[i].count * garderob.addedDops[i].price;

@@ -58,8 +58,8 @@ const GarderobTypes = ({setActive1,setActive2,setColor}): JSX.Element => {
 				<div
 					onClick={() => {
 						handleChangeCurrentGarderob(0)
-						setActive1(true);
-						setActive2(false);
+						// setActive1(true);
+						// setActive2(false);
 						setColor('#C4C4C4')
 					}}
 					className={classNames(
@@ -77,8 +77,8 @@ const GarderobTypes = ({setActive1,setActive2,setColor}): JSX.Element => {
 				<div
 					onClick={() => {
 						handleChangeCurrentGarderob(1);
-						setActive1(true);
-						setActive2(false);
+						// setActive1(true);
+						// setActive2(false);
 						setColor('#C4C4C4')
 					}
 
@@ -98,8 +98,8 @@ const GarderobTypes = ({setActive1,setActive2,setColor}): JSX.Element => {
 				<div
 					onClick={() => {
 						handleChangeCurrentGarderob(2)
-						setActive1(true);
-						setActive2(false);
+						// setActive1(true);
+						// setActive2(false);
 						setColor('#C4C4C4')
 					}}
 					className={classNames(

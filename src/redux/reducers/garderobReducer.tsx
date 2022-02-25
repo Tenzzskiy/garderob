@@ -44,14 +44,18 @@ const favoriteReducer = createReducer(initialState, builder => {
 		.addCase(increaseGarderob, (state, action) => {
 			const item = state.items.find(card => card.id === action.payload);
 
-			if (item) {
+			if (item && item.id === 3) {
+				item.count += 60;
+			} else if (item){
 				item.count += 1;
 			}
 		})
 		.addCase(decreaseGarderob, (state, action) => {
 			const item = state.items.find(card => card.id === action.payload);
 
-			if (item) {
+			if (item && item.id === 3) {
+				item.count -= 60;
+			} else if (item){
 				item.count -= 1;
 			}
 		})

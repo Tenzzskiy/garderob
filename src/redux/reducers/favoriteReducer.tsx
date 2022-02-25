@@ -3,7 +3,7 @@ import {addFavoriteItemToStore, deleteFavoriteItemFromStore, initializeFavoriteS
 import {ShopStateType} from '../types';
 import {getFavoritesFromLocaleStorage} from '@/utilities/helpers';
 import {CategoryCardType} from '@/types';
-import {decreaseGarderob, increaseGarderob} from "@/redux/actions/garderobActions";
+import {decreaseGarderob, increaseGarderob, updateDate} from "@/redux/actions/garderobActions";
 import {increaseFavourite,decreaseFavourite,addToBusket} from "../actions/favoriteActions";
 
 const savedFavorites = getFavoritesFromLocaleStorage() as CategoryCardType[];
@@ -38,8 +38,10 @@ const favoriteReducer = createReducer(initialState, builder => {
 			}
 		})
 		.addCase(addToBusket, (state,action) =>{
-			state.items.map(card => card.id == action.payload ? {...card,isAdded:true} : console.log(card.id));
-			console.log(action.payload)
+
+				// @ts-ignore
+			state.items = state.items.map(card => card.id === action.payload.id ? action.payload : card );
+
 
 		})
 });

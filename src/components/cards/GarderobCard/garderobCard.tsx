@@ -5,7 +5,7 @@ import useAppDispatch from '@/hooks/useAppDispatch';
 import { addCardToBasket } from '@/redux/actions/shopActions';
 import { AddButton, HeartIcon } from '@/components';
 import { addDopsToGarderob } from '@/redux/actions/garderobActions';
-import { useState, CSSProperties } from 'react';
+import {useState, CSSProperties, useEffect} from 'react';
 import CardSlider from '../../elements/CardSlider/cardSlider';
 import useAppSelector from '@/hooks/useAppSelector';
 import {addToBusket} from "@/redux/actions/favoriteActions";
@@ -30,7 +30,7 @@ const GarderobCard = ({
 
 			dispatch(addCardToBasket({ ...card, isAdded: true, count: 1, countTime: card.info.minTime }));
 			// @ts-ignore
-		dispatch(addToBusket(card.id))
+		dispatch(addToBusket({...card,isAdded:true}))
 
 		// }
 	};
@@ -38,7 +38,7 @@ const GarderobCard = ({
 	const [descStatus, setDescStatus] = useState(false);
 	const favoriteItems = useAppSelector(state => state.favoriteState.items);
 	const foundItem = favoriteItems.find(item => item.title === card.title);
-
+	console.log('card',card)
 	return (
 		<div className={classNames(className, styles.wrapper)}
 			onMouseEnter={() => setDescStatus(true)}

@@ -87,3 +87,10 @@
 		display: none;
 	}
 }
+@media (max-width: 720px) {
+	.right{
+		width: 140px;
+		justify-content: space-between;
+		display: flex;
+	}
+}

@@ -21,7 +21,7 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 	const dispatch = useAppDispatch();
 
 	const handleAdd = ()=> {
-		dispatch(addGarderob({ ...card, isAdded: true, count: 1, countTime: 1, montage: active2 , dops:active2 ? 'Монтаж включен' : 'Без монтажа' }));
+		dispatch(addGarderob({ ...card, isAdded: true, count: card.id === 3 ? 60 : 1, countTime: 1, montage: active2 , dops:active2 ? 'Монтаж включен' : 'Без монтажа' }));
 	};
 	const handleDelete = ()=> {
 		dispatch(clearBasket());
@@ -32,6 +32,7 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 		scrollTo('garderobBlock', -60);
 	};
 	const garderobs = useAppSelector(selectAllGarderobs);
+
 	const getPriceOfGarderob = () => {
 		// let sum = 0;
 		// console.log(card)
@@ -46,7 +47,7 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 			if (items && items.length) {
 				for (let card of items) {
 					let price = card.price + (card.countTime - card.info.minTime) * card.info.priceForTime
-						+ (active2 ? 2900 : 0);
+						+ (card.montage ? 2900 : 0);
 
 					sum += price * card.count;
 				}
@@ -73,6 +74,37 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 			return sum;
 
 	};
+	const cards = useAppSelector(selectItems);
+	const renderPrice = () => {
+		let sum = 0;
+		if (cards && cards.length) {
+			for (let card of cards) {
+				let price = card.price + (card.countTime - card.info.minTime) * card.info.priceForTime ;
+
+				sum +=  price * card.count;
+			}
+		}
+
+		if (garderobs && garderobs.length) {
+			for (let garderob of garderobs) {
+				let price = 0;
+
+				if (garderob.countTime > 1) {
+					price += garderob.info.priceForTime * garderob.count * (garderob.countTime - 1);
+				}
+
+				price += garderob.price * garderob.count ;
+
+				for (let i = 0; i < garderob.addedDops.length; i++) {
+					price += garderob.addedDops[i].count * garderob.addedDops[i].price;
+				}
+
+				sum += price + (garderob.montage ? 2900 : 0 );
+			}
+		}
+
+		return sum;
+	};
 
 	const isGarderobs = () => {
 		const garderobItems = card.addedDops.filter(added => added.isGarderob === true);
@@ -83,6 +115,13 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 
 		return false;
 	};
+	useEffect(() =>{
+		if (card.montage){
+			setColor(card.color)
+		}else {
+			setColor('#C4C4C4')
+		}
+	},)
 	useEffect(() =>{
 		if (!card.isAdded && active2 === true ){
 			handleAdd();
@@ -145,7 +184,7 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 							<span className={classNames(styles.additivesItemText)}>Вешала</span>
 						</div><div className={styles.additivesItem}>
 							<FourthIcon className={classNames(styles.additivesItemIcon)} color={color} />
-							<span className={classNames(styles.additivesItemText2,active2 ? styles.active_item : null)}>Монтаж/демонтаж</span>
+							<span className={classNames(styles.additivesItemText2,(card.montage) ? styles.active_item : null)}>Монтаж/демонтаж</span>
 						</div>
 						{/* <div className={styles.additivesItem}>
 							<span className={classNames(styles.additivesItemIcon, 'icon-clock')}></span>
@@ -168,7 +207,6 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 						if(active1 === false){
 							setActive1(true);
 							setActive2(false)
-							setColor('#C4C4C4')
 						}
 
 					}}>
@@ -184,9 +222,8 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 								!active2
 							);
 							setActive1((active1) => !active1)
-							setColor(card.color)
-							console.log(active2)
-							console.log(active1)
+
+
 						}
 
 					}}>
@@ -219,7 +256,7 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 							<p className={classNames(styles.boxNameWrapper)}>
 								<span className={styles.boxName}>Стоимость аренды</span>
 								<span className={styles.boxPrice}>
-									{convertToNumberWithSpaces(getPriceOfGarderob())} ₽
+									{convertToNumberWithSpaces(renderPrice())} ₽
 								</span>
 							</p>
 							<span
@@ -234,10 +271,11 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 									styles.boxItem,
 									styles.boxItemThird,
 									styles.boxItemCenter,
-									isGarderobs() && styles.boxItemGarderob
+									isGarderobs() && styles.boxItemGarderob,
+									shopState.filter(added => added.isGarderob === true).length ? styles.boxItemGarderob : null
 								)}
 							>
-								<span className={classNames(styles.boxName, styles.boxNameButton, styles.boxNameBold)}>
+								<span className={classNames(styles.boxName, styles.boxNameButton, styles.boxNameBold, )}>
 									Перейти в корзину
 								</span>
 								<span

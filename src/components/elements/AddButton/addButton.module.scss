@@ -6,6 +6,13 @@
 .border{
 	border: 1px solid #373737;
 }
+@media (max-width: 720px) {
+	.wrapper{
+		padding-left: 56px!important;
+		padding-right: 56px!important;
+	}
+
+}
 .wrapper {
 	position: relative;
 	display: flex;
