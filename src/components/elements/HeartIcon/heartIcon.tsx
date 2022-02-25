@@ -24,21 +24,24 @@ function HeartIcon({ className, card }: Props): JSX.Element {
 	const handleSaveItem = () => {
 		if (!isLiked) {
 			setLiked(true);
-
+			setLink(true)
 			dispatch(addFavoriteItemToStore(card));
 		} else {
 			dispatch(deleteFavoriteItemFromStore(card.id));
-
+			setLink(false)
 			setLiked(false);
 		}
 	};
 
+	// @ts-ignore
+	const [link,setLink] = useState(false)
 	return !isLiked ? (
-		<span
-			className={classNames(styles.icon, styles.iconHover, className, 'icon-heart', isLiked && styles.liked)}
-			onClick={handleSaveItem}
-		></span>
-	) : (
+		// @ts-ignore
+		<span onMouseEnter={() => setLink(true)} onMouseLeave={() => setLink(false)}
+	className={classNames(styles.icon, styles.iconHover, className, 'icon-heart',  link ? styles.liked : null)}
+	onClick={handleSaveItem}
+	/>
+	) : (	// @ts-ignore
 		<svg
 			width='24'
 			height='24'

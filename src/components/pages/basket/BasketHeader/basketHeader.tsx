@@ -18,9 +18,7 @@ const BasketHeader = (): JSX.Element => {
 				<p className={classNames(styles.title, 'sectionTitle')}>Корзина</p>
 				<span className={classNames(styles.icon)} onClick={handleClearBasket}>Очистить корзину</span>
 			</div>
-			<p className={styles.text}>
-				Стоимость доставки зависит от объема заказа и адреса, рассчитывается после оформления заявки менеджером
-			</p>
+
 		</div>
 	);
 };

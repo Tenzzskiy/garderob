@@ -10,7 +10,7 @@ import 'react-calendar/dist/Calendar.css';
 import Calendar from 'react-calendar';
 import useOnClickOutside from "@/hooks/useOnClickOutside";
 
-const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Props): JSX.Element => {
+const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Props)=> {
 	const [date2,setDate2] = useState();
 
 	const [isOpened, setOpened] = useState(false);
@@ -18,6 +18,31 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 	const [calendar1,setCalendar1] = useState(false);
 	const calendar_f = useRef(null);
 	const [date1,setDate1] = useState();
+	const [bottomIndicatorStatus, setBottomIndicatorStatus] = useState(false);
+
+	useEffect(()=>{
+
+	},[bottomIndicatorStatus])
+
+	const handleBottomIndicator = () => {
+	  let observer = new IntersectionObserver(function (entries) {
+	    entries.forEach(function (entry) {
+	      setBottomIndicatorStatus(entry.isIntersecting)
+	    });
+	  });
+		console.log(123)
+
+	  let el = document.querySelector('#bottomIndicator');
+	  // @ts-ignore
+		observer.observe(el);
+	}
+
+	useEffect(() => {
+		if(garderobs && garderobs.length || cards && cards.length && document) {
+			handleBottomIndicator()
+		} else return
+
+	}, [])
 
  	useEffect(() =>{
 		 // @ts-ignore
@@ -106,48 +131,52 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 		// @ts-ignore
 		// @ts-ignore
 		return (
-			<>
-				<p className={styles.title}>Ваш заказ</p>
-				<div className={styles.calendar}>
-				<div className={styles.arenda_time}>
-					<p>
-						Укажите время аренды
-					</p>
-					<span>
+
+				garderobs && garderobs.length || cards && cards.length ?
+				<>
+					<p className={styles.title}>Ваш заказ</p>
+					<div className={styles.calendar}>
+						<div className={styles.arenda_time}>
+							<p>
+								Укажите время аренды
+							</p>
+							<span>
 						{
 							Array.isArray(value) ?
-							(value[1].getDate() -value[0].getDate() +1) : 1
+								(value[1].getDate() -value[0].getDate() +1) : 1
 						} дн
 					</span>
-				</div>
-					<div className={styles.calendar_flex}>
-					<div> c</div>
-					<input value={date1} className={styles.first_date}
-						   onClick={() => setCalendar1(true)}
-					// onChange={(e) => setDate1(e.current)}
-					/>
+						</div>
+						<div className={styles.calendar_flex}>
+							<div> c</div>
+							<input value={date1} className={styles.first_date}
+								   onClick={() => setCalendar1(true)}
+								// onChange={(e) => setDate1(e.current)}
+							/>
 
-					<div> до</div>
-					<input value={date2}
-						   className={styles.second_date}
-						   onClick={() => setCalendar1(true)}
-						   // onChange={(e) => setDate2(e.current)}
+							<div> до</div>
+							<input value={date2}
+								   className={styles.second_date}
+								   onClick={() => setCalendar1(true)}
+								// onChange={(e) => setDate2(e.current)}
 
-					/>
+							/>
+						</div>
 					</div>
-				</div>
-				<div className={styles.priceBlock}>
-					<span className={styles.priceBlockName}>Итого</span>
-					<span className={styles.priceBlockText}>{convertToNumberWithSpaces(renderPrice())} &#8381;</span>
-				</div>
-				<button className={classNames(styles.button, styles.buttonMargin)} onClick={handleShowSecond}>
-					Перейти к оформлению
-				</button>
-				<p className={styles.description}>
-					Стоимость доставки зависит от объема заказа и адреса, рассчитывается после оформления заявки
-					менеджером
-				</p>
-			</>
+					<div className={styles.priceBlock}>
+						<span className={styles.priceBlockName}>Итого</span>
+						<span className={styles.priceBlockText}>{convertToNumberWithSpaces(renderPrice())} &#8381;</span>
+					</div>
+					<button id='bottomIndicator' className={classNames(styles.button, styles.buttonMargin)} onClick={handleShowSecond}>
+						Перейти к оформлению
+					</button>
+					<p className={styles.description}>
+						Стоимость доставки зависит от объема заказа и адреса, рассчитывается после оформления заявки
+						менеджером
+					</p>
+				</> : null
+
+
 		);
 	};
 
@@ -171,7 +200,7 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 					garderobs={garderobs}
 				/>
 			) : null}
-			{typeof windowSize.width !== 'undefined' && windowSize.width <= 992 && renderPrice() !== 0 ? (
+			{typeof windowSize.width !== 'undefined' && windowSize.width <= 992 && renderPrice() !== 0 && !bottomIndicatorStatus ? (
 				<div className={styles.fixedBlock}>
 					<div className={styles.fixedHeader}>
 						<span className={styles.fixedName}>Стоимость аренды</span>

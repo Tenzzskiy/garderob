@@ -1,18 +1,25 @@
 .icon {
 	cursor: pointer;
+	&:hover{
+
+	}
 }
 
 .iconHover {
 	font-size: 24px;
 	opacity: 0.4;
 	transition: opacity 0.3s;
-
+	&:hover .iconHover{
+		opacity: 1;
+	}
 	&:hover {
 		opacity: 1;
+
 	}
 }
 
 .liked {
-	color: red;
+	color: #FA198C;
 	opacity: 1;
+
 }

@@ -16,7 +16,7 @@ const CatalogFilter = ({sort, price, onChangePrice, onChangeSort}: Props): JSX.E
 	return (
 		<>
 			<div className={styles.filter}>
-				<p className={styles.filterTitle}>Мебель</p>
+
 				<span className={classNames(styles.filterIcon, 'icon-sliders')} onClick={handleShowFilterModal} />
 				<PriceBox classname={styles.priceBox} price={price} onChangePrice={onChangePrice} />
 				<Dropdown

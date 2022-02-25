@@ -26,7 +26,7 @@ const CategoryList = ({ onCloseMenu }: Props): JSX.Element => {
 					</div>
 				</a>
 			</Link>
-			<Link href={{ pathname: '/catalog/arenda-mebeli', hash: ('catalog')}} passHref>
+			<Link href={{ pathname: '/catalog/arenda-mebeli'}} passHref>
 				<a className={classNames(styles.catalogItem, styles.catalogItem4)} onClick={onCloseMenu}>
 					<div className={classNames(styles.catalogItemContainer, styles.catalogItemContainer4)}>
 						<div className={styles.catalogItemInfo}>
@@ -46,7 +46,7 @@ const CategoryList = ({ onCloseMenu }: Props): JSX.Element => {
 					</div>
 				</a>
 			</Link>
-			<Link  href={{ pathname: '/catalog/personal-na-meropriyatie', hash: ('catalog')}} passHref>
+			<Link  href={{ pathname: '/catalog/personal-na-meropriyatie'}} passHref>
 				<a className={classNames(styles.catalogItem, styles.catalogItem3)} onClick={onCloseMenu}>
 					<div className={classNames(styles.catalogItemContainer, styles.catalogItemContainer3)}>
 						<div className={styles.catalogItemInfo}>
@@ -66,7 +66,7 @@ const CategoryList = ({ onCloseMenu }: Props): JSX.Element => {
 					</div>
 				</a>
 			</Link>
-			<Link href={{ pathname: '/catalog/dezinfeksiya', hash: ('catalog')}}  passHref>
+			<Link href={{ pathname: '/catalog/dezinfeksiya'}}  passHref>
 				<a className={classNames(styles.catalogItem, styles.catalogItem6)} onClick={onCloseMenu}>
 					<div className={classNames(styles.catalogItemContainer, styles.catalogItemContainer6)}>
 						<div className={styles.catalogItemInfo}>
@@ -86,7 +86,7 @@ const CategoryList = ({ onCloseMenu }: Props): JSX.Element => {
 					</div>
 				</a>
 			</Link>
-			<Link href={{ pathname: '/catalog/kamery-hraneniya-v-arendu', hash: ('catalog')}} passHref>
+			<Link href={{ pathname: '/catalog/kamery-hraneniya-v-arendu'}} passHref>
 				<a className={classNames(styles.catalogItem, styles.catalogItem2)} onClick={onCloseMenu}>
 					<div className={classNames(styles.catalogItemContainer, styles.catalogItemContainer2)}>
 						<div className={styles.catalogItemInfo}>
@@ -106,7 +106,7 @@ const CategoryList = ({ onCloseMenu }: Props): JSX.Element => {
 					</div>
 				</a>
 			</Link>
-			<Link href={{ pathname: '/catalog/oborudovanie-dlya-grimernoy', hash: ('catalog')}} passHref>
+			<Link href={{ pathname: '/catalog/oborudovanie-dlya-grimernoy'}} passHref>
 				<a className={classNames(styles.catalogItem, styles.catalogItem5)} onClick={onCloseMenu}>
 					<div className={classNames(styles.catalogItemContainer, styles.catalogItemContainer5)}>
 						<div className={styles.catalogItemInfo}>

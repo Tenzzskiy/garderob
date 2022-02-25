@@ -107,7 +107,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 
 		dispatch(removeCardToBasket(card.id));
 	};
-
+	const [add,setAdd] = useState(false);
 	return (
 		<div className={styles.card}>
 			<div className={styles.header}>
@@ -115,9 +115,12 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 					<img className={styles.image} src={getImageSoure()} alt={card.title} />
 				</figure>
 				{getTitleBlock()}
-				{card.isGarderob ? <div className={styles.radio_button} onClick={() => setCircle((prev) => !prev)}>
-					<div className={styles.r_button} onClick={() =>changeValue()}>
-						<div className={classNames(styles.circle,circle ? styles.active_circle : null)}>
+				{card.isGarderob ? <div className={styles.radio_button} >
+					<div className={styles.r_button} onClick={() => {
+						setCircle(!circle)
+						changeValue();
+					}}>
+						<div className={classNames(styles.circle,circle ? styles.active_circle : null)} >
 
 						</div>
 					</div>
@@ -130,7 +133,9 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 				<div className={classNames(styles.block, styles.priceBlock)}>
 					<span className={classNames(styles.blockName, styles.hiddenForTablets)}>Цена</span>
 					<div className={styles.price}>
-						<span className={styles.priceText}>
+						<span className={styles.priceText}  onMouseEnter={() => setAdd(true)} onMouseLeave={() => {setAdd(false)}}>
+							{add && card.isGarderob ? <div className={styles.addition}> <div> Время работы гардеробщика отличается от времени работы гардероб</div> <img
+								src="info.svg" alt=""/> <img className={styles.exit} src="/exit.svg" alt=""/></div> : null}
 							{card.price }&#8381;/
 							{card.time}
 						</span>

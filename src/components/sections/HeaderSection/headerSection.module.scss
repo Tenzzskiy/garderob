@@ -67,6 +67,7 @@
 }
 
 .iconHover {
+
 	//padding-right: 4px;
 
 	@include desktops {
@@ -92,5 +93,10 @@
 		width: 140px;
 		justify-content: space-between;
 		display: flex;
+	}
+}
+.icon-heart::before{
+	&hover{
+		background-color: #FF198F
 	}
 }

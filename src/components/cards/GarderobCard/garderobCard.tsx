@@ -30,7 +30,7 @@ const GarderobCard = ({
 
 			dispatch(addCardToBasket({ ...card, isAdded: true, count: 1, countTime: card.info.minTime }));
 			// @ts-ignore
-		dispatch(addToBusket({...card,isAdded:true}))
+		dispatch(addToBusket({...card,isAdded:true,count: 1}))
 
 		// }
 	};
@@ -38,7 +38,6 @@ const GarderobCard = ({
 	const [descStatus, setDescStatus] = useState(false);
 	const favoriteItems = useAppSelector(state => state.favoriteState.items);
 	const foundItem = favoriteItems.find(item => item.title === card.title);
-	console.log('card',card)
 	return (
 		<div className={classNames(className, styles.wrapper)}
 			onMouseEnter={() => setDescStatus(true)}

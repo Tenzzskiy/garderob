@@ -45,7 +45,9 @@ body {
 	color: $grayDarkColor;
 	margin-top: $headerHeight;
 	overflow-x: hidden;
-
+	button{
+		color: #373737;
+	}
 }
 
 html {
