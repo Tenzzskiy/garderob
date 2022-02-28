@@ -2,7 +2,11 @@
 	font-size: 28px;
 	padding-left: 4px;
 	padding-right: 4px;
-
+	transition: all 0.1s;
+	&:hover{
+		color:#ffe200 !important;
+		transition: all 0.3s;
+	}
 	&:not(:last-child) {
 		margin-right: 8px;
 	}
@@ -13,9 +17,7 @@
 		transition: background-color 0.3s;
 		position: relative;
 
-		&:hover {
-			background-color: #ffe200;
-		}
+
 
 		&:not(:last-child) {
 			margin-right: 16px;
@@ -26,9 +28,7 @@
 		transition: background-color 0.3s;
 		position: relative;
 
-		&:hover {
-			background-color: #ffe200;
-		}
+
 
 		&:not(:last-child) {
 			margin-right: 16px;
@@ -39,9 +39,7 @@
 		transition: background-color 0.3s;
 		position: relative;
 
-		&:hover {
-			background-color: #ffe200;
-		}
+
 
 		&:not(:last-child) {
 			margin-right: 16px;
@@ -73,7 +71,6 @@
 
 		&:hover {
 			&::after {
-				background-color: #ffe200;
 				z-index: -1;
 			}
 		}
