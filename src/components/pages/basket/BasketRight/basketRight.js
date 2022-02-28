@@ -12,7 +12,7 @@ import useOnClickOutside from "@/hooks/useOnClickOutside";
 import {useDispatch} from "react-redux";
 import {updateDate} from "@/redux/actions/garderobActions";
 
-const BasketRight = ({calendar1,date2,setDate2,setCalendar1,date1,setDate1,cards, garderobs,value,onChange,date,duration,circle}: Props)=> {
+const BasketRight = ({calendar1,date2,setDate2,setCalendar1,date1,setDate1,cards, garderobs,value,onChange,date})=> {
 	// const [date2,setDate2] = useState();
 
 	const [isOpened, setOpened] = useState(false);
@@ -81,7 +81,7 @@ const BasketRight = ({calendar1,date2,setDate2,setCalendar1,date1,setDate1,cards
 		// @ts-ignore
 useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) : null)
 
-	const renderPrice = (): number => {
+	const renderPrice = () => {
 		let sum = 0;
 
 		if (cards && cards.length) {
@@ -129,13 +129,13 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 
 	const price = renderPrice();
 
-	const handleShowSecond = (): void => {
+	const handleShowSecond = () => {
 		if (price !== 0) {
 			setOpened(true);
 		}
 	};
 
-	const renderWindow = (): JSX.Element => {
+	const renderWindow = () => {
 		// @ts-ignore
 		// @ts-ignore
 		// @ts-ignore

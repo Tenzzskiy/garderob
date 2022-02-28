@@ -15,6 +15,7 @@ const BasketSection = (): JSX.Element => {
 	let date = new Date();
 	const [value, onChange] = useState(new Date(date.setDate(date.getDate() +1)));
 	// @ts-ignore
+	// @ts-ignore
 	return (
 		<section className={styles.section}>
 			<div className={classNames('container', styles.container)}>
@@ -25,16 +26,24 @@ const BasketSection = (): JSX.Element => {
 							  date2={date2}
 							  setDate1={setDate1}
 							  setDate2={setDate2}
+					// @ts-ignore
 							  cards={items} garderobs={garderobs} value={value} duration={duration}   onChange={onChange} date={date}
 				/>
-				<BasketLeft cards={items} garderobs={garderobs} value={value} duration={duration} setDuration={setDuration} />
+				<BasketLeft
+					// @ts-ignore
+					cards={items} garderobs={garderobs} value={value}
+					// @ts-ignore
+					duration={duration} setDuration={setDuration} />
 				<BasketRight calendar1={calendar1}
 							 setCalendar1={setCalendar1}
+					// @ts-ignore
 							 date1={date1}
 							 date2={date2}
 							 setDate1={setDate2}
 							 setDate2={setDate2}
-							 cards={items} garderobs={garderobs} value={value} duration={duration}   onChange={onChange} date={date}/>
+							 cards={items} garderobs={garderobs} value={value}
+					// @ts-ignore
+							 duration={duration}   onChange={onChange} date={date}/>
 			</div>
 		</section>
 	);

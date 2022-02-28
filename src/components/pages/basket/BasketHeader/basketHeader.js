@@ -19,7 +19,7 @@ const BasketHeader = ({
 						  setCalendar1, date,
 						  date1, date2, setDate2, value, onChange,
 						  setDate1
-					  }:Props): JSX.Element => {
+					  }) => {
 	const dispatch = useAppDispatch();
 	const size = useWindowSize();
 	const calendar_f = useRef(null);

@@ -1,5 +1,5 @@
 import styles from './menu.module.scss';
-import { Props } from './menu.props';
+
 import classNames from 'classnames';
 import { SearchBox, WhatsappFillIcon, GarderobMenu } from '@/components';
 import Link from 'next/link';
@@ -10,19 +10,19 @@ import { chooseGarderob } from '@/redux/actions/garderobActions';
 import { MOBILE_PHONE, MOBILE_PHONE_BEAUTY } from '@/constants';
 import useWindowSize from "@/hooks/useWindowSize";
 
-const Menu = ({ isOpened, onCloseMenu }: Props): JSX.Element => {
+const Menu = ({ isOpened, onCloseMenu }) => {
 	const [isGarderobOpened, setGarderobOpened] = useState(false);
 	const [isCatalogOpened, setCatalogOpened] = useState(false);
 	const [isShowedMenu, setShowedMenu] = useState(false);
 
 	const dispatch = useAppDispatch();
 
-	const handleChooseGarderob = (index: number) => {
+	const handleChooseGarderob = (index) => {
 		dispatch(chooseGarderob(index));
 		onCloseMenu();
 	};
 
-	const onHandleCloseMenu = (e: MouseEvent<HTMLAnchorElement>, id: string) => {
+	const onHandleCloseMenu = (e, id) => {
 		onCloseMenu();
 		handleMenuMouseOut();
 
@@ -33,7 +33,7 @@ const Menu = ({ isOpened, onCloseMenu }: Props): JSX.Element => {
 		}
 	};
 
-	const handleMenuMouseOver = (type: 'garderob' | 'catalog') => {
+	const handleMenuMouseOver = (type) => {
 		if (type === 'garderob') {
 			setGarderobOpened(true);
 			setCatalogOpened(false);
