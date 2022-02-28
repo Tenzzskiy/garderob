@@ -120,6 +120,8 @@
 .itemLink {
 	color: #FFFFFF;
 	opacity: 1;
+	display: flex;
+	align-items: flex-start !important;
 }
 
 .itemLink:hover {
