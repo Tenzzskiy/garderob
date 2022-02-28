@@ -17,7 +17,6 @@ const GarderobMenu = ({type, onCloseMenu}: Props): JSX.Element => {
 	return (
 		<div className={styles.menu}>
 			<div className='container'>
-				<p className={styles.title}>{type === 'garderob' ? 'Гардероб' : 'Каталог'}</p>
 				<div className={classNames(type === 'garderob' ? styles.garderobList : styles.categoryList)}>
 					{type === 'garderob' ? (
 						<>
