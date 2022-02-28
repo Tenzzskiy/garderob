@@ -8,6 +8,7 @@ import { smoothScrollTo } from '@/utilities/helpers';
 import useAppDispatch from '@/hooks/useAppDispatch';
 import { chooseGarderob } from '@/redux/actions/garderobActions';
 import { MOBILE_PHONE, MOBILE_PHONE_BEAUTY } from '@/constants';
+import useWindowSize from "@/hooks/useWindowSize";
 
 const Menu = ({ isOpened, onCloseMenu }: Props): JSX.Element => {
 	const [isGarderobOpened, setGarderobOpened] = useState(false);
@@ -47,14 +48,15 @@ const Menu = ({ isOpened, onCloseMenu }: Props): JSX.Element => {
 		setCatalogOpened(false);
 	};
 	const [searchOpened, setSearchOpened] = useState(false);
+	// @ts-ignore
 	return (
 		<nav className={classNames(styles.menu, isOpened && styles.opened)} onMouseLeave={handleMenuMouseOut}>
 			<ul className={styles.list}>
 				<li> 	{searchOpened && <SearchBox mobile={true} onCloseMenu={() => setSearchOpened(false)} />}
-					<span
+					{useWindowSize().width < 1000 ? <span
 						className={classNames(styles.icon, styles.desktopHidden, 'icon-search')}
 						onClick={() => setSearchOpened(true)}
-					/>
+					/> : null}
 				</li>
 				<li className={classNames(styles.item, styles.itemMobileHidden)}>
 					<p

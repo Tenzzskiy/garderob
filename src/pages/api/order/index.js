@@ -56,6 +56,7 @@ const renderCardMessage = items => {
 					<th>Имя</th>
 					<th>Изначальная цена</th>
 					<th>Количество</th>
+					<th>Количество дней</th>
 					<th>Итого</th>
 				</tr>
 			`;
@@ -66,6 +67,7 @@ const renderCardMessage = items => {
 				<td>${items[i].title}</td>
 				<td>${items[i].price} руб.</td>
 				<td>${items[i].count} </td>
+				<td>${items[i].time} </td>
 				<td>${getCurrentPriceOfProduct(items[i])} руб.</td>
 			</tr>`;
 	}
@@ -87,6 +89,8 @@ const renderGarderobMessage = items => {
 					<th>Имя</th>
 					<th>Изначальная цена</th>
 					<th>Количество</th>
+					<th>Количество дней</th>
+					<th>Монтаж</th>
 					<th>Дополнительные товары</th>
 					<th>Итого</th>
 				</tr>
@@ -98,6 +102,8 @@ const renderGarderobMessage = items => {
 				<td>${items[i].title}</td>
 				<td>${items[i].price} руб.</td>
 				<td>${items[i].count} </td>
+				<td>1 </td>
+				<td>${items[i].montage ? 'Включен' : ' Без монтажа'} </td>
 				<td>${items[i].addedDops.length ? 'Присутствуют' : 'Отсутствуют'} </td>
 				<td>${getCurrentPriceOfGarderob(items[i])} руб.</td>
 			</tr>`;
@@ -142,7 +148,7 @@ export default function (req, res) {
 		if (cards.length) {
 			orderMessage =
 				orderMessage +
-				`<div style='padding-top: 10px; padding-bottom: 10px; font-weight: bold; margin-botom: 20px; '>Оборудование</div>` +
+				`<div style='padding-top: 10px; padding-bottom: 10px; font-weight: bold; margin-botom: 20px; '>Оборудование</div> ` +
 				renderCardMessage(cards);
 		}
 

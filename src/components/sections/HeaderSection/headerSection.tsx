@@ -39,7 +39,7 @@ const HeaderSection = (): JSX.Element => {
 					<Menu isOpened={opened} onCloseMenu={handleCloseMenu} />
 				</div>
 				<div className={styles.right}>
-					
+
 					<Link href='/favorites' passHref>
 						<a className={styles.icon} rel='nofollow'>
 							<FavouriteIcon />

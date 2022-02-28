@@ -130,18 +130,19 @@ const GarderobDescription = ({active1,
 		}
 	},)
 	useEffect(() =>{
-		if (!card.isAdded && active2 === true ){
+		if (!card.isAdded && active2  === true && card.color === '#FB8F00' ){
 			handleAdd();
-		}if (!card.isAdded && active4 === true ){
-			handleAdd();
-		}if (!card.isAdded && active6 === true ){
-			handleAdd();
+			console.log('1')
+		}if (!card.isAdded && active4 === true && card.color === '#68888C' ){
+			handleAdd();console.log('2')
+		}if (!card.isAdded && active6 === true && card.color === '#FF377F' ){
+			handleAdd();console.log('3')
 		}
-		if (card.color === '#FB8F00' && card.isAdded){
+		if (card.color === '#FB8F00' && card.isAdded){console.log('4')
 		dispatch(updateDate({...card,montage:active2}));
-		}if (card.color === '#68888C' && card.isAdded){
+		}if (card.color === '#68888C' && card.isAdded){console.log('5')
 			dispatch(updateDate({...card,montage:active4}));
-		}if (card.color === '#FF377F' && card.isAdded){
+		}if (card.color === '#FF377F' && card.isAdded){console.log('6')
 			dispatch(updateDate({...card,montage:active6}));
 		}
 	},[active2,active4,active6]);

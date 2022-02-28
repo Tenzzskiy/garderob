@@ -9,6 +9,8 @@ import 'react-calendar/dist/Calendar.css';
 // @ts-ignore
 import Calendar from 'react-calendar';
 import useOnClickOutside from "@/hooks/useOnClickOutside";
+import {useDispatch} from "react-redux";
+import {updateDate} from "@/redux/actions/garderobActions";
 
 const BasketRight = ({calendar1,date2,setDate2,setCalendar1,date1,setDate1,cards, garderobs,value,onChange,date,duration,circle}: Props)=> {
 	// const [date2,setDate2] = useState();
@@ -21,7 +23,7 @@ const BasketRight = ({calendar1,date2,setDate2,setCalendar1,date1,setDate1,cards
 	const [bottomIndicatorStatus, setBottomIndicatorStatus] = useState(false);
 
 
-
+	const dispatch = useDispatch();
 	const handleBottomIndicator = () => {
 	  let observer = new IntersectionObserver(function (entries) {
 	    entries.forEach(function (entry) {
@@ -70,6 +72,8 @@ const BasketRight = ({calendar1,date2,setDate2,setCalendar1,date1,setDate1,cards
 
 
 		}
+		// @ts-ignore
+
 
 	},[value]);
 

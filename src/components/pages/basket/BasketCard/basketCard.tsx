@@ -8,6 +8,7 @@ import useAppDispatch from '@/hooks/useAppDispatch';
 import {useEffect, useState} from 'react';
 import {GarderobItemType} from '@/types';
 import {convertToNumberWithSpaces} from '@/utilities/helpers';
+import {array} from "prop-types";
 
 const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props): JSX.Element => {
 	const [isOpened, setOpened] = useState(false);
@@ -54,8 +55,10 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 
 		}else {
 // @ts-ignore
+
 			dispatch(updateDate({...card,price: price + 1500, time:'дн'}))
 		}
+
 	}
 	useEffect(() =>{
 		// @ts-ignore
@@ -63,14 +66,24 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 		if (Array.isArray(value) ){
 			// @ts-ignore
 			setDuration((prev) =>  [prev[0] = value[0].getDate(),prev[1] =value[1].getDate()])
+			// @ts-ignore
+
+					// @ts-ignore
+
 		}
-		// if (card.isGarderob)
-		// @ts-ignore
-		// @ts-ignore
-		// if (circle && Array.isArray(value)){
 
 
 	},[value,circle])
+	useEffect(() =>{
+		if (Array.isArray(value) ){
+			// @ts-ignore
+
+			// @ts-ignore
+
+			// @ts-ignore
+
+		}
+	},[value])
 	const getImageSoure = (): string => {
 		if (isGarderob) {
 			return card.images[0];
