@@ -5,7 +5,7 @@ import { useGarderobContext } from '@/contexts/GarderobContext';
 
 const GarderobImage = (): JSX.Element => {
 	const { images, title } = useGarderobContext();
-	console.log(images)
+	(images)
 	const { currentIndex, slider, sliderRef, handleChangeCurrentIndex, handleSlideNext, handleSlidePrev } = useSlider({
 		slidesPerView: 1
 	});
@@ -59,7 +59,7 @@ const GarderobImage = (): JSX.Element => {
 					})}
 				</div>
 			</div>
-			{/*{renderSliderArrows()}*/}
+			{renderSliderArrows()}
 		</div>
 	);
 };

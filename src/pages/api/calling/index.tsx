@@ -45,14 +45,14 @@ export default function (req: NextApiRequest, res: NextApiResponse) {
 
 		transporter.sendMail(mailData, function (err: any, info: any) {
 			if (err) {
-				console.log(err);
+				(err);
 				return res.status(200).json({success: false});
 			} else {
-				console.log(info);
+				(info);
 			}
 		});
 	} catch {
-		console.log('i am here');
+		('i am here');
 		return res.status(200).json({success: false});
 	}
 

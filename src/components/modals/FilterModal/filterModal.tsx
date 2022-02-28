@@ -14,7 +14,7 @@ function FilterModal({visible, price, sort, onChangeSort, onChangePrice, onChang
 			return;
 		}
 
-		console.log(e.target.name);
+		(e.target.name);
 
 		setMyPrice({...price, [e.target.name]: e.target.value});
 	};

@@ -26,10 +26,10 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 				sum += card.addedDops[i].count * card.addedDops[i].price;
 			}
 			if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
-				sum += (card.price*0.8) *  card.count   *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() )   : 1) + card.price * card.count ;
+				sum += (card.price*0.8) *  card.count   *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count ;
 
 			} else {
-				sum +=card.price * card.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() + 1 )  : 1) ;
+				sum +=card.price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 			}
 
 
@@ -38,10 +38,10 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 
 		let price = 0;
 		if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
-			price += (card.price*0.8) *  card.count   *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() )   : 1) + card.price * card.count ;
+			price += (card.price*0.8) *  card.count   *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count ;
 
 		} else {
-			price +=card.price * card.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() + 1 )  : 1) ;
+			price +=card.price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 		}
 
 
@@ -100,7 +100,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 	const handleRemove = () => {
 		if (isGarderob) {
 			dispatch(removeGarderob(card.id));
-			console.log(card);
+			(card);
 			return;
 
 		}
@@ -109,7 +109,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 	};
 	const [add,setAdd] = useState(false);
 	return (
-		<div className={styles.card}>
+		<div className={classNames(styles.card, !card.isGarderob ? styles.card_margin : null)}>
 			<div className={styles.header}>
 				<figure className={styles.figure}>
 					<img className={styles.image} src={getImageSoure()} alt={card.title} />
@@ -130,7 +130,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 				</div> : null}
 			</div>
 			<div className={styles.body}>
-				<div className={classNames(styles.block, styles.priceBlock)}>
+				<div className={classNames(styles.block, styles.priceBlock,!card.isGarderob ? styles.block_disable_margin : null)}>
 					<span className={classNames(styles.blockName, styles.hiddenForTablets)}>Цена</span>
 					<div className={styles.price}>
 						<span className={styles.priceText}  onMouseEnter={() => setAdd(true)} onMouseLeave={() => {setAdd(false)}}>
@@ -171,7 +171,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 						{/*</div>*/}
 					</div>
 				</div>
-				<div className={classNames(styles.block, styles.priceBlock)}>
+				<div className={classNames(styles.block, styles.priceBlock,!card.isGarderob ? styles.block_disable_margin : null)}>
 					<span className={classNames(styles.blockName, styles.hiddenForTablets)}>Сумма</span>
 					<div className={classNames(styles.priceFooter)}>
 						<span className={classNames(styles.priceText, styles.priceMargin)}>

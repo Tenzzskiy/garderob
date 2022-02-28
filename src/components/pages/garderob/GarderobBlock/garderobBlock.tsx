@@ -12,7 +12,7 @@ const GarderobBlock = ({title, items, isAdded, isDifferent = false, visible = fa
 	const [isOpened, setOpened] = useState(true);
 	const {id, addedDops} = useGarderobContext();
 	const shopState = useSelector(selectItems)
-	console.log('d',shopState)
+	('d',shopState)
 	const {sliderRef, slider, handleSlideNext, handleSlidePrev} = useSlider({
 		slidesPerView: 1.1,
 		spacing: 16,

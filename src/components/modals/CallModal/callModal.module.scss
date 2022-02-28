@@ -162,7 +162,7 @@
 	outline: none;
 	color: black !important;
 	cursor: pointer;
-	width: 296px !important;
+	width: 328px !important;
 	height: 48px !important;
 
 	@include textSubtitleFirst;
@@ -181,6 +181,11 @@
 		width: auto;
 		padding-left: 16px;
 		padding-right: 16px;
+	}
+}
+@media (max-width: 450px){
+	.button{
+		width: 100% !important;
 	}
 }
 

@@ -20,6 +20,32 @@
 		&:not(:last-child) {
 			margin-right: 16px;
 		}
+	}@include tablets {
+		cursor: pointer;
+		font-size: 32px;
+		transition: background-color 0.3s;
+		position: relative;
+
+		&:hover {
+			background-color: #ffe200;
+		}
+
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+	}@include mobile {
+		cursor: pointer;
+		font-size: 32px;
+		transition: background-color 0.3s;
+		position: relative;
+
+		&:hover {
+			background-color: #ffe200;
+		}
+
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
 	}
 }
 
@@ -57,20 +83,26 @@
 .iconCount {
 	display: none;
 
-	@include desktops {
-		display: block;
-		position: absolute;
-		top: -4px;
-		right: -6px;
-		width: 22px;
-		height: 22px;
-		font-size: 12px;
-		line-height: 20px;
-		border-radius: 100%;
-		background-color: #ffe200;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-weight: 600;
+}
+.itemCount_active{
+
+	position: absolute;
+	top: -4px;
+	right: -6px;
+	width: 22px;
+	height: 22px;
+	font-size: 12px;
+	line-height: 20px;
+	border-radius: 100%;
+	background-color: #ffe200;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+}
+@media (max-width: 575px) {
+	.itemCount_active{
+		top: 12px;
+		right: 12px;
 	}
 }

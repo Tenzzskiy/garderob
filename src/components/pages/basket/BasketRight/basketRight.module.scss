@@ -71,6 +71,16 @@ background: white;
 	justify-content: space-between;
 
 }
+@media (max-width: 1000px){
+	.calendar_flex{
+		width: 250px;
+	}
+}
+@media (max-width: 720px){
+	.calendar_flex{
+		width: 100%;
+	}
+}
 .calendar_active{
 	transition: all 0.3s;
 	transform: scale(1) !important;

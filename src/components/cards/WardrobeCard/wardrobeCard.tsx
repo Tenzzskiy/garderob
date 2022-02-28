@@ -21,7 +21,7 @@ const WardrobeCard = ({ className = null, card, index }: Props): JSX.Element => 
 	const handleChooseGarderob = () => {
 		dispatch(chooseGarderob(index));
 	};
-	console.log(card)
+	(card)
 	return (
 		<Link href='/garderob' passHref>
 			<a className={classNames(className, styles.wrapper,card.status === 1 ? styles.white : card.status === 2 ? styles.gray : styles.purple  )} onClick={handleChooseGarderob} >

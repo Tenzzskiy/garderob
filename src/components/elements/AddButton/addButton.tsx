@@ -45,7 +45,7 @@ const AddButton = ({
 	custom
 
 }: Props) => {
-	console.log(card)
+	(card)
 	const [step,setStep] =useState(60);
 	const favoriteItems = useAppSelector(state => state.favoriteState.items);
 	const foundItem = favoriteItems.find(item => item.title === card.title);
@@ -103,24 +103,24 @@ const AddButton = ({
 
 	const handleIncrease = () => {
 		if (card.count + 1 > maxValue) {
-			console.log('+1')
+			('+1')
 			return;
 
 		}
 
 		if (!isOwn && typeof garderobId !== 'undefined') {
-			console.log('own')
+			('own')
 			dispatch(increaseDopsInGarderob({id: garderobId, item: card}));
 			return;
 		}
 
 		if (isGarderob) {
-			console.log('garderob')
+			('garderob')
 			if (isCount) {
-				console.log('id')
+				('id')
 				dispatch(increaseGarderob(card.id));
 			} else {
-				console.log('time')
+				('time')
 				dispatch(increaseTimeGarderob(card.id));
 
 			}
@@ -129,7 +129,7 @@ const AddButton = ({
 		}
 
 		if (isCount) {
-			console.log('+count')
+			('+count')
 			// dispatch(increaseFavourite(card.id));
 			// @ts-ignore
 
@@ -138,7 +138,7 @@ const AddButton = ({
 			dispatch(increaseDopsInGarderob({id: garderobId, item: card}));
 
 		} else {
-			console.log('time++')
+			('time++')
 			dispatch(increaseTimeCardToBasket(card.id));
 		}
 	};

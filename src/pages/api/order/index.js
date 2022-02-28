@@ -118,7 +118,7 @@ export default function (req, res) {
 	const email = 'info@vyezdnoy-garderob77.ru';
 	const password = 'KP6-WfX-9u7';
 
-	//console.log(garderobs);
+	//(garderobs);
 
 	if (!email || !password) {
 		return res.status(200).json({success: false});
@@ -163,7 +163,7 @@ export default function (req, res) {
 
 		transporter.sendMail(mailData, function (err, info) {
 			if (err) {
-				console.log('sdsd');
+				('sdsd');
 				return res.status(200).json({success: false});
 			} else {
 				return res.status(200).json({success: true});

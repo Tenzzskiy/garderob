@@ -6,7 +6,7 @@ function FavouritesIcon() {
 
 	const favoriteItems = useAppSelector(state => state.favoriteState.items);
 
-	console.log(favoriteItems)
+	(favoriteItems)
 
 	return (
 		<>

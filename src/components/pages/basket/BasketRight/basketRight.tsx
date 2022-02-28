@@ -20,9 +20,7 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 	const [date1,setDate1] = useState();
 	const [bottomIndicatorStatus, setBottomIndicatorStatus] = useState(false);
 
-	useEffect(()=>{
 
-	},[bottomIndicatorStatus])
 
 	const handleBottomIndicator = () => {
 	  let observer = new IntersectionObserver(function (entries) {
@@ -30,7 +28,7 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 	      setBottomIndicatorStatus(entry.isIntersecting)
 	    });
 	  });
-		console.log(123)
+
 
 	  let el = document.querySelector('#bottomIndicator');
 	  // @ts-ignore
@@ -55,14 +53,17 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 			if (value.length < 2) {
 				// @ts-ignore
 				setDate1(`${value[0].getDate()}.${value[0].getMonth()}.${value[0].getFullYear()} `);
-				console.log(value[1] -value[0])
+
 				// @ts-ignore
 				setDate1(`${value[0].getDate()}.${value[0].getMonth()}.${value[0].getFullYear()} `);
 			}else
 			{
+
+
+
 				// @ts-ignore
 				setDate1(`${value[0].getDate()}.${value[0].getMonth()}.${value[0].getFullYear()} `);
-				console.log((value[1].getDate() -value[0].getDate() +1))
+
 				// @ts-ignore
 				setDate2(`${value[1].getDate()}.${value[1].getMonth()}.${value[1].getFullYear()} `);
 			}
@@ -82,9 +83,9 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 					* 0.8) : card.price) + (card.countTime - card.info.minTime) * card.info.priceForTime ;
 
 					if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
-						sum +=  price * card.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() )   : 1) + card.price * card.count ;
+						sum +=  price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count ;
 					} else {
-						sum +=  price * card.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() + 1 )  : 1) ;
+						sum +=  price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 					}
 
 			}
@@ -100,10 +101,10 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 
 
 				if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
-					price += (garderob.price*0.8) *   garderob.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() )   : 1) + garderob.price * garderob.count ;
+					price += (garderob.price*0.8) *   garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + garderob.price * garderob.count ;
 
 				} else {
-					price +=garderob.price * garderob.count *(Array.isArray(value) ? (value[1].getDate() -value[0].getDate() + 1 )  : 1) ;
+					price +=garderob.price * garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 				}
 
 
@@ -143,7 +144,7 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 							<span>
 						{
 							Array.isArray(value) ?
-								(value[1].getDate() -value[0].getDate() +1) : 1
+								Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24)) : 1
 						} дн
 					</span>
 						</div>
