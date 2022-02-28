@@ -53,13 +53,14 @@
 }
 
 .icon {
+
 	&:hover{
 		color: #FA198C;
 	}
 	font-size: 28px;
 	padding-left: 2px;
 	padding-right: 2px;
-
+	margin-right: 20px;
 	@include desktops {
 		cursor: pointer;
 		font-size: 32px;
