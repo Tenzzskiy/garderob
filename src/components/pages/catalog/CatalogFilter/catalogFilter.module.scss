@@ -2,9 +2,14 @@
 
 .filter {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 16px;
+}
+@media (max-width: 1000px) {
+	.filter{
+		justify-content: flex-start;
+	}
 }
 
 .filterTitle {

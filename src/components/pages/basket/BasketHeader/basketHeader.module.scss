@@ -7,6 +7,112 @@
 		grid-area: top;
 		margin-bottom: 0;
 	}
+	z-index: 5;
+	position: relative;
+}
+.first_date{
+	background: white;
+	width: 102px;
+	height: 36px;
+	border-radius: 30px;
+	text-decoration: none;
+	outline: none;text-align: center;
+	cursor: pointer;
+	transition: all 0.3s;
+	border: 0;
+	&:hover{
+		background: #FFFCE8;
+		border: 1px solid #373737;
+		box-sizing: border-box;
+		transition: all 0.3s;
+	}
+}
+.second_date{
+	border: 0;
+	&:hover{
+		background: #FFFCE8;
+		border: 1px solid #373737;
+		box-sizing: border-box;
+		transition: all 0.3s;
+	}
+	transition: all 0.3s;
+	cursor: pointer;
+	outline: none;text-align: center;
+	background: white;
+	width: 102px;
+	height: 36px;
+	border-radius: 30px;
+	text-decoration: none;
+}
+.arenda_time{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	span{
+		color: #404A4C;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+.calendar{
+
+	p{
+		margin-bottom: 12px;
+	}
+	display: flex;
+	flex-direction: column;
+	z-index: 5;
+}
+.calendar_flex{
+	margin-bottom: 12px;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+}
+@media (max-width: 1000px){
+	.calendar_flex{
+		width: 250px;
+	}
+}
+@media (max-width: 720px){
+	.calendar_flex{
+		width: 100%;
+	}
+}
+.description {
+	padding: 16px;
+	border-radius: 8px;
+	background-color: #fff;
+	font-weight: 400;
+	line-height: 20px;
+	color: #404a4c;
+}
+.modaal_calendar{
+	position: absolute !important;
+	width: 400px;
+	top: 150px;
+	left: 5px;
+	max-width: 320px;
+	transform: scale(0);
+	transition: all 0.3s;
+}
+@media(max-width: 1000px){
+	.modaal_calendar{
+		position: absolute !important;
+
+		max-width: 320px;
+		transform: scale(0);
+		transition: all 0.3s;
+	}
+}
+.calendar_active{
+	transition: all 0.3s;
+	transform: scale(1) !important;
 }
 
 .block {

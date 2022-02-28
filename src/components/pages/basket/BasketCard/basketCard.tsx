@@ -124,8 +124,10 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 
 						</div>
 					</div>
-					<span className={styles.radio_button_text} >
+					<span className={styles.radio_button_text} onMouseEnter={() => setAdd(true)} onMouseLeave={() => {setAdd(false)}} >
 					{`Продлить работу ${card.title} на весь период аренды гардероба`}
+						{add && card.isGarderob ? <div className={styles.addition}> <div> Время работы гардеробщика отличается от времени работы гардероб</div> <img
+							src="info.svg" alt=""/> <img onClick={() => setAdd(false)} className={styles.exit} src="/exit.svg" alt=""/></div> : null}
 				</span>
 				</div> : null}
 			</div>
@@ -133,9 +135,8 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 				<div className={classNames(styles.block, styles.priceBlock,!card.isGarderob ? styles.block_disable_margin : null)}>
 					<span className={classNames(styles.blockName, styles.hiddenForTablets)}>Цена</span>
 					<div className={styles.price}>
-						<span className={styles.priceText}  onMouseEnter={() => setAdd(true)} onMouseLeave={() => {setAdd(false)}}>
-							{add && card.isGarderob ? <div className={styles.addition}> <div> Время работы гардеробщика отличается от времени работы гардероб</div> <img
-								src="info.svg" alt=""/> <img className={styles.exit} src="/exit.svg" alt=""/></div> : null}
+						<span className={styles.priceText}  >
+
 							{card.price }&#8381;/
 							{card.time}
 						</span>

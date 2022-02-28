@@ -1,7 +1,27 @@
 @import '@/assets/base/variables';
 @import '@/assets/framework/typography';
 @import '@/assets/framework/breakpoints';
+.icon {
 
+	font-size: 28px;
+	padding-left: 2px;
+	padding-right: 2px;
+	display: flex;
+	justify-content: flex-start;
+	height: 40px;
+	@include desktops {
+		cursor: pointer;
+		font-size: 32px;
+		transition: background-color 0.3s;
+		position: relative;
+		padding-left: 4px;
+		padding-right: 4px;
+
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+	}
+}
 .menu {
 	position: absolute;
 	top: 100%;

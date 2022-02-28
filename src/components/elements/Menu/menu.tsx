@@ -46,10 +46,16 @@ const Menu = ({ isOpened, onCloseMenu }: Props): JSX.Element => {
 		setGarderobOpened(false);
 		setCatalogOpened(false);
 	};
-
+	const [searchOpened, setSearchOpened] = useState(false);
 	return (
 		<nav className={classNames(styles.menu, isOpened && styles.opened)} onMouseLeave={handleMenuMouseOut}>
 			<ul className={styles.list}>
+				<li> 	{searchOpened && <SearchBox mobile={true} onCloseMenu={() => setSearchOpened(false)} />}
+					<span
+						className={classNames(styles.icon, styles.desktopHidden, 'icon-search')}
+						onClick={() => setSearchOpened(true)}
+					/>
+				</li>
 				<li className={classNames(styles.item, styles.itemMobileHidden)}>
 					<p
 						className={styles.link}

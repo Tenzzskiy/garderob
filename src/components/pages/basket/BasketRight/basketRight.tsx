@@ -10,14 +10,14 @@ import 'react-calendar/dist/Calendar.css';
 import Calendar from 'react-calendar';
 import useOnClickOutside from "@/hooks/useOnClickOutside";
 
-const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Props)=> {
-	const [date2,setDate2] = useState();
+const BasketRight = ({calendar1,date2,setDate2,setCalendar1,date1,setDate1,cards, garderobs,value,onChange,date,duration,circle}: Props)=> {
+	// const [date2,setDate2] = useState();
 
 	const [isOpened, setOpened] = useState(false);
 	const windowSize = useWindowSize();
-	const [calendar1,setCalendar1] = useState(false);
+	// const [calendar1,setCalendar1] = useState(false);
 	const calendar_f = useRef(null);
-	const [date1,setDate1] = useState();
+
 	const [bottomIndicatorStatus, setBottomIndicatorStatus] = useState(false);
 
 
@@ -73,7 +73,10 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 
 	},[value]);
 
-	useOnClickOutside(calendar_f,() => setCalendar1(false));
+
+		// @ts-ignore
+useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) : null)
+
 	const renderPrice = (): number => {
 		let sum = 0;
 
@@ -131,12 +134,16 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 	const renderWindow = (): JSX.Element => {
 		// @ts-ignore
 		// @ts-ignore
+		// @ts-ignore
+		// @ts-ignore
 		return (
 
 				garderobs && garderobs.length || cards && cards.length ?
 				<>
 					<p className={styles.title}>Ваш заказ</p>
-					<div className={styles.calendar}>
+
+					{// @ts-ignore
+						windowSize.width < 720 ? null : <div className={styles.calendar}>
 						<div className={styles.arenda_time}>
 							<p>
 								Укажите время аренды
@@ -163,7 +170,7 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 
 							/>
 						</div>
-					</div>
+					</div>}
 					<div className={styles.priceBlock}>
 						<span className={styles.priceBlockName}>Итого</span>
 						<span className={styles.priceBlockText}>{convertToNumberWithSpaces(renderPrice())} &#8381;</span>
@@ -171,10 +178,11 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 					<button id='bottomIndicator' className={classNames(styles.button, styles.buttonMargin)} onClick={handleShowSecond}>
 						Перейти к оформлению
 					</button>
-					<p className={styles.description}>
+
+					{windowSize.width > 720 ? <p className={styles.description}>
 						Стоимость доставки зависит от объема заказа и адреса, рассчитывается после оформления заявки
 						менеджером
-					</p>
+					</p> : null}
 				</> : null
 
 
@@ -204,7 +212,7 @@ const BasketRight = ({cards, garderobs,value,onChange,date,duration,circle}: Pro
 			{typeof windowSize.width !== 'undefined' && windowSize.width <= 992 && renderPrice() !== 0 && !bottomIndicatorStatus ? (
 				<div className={styles.fixedBlock}>
 					<div className={styles.fixedHeader}>
-						<span className={styles.fixedName}>Стоимость аренды</span>
+						<span className={styles.fixedName}>Итого:</span>
 						<span className={styles.fixedPrice}>{convertToNumberWithSpaces(renderPrice())} &#8381;</span>
 					</div>
 					<button className={styles.button} onClick={handleShowSecond}>

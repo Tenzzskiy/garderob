@@ -168,6 +168,11 @@
 	top: 10px;
 	right:10px;
 }
+@media (max-width: 720px){
+	.addition{
+		left: 5px !important;
+	}
+}
 .addition{
 	position: absolute;
 	background: #68888C;
@@ -176,7 +181,7 @@
 	height: 64px;
 	z-index: 2;
 	top: -80px;
-	left: -120px;
+	left: 150px;
 	text-align:center ;
 	color: white;
 	font-style: normal;

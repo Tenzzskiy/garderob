@@ -9,7 +9,7 @@ import FavouriteIcon from '../../elements/FavouritesIcon/favouritesIcon'
 
 const HeaderSection = (): JSX.Element => {
 	const [opened, setOpened] = useState(false);
-	const [searchOpened, setSearchOpened] = useState(false);
+
 
 	useScrollFreeze(opened);
 
@@ -39,10 +39,7 @@ const HeaderSection = (): JSX.Element => {
 					<Menu isOpened={opened} onCloseMenu={handleCloseMenu} />
 				</div>
 				<div className={styles.right}>
-					<span
-						className={classNames(styles.icon, styles.desktopHidden, 'icon-search')}
-						onClick={() => setSearchOpened(true)}
-					/>
+					
 					<Link href='/favorites' passHref>
 						<a className={styles.icon} rel='nofollow'>
 							<FavouriteIcon />
@@ -55,7 +52,7 @@ const HeaderSection = (): JSX.Element => {
 					</Link>
 				</div>
 			</div>
-			{searchOpened && <SearchBox mobile={true} onCloseMenu={() => setSearchOpened(false)} />}
+
 		</header>
 	);
 };

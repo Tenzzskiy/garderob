@@ -103,24 +103,24 @@ const AddButton = ({
 
 	const handleIncrease = () => {
 		if (card.count + 1 > maxValue) {
-			('+1')
+
 			return;
 
 		}
 
 		if (!isOwn && typeof garderobId !== 'undefined') {
-			('own')
+
 			dispatch(increaseDopsInGarderob({id: garderobId, item: card}));
 			return;
 		}
 
 		if (isGarderob) {
-			('garderob')
+
 			if (isCount) {
-				('id')
+
 				dispatch(increaseGarderob(card.id));
 			} else {
-				('time')
+
 				dispatch(increaseTimeGarderob(card.id));
 
 			}
@@ -129,7 +129,7 @@ const AddButton = ({
 		}
 
 		if (isCount) {
-			('+count')
+
 			// dispatch(increaseFavourite(card.id));
 			// @ts-ignore
 
@@ -138,7 +138,7 @@ const AddButton = ({
 			dispatch(increaseDopsInGarderob({id: garderobId, item: card}));
 
 		} else {
-			('time++')
+
 			dispatch(increaseTimeCardToBasket(card.id));
 		}
 	};

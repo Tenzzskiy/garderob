@@ -28,13 +28,20 @@
 	color: #FF198F !important;
 }
 .react-calendar {
-	width: 350px;
+	z-index: 5;
+	position: relative;
+	min-width: 350px;
 	max-width: 100%;
 	background: white;
 	border: 0 !important;
 	border-radius: 8px;
 	font-family: 'Futura PT';
 	box-shadow: 0px 1px 25px rgba(162, 159, 159, 0.25);
+}
+@media (max-width: 720px) {
+	.react-calendar{
+		min-width: 330px;
+	}
 }
 
 
