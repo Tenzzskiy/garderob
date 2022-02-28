@@ -7,7 +7,7 @@ import { chooseGarderob } from '@/redux/actions/garderobActions';
 import { useGarderobContext } from '@/contexts/GarderobContext';
 
 // @ts-ignore
-const GarderobTypes = ({setActive1,setActive2,setColor}): JSX.Element => {
+const GarderobTypes = ({setColor}): JSX.Element => {
 	const { index: currentGarderob } = useGarderobContext();
 
 	const windowSize = useWindowSize();
@@ -58,8 +58,7 @@ const GarderobTypes = ({setActive1,setActive2,setColor}): JSX.Element => {
 				<div
 					onClick={() => {
 						handleChangeCurrentGarderob(0)
-						// setActive1(true);
-						// setActive2(false);
+
 						setColor('#C4C4C4')
 					}}
 					className={classNames(
@@ -77,8 +76,6 @@ const GarderobTypes = ({setActive1,setActive2,setColor}): JSX.Element => {
 				<div
 					onClick={() => {
 						handleChangeCurrentGarderob(1);
-						// setActive1(true);
-						// setActive2(false);
 						setColor('#C4C4C4')
 					}
 
@@ -98,8 +95,6 @@ const GarderobTypes = ({setActive1,setActive2,setColor}): JSX.Element => {
 				<div
 					onClick={() => {
 						handleChangeCurrentGarderob(2)
-						// setActive1(true);
-						// setActive2(false);
 						setColor('#C4C4C4')
 					}}
 					className={classNames(

@@ -140,7 +140,13 @@ const favoriteReducer = createReducer(initialState, builder => {
 
 		.addCase(initializeGarderobStore, state => {
 			state.items = savedItems;
-		});
+		})
+		.addCase(updateDate, (state,action) => {
+		// @ts-ignore
+		state.items = state.items.map(card => card.id === action.payload.id ? action.payload : card );
+
+	});
+
 
 });
 

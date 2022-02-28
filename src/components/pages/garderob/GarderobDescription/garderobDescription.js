@@ -3,17 +3,29 @@ import styles from './garderobDescription.module.scss';
 import { ExclamationIcon, HangerIcon, AddButton } from '@/components';
 import { useGarderobContext } from '@/contexts/GarderobContext';
 import useAppDispatch from '@/hooks/useAppDispatch';
-import {addGarderob, clearGarderobs, refresh, removeGarderob} from '@/redux/actions/garderobActions';
+import {addGarderob, clearGarderobs, refresh, removeGarderob, updateDate} from '@/redux/actions/garderobActions';
 import {CSSProperties, useEffect, useState} from 'react';
 import Link from 'next/link';
 import { convertToNumberWithSpaces, scrollTo } from '@/utilities/helpers';
-import {useCatalogContext} from "@/contexts/CatalogContext";
 import {useSelector} from "react-redux";
 import {selectAllGarderobs, selectItems} from "@/redux/selectors";
 import useAppSelector from "@/hooks/useAppSelector";
 import {clearBasket} from "@/redux/actions/shopActions";
 import {SecondIcon,ThirdIcon,FourthIcon} from './../../../../components/icons/HangerIcon'
-const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setColor}) => {
+const GarderobDescription = ({active1,
+								 active2,
+								 active3,
+								 active4,
+								 active5,
+								 active6,
+								 color,
+								 setActive1,
+								 setActive2,
+								 setActive3,
+								 setActive4,
+								 setActive5,
+								 setActive6,
+								 setColor}) => {
 
 	const card = useGarderobContext();
 	const items = useAppSelector(selectItems);
@@ -21,7 +33,9 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 	const dispatch = useAppDispatch();
 
 	const handleAdd = ()=> {
-		dispatch(addGarderob({ ...card, isAdded: true, count: card.id === 3 ? 60 : 1, countTime: 1, montage: active2 , dops:active2 ? 'Монтаж включен' : 'Без монтажа' }));
+		dispatch(addGarderob({ ...card, isAdded: true, count: card.id === 3 ? 60 : 1, countTime: 1, montage: card.color === '#FB8F00' ? active2 :
+				card.color === '#68888C' ? active4 : card.color === '#FF377F' ? active6 : false
+			, dops:active2 ? 'Монтаж включен' : 'Без монтажа' }));
 	};
 	const handleDelete = ()=> {
 		dispatch(clearBasket());
@@ -34,14 +48,7 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 	const garderobs = useAppSelector(selectAllGarderobs);
 
 	const getPriceOfGarderob = () => {
-		// let sum = 0;
-		// console.log(card)
-		// if (card.addedDops && card.addedDops.length) {
-		// 	card.addedDops.forEach(item => {
-		// 		sum += item.count * item.price;
-		// 	});
-		// }
-		// return sum + card.count * card.price;
+
 			let sum = 0;
 
 			if (items && items.length) {
@@ -67,7 +74,7 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 						price += garderob.addedDops[i].count * garderob.addedDops[i].price ;
 					}
 
-					sum += price + (active2 ? 2900 : 0) ;
+					sum += price + (garderob.montage ? 2900 : 0) ;
 				}
 			}
 
@@ -125,8 +132,19 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 	useEffect(() =>{
 		if (!card.isAdded && active2 === true ){
 			handleAdd();
+		}if (!card.isAdded && active4 === true ){
+			handleAdd();
+		}if (!card.isAdded && active6 === true ){
+			handleAdd();
 		}
-	},[active2]);
+		if (card.color === '#FB8F00' && card.isAdded){
+		dispatch(updateDate({...card,montage:active2}));
+		}if (card.color === '#68888C' && card.isAdded){
+			dispatch(updateDate({...card,montage:active4}));
+		}if (card.color === '#FF377F' && card.isAdded){
+			dispatch(updateDate({...card,montage:active6}));
+		}
+	},[active2,active4,active6]);
 	const shopState = useSelector(selectItems)
 	const renderChooseGarderobBlock = () => {
 		if (shopState && shopState.length ) {
@@ -203,39 +221,115 @@ const GarderobDescription = ({active1,active2,color,setActive1,setActive2,setCol
 				</div>
 
 				<div className={styles.radioFlex} >
-					<div className={styles.flexx} onClick={() =>{
-						if(active1 === false){
-							setActive1(true);
-							setActive2(false)
-						}
+					{card.color === '#FB8F00' ?
+						<>
+							<div className={styles.flexx} onClick={() =>{
+								if(active1 === false){
+									setActive1(true);
+									setActive2(false)
+								}
 
-					}}>
-					<div className={styles.circle}>
-						<div className={classNames(styles.circleCenter,active1 ? styles.active : null)} >
-						</div>
+							}}>
+								<div className={styles.circle}>
+									<div className={classNames(styles.circleCenter,active1 ? styles.active : null)} >
+									</div>
 
-					</div>
-					<div>Без монтажа</div></div>
-					<div className={styles.flexx} onClick={() =>{
-						if(active2 === false){
-							setActive2(
-								!active2
-							);
-							setActive1((active1) => !active1)
+								</div>
+								<div>Без монтажа</div></div>
+							<div className={styles.flexx} onClick={() =>{
+								if(active2 === false){
+									setActive2(
+										!active2
+									);
+									setActive1((active1) => !active1)
 
 
-						}
+								}
 
-					}}>
-					<div className={styles.circle} onClick={() => {
+							}}>
+								<div className={styles.circle} onClick={() => {
 
-					}}>
-						<div  className={classNames(styles.circleCenter,active2 ? styles.active : null)} >
+								}}>
+									<div  className={classNames(styles.circleCenter,active2 ? styles.active : null)} >
 
-						</div>
-					</div>
-					<div >С монтажом  + <span style={{ 'color': card.color } }>2900 Р </span></div>
-					</div>
+									</div>
+								</div>
+								<div >С монтажом  + <span style={{ 'color': card.color } }>2900 Р </span></div>
+							</div>
+						</> : card.color === '#68888C' ?
+
+							<>
+								<div className={styles.flexx} onClick={() =>{
+									if(active3 === false){
+										setActive3(true);
+										setActive4(false)
+									}
+
+								}}>
+									<div className={styles.circle}>
+										<div className={classNames(styles.circleCenter,active3 ? styles.active : null)} >
+										</div>
+
+									</div>
+									<div>Без монтажа</div></div>
+								<div className={styles.flexx} onClick={() =>{
+									if(active4 === false){
+										setActive4(
+											!active4
+										);
+										setActive3((active3) => !active3)
+
+
+									}
+
+								}}>
+									<div className={styles.circle} onClick={() => {
+
+									}}>
+										<div  className={classNames(styles.circleCenter,active4 ? styles.active : null)} >
+
+										</div>
+									</div>
+									<div >С монтажом  + <span style={{ 'color': card.color } }>2900 Р </span></div>
+								</div>
+							</> : card.color === '#FF377F' ? <>
+								<div className={styles.flexx} onClick={() =>{
+									if(active5 === false){
+										setActive5(true);
+										setActive6(false)
+									}
+
+								}}>
+									<div className={styles.circle}>
+										<div className={classNames(styles.circleCenter,active5 ? styles.active : null)} >
+										</div>
+
+									</div>
+									<div>Без монтажа</div></div>
+								<div className={styles.flexx} onClick={() =>{
+									if(active6 === false){
+										setActive6(
+											!active6
+										);
+										setActive5((active5) => !active5)
+
+
+									}
+
+								}}>
+									<div className={styles.circle} onClick={() => {
+
+									}}>
+										<div  className={classNames(styles.circleCenter,active6 ? styles.active : null)} >
+
+										</div>
+									</div>
+									<div >С монтажом  + <span style={{ 'color': card.color } }>2900 Р </span></div>
+								</div>
+							</> : null
+
+
+					}
 				</div>
 
 				{card.isAdded ? (

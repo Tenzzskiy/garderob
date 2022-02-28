@@ -48,6 +48,9 @@
 }
 
 .icon {
+	&:hover{
+		color: #FA198C;
+	}
 	font-size: 28px;
 	padding-left: 2px;
 	padding-right: 2px;
@@ -81,12 +84,16 @@
 	@include desktops {
 		display: none;
 	}
+	&:hover{
+		color: #FA198C;
+	}
 }
 
 .desktopHidden {
 	@include desktops {
 		display: none;
 	}
+
 }
 @media (max-width: 720px) {
 	.right{
