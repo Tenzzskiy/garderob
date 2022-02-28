@@ -26,10 +26,11 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 			for (let i = 0; i < card.addedDops.length; i++) {
 				sum += card.addedDops[i].count * card.addedDops[i].price;
 			}
-			if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
-				sum += (card.price*0.8) *  card.count   *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count ;
-
+			if(Array.isArray(value)&& (Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24)) >= 2)) {
+				sum += (card.price*0.8) *  card.count   *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count  -(card.price*0.8) ;
+				console.log(1)
 			} else {
+				console.log(2)
 				sum +=card.price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 			}
 
@@ -38,10 +39,10 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 		}
 
 		let price = 0;
-		if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
-			price += (card.price*0.8) *  card.count   *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count ;
+		if(Array.isArray(value)&& ((Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))) >= 2)) {console.log(3)
+			price += ((card.price*0.8) *  card.count)   *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count -(card.price*0.8) ;
 
-		} else {
+		} else {console.log(4)
 			price +=card.price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 		}
 

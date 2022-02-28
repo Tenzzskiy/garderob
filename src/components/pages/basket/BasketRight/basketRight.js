@@ -87,10 +87,10 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 		if (cards && cards.length) {
 			for (let card of cards) {
 				let price =  ( (Array.isArray(value) && (value[1].getDate() -value[0].getDate() +1 )) > 1 ? (card.price
-					* 0.8) : card.price) + (card.countTime - card.info.minTime) * card.info.priceForTime ;
+					* 0.8) : card.price) + (card.countTime - card.info.minTime) * card.info.priceForTime  ;
 
 					if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
-						sum +=  price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count ;
+						sum +=  price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count  -(card.price*0.8) ;
 					} else {
 						sum +=  price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 					}
@@ -108,7 +108,7 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 
 
 				if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
-					price += (garderob.price*0.8) *   garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + garderob.price * garderob.count ;
+					price += (garderob.price*0.8) *   garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + garderob.price * garderob.count  -(garderob.price*0.8) ;
 
 				} else {
 					price +=garderob.price * garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;

@@ -27,7 +27,7 @@ const FooterSection = (): JSX.Element => {
 		e.stopPropagation();
 		e.preventDefault();
 	};
-
+	console.log(typeof 1n)
 	return (
 		<footer className={styles.footer}>
 			<div className={classNames('container', styles.footerContainer)}>
