@@ -6,7 +6,7 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: $light;
+	background-color: white;
 	padding-bottom: 10px;
 	padding-top: 10px;
 	z-index: 99;
@@ -28,7 +28,12 @@
 	display: flex;
 	align-items: center;
 }
-
+@media (max-width: 1000px){
+	.left{
+		width: 60%;
+		justify-content: space-between;
+	}
+}
 .logo {
 	margin-left: 20px;
 
