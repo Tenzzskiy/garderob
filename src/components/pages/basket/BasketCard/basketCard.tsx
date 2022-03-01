@@ -43,7 +43,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 			price += ((card.price*0.8) *  card.count)   *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count -(card.price*0.8) ;
 
 		} else {console.log(4)
-			price +=card.price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
+			price +=card.price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1)    ;
 		}
 
 
