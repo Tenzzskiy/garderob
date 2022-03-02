@@ -63,6 +63,7 @@ export type WorkingType = {
 };
 
 export interface CategoryCardType {
+	isGarderob?:any;
 	id: number;
 	title: string;
 	image: string;

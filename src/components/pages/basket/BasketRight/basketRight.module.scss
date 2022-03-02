@@ -1,34 +1,50 @@
 @import '@/assets/framework/breakpoints';
 
 .aside {
-
+	background: white;
 	position: relative;
+	border-radius: 8px;
+	margin-bottom: 15px !important;
 	@include desktops {
 		display: initial;
 		grid-area: right;
 	}
 }
+.aside_content{
+	padding: 14px;
+
+}
 .first_date{
-background: white;
 	width: 102px;
+	background: #FFFCE8;
+	border: 1px solid #373737;
 	height: 36px;
 	border-radius: 30px;
 	text-decoration: none;
 	outline: none;text-align: center;
 	cursor: pointer;
 	transition: all 0.3s;
-	border: 0;
 	&:hover{
-		background: #FFFCE8;
+		background: #FFE200;
 		border: 1px solid #373737;
 		box-sizing: border-box;
 		transition: all 0.3s;
 	}
+	&:focus{
+		background: #FFE200 !important;
+	}
 }
+
 .second_date{
-	border: 0;
+	background: #FFFCE8;
+	/* 373773 */
+
+	border: 1px solid #373737;
+	&:focus{
+		background: #FFE200 !important;
+	}
 	&:hover{
-		background: #FFFCE8;
+		background: #FFE200;
 		border: 1px solid #373737;
 		box-sizing: border-box;
 		transition: all 0.3s;
@@ -36,7 +52,6 @@ background: white;
 	transition: all 0.3s;
 	cursor: pointer;
 	outline: none;text-align: center;
-	background: white;
 	width: 102px;
 	height: 36px;
 	border-radius: 30px;
@@ -94,8 +109,8 @@ background: white;
 }
 .modaal_calendar{
 	position: absolute !important;
-	right: -20px;
-	top: 140px;
+	right: 0;
+	top: 160px;
 	max-width: 320px;
 	transform: scale(0);
 	transition: all 0.3s;
@@ -114,9 +129,7 @@ background: white;
 
 	/* gray/lighter */
 
-	border-top: 0.5px solid rgba(64, 74, 76, 0.3);
 	display: flex;
-	padding-top: 12px;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 16px;
@@ -168,10 +181,11 @@ background: white;
 .description {
 	padding: 16px;
 	border-radius: 8px;
-	background-color: #fff;
+	background-color: white;
 	font-weight: 400;
 	line-height: 20px;
 	color: #404a4c;
+	grid-area: bottom;
 }
 
 .fixedBlock {

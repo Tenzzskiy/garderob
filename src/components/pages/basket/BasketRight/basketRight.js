@@ -11,6 +11,7 @@ import Calendar from 'react-calendar';
 import useOnClickOutside from "@/hooks/useOnClickOutside";
 import {useDispatch} from "react-redux";
 import {updateDate} from "@/redux/actions/garderobActions";
+import {MathRound, MathRoundGarderob} from "@/components/pages/basket/BasketCard/basketCard";
 
 const BasketRight = ({calendar1,date2,setDate2,setCalendar1,date1,setDate1,cards, garderobs,value,onChange,date})=> {
 	// const [date2,setDate2] = useState();
@@ -86,18 +87,17 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 
 		if (cards && cards.length) {
 			for (let card of cards) {
-				let price =  ( (Array.isArray(value) && (value[1].getDate() -value[0].getDate() +1 )) > 1 ? (card.price
-					* 0.8) : card.price) + (card.countTime - card.info.minTime) * card.info.priceForTime  ;
+				let price =  ( (Array.isArray(value) && (value[1].getDate() -value[0].getDate() +1 )) > 1 && !card.isGarderob ? (MathRound(card.price)) : card.price) + (card.countTime - card.info.minTime) * card.info.priceForTime  ;
 
-					if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
-						sum +=  price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count  -(card.price*0.8) ;
+					if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2 && !card.isGarderob)) {
+						sum +=  price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count  -(MathRound(card.price)) ;
 					} else {
 						sum +=  price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 					}
 
 			}
 		}
-
+		console.log(cards)
 		if (garderobs && garderobs.length) {
 			for (let garderob of garderobs) {
 				let price = 0;
@@ -107,8 +107,8 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 				}
 
 
-				if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2)) {
-					price += (garderob.price*0.8) *   garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + garderob.price * garderob.count  -(garderob.price*0.8) ;
+				if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2 )) {
+					price += (MathRoundGarderob(garderob.price)) *   garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + garderob.price * garderob.count  -(MathRoundGarderob(garderob.price)) ;
 
 				} else {
 					price +=garderob.price * garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
@@ -143,38 +143,39 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 		return (
 
 				garderobs && garderobs.length || cards && cards.length ?
-				<>
+			<>
+				<div className={styles.aside_content}>
 					<p className={styles.title}>Ваш заказ</p>
 
 					{// @ts-ignore
 						windowSize.width < 720 ? null : <div className={styles.calendar}>
-						<div className={styles.arenda_time}>
-							<p>
-								Укажите время аренды
-							</p>
-							<span>
+							<div className={styles.arenda_time}>
+								<p>
+									Укажите время аренды
+								</p>
+								<span>
 						{
 							Array.isArray(value) ?
 								Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24)) : 1
 						} дн
 					</span>
-						</div>
-						<div className={styles.calendar_flex}>
-							<div> c</div>
-							<input value={date1} className={styles.first_date}
-								   onClick={() => setCalendar1(true)}
-								// onChange={(e) => setDate1(e.current)}
-							/>
+							</div>
+							<div className={styles.calendar_flex}>
+								<div> c</div>
+								<input value={date1} className={classNames(styles.active_date,styles.first_date)}
+									   onClick={() => setCalendar1(true)}
+									// onChange={(e) => setDate1(e.current)}
+								/>
 
-							<div> до</div>
-							<input value={date2}
-								   className={styles.second_date}
-								   onClick={() => setCalendar1(true)}
-								// onChange={(e) => setDate2(e.current)}
+								<div> до</div>
+								<input value={date2}
+									   className={classNames(styles.active_date,styles.second_date)}
+									   onClick={() => setCalendar1(true)}
+									// onChange={(e) => setDate2(e.current)}
 
-							/>
-						</div>
-					</div>}
+								/>
+							</div>
+						</div>}
 					<div className={styles.priceBlock}>
 						<span className={styles.priceBlockName}>Итого</span>
 						<span className={styles.priceBlockText}>{convertToNumberWithSpaces(renderPrice())} &#8381;</span>
@@ -183,11 +184,11 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 						Перейти к оформлению
 					</button>
 
-					{windowSize.width > 720 ? <p className={styles.description}>
-						Стоимость доставки зависит от объема заказа и адреса, рассчитывается после оформления заявки
-						менеджером
-					</p> : null}
-				</> : null
+
+				</div>
+
+			</>
+					: null
 
 
 		);
@@ -202,7 +203,10 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 
 
 			</div>
-
+			{windowSize.width > 720 ? <div className={styles.description}>
+				Стоимость доставки зависит от объема заказа и адреса, рассчитывается после оформления заявки
+				менеджером
+			</div> : null}
 
 			{isOpened ? (
 				<CallModal

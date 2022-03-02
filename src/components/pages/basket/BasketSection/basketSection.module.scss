@@ -14,7 +14,9 @@
 		grid-template-columns: 1fr 296px;
 		grid-template-areas:
 			'top .'
-			'left right';
+			'left right'
+			'. bottom'
+	;
 		column-gap: 48px;
 	}
 }

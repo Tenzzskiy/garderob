@@ -21,7 +21,6 @@ const GarderobCard = ({
 
 }: Props): JSX.Element => {
 	const dispatch = useAppDispatch();
-
 	const handleAddCard = () => {
 		// if (disabled) {
 		// 	return;
@@ -84,7 +83,7 @@ const GarderobCard = ({
 				) : (
 					<div className={styles.priceBlock}>Входит в стоимость</div>
 				)}
-				{!isDifferent && <p className={styles.info}>{card.priceDescription}</p>}
+				{!isDifferent && <p className={styles.info}>{card.isGarderob ? '+1 час' : 'Со 2 дня'} {card.isGarderob ? '750' : Math.round((card.price * 0.25)/10) * 10 }{card.isGarderob ? null : '₽'}</p>}
 			</div>
 			{!isPrimary ? (
 				<div className={styles.footer}>
