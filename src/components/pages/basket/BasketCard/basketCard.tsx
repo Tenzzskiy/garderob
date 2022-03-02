@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import styles from './basketCard.module.scss';
-import {AddButton} from '@/components';
+import {AddButton, LogoIcon} from '@/components';
 import {Props} from './basketCard.props';
 import {removeCardToBasket} from '@/redux/actions/shopActions';
 import {removeGarderob, updateDate} from '@/redux/actions/garderobActions';
@@ -9,6 +9,7 @@ import {useEffect, useState} from 'react';
 import {GarderobItemType} from '@/types';
 import {convertToNumberWithSpaces} from '@/utilities/helpers';
 import {array} from "prop-types";
+import Link from "next/link";
 
 const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props): JSX.Element => {
 	const [isOpened, setOpened] = useState(false);
@@ -99,7 +100,12 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 				<>
 					<div className={styles.title_list}>
 					<div className={styles.titleBlock} >
-						<p className={styles.title}>{card.title}</p>
+
+						<Link href='/garderob' passHref>
+							<a>
+								<p className={styles.title}>{card.title}</p>
+							</a>
+						</Link>
 						{card.montage === true ? <p className={styles.montage}>Монтаж включен</p> : null}
 					</div>
 
