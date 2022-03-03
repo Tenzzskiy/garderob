@@ -196,20 +196,20 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 
 	return (
 		<>
-			{garderobs && garderobs.length && cards && cards.length ? <div className={styles.aside}>{renderWindow()}
+			{garderobs && garderobs.length || cards && cards.length ? <div className={styles.aside}>{renderWindow()}
 				<div className={classNames(styles.modaal_calendar, calendar1 ? styles.calendar_active : null)}
 					 ref={calendar_f}>
 					<Calendar selectRange={true} minDate={new Date(date.setDate(date.getDate()))} onChange={onChange}
 							  value={value}/>
 				</div>
 
-
+				{windowSize.width > 720 && (garderobs && garderobs.length || cards && cards.length) ? <div className={styles.description}>
+					Стоимость доставки зависит от объема заказа и адреса, рассчитывается после оформления заявки
+					менеджером
+				</div> : null}
 
 			</div> : null }
-			{windowSize.width > 720 && garderobs && garderobs.length && cards && cards.length ? <div className={styles.description}>
-				Стоимость доставки зависит от объема заказа и адреса, рассчитывается после оформления заявки
-				менеджером
-			</div> : null}
+
 
 			{isOpened ? (
 				<CallModal

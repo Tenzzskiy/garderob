@@ -5,12 +5,14 @@
 
 	@include tablets {
 		padding-top: 48px;
+		margin-bottom: 60px;
 	}
 }
 
 .container {
 	@include desktops {
 		display: grid;
+
 		grid-template-columns: 1fr 296px;
 		grid-template-areas:
 			'top .'
