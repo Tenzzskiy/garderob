@@ -77,6 +77,7 @@ export const findBySearch = (search: ParamsType): CategoryCardType[] => {
 	}
 
 	categories.forEach(categoryItem => {
+		// @ts-ignore
 		let foundItems = categoryItem.items.filter(item =>
 			item.title.toLowerCase().includes(search.toString())
 		) as CategoryCardType[];
