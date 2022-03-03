@@ -12,7 +12,7 @@ import {selectItems} from "@/redux/selectors";
 
 const GarderobTabs = () => {
 	const shopState = useSelector(selectItems)
-	const [selected, setSelected] = useState('vse');
+	const [selected, setSelected] = useState('garderob');
 	const { id, addedDops } = useGarderobContext();
 	const [showValue, setShowValue] = useState(0);
 
@@ -103,6 +103,11 @@ const tabsService = [
 		"category": "vse"
 	},
 	{
+		"id": 9,
+		"title": "Для гардероба",
+		"category": "garderob"
+	},
+	{
 		"id": 2,
 		"title": "Мебель",
 		"category": "arenda-mebeli"
@@ -136,5 +141,6 @@ const tabsService = [
 		"id": 8,
 		"title": "Брендирование",
 		"category": "brendirovanie"
-	}
+	},
+
 ]

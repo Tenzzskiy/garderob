@@ -4,7 +4,7 @@
 		"slug": "zonirovanie",
 		"items": [
 			{
-				"id": 1,
+				"id": 93,
 				"title": "Столбики ограждения (канат)",
 				"image": "/images/zon-1.png",
 				"price": 1000,
@@ -52,7 +52,7 @@
 				}
 			},
 			{
-				"id": 2,
+				"id": 98,
 				"title": "Мобильная стена (1 секция)",
 				"image": "/images/sekciya_2.jpg",
 				"price": 900,
@@ -142,6 +142,402 @@
 					"timeDesktop": "Часов",
 					"minTime": 6,
 					"priceForTime": 300
+				}
+			}
+		]
+	},
+	{
+		"id": 7,
+		"slug": "garderob",
+		"items": [
+			{
+				"id": 22,
+				"title": "Стол для выдачи (черный)",
+				"image": "/images/stol-pryamougolnyy-dlinniy_2.jpg",
+				"price": 1500,
+				"time": "дн",
+				"priceDescription": "Со второго дня 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 2,
+				"title": "Стойка приема",
+				"image": [
+					"/images/brand-2.png",
+					"/images/brand-2-2.png",
+					"/images/brand-2-3.png"
+				],
+				"price": 1000,
+				"brand": true,
+				"time": "дн",
+				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 31,
+				"title": "Банкетка (Классическая).",
+				"image": "/images/banketka1.jpg",
+				"price": 950,
+				"time": "дн",
+				"priceDescription": "Со второго дня 450₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 32,
+				"title": "Банкетка (Черная)",
+				"image": "/images/banketka2.jpg",
+				"price": 3350,
+				"time": "дн",
+				"priceDescription": "Со второго дня 1700₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 98,
+				"title": "Мобильная стена (1 секция)",
+				"image": "/images/sekciya_2.jpg",
+				"price": 900,
+				"time": "дн",
+				"priceDescription": "+1 час 450₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 94,
+				"title": "Пуфик(Черный)",
+				"image": "/images/Pufik_black.jpg",
+				"price": 800,
+				"time": "дн",
+				"priceDescription": "Со второго дня 400₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 95,
+				"title": "Пуфик(Красный)",
+				"image": "/images/pufik.jpg",
+				"price": 800,
+				"time": "дн",
+				"priceDescription": "Со второго дня 400₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 96,
+				"title": "Пуфик(Белый)",
+				"image": "/images/Pufik_belyj.jpg",
+				"price": 800,
+				"time": "дн",
+				"priceDescription": "Со второго дня 400₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 36,
+				"title": "Диван (Белый)",
+				"image": "/images/divan2.jpg",
+				"price": 3000,
+				"time": "дн",
+				"priceDescription": "Со второго дня 600₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 35,
+				"title": "Диван (Черный)",
+				"image": "/images/divan1.jpg",
+				"price": 3000,
+				"time": "дн",
+				"priceDescription": "Со второго дня 600₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 12,
+				"title": "Стеллаж для хранения сумки и обуви",
+				"image": "/images/kamera_hranenia3.jpg",
+				"price": 3000,
+				"time": "дн",
+				"priceDescription": "Со второго дня 2000₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 17,
+				"title": "Шкаф 8 секций",
+				"image": "/images/shkafmetal1.jpg",
+				"price": 2600,
+				"time": "дн",
+				"priceDescription": "Со второго дня 1300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Штук",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 13,
+				"title": "Камера хранения",
+				"image": "/images/kamera_hranenia2.jpg",
+				"price": 9000,
+				"time": "дн",
+				"priceDescription": "Со второго дня 7700₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 16,
+				"title": "Шкаф 4 секции",
+				"image": "/images/shkafmetal2.jpg",
+				"price": 1400,
+				"time": "дн",
+				"priceDescription": "Со второго дня 700₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 3,
+				"title": "Красная дорожка",
+				"image": "/images/zon-3.png",
+				"price": 1000,
+				"time": "дн",
+				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 93,
+				"title": "Столбики ограждения (канат)",
+				"image": "/images/zon-1.png",
+				"price": 1000,
+				"time": "дн",
+				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 1,
+				"title": "Брендирование номерков",
+				"image": "/images/brand-1.png",
+				"price": 50,
+				"brand": true,
+				"time": "шт",
+				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 2,
+				"title": "Указатель",
+				"image": "/images/zon-2.png",
+				"price": 1000,
+				"time": "дн",
+				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 11,
+				"title": "Хостес",
+				"image": "/images/hostes3.jpg",
+				"price": 4000,
+				"time": "4 ч",
+				"priceDescription": "+1 час 500₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 4,
+					"priceForTime": 100
+				}
+			},
+			{
+				"id": 7,
+				"title": "Санитайзер",
+				"image": "/images/sanitaizer.jpg",
+				"price": 2200,
+				"time": "дн",
+				"priceDescription": "Со второго дня 1350₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 9,
+				"title": "Туннель дезинфекции",
+				"image": "/images/tunnel_dezinfekcii.jpg",
+				"price": 28900,
+				"time": "дн",
+				"priceDescription": "Со второго дня 17500₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 94,
+				"title": "Стеллаж (Loft)",
+				"image": "/images/Stelazh_loft.jpg",
+				"price": 8000,
+				"time": "дн",
+				"priceDescription": "Со второго дня 7000₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 15,
+				"title": "Парковщик",
+				"image": "/images/parkovshik1.jpg",
+				"price": 3500,
+				"time": "4 ч",
+				"priceDescription": "+1 час 500₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 4,
+					"priceForTime": 100
+				}
+			},
+			{
+				"id": 99,
+				"title": "Грузчик",
+				"image": "/images/Gruzchik.jpg",
+				"price": 1200,
+				"time": "4 ч",
+				"priceDescription": "+1 час 250₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 4,
+					"priceForTime": 100
 				}
 			}
 		]

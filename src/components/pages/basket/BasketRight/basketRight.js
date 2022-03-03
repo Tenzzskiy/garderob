@@ -87,11 +87,14 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 
 		if (cards && cards.length) {
 			for (let card of cards) {
-				let price =  ( (Array.isArray(value) && (value[1].getDate() -value[0].getDate() +1 )) > 1 && !card.isGarderob ? (MathRound(card.price)) : card.price) + (card.countTime - card.info.minTime) * card.info.priceForTime  ;
+				let price =  ( (Array.isArray(value) && (value[1].getDate() -value[0].getDate() +1 )) > 1 && card.isGarderob ? (MathRound(card.price)) : card.price) + (card.countTime - card.info.minTime) * card.info.priceForTime  ;
+				console.log(card.isGarderobs)
+					if(Array.isArray(value)&&  card.isGarderob && ((value[1].getDate() -value[0].getDate() +1) >= 2  )) {
 
-					if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2 && !card.isGarderob)) {
-						sum +=  price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count  -(MathRound(card.price)) * card.count ;
+						sum +=  price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price   -(MathRound(card.price)) ;
 					} else {
+						console.log(2)
+
 						sum +=  price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 					}
 
@@ -108,9 +111,11 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 
 
 				if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2 )) {
-					price += (MathRoundGarderob(garderob.price)) *   garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + garderob.price * garderob.count  -(MathRoundGarderob(garderob.price)) * card.count  ;
+					console.log(3)
+					price += (MathRoundGarderob(garderob.price)) *   garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + garderob.price   -(MathRoundGarderob(garderob.price)) ;
 
 				} else {
+					console.log(4)
 					price +=garderob.price * garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 				}
 
@@ -134,7 +139,8 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 			setOpened(true);
 		}
 	};
-
+	console.log(cards)
+	console.log(garderobs)
 	const renderWindow = () => {
 		// @ts-ignore
 		// @ts-ignore
@@ -184,7 +190,10 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 						Перейти к оформлению
 					</button>
 
-
+					{windowSize.width > 720 && garderobs.length || cards.length ? <div className={styles.description}>
+						Стоимость доставки зависит от объема заказа и адреса, рассчитывается после оформления заявки
+						менеджером
+					</div> : null}
 				</div>
 
 			</>

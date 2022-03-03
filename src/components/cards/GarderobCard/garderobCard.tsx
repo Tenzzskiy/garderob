@@ -25,9 +25,9 @@ const GarderobCard = ({
 		// if (disabled) {
 		// 	return;
 		// }
+		console.log(card)
 
-
-			dispatch(addCardToBasket({ ...card, isAdded: true, count: 1, countTime: card.info.minTime }));
+			dispatch(addCardToBasket({ ...card, isAdded: true, count: 1, countTime: card.info.minTime, }));
 			// @ts-ignore
 		dispatch(addToBusket({...card,isAdded:true,count: 1}))
 
@@ -83,7 +83,7 @@ const GarderobCard = ({
 				) : (
 					<div className={styles.priceBlock}>Входит в стоимость</div>
 				)}
-				{!isDifferent && <p className={styles.info}>{card.isGarderob ? '+1 час' : 'Со 2 дня'} {card.isGarderob ? '750' : Math.round((card.price * 0.25)/10) * 10 }{card.isGarderob ? null : '₽'}</p>}
+				{!isDifferent && <p className={styles.info}>{card.isGarderob || (card.id === 15 || 99 || 11 ||12 ||13 ||14 || 16 ||17 ||18) ? '+1 час' : 'Со 2 дня'} {card.isGarderob || (card.id === 15 || 99 || 11 ||12 ||13 ||14 || 16 ||17 ||18) ? '750' : Math.round((card.price * 0.25)/10) * 10 }{ ' ₽'}</p>}
 			</div>
 			{!isPrimary ? (
 				<div className={styles.footer}>

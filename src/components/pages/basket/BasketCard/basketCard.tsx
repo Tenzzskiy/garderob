@@ -38,7 +38,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 			for (let i = 0; i < card.addedDops.length; i++) {
 				sum += card.addedDops[i].count * card.addedDops[i].price;
 			}
-			if(Array.isArray(value)&& !card.isGarderob && (Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24) ) >= 2)) {
+			if(Array.isArray(value)&& !card.isGarderob && !card.isGarderobs && (Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24) ) >= 2)) {
 				sum += (MathRound(card.price)) *  card.count   *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count  -(MathRound(card.price)) * card.count  ;
 
 			} else {
@@ -51,7 +51,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 		}
 
 		let price = 0;
-		if(Array.isArray(value)&& ((Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))) >= 2) && !card.isGarderob) {
+		if(Array.isArray(value)&& ((Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))) >= 2) && !card.isGarderob && !card.isGarderobs) {
 			price += ((MathRound(card.price)) *  card.count)   *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count -(MathRound(card.price)) * card.count  ;
 
 		} else {
@@ -138,6 +138,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 
 		dispatch(removeCardToBasket(card.id));
 	};
+
 	const [add,setAdd] = useState(false);
 	return (
 		<div className={classNames(styles.card, !card.isGarderob ? styles.card_margin : null)}>
@@ -171,8 +172,8 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 							{card.price }&#8381;/
 							{card.time}
 						</span>
-						<span className={styles.priceDescription}>{card.isGarderob ? null : 'Со 2 дня   '}
-							{card.isGarderob ? null :
+						<span className={styles.priceDescription}>{card.isGarderob || card.isGarderobs ? null : 'Со 2 дня   '}
+							{card.isGarderob || card.isGarderobs ? null :
 
 								card.name === 'primary' ? Math.round(card.price * 0.8) :
 								card.name === 'secondary' ? Math.round(card.price * 0.8) :
@@ -180,7 +181,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 
 							}
 
-							{card.isGarderob ? null : '  ₽'} </span>
+							{card.isGarderob || card.isGarderobs ? null : '  ₽'} </span>
 					</div>
 				</div>
 				<div className={classNames(styles.block, styles.descriptionBlock)}>

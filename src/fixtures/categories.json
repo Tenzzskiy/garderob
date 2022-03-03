@@ -311,7 +311,7 @@
 				}
 			},
 			{
-				"id": 27,
+				"id": 95,
 				"title": "Пуфик(Красный)",
 				"image": "/images/pufik.jpg",
 				"price": 800,
@@ -327,7 +327,7 @@
 				}
 			},
 			{
-				"id": 27,
+				"id": 94,
 				"title": "Пуфик(Черный)",
 				"image": "/images/Pufik_black.jpg",
 				"price": 800,
@@ -343,7 +343,7 @@
 				}
 			},
 			{
-				"id": 27,
+				"id": 96,
 				"title": "Пуфик(Белый)",
 				"image": "/images/Pufik_belyj.jpg",
 				"price": 800,
@@ -583,7 +583,7 @@
 				}
 			},
 			{
-				"id": 2,
+				"id": 98,
 				"title": "Мобильная стена (1 секция)",
 				"image": "/images/sekciya_2.jpg",
 				"price": 900,
@@ -846,6 +846,7 @@
 			{
 				"id": 11,
 				"title": "Хостес",
+				"isGarderobs": true,
 				"image": "/images/hostes3.jpg",
 				"price": 4000,
 				"time": "4 ч",
@@ -863,6 +864,7 @@
 				"id": 12,
 				"title": "Клинер",
 				"image": "/images/cleaner1.jpg",
+				"isGarderobs": true,
 				"price": 3500,
 				"time": "4 ч",
 				"priceDescription": "+1 час 500₽",
@@ -880,6 +882,7 @@
 				"title": "Швейцар",
 				"image": "/images/shweizar1.jpg",
 				"price": 3500,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 400₽",
 				"info": {
@@ -896,6 +899,7 @@
 				"title": "Промо-модели",
 				"image": "/images/promo1.jpg",
 				"price": 5000,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 500₽",
 				"info": {
@@ -912,6 +916,7 @@
 				"title": "Парковщик",
 				"image": "/images/parkovshik1.jpg",
 				"price": 3500,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 500₽",
 				"info": {
@@ -924,10 +929,11 @@
 				}
 			},
 			{
-				"id": 15,
+				"id": 99,
 				"title": "Грузчик",
 				"image": "/images/Gruzchik.jpg",
 				"price": 1200,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 250₽",
 				"info": {
@@ -944,6 +950,7 @@
 				"title": "Фотограф",
 				"image": "/images/fotograf3.jpg",
 				"price": 10500,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 1500₽",
 				"info": {
@@ -960,6 +967,7 @@
 				"title": "Аниматор",
 				"image": "/images/animator2.jpg",
 				"price": 5500,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 800₽",
 				"info": {
@@ -976,6 +984,7 @@
 				"title": "Промоутер",
 				"image": "/images/promouter1.jpg",
 				"price": 2500,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 300₽",
 				"info": {
@@ -1493,7 +1502,7 @@
 				}
 			},
 			{
-				"id": 12,
+				"id": 94,
 				"title": "Стеллаж (Loft)",
 				"image": "/images/Stelazh_loft.jpg",
 				"price": 8000,
@@ -1573,6 +1582,7 @@
 				}
 			}
 		],
+
 		"seo": [
 			{
 				"id": 1,

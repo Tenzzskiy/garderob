@@ -3,19 +3,26 @@
 @import '@/assets/base/variables';
 
 .sidebar {
-	display: none;
+
+
+
 
 	@include desktops {
-		display: initial;
+		display: inline-block;
 		padding-left: 16px;
 	}
 
 	@include largeDesktops {
 		padding-left: 0;
 	}
+
 }
 
 .list {
+	position: sticky;
+	top: 100px ;
+
+
 }
 
 .item {
