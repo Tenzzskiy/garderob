@@ -68,7 +68,7 @@ const AddButton = ({
 		}
 	};
 	useEffect(() =>{
-		if (card.count === 1 || card.count ===0) {
+		if (card.count < 1 || card.count ===0) {
 			handleRemove();
 			return;
 
