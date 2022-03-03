@@ -5,11 +5,27 @@
 		"items": [
 			{
 				"id": 1,
-				"title": "Столбики ограждения",
+				"title": "Столбики ограждения (канат)",
 				"image": "/images/zon-1.png",
 				"price": 1000,
 				"time": "дн",
 				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 1,
+				"title": "Столбики ограждения(лента)",
+				"image": "/images/lenta_01.jpg",
+				"price": 800,
+				"time": "дн",
+				"priceDescription": "+1 час 250₽",
 				"info": {
 					"count": "шт",
 					"time": "ч",
@@ -26,6 +42,22 @@
 				"price": 1000,
 				"time": "дн",
 				"priceDescription": "+1 час 300₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 2,
+				"title": "Мобильная стена (1 секция)",
+				"image": "/images/sekciya_2.jpg",
+				"price": 900,
+				"time": "дн",
+				"priceDescription": "+1 час 450₽",
 				"info": {
 					"count": "шт",
 					"time": "ч",

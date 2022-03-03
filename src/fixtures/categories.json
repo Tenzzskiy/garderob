@@ -27,28 +27,15 @@
 			"rectangleColor": "#FFAD9A",
 			"maskColor": "#EDE9E9"
 		},
-		"items": [
-			{
-				"id": 44,
-				"title": "Стол прямоугольный пластиковый",
-				"image": "/images/glavniystol.jpg",
-				"price": 550,
-				"time": "дн",
-				"priceDescription": "Со второго дня 100₽",
-				"info": {
-					"count": "шт",
-					"time": "ч",
-					"countDesktop": "Штук",
-					"timeDesktop": "Часов",
-					"minTime": 6,
-					"priceForTime": 300
-				}
-			},
+		"items": 
+		[
+			
+			
 			{
 				"id": 2,
-				"title": "Стол для кейтеринга (синий)",
+				"title": "Стол для выдачи (синий)",
 				"image": "/images/stol-pryamougolnyy-malenkiy1.jpg",
-				"price": 1500,
+				"price": 1600,
 				"time": "дн",
 				"priceDescription": "Со второго дня 300₽",
 				"info": {
@@ -62,9 +49,9 @@
 			},
 			{
 				"id": 3,
-				"title": "Стол для кейтеринга (красный)",
+				"title": "Стол для выдачи (красный)",
 				"image": "/images/stol-pryamougolnyy-malenkiy2.jpg",
-				"price": 1500,
+				"price": 1700,
 				"time": "дн",
 				"priceDescription": "Со второго дня 300₽",
 				"info": {
@@ -78,9 +65,9 @@
 			},
 			{
 				"id": 4,
-				"title": "Стол для кейтеринга (зеленый)",
+				"title": "Стол для выдачи (зеленый)",
 				"image": "/images/stol-pryamougolnyy-malenkiy3.jpg",
-				"price": 1500,
+				"price": 2000,
 				"time": "дн",
 				"priceDescription": "Со второго дня 300₽",
 				"info": {
@@ -94,7 +81,7 @@
 			},
 			{
 				"id": 22,
-				"title": "Стол для кейтеринга (черный)",
+				"title": "Стол для выдачи (черный)",
 				"image": "/images/stol-pryamougolnyy-dlinniy_2.jpg",
 				"price": 1500,
 				"time": "дн",
@@ -108,54 +95,9 @@
 					"priceForTime": 300
 				}
 			},
-			{
-				"id": 5,
-				"title": "Стол бочка (зеленый)",
-				"image": "/images/bochka_3.jpg",
-				"price": 1200,
-				"time": "дн",
-				"priceDescription": "Со второго дня 240₽",
-				"info": {
-					"count": "шт",
-					"time": "ч",
-					"countDesktop": "Штук",
-					"timeDesktop": "Часов",
-					"minTime": 6,
-					"priceForTime": 300
-				}
-			},
-			{
-				"id": 6,
-				"title": "Стол бочка (красный)",
-				"image": "/images/bochka_2.jpg",
-				"price": 1200,
-				"time": "дн",
-				"priceDescription": "Со второго дня 240₽",
-				"info": {
-					"count": "шт",
-					"time": "ч",
-					"countDesktop": "Штук",
-					"timeDesktop": "Часов",
-					"minTime": 6,
-					"priceForTime": 300
-				}
-			},
-			{
-				"id": 66,
-				"title": "Стол Коктейльный",
-				"image": "/images/kokteylnii11.jpg",
-				"price": 550,
-				"time": "дн",
-				"priceDescription": "Со второго дня 100₽",
-				"info": {
-					"count": "шт",
-					"time": "ч",
-					"countDesktop": "Штук",
-					"timeDesktop": "Часов",
-					"minTime": 6,
-					"priceForTime": 300
-				}
-			},
+			
+			
+			
 			{
 				"id": 7,
 				"title": "Стол Коктейльный (синий)",
@@ -220,38 +162,9 @@
 					"priceForTime": 300
 				}
 			},
-			{
-				"id": 11,
-				"title": "Стол Коктейльный ВИП",
-				"image": "/images/stol-kokteylnyy_6.jpg",
-				"price": 1500,
-				"time": "дн",
-				"priceDescription": "Со второго дня 300₽",
-				"info": {
-					"count": "шт",
-					"time": "ч",
-					"countDesktop": "Штук",
-					"timeDesktop": "Часов",
-					"minTime": 6,
-					"priceForTime": 300
-				}
-			},
-			{
-				"id": 12,
-				"title": "Стол бочка (белый)",
-				"image": "/images/bochka_4.jpg",
-				"price": 1200,
-				"time": "дн",
-				"priceDescription": "Со второго дня 240₽",
-				"info": {
-					"count": "шт",
-					"time": "ч",
-					"countDesktop": "Штук",
-					"timeDesktop": "Часов",
-					"minTime": 6,
-					"priceForTime": 300
-				}
-			},
+			
+		
+			
 			{
 				"id": 13,
 				"title": "Стул кьявари (белый)",
@@ -364,22 +277,7 @@
 					"priceForTime": 300
 				}
 			},
-			{
-				"id": 23,
-				"title": "Стол бочка (черный)",
-				"image": "/images/bochka_1.jpg",
-				"price": 1200,
-				"time": "дн",
-				"priceDescription": "Со второго дня 240₽",
-				"info": {
-					"count": "шт",
-					"time": "ч",
-					"countDesktop": "Штук",
-					"timeDesktop": "Часов",
-					"minTime": 6,
-					"priceForTime": 300
-				}
-			},
+			
 			{
 				"id": 24,
 				"title": "Стул барный экокожа",
@@ -414,7 +312,7 @@
 			},
 			{
 				"id": 27,
-				"title": "Пуфик",
+				"title": "Пуфик(Красный)",
 				"image": "/images/pufik.jpg",
 				"price": 800,
 				"time": "дн",
@@ -429,8 +327,88 @@
 				}
 			},
 			{
+				"id": 27,
+				"title": "Пуфик(Черный)",
+				"image": "/images/Pufik_black.jpg",
+				"price": 800,
+				"time": "дн",
+				"priceDescription": "Со второго дня 400₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 27,
+				"title": "Пуфик(Белый)",
+				"image": "/images/Pufik_belyj.jpg",
+				"price": 800,
+				"time": "дн",
+				"priceDescription": "Со второго дня 400₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 27,
+				"title": "Пуфик(Оранжевый)",
+				"image": "/images/Pufik_orange.jpg",
+				"price": 800,
+				"time": "дн",
+				"priceDescription": "Со второго дня 400₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 27,
+				"title": "Пуфик(Черно-белый)",
+				"image": "/images/Pufik_chernyj_belyj.jpg",
+				"price": 900,
+				"time": "дн",
+				"priceDescription": "Со второго дня 450₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 27,
+				"title": "Пуфик(Серебристо-оранжевый)",
+				"image": "/images/Pufik_orange_silver.jpg",
+				"price": 900,
+				"time": "дн",
+				"priceDescription": "Со второго дня 450₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
 				"id": 30,
-				"title": "Диван из палет",
+				"title": "Диван из паллет",
 				"image": "/images/divan-iz-pallet.jpg",
 				"price": 2200,
 				"time": "дн",
@@ -445,8 +423,120 @@
 				}
 			},
 			{
+				"id": 30,
+				"title": "Журнальный столик из паллет",
+				"image": "/images/ZHurnalnyj_stolik_iz_pallet.jpg",
+				"price": 450,
+				"time": "дн",
+				"priceDescription": "Со второго дня 250₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 30,
+				"title": "Одинарный столик из паллет",
+				"image": "/images/Odinarnyj_stolik_iz_pallet.jpg",
+				"price": 700,
+				"time": "дн",
+				"priceDescription": "Со второго дня 350₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 30,
+				"title": "Коктейльный столик из паллет",
+				"image": "/images/Koktejl'nyj_stolik_iz_pallet.jpg",
+				"price": 1100,
+				"time": "дн",
+				"priceDescription": "Со второго дня 550₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 30,
+				"title": "Двойной столик из паллет",
+				"image": "/images/Dvojnoj_stolik_iz_pallet.jpg",
+				"price": 1300,
+				"time": "дн",
+				"priceDescription": "Со второго дня 650₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 30,
+				"title": "Барная стойка из паллет",
+				"image": "/images/Barnaya_stojka_stolik_iz_pallet.jpg",
+				"price": 2900,
+				"time": "дн",
+				"priceDescription": "Со второго дня 1450₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 30,
+				"title": "Угловая секция из паллет",
+				"image": "/images/Uglovaya_sekciya_iz_pallet.jpg",
+				"price": 2300,
+				"time": "дн",
+				"priceDescription": "Со второго дня 1150₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 30,
+				"title": "Модульный диван на 6-ых из паллет",
+				"image": "/images/Modulnyj_divan_na_6_iz_pallet.jpg",
+				"price": 6800,
+				"time": "дн",
+				"priceDescription": "Со второго дня 3400₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
 				"id": 31,
-				"title": "Банкетка (1 вид).",
+				"title": "Банкетка (Классическая).",
 				"image": "/images/banketka1.jpg",
 				"price": 950,
 				"time": "дн",
@@ -462,7 +552,7 @@
 			},
 			{
 				"id": 32,
-				"title": "Банкетка (2 вид)",
+				"title": "Банкетка (Черная)",
 				"image": "/images/banketka2.jpg",
 				"price": 3350,
 				"time": "дн",
@@ -493,6 +583,22 @@
 				}
 			},
 			{
+				"id": 2,
+				"title": "Мобильная стена (1 секция)",
+				"image": "/images/sekciya_2.jpg",
+				"price": 900,
+				"time": "дн",
+				"priceDescription": "+1 час 450₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
 				"id": 34,
 				"title": "Зеркало напольное",
 				"image": "/images/zerkalo.jpg",
@@ -510,7 +616,7 @@
 			},
 			{
 				"id": 35,
-				"title": "Диван (1 вид)",
+				"title": "Диван (Черный)",
 				"image": "/images/divan1.jpg",
 				"price": 3000,
 				"time": "дн",
@@ -526,7 +632,7 @@
 			},
 			{
 				"id": 36,
-				"title": "Диван (2 вид)",
+				"title": "Диван (Белый)",
 				"image": "/images/divan2.jpg",
 				"price": 3000,
 				"time": "дн",
@@ -539,7 +645,70 @@
 					"minTime": 6,
 					"priceForTime": 300
 				}
-			}
+			},
+			{
+				"id": 5,
+				"title": "Стол бочка (зеленый)",
+				"image": "/images/bochka_3.jpg",
+				"price": 1400,
+				"time": "дн",
+				"priceDescription": "Со второго дня 240₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 6,
+				"title": "Стол бочка (красный)",
+				"image": "/images/bochka_2.jpg",
+				"price": 1400,
+				"time": "дн",
+				"priceDescription": "Со второго дня 240₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 12,
+				"title": "Стол бочка (белый)",
+				"image": "/images/bochka_4.jpg",
+				"price": 1300,
+				"time": "дн",
+				"priceDescription": "Со второго дня 240₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}},
+				{
+					"id": 23,
+					"title": "Стол бочка (черный)",
+					"image": "/images/bochka_1.jpg",
+					"price": 1200,
+					"time": "дн",
+					"priceDescription": "Со второго дня 240₽",
+					"info": {
+						"count": "шт",
+						"time": "ч",
+						"countDesktop": "Штук",
+						"timeDesktop": "Часов",
+						"minTime": 6,
+						"priceForTime": 300
+					}
+				}
 		],
 		"seo": [
 			{
@@ -745,6 +914,22 @@
 				"price": 3500,
 				"time": "4 ч",
 				"priceDescription": "+1 час 500₽",
+				"info": {
+					"count": "чел",
+					"time": "ч",
+					"countDesktop": "Персон",
+					"timeDesktop": "Часов",
+					"minTime": 4,
+					"priceForTime": 100
+				}
+			},
+			{
+				"id": 15,
+				"title": "Грузчик",
+				"image": "/images/Gruzchik.jpg",
+				"price": 1200,
+				"time": "4 ч",
+				"priceDescription": "+1 час 250₽",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -1184,7 +1369,7 @@
 			},
 			{
 				"id": 31,
-				"title": "Банкетка (1 вид).",
+				"title": "Банкетка (Классическая).",
 				"image": "/images/banketka1.jpg",
 				"price": 950,
 				"time": "дн",
@@ -1200,7 +1385,7 @@
 			},
 			{
 				"id": 32,
-				"title": "Банкетка (2 вид)",
+				"title": "Банкетка (Черная)",
 				"image": "/images/banketka2.jpg",
 				"price": 3350,
 				"time": "дн",
@@ -1293,8 +1478,24 @@
 		"items": [
 			{
 				"id": 12,
-				"title": "Камера хранения (1 вид)",
+				"title": "Стеллаж для хранения сумки и обуви",
 				"image": "/images/kamera_hranenia3.jpg",
+				"price": 3000,
+				"time": "дн",
+				"priceDescription": "Со второго дня 2000₽",
+				"info": {
+					"count": "шт",
+					"time": "ч",
+					"countDesktop": "Штук",
+					"timeDesktop": "Часов",
+					"minTime": 6,
+					"priceForTime": 300
+				}
+			},
+			{
+				"id": 12,
+				"title": "Стеллаж (Loft)",
+				"image": "/images/Stelazh_loft.jpg",
 				"price": 8000,
 				"time": "дн",
 				"priceDescription": "Со второго дня 7000₽",
@@ -1309,7 +1510,7 @@
 			},
 			{
 				"id": 13,
-				"title": "Камера хранения (2 вид)",
+				"title": "Камера хранения",
 				"image": "/images/kamera_hranenia2.jpg",
 				"price": 9000,
 				"time": "дн",
@@ -1325,7 +1526,7 @@
 			},
 			{
 				"id": 14,
-				"title": "Шкаф ( для сумок ) на 16 мест",
+				"title": "Шкаф хранения",
 				"image": "/images/kamera_hranenia1.jpg",
 				"price": 12000,
 				"time": "дн",
