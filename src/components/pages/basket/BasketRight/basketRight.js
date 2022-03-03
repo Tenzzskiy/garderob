@@ -97,7 +97,7 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 
 			}
 		}
-		console.log(cards)
+
 		if (garderobs && garderobs.length) {
 			for (let garderob of garderobs) {
 				let price = 0;

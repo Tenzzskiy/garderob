@@ -40,9 +40,9 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 			}
 			if(Array.isArray(value)&& !card.isGarderob && (Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24) ) >= 2)) {
 				sum += (MathRound(card.price)) *  card.count   *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count  -(MathRound(card.price)) ;
-				console.log(1)
+
 			} else {
-				console.log(2)
+
 				sum +=card.price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 			}
 
@@ -51,10 +51,10 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 		}
 
 		let price = 0;
-		if(Array.isArray(value)&& ((Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))) >= 2) && !card.isGarderob) {console.log(3)
+		if(Array.isArray(value)&& ((Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))) >= 2) && !card.isGarderob) {
 			price += ((MathRound(card.price)) *  card.count)   *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count -(MathRound(card.price)) ;
 
-		} else {console.log(4)
+		} else {
 			price +=card.price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1)    ;
 		}
 
@@ -127,7 +127,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 
 		return <p className={styles.title}>{card.title}</p>;
 	};
-	console.log(garderobs)
+
 	const handleRemove = () => {
 		if (isGarderob) {
 			dispatch(removeGarderob(card.id));

@@ -67,12 +67,20 @@ const AddButton = ({
 
 		}
 	};
+	useEffect(() =>{
+		if (card.count === 1 || card.count ===0) {
+			handleRemove();
+			return;
 
+		}
+	},[card.count])
 	const handleDecrease = () => {
 
 		// @ts-ignore
 		timer.current = setTimeout(function decremetTick() {
+
 			if (!(value === 1 || value ===60)) {
+
 
 
 				if (!isOwn && typeof garderobId !== 'undefined') {
@@ -108,6 +116,7 @@ const AddButton = ({
 
 
 
+
 		}, 150);
 	};
 
@@ -120,6 +129,7 @@ const AddButton = ({
 					return;
 
 				}
+
 
 				if (!isOwn && typeof garderobId !== 'undefined') {
 
@@ -169,6 +179,7 @@ const AddButton = ({
 
 		}
 
+
 		if (!isOwn && typeof garderobId !== 'undefined') {
 			dispatch(decreaseDopsInGarderob({id: garderobId, item: card}));
 			return;
@@ -198,7 +209,6 @@ const AddButton = ({
 		}
 	}
 	const click = () => {
-		if (count < 999) {
 			if (card.count + 1 > maxValue) {
 
 				return;
@@ -229,7 +239,6 @@ const AddButton = ({
 
 				// dispatch(increaseFavourite(card.id));
 				// @ts-ignore
-
 				dispatch(addToBusket({...card, count: card.count + 1}))
 				dispatch(increaseCardToBasket(card.id));
 				dispatch(increaseDopsInGarderob({id: garderobId, item: card}));
@@ -238,7 +247,7 @@ const AddButton = ({
 
 				dispatch(increaseTimeCardToBasket(card.id));
 			}
-		}
+
 	}
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
