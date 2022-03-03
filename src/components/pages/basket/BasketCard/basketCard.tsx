@@ -157,7 +157,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 					</div>
 					<span className={styles.radio_button_text} onMouseEnter={() => setAdd(true)} onMouseLeave={() => {setAdd(false)}} >
 					{`Продлить работу ${card.title} на весь период аренды гардероба`}
-						{add && card.isGarderob ? <div className={styles.addition}> <div> Время работы гардеробщика отличается от времени работы гардероб</div> <img
+						{add && card.isGarderob ? <div className={styles.addition}> <div> Время работы гардеробщика отличается от времени работы гардероба</div> <img
 							src="info.svg" alt=""/> <img onClick={() => setAdd(false)} className={styles.exit} src="/exit.svg" alt=""/></div> : null}
 				</span>
 				</div> : null}
