@@ -36,7 +36,7 @@
 				}
 			},
 			{
-				"id": 2,
+				"id": 90,
 				"title": "Указатель",
 				"image": "/images/zon-2.png",
 				"price": 1000,
@@ -429,7 +429,7 @@
 				}
 			},
 			{
-				"id": 2,
+				"id": 90,
 				"title": "Указатель",
 				"image": "/images/zon-2.png",
 				"price": 1000,
@@ -477,7 +477,7 @@
 				}
 			},
 			{
-				"id": 9,
+				"id": 91,
 				"title": "Туннель дезинфекции",
 				"image": "/images/tunnel_dezinfekcii.jpg",
 				"price": 28900,

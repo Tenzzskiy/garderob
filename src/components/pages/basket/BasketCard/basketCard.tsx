@@ -181,7 +181,7 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 
 							}
 
-							{card.isGarderob || card.isGarderobs ? null : '  ₽'} </span>
+							{card.isGarderob || card.isGarderobs ? null : '  ₽'} {card.isGarderobs ? '1 час + 750 ₽' : null} </span>
 					</div>
 				</div>
 				<div className={classNames(styles.block, styles.descriptionBlock)}>
