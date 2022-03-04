@@ -7,6 +7,9 @@ import {getMaskForNumber} from '@/utilities/helpers';
 import Link from 'next/link';
 import axios from 'axios';
 import useOnClickOutside from '@/hooks/useOnClickOutside';
+import {clearBasket} from "@/redux/actions/shopActions";
+import {useDispatch} from "react-redux";
+import useAppDispatch from "@/hooks/useAppDispatch";
 
 const items = ['Общение по телефону', 'Написать в Whatsapp', 'Написать в Telegram'];
 
@@ -17,6 +20,7 @@ const CallModal = ({
 	cards = [],
 	garderobs = []
 }: Props): JSX.Element => {
+	const dispatch = useAppDispatch();
 	const [windowName, setWindowName] = useState<'request' | 'success'>('request');
 	const [select, setSelect] = useState<string | number>('Общение по телефону');
 	const [phone, setPhone] = useState<string>('');
@@ -44,6 +48,7 @@ const CallModal = ({
 
 				if (success) {
 					setWindowName('success');
+					dispatch(clearBasket())
 				} else {
 					setMessage('Что-то произошло не так! Попробуйте еще раз...');
 				}
@@ -55,9 +60,11 @@ const CallModal = ({
 
 			if (success) {
 				setWindowName('success');
+				dispatch(clearBasket())
 			} else {
 				setMessage('Что-то произошло не так! Попробуйте еще раз...');
 			}
+
 		}
 	};
 
