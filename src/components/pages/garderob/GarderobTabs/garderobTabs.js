@@ -12,7 +12,7 @@ import {selectItems} from "@/redux/selectors";
 
 const GarderobTabs = () => {
 	const shopState = useSelector(selectItems)
-	const [selected, setSelected] = useState('vse');
+	const [selected, setSelected] = useState('garderob');
 	const { id, addedDops } = useGarderobContext();
 	const [showValue, setShowValue] = useState(0);
 
