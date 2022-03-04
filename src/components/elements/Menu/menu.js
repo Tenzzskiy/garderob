@@ -47,7 +47,7 @@ const Menu = ({ isOpened, onCloseMenu }) => {
 		setGarderobOpened(false);
 		setCatalogOpened(false);
 	};
-	const [searchOpened, setSearchOpened] = useState(false);
+	const [searchOpened, setSearchOpened] = useState(true);
 	// @ts-ignore
 	return (
 		<nav className={classNames(styles.menu, isOpened && styles.opened)} onMouseLeave={handleMenuMouseOut}>

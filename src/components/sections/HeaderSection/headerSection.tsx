@@ -46,7 +46,7 @@ const HeaderSection = (): JSX.Element => {
 						</a>
 					</Link>
 					<Link href='/basket' passHref>
-						<a rel='nofollow'>
+						<a className={styles.icon} rel='nofollow'>
 							<BasketIcon />
 						</a>
 					</Link>

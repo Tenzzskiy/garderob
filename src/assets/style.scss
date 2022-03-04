@@ -57,14 +57,14 @@ body {
 	background-color: $lightBackgroundColor;
 	color: $grayDarkColor;
 	margin-top: $headerHeight;
-
+	overflow-x: hidden;
 	button{
 		color: #373737;
 	}
 }
 
 html {
-
+	overflow-x: hidden;
 	scroll-behavior: smooth;
 }
 

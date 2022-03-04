@@ -107,7 +107,7 @@
 				}
 			},
 			{
-				"id": 2,
+				"id": 131,
 				"title": "Стойка приема",
 				"image": [
 					"/images/brand-2.png",
@@ -167,7 +167,7 @@
 				}
 			},
 			{
-				"id": 2,
+				"id": 131,
 				"title": "Стойка приема",
 				"image": [
 					"/images/brand-2.png",
@@ -316,7 +316,7 @@
 				}
 			},
 			{
-				"id": 12,
+				"id": 79,
 				"title": "Стеллаж для хранения сумки и обуви",
 				"image": "/images/kamera_hranenia3.jpg",
 				"price": 3000,
@@ -332,7 +332,7 @@
 				}
 			},
 			{
-				"id": 17,
+				"id": 78,
 				"title": "Шкаф 8 секций",
 				"image": "/images/shkafmetal1.jpg",
 				"price": 2600,
@@ -348,7 +348,7 @@
 				}
 			},
 			{
-				"id": 13,
+				"id": 80,
 				"title": "Камера хранения",
 				"image": "/images/kamera_hranenia2.jpg",
 				"price": 9000,
@@ -364,7 +364,7 @@
 				}
 			},
 			{
-				"id": 16,
+				"id": 77,
 				"title": "Шкаф 4 секции",
 				"image": "/images/shkafmetal2.jpg",
 				"price": 1400,
@@ -445,7 +445,7 @@
 				}
 			},
 			{
-				"id": 11,
+				"id": 101,
 				"title": "Хостес",
 				"image": "/images/hostes3.jpg",
 				"price": 4000,
@@ -461,7 +461,7 @@
 				}
 			},
 			{
-				"id": 7,
+				"id": 102,
 				"title": "Санитайзер",
 				"image": "/images/sanitaizer.jpg",
 				"price": 2200,
@@ -509,7 +509,7 @@
 				}
 			},
 			{
-				"id": 15,
+				"id": 103,
 				"title": "Парковщик",
 				"image": "/images/parkovshik1.jpg",
 				"price": 3500,
@@ -525,7 +525,7 @@
 				}
 			},
 			{
-				"id": 99,
+				"id": 99 ,
 				"title": "Грузчик",
 				"image": "/images/Gruzchik.jpg",
 				"price": 1200,

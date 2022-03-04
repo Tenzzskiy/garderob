@@ -24,6 +24,11 @@
 
 
 }
+@media (max-width: 1000px) {
+	.list{
+		display: none;
+	}
+}
 
 .item {
 	padding-bottom: 12px;

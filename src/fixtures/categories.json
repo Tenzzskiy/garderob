@@ -844,7 +844,7 @@
 				}
 			},
 			{
-				"id": 11,
+				"id": 101,
 				"title": "Хостес",
 				"isGarderobs": true,
 				"image": "/images/hostes3.jpg",
@@ -861,7 +861,7 @@
 				}
 			},
 			{
-				"id": 12,
+				"id": 122,
 				"title": "Клинер",
 				"image": "/images/cleaner1.jpg",
 				"isGarderobs": true,
@@ -878,7 +878,7 @@
 				}
 			},
 			{
-				"id": 13,
+				"id": 121,
 				"title": "Швейцар",
 				"image": "/images/shweizar1.jpg",
 				"price": 3500,
@@ -895,7 +895,7 @@
 				}
 			},
 			{
-				"id": 14,
+				"id": 120,
 				"title": "Промо-модели",
 				"image": "/images/promo1.jpg",
 				"price": 5000,
@@ -912,7 +912,7 @@
 				}
 			},
 			{
-				"id": 15,
+				"id": 103,
 				"title": "Парковщик",
 				"image": "/images/parkovshik1.jpg",
 				"price": 3500,
@@ -946,7 +946,7 @@
 				}
 			},
 			{
-				"id": 16,
+				"id": 123,
 				"title": "Фотограф",
 				"image": "/images/fotograf3.jpg",
 				"price": 10500,
@@ -963,7 +963,7 @@
 				}
 			},
 			{
-				"id": 17,
+				"id": 124,
 				"title": "Аниматор",
 				"image": "/images/animator2.jpg",
 				"price": 5500,
@@ -980,7 +980,7 @@
 				}
 			},
 			{
-				"id": 18,
+				"id": 125,
 				"title": "Промоутер",
 				"image": "/images/promouter1.jpg",
 				"price": 2500,
@@ -1150,7 +1150,7 @@
 				}
 			},
 			{
-				"id": 8,
+				"id": 131,
 				"title": "Стойка дезинфекции",
 				"image": "/images/stoika_dezinfekcii.jpg",
 				"price": 18700,
@@ -1486,7 +1486,7 @@
 		},
 		"items": [
 			{
-				"id": 12,
+				"id": 79,
 				"title": "Стеллаж для хранения сумки и обуви",
 				"image": "/images/kamera_hranenia3.jpg",
 				"price": 3000,
@@ -1518,7 +1518,7 @@
 				}
 			},
 			{
-				"id": 13,
+				"id": 80,
 				"title": "Камера хранения",
 				"image": "/images/kamera_hranenia2.jpg",
 				"price": 9000,
@@ -1550,7 +1550,7 @@
 				}
 			},
 			{
-				"id": 16,
+				"id": 77,
 				"title": "Шкаф 4 секции",
 				"image": "/images/shkafmetal2.jpg",
 				"price": 1400,
@@ -1566,7 +1566,7 @@
 				}
 			},
 			{
-				"id": 17,
+				"id": 78,
 				"title": "Шкаф 8 секций",
 				"image": "/images/shkafmetal1.jpg",
 				"price": 2600,

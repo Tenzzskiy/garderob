@@ -3,6 +3,7 @@ import {Props} from './searchBox.props';
 import classNames from 'classnames';
 import {ChangeEvent, useState, KeyboardEvent} from 'react';
 import {useRouter} from 'next/router';
+import useWindowSize from "@/hooks/useWindowSize";
 
 const SearchBox = ({mobile = false, onCloseMenu}: Props): JSX.Element => {
 	const [value, setValue] = useState('');
@@ -35,7 +36,8 @@ const SearchBox = ({mobile = false, onCloseMenu}: Props): JSX.Element => {
 			handleSearch();
 		}
 	};
-
+	const size = useWindowSize();
+	// @ts-ignore
 	return (
 		<div className={classNames(mobile && styles.searchMobile)}>
 			<div className={classNames(styles.search, mobile && styles.inputMobile)}>
@@ -48,7 +50,10 @@ const SearchBox = ({mobile = false, onCloseMenu}: Props): JSX.Element => {
 					placeholder='Поиск'
 				/>
 				<span className={classNames('icon-search', styles.icon)} />
-				{mobile && <span className={classNames('icon-close', styles.closeIcon)} onClick={onCloseMenu} />}
+				{mobile && <span className={classNames('icon-close', styles.closeIcon,
+
+					// @ts-ignore
+					size.width < 1000 ? styles.none : null)} onClick={onCloseMenu} />}
 			</div>
 		</div>
 	);

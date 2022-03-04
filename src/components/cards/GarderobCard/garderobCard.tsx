@@ -21,6 +21,7 @@ const GarderobCard = ({
 
 }: Props): JSX.Element => {
 	const dispatch = useAppDispatch();
+
 	const handleAddCard = () => {
 		// if (disabled) {
 		// 	return;
@@ -83,7 +84,7 @@ const GarderobCard = ({
 				) : (
 					<div className={styles.priceBlock}>Входит в стоимость</div>
 				)}
-				{!isDifferent && <p className={styles.info}>{card.isGarderob || (card.id === 15 || 99 || 11 ||12 ||13 ||14 || 16 ||17 ||18) ? '+1 час' : 'Со 2 дня'} {card.isGarderob || (card.id === 15 || 99 || 11 ||12 ||13 ||14 || 16 ||17 ||18) ? '750' : Math.round((card.price * 0.25)/10) * 10 }{ ' ₽'}</p>}
+				{!isDifferent && <p className={styles.info}>{card.isGarderob || (card.id === 101||  card.id ===99 ||  card.id ===122 || card.id ===121 || card.id ===120 || card.id ===103 ||  card.id ===123 || card.id ===124 || card.id ===125 ) ? '+1 час' : 'Со 2 дня'} {card.isGarderob || (card.id === 101||  card.id ===99 ||  card.id ===122 || card.id ===121 || card.id ===120 || card.id ===103 ||  card.id ===123 || card.id ===124 || card.id ===125 )  ? '750' : Math.round((card.price * 0.25)/10) * 10 }{ ' ₽'}</p>}
 			</div>
 			{!isPrimary ? (
 				<div className={styles.footer}>

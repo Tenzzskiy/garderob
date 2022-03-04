@@ -97,9 +97,15 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 
 		}
 	},[value])
+	// @ts-ignore
+
 	const getImageSoure = (): string => {
-		if (isGarderob) {
-			return card.images[0];
+		if (isGarderob || Array.isArray(card.image)) {
+			 if (Array.isArray(card.image)) {
+				 return  card.image[0];
+			} else{
+			return 	 card.images[0] ;
+			 }
 		} else {
 			return card.image;
 		}
@@ -143,9 +149,14 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 	return (
 		<div className={classNames(styles.card, !card.isGarderob ? styles.card_margin : null)}>
 			<div className={styles.header}>
-				<figure className={styles.figure}>
+				{isGarderob ? <Link href='/garderob' passHref>
+					<figure className={styles.figure}>
+						<img className={styles.image} src={getImageSoure()} alt={card.title} />
+					</figure>
+				</Link> : <figure className={styles.figure}>
 					<img className={styles.image} src={getImageSoure()} alt={card.title} />
-				</figure>
+				</figure>}
+
 				{getTitleBlock()}
 				{card.isGarderob ? <div className={styles.radio_button} >
 					<div className={styles.r_button} onClick={() => {

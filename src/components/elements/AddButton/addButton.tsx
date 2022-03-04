@@ -73,6 +73,7 @@ const AddButton = ({
 			return;
 
 		}
+
 	},[card.count])
 	const handleDecrease = () => {
 
@@ -89,12 +90,9 @@ const AddButton = ({
 				}
 
 				if (isGarderob) {
-					if (isCount) {
+
 						dispatch(decreaseGarderob(card.id));
-					} else {
-						dispatch(decreaseTimeGarderob(card.id));
-					}
-					return;
+
 				}
 
 				if (isCount) {
@@ -139,16 +137,9 @@ const AddButton = ({
 
 				if (isGarderob) {
 
-					if (isCount) {
-
 						dispatch(increaseGarderob(card.id));
-					} else {
 
-						dispatch(increaseTimeGarderob(card.id));
 
-					}
-
-					return;
 				}
 
 				if (isCount) {
@@ -178,21 +169,22 @@ const AddButton = ({
 			return;
 
 		}
-
-
-		if (!isOwn && typeof garderobId !== 'undefined') {
-			dispatch(decreaseDopsInGarderob({id: garderobId, item: card}));
-			return;
-		}
-
 		if (isGarderob) {
 			if (isCount) {
+
 				dispatch(decreaseGarderob(card.id));
 			} else {
 				dispatch(decreaseTimeGarderob(card.id));
 			}
 			return;
 		}
+
+		if (!isOwn && typeof garderobId !== 'undefined') {
+			dispatch(decreaseDopsInGarderob({id: garderobId, item: card}));
+			return;
+		}
+
+
 
 		if (isCount) {
 			// @ts-ignore
