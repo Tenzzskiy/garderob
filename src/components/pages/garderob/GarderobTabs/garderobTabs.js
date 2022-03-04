@@ -2,7 +2,7 @@ import { GarderobMain } from '@/components';
 import styles from './garderobTabs.module.scss';
 import cn from 'classnames';
 import { useEffect, useState } from 'react';
-import categories from '@/fixtures/categories.json';
+import categories from './../../../../fixtures/categories.json'
 import categoriesNew from '@/fixtures/categoriesNew.json';
 import { useGarderobContext } from '@/contexts/GarderobContext';
 import { GarderobCard } from '@/components';
@@ -12,7 +12,7 @@ import {selectItems} from "@/redux/selectors";
 
 const GarderobTabs = () => {
 	const shopState = useSelector(selectItems)
-	const [selected, setSelected] = useState('garderob');
+	const [selected, setSelected] = useState('vse');
 	const { id, addedDops } = useGarderobContext();
 	const [showValue, setShowValue] = useState(0);
 
@@ -26,9 +26,11 @@ const GarderobTabs = () => {
 			fullArr = fullArr.concat(concatedArr[i].items)
 		}
 		return fullArr;
+
 	}
 
 	const calcCurrentArr = () => {
+
 		if (selected === 'vse') {
 			return calcFullArr().filter((v, i, a) => a.findIndex(t => ((t.title + t.id) === (v.title + v.id))) === i)
 		}

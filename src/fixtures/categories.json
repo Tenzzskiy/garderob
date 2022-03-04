@@ -311,7 +311,7 @@
 				}
 			},
 			{
-				"id": 27,
+				"id": 95,
 				"title": "Пуфик(Красный)",
 				"image": "/images/pufik.jpg",
 				"price": 800,
@@ -327,9 +327,9 @@
 				}
 			},
 			{
-				"id": 27,
+				"id": 94,
 				"title": "Пуфик(Черный)",
-				"image": "/images/Pufik_black",
+				"image": "/images/Pufik_black.jpg",
 				"price": 800,
 				"time": "дн",
 				"priceDescription": "Со второго дня 400₽",
@@ -343,9 +343,9 @@
 				}
 			},
 			{
-				"id": 27,
+				"id": 96,
 				"title": "Пуфик(Белый)",
-				"image": "/images/Pufik_belyj",
+				"image": "/images/Pufik_belyj.jpg",
 				"price": 800,
 				"time": "дн",
 				"priceDescription": "Со второго дня 400₽",
@@ -361,7 +361,7 @@
 			{
 				"id": 27,
 				"title": "Пуфик(Оранжевый)",
-				"image": "/images/Pufik_orange",
+				"image": "/images/Pufik_orange.jpg",
 				"price": 800,
 				"time": "дн",
 				"priceDescription": "Со второго дня 400₽",
@@ -377,7 +377,7 @@
 			{
 				"id": 27,
 				"title": "Пуфик(Черно-белый)",
-				"image": "/images/Pufik_chernyj_belyj",
+				"image": "/images/Pufik_chernyj_belyj.jpg",
 				"price": 900,
 				"time": "дн",
 				"priceDescription": "Со второго дня 450₽",
@@ -393,7 +393,7 @@
 			{
 				"id": 27,
 				"title": "Пуфик(Серебристо-оранжевый)",
-				"image": "/images/Pufik_orange_silver",
+				"image": "/images/Pufik_orange_silver.jpg",
 				"price": 900,
 				"time": "дн",
 				"priceDescription": "Со второго дня 450₽",
@@ -583,7 +583,7 @@
 				}
 			},
 			{
-				"id": 2,
+				"id": 98,
 				"title": "Мобильная стена (1 секция)",
 				"image": "/images/sekciya_2.jpg",
 				"price": 1500,
@@ -795,7 +795,7 @@
 				"priceDescription": "+1 час 850₽",
 				"isGarderob": true,
 				"color": "#68888C",
-				"desc": ", рекомендован на мероприятие где каждый гость важен",
+				"desc": ", на мероприятиях где каждый гость важен",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -833,7 +833,7 @@
 				"priceDescription": "+1 час 900₽",
 				"isGarderob": true,
 				"color": "#A39CE8",
-				"desc": ", рекомендуем при работе 2-х гардеробах в VIP зале",
+				"desc": ", рекомендуем при работе более 2-х VIP гардеробов",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -844,8 +844,9 @@
 				}
 			},
 			{
-				"id": 11,
+				"id": 101,
 				"title": "Хостес",
+				"isGarderobs": true,
 				"image": "/images/hostes3.jpg",
 				"price": 4000,
 				"time": "4 ч",
@@ -860,9 +861,10 @@
 				}
 			},
 			{
-				"id": 12,
+				"id": 122,
 				"title": "Клинер",
 				"image": "/images/cleaner1.jpg",
+				"isGarderobs": true,
 				"price": 3500,
 				"time": "4 ч",
 				"priceDescription": "+1 час 500₽",
@@ -876,10 +878,11 @@
 				}
 			},
 			{
-				"id": 13,
+				"id": 121,
 				"title": "Швейцар",
 				"image": "/images/shweizar1.jpg",
 				"price": 3500,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 400₽",
 				"info": {
@@ -892,10 +895,11 @@
 				}
 			},
 			{
-				"id": 14,
+				"id": 120,
 				"title": "Промо-модели",
 				"image": "/images/promo1.jpg",
 				"price": 5000,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 500₽",
 				"info": {
@@ -908,10 +912,11 @@
 				}
 			},
 			{
-				"id": 15,
+				"id": 103,
 				"title": "Парковщик",
 				"image": "/images/parkovshik1.jpg",
 				"price": 3500,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 500₽",
 				"info": {
@@ -924,10 +929,11 @@
 				}
 			},
 			{
-				"id": 15,
+				"id": 99,
 				"title": "Грузчик",
 				"image": "/images/Gruzchik.jpg",
 				"price": 1200,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 250₽",
 				"info": {
@@ -940,10 +946,11 @@
 				}
 			},
 			{
-				"id": 16,
+				"id": 123,
 				"title": "Фотограф",
 				"image": "/images/fotograf3.jpg",
 				"price": 10500,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 1500₽",
 				"info": {
@@ -956,10 +963,11 @@
 				}
 			},
 			{
-				"id": 17,
+				"id": 124,
 				"title": "Аниматор",
 				"image": "/images/animator2.jpg",
 				"price": 5500,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 800₽",
 				"info": {
@@ -972,10 +980,11 @@
 				}
 			},
 			{
-				"id": 18,
+				"id": 125,
 				"title": "Промоутер",
 				"image": "/images/promouter1.jpg",
 				"price": 2500,
+				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 300₽",
 				"info": {
@@ -1141,7 +1150,7 @@
 				}
 			},
 			{
-				"id": 8,
+				"id": 131,
 				"title": "Стойка дезинфекции",
 				"image": "/images/stoika_dezinfekcii.jpg",
 				"price": 18700,
@@ -1157,7 +1166,7 @@
 				}
 			},
 			{
-				"id": 9,
+				"id": 91,
 				"title": "Туннель дезинфекции",
 				"image": "/images/tunnel_dezinfekcii.jpg",
 				"price": 28900,
@@ -1371,9 +1380,9 @@
 				"id": 31,
 				"title": "Банкетка (Классическая).",
 				"image": "/images/banketka1.jpg",
-				"price": 950,
+				"price": 3100,
 				"time": "дн",
-				"priceDescription": "Со второго дня 450₽",
+				"priceDescription": "Со второго дня 820₽",
 				"info": {
 					"count": "шт",
 					"time": "ч",
@@ -1389,7 +1398,7 @@
 				"image": "/images/banketka2.jpg",
 				"price": 3350,
 				"time": "дн",
-				"priceDescription": "Со второго дня 1700₽",
+				"priceDescription": "Со второго дня 840₽",
 				"info": {
 					"count": "шт",
 					"time": "ч",
@@ -1477,7 +1486,7 @@
 		},
 		"items": [
 			{
-				"id": 12,
+				"id": 79,
 				"title": "Стеллаж для хранения сумки и обуви",
 				"image": "/images/kamera_hranenia3.jpg",
 				"price": 3000,
@@ -1493,7 +1502,7 @@
 				}
 			},
 			{
-				"id": 12,
+				"id": 94,
 				"title": "Стеллаж (Loft)",
 				"image": "/images/Stelazh_loft.jpg",
 				"price": 8000,
@@ -1509,7 +1518,7 @@
 				}
 			},
 			{
-				"id": 13,
+				"id": 80,
 				"title": "Камера хранения",
 				"image": "/images/kamera_hranenia2.jpg",
 				"price": 9000,
@@ -1541,7 +1550,7 @@
 				}
 			},
 			{
-				"id": 16,
+				"id": 77,
 				"title": "Шкаф 4 секции",
 				"image": "/images/shkafmetal2.jpg",
 				"price": 1400,
@@ -1557,7 +1566,7 @@
 				}
 			},
 			{
-				"id": 17,
+				"id": 78,
 				"title": "Шкаф 8 секций",
 				"image": "/images/shkafmetal1.jpg",
 				"price": 2600,
@@ -1573,6 +1582,7 @@
 				}
 			}
 		],
+
 		"seo": [
 			{
 				"id": 1,
