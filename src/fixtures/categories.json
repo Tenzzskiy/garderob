@@ -311,7 +311,7 @@
 				}
 			},
 			{
-				"id": 95,
+				"id": 27,
 				"title": "Пуфик(Красный)",
 				"image": "/images/pufik.jpg",
 				"price": 800,
@@ -327,9 +327,9 @@
 				}
 			},
 			{
-				"id": 94,
+				"id": 27,
 				"title": "Пуфик(Черный)",
-				"image": "/images/Pufik_black.jpg",
+				"image": "/images/Pufik_black",
 				"price": 800,
 				"time": "дн",
 				"priceDescription": "Со второго дня 400₽",
@@ -343,9 +343,9 @@
 				}
 			},
 			{
-				"id": 96,
+				"id": 27,
 				"title": "Пуфик(Белый)",
-				"image": "/images/Pufik_belyj.jpg",
+				"image": "/images/Pufik_belyj",
 				"price": 800,
 				"time": "дн",
 				"priceDescription": "Со второго дня 400₽",
@@ -361,7 +361,7 @@
 			{
 				"id": 27,
 				"title": "Пуфик(Оранжевый)",
-				"image": "/images/Pufik_orange.jpg",
+				"image": "/images/Pufik_orange",
 				"price": 800,
 				"time": "дн",
 				"priceDescription": "Со второго дня 400₽",
@@ -377,7 +377,7 @@
 			{
 				"id": 27,
 				"title": "Пуфик(Черно-белый)",
-				"image": "/images/Pufik_chernyj_belyj.jpg",
+				"image": "/images/Pufik_chernyj_belyj",
 				"price": 900,
 				"time": "дн",
 				"priceDescription": "Со второго дня 450₽",
@@ -393,7 +393,7 @@
 			{
 				"id": 27,
 				"title": "Пуфик(Серебристо-оранжевый)",
-				"image": "/images/Pufik_orange_silver.jpg",
+				"image": "/images/Pufik_orange_silver",
 				"price": 900,
 				"time": "дн",
 				"priceDescription": "Со второго дня 450₽",
@@ -538,9 +538,9 @@
 				"id": 31,
 				"title": "Банкетка (Классическая).",
 				"image": "/images/banketka1.jpg",
-				"price": 950,
+				"price": 3100,
 				"time": "дн",
-				"priceDescription": "Со второго дня 450₽",
+				"priceDescription": "Со второго дня 820₽",
 				"info": {
 					"count": "шт",
 					"time": "ч",
@@ -556,7 +556,7 @@
 				"image": "/images/banketka2.jpg",
 				"price": 3350,
 				"time": "дн",
-				"priceDescription": "Со второго дня 1700₽",
+				"priceDescription": "Со второго дня 840₽",
 				"info": {
 					"count": "шт",
 					"time": "ч",
@@ -583,12 +583,12 @@
 				}
 			},
 			{
-				"id": 98,
+				"id": 2,
 				"title": "Мобильная стена (1 секция)",
 				"image": "/images/sekciya_2.jpg",
-				"price": 900,
+				"price": 1500,
 				"time": "дн",
-				"priceDescription": "+1 час 450₽",
+				"priceDescription": "+1 час 300₽",
 				"info": {
 					"count": "шт",
 					"time": "ч",
@@ -792,10 +792,10 @@
 				"image": "/images/garderob-10.jpg",
 				"price": 4500,
 				"time": "4 ч",
-				"priceDescription": "+1 час 750₽",
+				"priceDescription": "+1 час 850₽",
 				"isGarderob": true,
 				"color": "#68888C",
-				"desc": ", внимателен к каждому гостю",
+				"desc": ", рекомендован на мероприятие где каждый гость важен",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -811,10 +811,10 @@
 				"image": "/images/garderob/garderob-10-1.jpg",
 				"price": 9000,
 				"time": "4 ч",
-				"priceDescription": "+1 час 750₽",
+				"priceDescription": "+1 час 1200₽",
 				"isGarderob": true,
 				"color": "#FF198F",
-				"desc": ", презентабельный внешний вид, обходительность",
+				"desc": ", персональное внимание каждому VIP гостю",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -830,10 +830,10 @@
 				"image": "/images/garderob-10-2.jpg",
 				"price": 6000,
 				"time": "4 ч",
-				"priceDescription": "+1 час 750₽",
+				"priceDescription": "+1 час 900₽",
 				"isGarderob": true,
 				"color": "#A39CE8",
-				"desc": ", рекомендуем для мероприятий от 150 человек",
+				"desc": ", рекомендуем при работе 2-х гардеробах в VIP зале",
 				"info": {
 					"count": "чел",
 					"time": "ч",
@@ -844,9 +844,8 @@
 				}
 			},
 			{
-				"id": 101,
+				"id": 11,
 				"title": "Хостес",
-				"isGarderobs": true,
 				"image": "/images/hostes3.jpg",
 				"price": 4000,
 				"time": "4 ч",
@@ -861,10 +860,9 @@
 				}
 			},
 			{
-				"id": 122,
+				"id": 12,
 				"title": "Клинер",
 				"image": "/images/cleaner1.jpg",
-				"isGarderobs": true,
 				"price": 3500,
 				"time": "4 ч",
 				"priceDescription": "+1 час 500₽",
@@ -878,11 +876,10 @@
 				}
 			},
 			{
-				"id": 121,
+				"id": 13,
 				"title": "Швейцар",
 				"image": "/images/shweizar1.jpg",
 				"price": 3500,
-				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 400₽",
 				"info": {
@@ -895,11 +892,10 @@
 				}
 			},
 			{
-				"id": 120,
+				"id": 14,
 				"title": "Промо-модели",
 				"image": "/images/promo1.jpg",
 				"price": 5000,
-				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 500₽",
 				"info": {
@@ -912,11 +908,10 @@
 				}
 			},
 			{
-				"id": 103,
+				"id": 15,
 				"title": "Парковщик",
 				"image": "/images/parkovshik1.jpg",
 				"price": 3500,
-				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 500₽",
 				"info": {
@@ -929,11 +924,10 @@
 				}
 			},
 			{
-				"id": 99,
+				"id": 15,
 				"title": "Грузчик",
 				"image": "/images/Gruzchik.jpg",
 				"price": 1200,
-				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 250₽",
 				"info": {
@@ -946,11 +940,10 @@
 				}
 			},
 			{
-				"id": 123,
+				"id": 16,
 				"title": "Фотограф",
 				"image": "/images/fotograf3.jpg",
 				"price": 10500,
-				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 1500₽",
 				"info": {
@@ -963,11 +956,10 @@
 				}
 			},
 			{
-				"id": 124,
+				"id": 17,
 				"title": "Аниматор",
 				"image": "/images/animator2.jpg",
 				"price": 5500,
-				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 800₽",
 				"info": {
@@ -980,11 +972,10 @@
 				}
 			},
 			{
-				"id": 125,
+				"id": 18,
 				"title": "Промоутер",
 				"image": "/images/promouter1.jpg",
 				"price": 2500,
-				"isGarderobs": true,
 				"time": "4 ч",
 				"priceDescription": "+1 час 300₽",
 				"info": {
@@ -1150,7 +1141,7 @@
 				}
 			},
 			{
-				"id": 131,
+				"id": 8,
 				"title": "Стойка дезинфекции",
 				"image": "/images/stoika_dezinfekcii.jpg",
 				"price": 18700,
@@ -1166,7 +1157,7 @@
 				}
 			},
 			{
-				"id": 91,
+				"id": 9,
 				"title": "Туннель дезинфекции",
 				"image": "/images/tunnel_dezinfekcii.jpg",
 				"price": 28900,
@@ -1486,7 +1477,7 @@
 		},
 		"items": [
 			{
-				"id": 79,
+				"id": 12,
 				"title": "Стеллаж для хранения сумки и обуви",
 				"image": "/images/kamera_hranenia3.jpg",
 				"price": 3000,
@@ -1502,7 +1493,7 @@
 				}
 			},
 			{
-				"id": 94,
+				"id": 12,
 				"title": "Стеллаж (Loft)",
 				"image": "/images/Stelazh_loft.jpg",
 				"price": 8000,
@@ -1518,7 +1509,7 @@
 				}
 			},
 			{
-				"id": 80,
+				"id": 13,
 				"title": "Камера хранения",
 				"image": "/images/kamera_hranenia2.jpg",
 				"price": 9000,
@@ -1550,7 +1541,7 @@
 				}
 			},
 			{
-				"id": 77,
+				"id": 16,
 				"title": "Шкаф 4 секции",
 				"image": "/images/shkafmetal2.jpg",
 				"price": 1400,
@@ -1566,7 +1557,7 @@
 				}
 			},
 			{
-				"id": 78,
+				"id": 17,
 				"title": "Шкаф 8 секций",
 				"image": "/images/shkafmetal1.jpg",
 				"price": 2600,
@@ -1582,7 +1573,6 @@
 				}
 			}
 		],
-
 		"seo": [
 			{
 				"id": 1,
