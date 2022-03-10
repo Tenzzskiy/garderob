@@ -5,7 +5,7 @@ import {Props} from './basketCard.props';
 import {removeCardToBasket} from '@/redux/actions/shopActions';
 import {removeGarderob, updateDate} from '@/redux/actions/garderobActions';
 import useAppDispatch from '@/hooks/useAppDispatch';
-import {useEffect, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import {GarderobItemType} from '@/types';
 import {convertToNumberWithSpaces} from '@/utilities/helpers';
 import {array} from "prop-types";
@@ -14,7 +14,8 @@ import useAppSelector from "@/hooks/useAppSelector";
 import garderobCard from "@/components/cards/GarderobCard";
 import GarderobCard from "@/components/cards/GarderobCard";
 import {selectAllGarderobs} from "@/redux/selectors";
-
+import useOnClickOutside from "@/hooks/useOnClickOutside";
+import {ymClick} from "@/utilities/helpers";
 export const MathRound = (num:number) =>{
 	return Math.round((num * 0.3)/10) * 10
 }
@@ -22,6 +23,7 @@ export const MathRoundGarderob = (num:number) =>{
 	return Math.round((num * 0.8))
 }
 const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props): JSX.Element => {
+
 	const [isOpened, setOpened] = useState(false);
 	const [circle , setCircle ] = useState(false);
 	const dispatch = useAppDispatch();
@@ -147,6 +149,10 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 	};
 
 	const [add,setAdd] = useState(false);
+	const ref = useRef();
+	// @ts-ignore
+	useOnClickOutside(ref, () => setAdd(false));
+	// @ts-ignore
 	return (
 		<div className={classNames(styles.card, !card.isGarderob ? styles.card_margin : null)}>
 			<div className={styles.header}>
@@ -163,12 +169,16 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 					<div className={styles.r_button} onClick={() => {
 						setCircle(!circle)
 						changeValue();
+						ymClick('extend_work');
 					}}>
 						<div className={classNames(styles.circle,circle ? styles.active_circle : null)} >
 
 						</div>
 					</div>
-					<span className={styles.radio_button_text} onMouseEnter={() => setAdd(true)} onMouseLeave={() => {setAdd(false)}} >
+
+					<span className={styles.radio_button_text} onClick={() => setAdd(true)}
+						// @ts-ignore
+						  ref={ref} >
 					{`Продлить работу ${card.title} на весь период аренды гардероба`}
 						{add && card.isGarderob ? <div className={styles.addition}> <div> Время работы гардеробщика отличается от времени работы гардероба</div> <img
 							src="info.svg" alt=""/> <img onClick={() => setAdd(false)} className={styles.exit} src="/exit.svg" alt=""/></div> : null}

@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import useAppSelector from '@/hooks/useAppSelector';
 import useAppDispatch from '@/hooks/useAppDispatch';
 import { addFavoriteItemToStore, deleteFavoriteItemFromStore } from '@/redux/actions/favoriteActions';
+import {ymClick} from "@/utilities/helpers";
 
 function HeartIcon({ className, card }: Props): JSX.Element {
 	const [isLiked, setLiked] = useState(false);
@@ -39,7 +40,10 @@ function HeartIcon({ className, card }: Props): JSX.Element {
 		// @ts-ignore
 		<span onMouseEnter={() => setLink(true)} onMouseLeave={() => setLink(false)}
 	className={classNames(styles.icon, styles.iconHover, className, 'icon-heart',  link ? styles.liked : null)}
-	onClick={handleSaveItem}
+	onClick={() => {
+		handleSaveItem();
+		ymClick('add_to_favourites')
+	}}
 	/>
 	) : (	// @ts-ignore
 		<svg

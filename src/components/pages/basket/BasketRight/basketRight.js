@@ -10,7 +10,7 @@ import 'react-calendar/dist/Calendar.css';
 import Calendar from 'react-calendar';
 import useOnClickOutside from "@/hooks/useOnClickOutside";
 import {useDispatch} from "react-redux";
-import {updateDate} from "@/redux/actions/garderobActions";
+import {ymClick} from "@/utilities/helpers";
 import {MathRound, MathRoundGarderob} from "@/components/pages/basket/BasketCard/basketCard";
 
 const BasketRight = ({calendar1,date2,setDate2,setCalendar1,date1,setDate1,cards, garderobs,value,onChange,date})=> {
@@ -176,8 +176,14 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 							<div className={styles.calendar_flex}>
 								<div> c</div>
 								<input value={date1} className={classNames(styles.active_date,styles.first_date)}
-									   onClick={() => setCalendar1(true)}
+									   onClick={() => {
+										   setCalendar1(true)
+										   ymClick('rental_period')
+									   }
+
+								}
 									// onChange={(e) => setDate1(e.current)}
+
 								/>
 
 								<div> до</div>

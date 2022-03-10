@@ -2,7 +2,7 @@ import styles from './heroSection.module.scss';
 import classNames from 'classnames';
 import { Props } from './heroSection.props';
 import { CSSProperties } from 'react';
-import { scrollTo } from '@/utilities/helpers';
+import {scrollTo, ymClick} from '@/utilities/helpers';
 
 const HeroSection = ({ hero: { title, subtitle, mobileImage, desktopImage } }: Props): JSX.Element => {
 	const handleScroll = () => {
@@ -21,7 +21,10 @@ const HeroSection = ({ hero: { title, subtitle, mobileImage, desktopImage } }: P
 				<div className={styles.wrapper}>
 					<h1 className={styles.title} dangerouslySetInnerHTML={{ __html: title }}></h1>
 					<p className={styles.subtitle}>{subtitle}</p>
-					<span className={styles.button} onClick={handleScroll}>
+					<span className={styles.button} onClick={() => {
+						handleScroll();
+						ymClick('selection')
+					}}>
 						Подобрать
 					</span>
 				</div>

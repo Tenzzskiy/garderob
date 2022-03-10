@@ -9,6 +9,7 @@ import {useState, CSSProperties, useEffect} from 'react';
 import CardSlider from '../../elements/CardSlider/cardSlider';
 import useAppSelector from '@/hooks/useAppSelector';
 import {addToBusket} from "@/redux/actions/favoriteActions";
+import {ymClick} from "@/utilities/helpers";
 
 const GarderobCard = ({
 	className,
@@ -75,7 +76,10 @@ const GarderobCard = ({
 									styles.button,
 									styles.buttonActive
 								)}
-								onClick={handleAddCard}
+								onClick={() => {
+									handleAddCard();
+									ymClick('add_product')
+								}}
 							>
 								Добавить
 							</span>

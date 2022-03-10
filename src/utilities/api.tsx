@@ -89,3 +89,4 @@ export const findBySearch = (search: ParamsType): CategoryCardType[] => {
 
 	return items;
 };
+

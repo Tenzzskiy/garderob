@@ -6,7 +6,7 @@ import useAppDispatch from '@/hooks/useAppDispatch';
 import {addGarderob, clearGarderobs, refresh, removeGarderob, updateDate} from '@/redux/actions/garderobActions';
 import {CSSProperties, useEffect, useState} from 'react';
 import Link from 'next/link';
-import { convertToNumberWithSpaces, scrollTo } from '@/utilities/helpers';
+import {convertToNumberWithSpaces, scrollTo, ymClick} from '@/utilities/helpers';
 import {useSelector} from "react-redux";
 import {selectAllGarderobs, selectItems} from "@/redux/selectors";
 import useAppSelector from "@/hooks/useAppSelector";
@@ -339,7 +339,10 @@ const GarderobDescription = ({active1,
 						<AddButton custom={true} data={card} card={card} value={card.count} size='116px' isGarderob={true} />
 					</div>
 				) : (
-					<span className={styles.button} onClick={handleAdd}>
+					<span className={styles.button} onClick={() => {
+						handleAdd();
+						ymClick('add_wardrobe')
+					}}>
 						Добавить
 					</span>
 				)}
@@ -356,7 +359,10 @@ const GarderobDescription = ({active1,
 							</p>
 							<span
 								className={classNames(styles.boxIcon, styles.boxTrash, 'icon-trash')}
-								onClick={handleDelete}
+								onClick={() => {
+									handleDelete();
+									ymClick('clear_cart');
+								}}
 							></span>
 						</div>
 						{renderChooseGarderobBlock()}

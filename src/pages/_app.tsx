@@ -8,7 +8,7 @@ import {initializeFavoriteStore} from '@/redux/actions/favoriteActions';
 import {initializeGarderobStore} from '@/redux/actions/garderobActions';
 import {initializeShop} from '@/redux/actions/shopActions';
 import LazyLoad, {ILazyLoadInstance} from 'vanilla-lazyload';
-
+import {ymClick} from './../utilities/helpers'
 let lazyLoadInstance: null | ILazyLoadInstance = null;
 
 declare global {
@@ -16,6 +16,7 @@ declare global {
 		lazyInstance: undefined | ILazyLoadInstance;
 	}
 }
+
 
 function MyApp({Component, pageProps}: AppProps) {
 	const store = useStore(pageProps.initialReduxState);
