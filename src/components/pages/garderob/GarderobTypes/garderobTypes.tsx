@@ -5,6 +5,7 @@ import useWindowSize from '@/hooks/useWindowSize';
 import useAppDispatch from '@/hooks/useAppDispatch';
 import { chooseGarderob } from '@/redux/actions/garderobActions';
 import { useGarderobContext } from '@/contexts/GarderobContext';
+import garderobCard from "@/components/cards/GarderobCard";
 
 // @ts-ignore
 const GarderobTypes = ({setColor}): JSX.Element => {
@@ -71,7 +72,7 @@ const GarderobTypes = ({setColor}): JSX.Element => {
 				>
 					<p className={classNames(styles.cardTitle, styles.cardTitle1)}>Эконом</p>
 					<p className={styles.cardTitle}>20 &#8381;/место</p>
-					<p className={styles.cardInfo}>со 2 дня 15₽/место</p>
+					<p className={styles.cardInfo}>со 2 дня 16₽/место</p>
 				</div>
 				<div
 					onClick={() => {
@@ -90,7 +91,7 @@ const GarderobTypes = ({setColor}): JSX.Element => {
 				>
 					<p className={classNames(styles.cardTitle, styles.cardTitle2)}>Стандарт</p>
 					<p className={styles.cardTitle}>45 &#8381;/место</p>
-					<p className={styles.cardInfo}>со 2 дня 30₽/место</p>
+					<p className={styles.cardInfo}>со 2 дня 36₽/место</p>
 				</div>
 				<div
 					onClick={() => {
@@ -106,7 +107,7 @@ const GarderobTypes = ({setColor}): JSX.Element => {
 				>
 					<p className={classNames(styles.cardTitle, styles.cardTitle3)}>VIP</p>
 					<p className={styles.cardTitle}>15 000 &#8381;/до 60 мест</p>
-					<p className={styles.cardInfo}>со 2 дня 9000 &#8381;</p>
+					<p className={styles.cardInfo}>со 2 дня 12000&#8381;</p>
 				</div>
 			</div >
 		);

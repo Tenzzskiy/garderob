@@ -88,12 +88,12 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 		if (cards && cards.length) {
 			for (let card of cards) {
 				let price =  ( (Array.isArray(value) && (value[1].getDate() -value[0].getDate() +1 )) > 1 && card.isGarderob ? (MathRound(card.price)) : card.price) + (card.countTime - card.info.minTime) * card.info.priceForTime  ;
-				console.log(card.isGarderobs)
+
 					if(Array.isArray(value)&&  card.isGarderob && ((value[1].getDate() -value[0].getDate() +1) >= 2  )) {
 
 						sum +=  price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price   -(MathRound(card.price)) ;
 					} else {
-						console.log(2)
+
 
 						sum +=  price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 					}
@@ -111,11 +111,18 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 
 
 				if(Array.isArray(value)&& ((value[1].getDate() -value[0].getDate() +1) >= 2 )) {
-					console.log(3)
-					price += (MathRoundGarderob(garderob.price)) *   garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + garderob.price   -(MathRoundGarderob(garderob.price)) ;
+
+					if (garderob.name === 'primary'){
+						price += (MathRoundGarderob(garderob.price)) *   garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + garderob.price   -(MathRoundGarderob(garderob.price)) ;
+						console.log(4)
+					}else {
+						console.log(3)
+						price += (MathRoundGarderob(garderob.price)) *   garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + garderob.price   -(MathRoundGarderob(garderob.price)) ;
+
+					}
 
 				} else {
-					console.log(4)
+
 					price +=garderob.price * garderob.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 				}
 
@@ -139,8 +146,8 @@ useOnClickOutside(calendar_f,() => windowSize.width > 720 ? setCalendar1(false) 
 			setOpened(true);
 		}
 	};
-	console.log(cards)
-	console.log(garderobs)
+
+
 	const renderWindow = () => {
 		// @ts-ignore
 		// @ts-ignore

@@ -10,6 +10,7 @@ import useOnClickOutside from '@/hooks/useOnClickOutside';
 import {clearBasket} from "@/redux/actions/shopActions";
 import {useDispatch} from "react-redux";
 import useAppDispatch from "@/hooks/useAppDispatch";
+import {clearGarderobs} from "@/redux/actions/garderobActions";
 
 const items = ['Общение по телефону', 'Написать в Whatsapp', 'Написать в Telegram'];
 
@@ -49,6 +50,7 @@ const CallModal = ({
 				if (success) {
 					setWindowName('success');
 					dispatch(clearBasket())
+					dispatch(clearGarderobs());
 				} else {
 					setMessage('Что-то произошло не так! Попробуйте еще раз...');
 				}
@@ -60,7 +62,8 @@ const CallModal = ({
 
 			if (success) {
 				setWindowName('success');
-				dispatch(clearBasket())
+				dispatch(clearBasket());
+				dispatch(clearGarderobs());
 			} else {
 				setMessage('Что-то произошло не так! Попробуйте еще раз...');
 			}

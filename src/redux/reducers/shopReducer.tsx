@@ -74,7 +74,7 @@ const shopReducer = createReducer(initialState, builder => {
 		})
 		.addCase(clearBasket, state => {
 			state.items = [];
-			console.log(12312123123123)
+
 		})
 		.addCase(initializeShop, state => {
 			state.items = savedItems;

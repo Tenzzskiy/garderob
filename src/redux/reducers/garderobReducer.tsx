@@ -136,6 +136,7 @@ const favoriteReducer = createReducer(initialState, builder => {
 		})
 		.addCase(clearGarderobs, state => {
 			state.items = [];
+
 		})
 
 		.addCase(initializeGarderobStore, state => {

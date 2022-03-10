@@ -26,7 +26,7 @@ const GarderobCard = ({
 		// if (disabled) {
 		// 	return;
 		// }
-		console.log(card)
+
 
 			dispatch(addCardToBasket({ ...card, isAdded: true, count: 1, countTime: card.info.minTime, }));
 			// @ts-ignore

@@ -19,7 +19,7 @@ export const MathRound = (num:number) =>{
 	return Math.round((num * 0.3)/10) * 10
 }
 export const MathRoundGarderob = (num:number) =>{
-	return Math.round((num * 0.8)/10) * 10
+	return Math.round((num * 0.8))
 }
 const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props): JSX.Element => {
 	const [isOpened, setOpened] = useState(false);
@@ -28,9 +28,9 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 	const price = card.price;
 	const garderobs = useAppSelector(selectAllGarderobs);
 	const countPrice = (): number => {
+		console.log(card)
 		if (isGarderob) {
 			let sum = 0;
-
 			if (card.countTime > 1) {
 				sum += card.info.priceForTime * card.count * (card.countTime - 1);
 			}
@@ -39,10 +39,11 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 				sum += card.addedDops[i].count * card.addedDops[i].price;
 			}
 			if(Array.isArray(value)&& !card.isGarderob && !card.isGarderobs && (Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24) ) >= 2)) {
-				sum += (MathRound(card.price)) *  card.count   *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count  -(MathRound(card.price)) * card.count  ;
+				sum += (MathRoundGarderob(card.price)) *  card.count   *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))   : 1) + card.price * card.count  -(MathRoundGarderob(card.price)) * card.count  ;
+				console.log(1)
 
 			} else {
-
+				console.log(2)
 				sum +=card.price * card.count *(Array.isArray(value) ? Math.ceil(Math.abs(value[1].getTime() - value[0].getTime()) / (1000 * 3600 * 24))  : 1) ;
 			}
 
