@@ -123,7 +123,7 @@ export const loadScript = (src: string) => {
 // @ts-ignore
 export const ymClick = target => {
 	// @ts-ignore
-	<Script src='/main.js' strategy="lazyOnload" />
+
 	// @ts-ignore
 	if (window && window.ym) {
 		// @ts-ignore

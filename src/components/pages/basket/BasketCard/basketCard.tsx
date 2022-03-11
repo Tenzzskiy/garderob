@@ -165,9 +165,11 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 				</figure>}
 
 				{getTitleBlock()}
+				{add && card.isGarderob ? <div className={styles.addition}> <div> Время работы гардеробщика отличается от времени работы гардероба</div> <img
+					src="info.svg" alt=""/> <img onClick={() => setAdd(false)} className={styles.exit} src="/exit.svg" alt=""/></div> : null}
 				{card.isGarderob ? <div className={styles.radio_button} >
 					<div className={styles.r_button} onClick={() => {
-						setCircle(!circle)
+						setCircle(!circle);
 						changeValue();
 						ymClick('extend_work');
 					}}>
@@ -176,12 +178,15 @@ const BasketCard = ({card, isGarderob = false,duration,value,setDuration}: Props
 						</div>
 					</div>
 
-					<span className={styles.radio_button_text} onClick={() => setAdd(true)}
+					<span className={styles.radio_button_text} onClick={() => {
+						setAdd(true);
+							setCircle(!circle);
+						changeValue();
+					}}
 						// @ts-ignore
 						  ref={ref} >
 					{`Продлить работу ${card.title} на весь период аренды гардероба`}
-						{add && card.isGarderob ? <div className={styles.addition}> <div> Время работы гардеробщика отличается от времени работы гардероба</div> <img
-							src="info.svg" alt=""/> <img onClick={() => setAdd(false)} className={styles.exit} src="/exit.svg" alt=""/></div> : null}
+
 				</span>
 				</div> : null}
 			</div>

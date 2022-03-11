@@ -144,7 +144,7 @@
 	object-fit: cover;
 	max-width: 132px;
 	width: 132px;
-
+	background: white;
 	img{
 		height: 100%;
 		width: 132px;
@@ -167,36 +167,45 @@
 	position: absolute;
 	top: 10px;
 	right:10px;
+	z-index: 5;
 }
+
+
 @media (max-width: 720px){
 	.addition{
 		left: 5px !important;
+		top: 73px !important;
 	}
-}
-.addition{
-	position: absolute;
-	background: #68888C;
-	border-radius: 5px;
-	width: 320px;
-	height: 64px;
-	z-index: 2;
-	top: -80px;
-	left: 150px;
-	text-align:center ;
-	color: white;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	div{
-		max-width: 270px;
+}@media (max-width: 1000px){
+	.addition{
+		top: 279px ;
 	}
-	img{
+}@media (max-width: 999999999px){
+	.addition{
 		position: absolute;
-		bottom: -7px;
+		background: #68888C;
+		border-radius: 5px;
+		width: 320px;
+		height: 64px;
+		z-index: 2;
+		top: 35px;
+		left: 150px;
+		text-align:center ;
+		color: white;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		div{
+			max-width: 270px;
+		}
+		img{
+			position: absolute;
+			bottom: -7px;
+		}
 	}
 }
 
